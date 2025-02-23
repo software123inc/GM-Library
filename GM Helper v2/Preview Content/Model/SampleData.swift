@@ -30,6 +30,20 @@ let samplePreviewContainer: ModelContainer = {
         configurations: ModelConfiguration(isStoredInMemoryOnly: true)
     )
     
+    let spellsA5e = (PreviewData.loadJSON(forResource: JsonResourceKey.spellsA5e.rawValue) as [Spell_Ae5]).prefix(5)
+    
+    // add spells
+    for spell in spellsA5e {
+        container.mainContext.insert(spell)
+    }
+    
+    do {
+        try container.mainContext.save()
+    }
+    catch {
+        fatalError("[SAMPLE DATA] Unable to save context. \(error.localizedDescription)")
+    }
+    
     return container
 }()
 

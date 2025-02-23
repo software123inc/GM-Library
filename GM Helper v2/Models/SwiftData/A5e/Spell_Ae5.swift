@@ -66,19 +66,19 @@ class Spell_Ae5: Decodable, Nameable {
     }
 }
 
-//extension Spell_Ae5:ViewDataSource {
-//    static func listViewContent (_ listItem: Any) -> AnyView {
-//        let spell = listItem as! Spell_Ae5
-//        return AnyView(
-//            NavigationLink(destination: SpellA5eDetailView(spell: spell)) {
-//                VStack(alignment: .leading) {
-//                    Text(spell.name)
-//                        .font(.headline)
-//                    Text("Level \(spell.level) - \(spell.school)")
-//                        .font(.subheadline)
-//                        .foregroundStyle(.gray)
-//                }
-//            }
-//        )
-//    }
-//}
+extension Spell_Ae5:ViewDataSource {
+    static func listViewContent (_ listItem: Any) -> AnyView {
+        let spell = listItem as! Spell_Ae5
+        return AnyView(
+            NavigationLink(destination: SpellA5eDetailView(spell: spell)) {
+                VStack(alignment: .leading) {
+                    Text(spell.name)
+                        .font(.headline)
+                    Text("Level \(spell.level) - \(spell.school)")
+                        .font(.subheadline)
+                        .foregroundStyle(.gray)
+                }
+            }
+        )
+    }
+}
