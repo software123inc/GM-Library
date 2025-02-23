@@ -1,14 +1,15 @@
 //
-//  HP.swift
+//  AC.swift
 //  GM Helper Beta
 //
 //  Created by Tim W. Newton on 2/17/25.
 //
 
 import Foundation
+import SwiftData
 
-class HP_A5e: Decodable {
-    var id:UUID = UUID()
+@Model
+class AC_A5e: Decodable {
     var value: Int = 0
     var notes: String?
     

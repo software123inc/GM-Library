@@ -1,16 +1,17 @@
 //
-//  CoffeeSampleData.swift
-//  GM Helper Beta
+//  SampleData.swift
+//  GM Helper v2
 //
-//  Created by Tim W. Newton on 2/17/25.
+//  Created by Tim W. Newton on 2/23/25.
 //
+
 
 import SwiftData
 import SwiftUI
 
-struct CoffeeSampleData: PreviewModifier {
+struct SampleData: PreviewModifier {
     static func makeSharedContext() throws -> ModelContainer {
-        coffeePreviewContainer
+        samplePreviewContainer
     }
     
     func body(content: Content, context: ModelContainer) -> some View {
@@ -19,17 +20,16 @@ struct CoffeeSampleData: PreviewModifier {
 }
 
 extension PreviewTrait where T == Preview.ViewTraits {
-    @MainActor static var coffeeSampleData: Self = .modifier(CoffeeSampleData())
+    @MainActor static var sampleData: Self = .modifier(SampleData())
 }
 
 @MainActor
-let coffeePreviewContainer: ModelContainer = {
-    let schema = Schema([])
-    
+let samplePreviewContainer: ModelContainer = {
     let container = try! ModelContainer(
-        for: schema,
+        for: AppCommon.shared.schema,
         configurations: ModelConfiguration(isStoredInMemoryOnly: true)
     )
     
     return container
 }()
+
