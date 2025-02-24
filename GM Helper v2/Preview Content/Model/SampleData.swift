@@ -35,9 +35,7 @@ let samplePreviewContainer: ModelContainer = {
     
     var combined: [any PersistentModel] = Array(spellsA5e) + Array(spellsWoTC)
     
-//    combined.append(contentsOf: spellsA5e)
-    
-    // add spells
+    // add decoded JSON objects to SwiftData
     for mObj in combined {
         container.mainContext.insert(mObj)
     }

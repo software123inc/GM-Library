@@ -16,6 +16,7 @@ enum UrlType: String, Codable {
 
 @Model
 class URL_WoTC: Decodable, Identifiable {
+    #Index<URL_WoTC>([\.name])
     var id = UUID()
     var index: String?
     var name: String?
