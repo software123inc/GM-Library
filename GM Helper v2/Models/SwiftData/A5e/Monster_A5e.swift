@@ -147,70 +147,70 @@ class Monster_A5e: Decodable, Nameable {
     // MARK: - Computed Properties
     
     /// Primary movement speed (assumes first speed value is primary)
-//    var mainSpeed: String {
-//        return speed?.first ?? "0 ft."
-//    }
-//    
-//    /// Checks if the monster has Mythic Actions
-//    var isMythic: Bool {
-//        return !mythicActions.isEmpty
-//    }
-//    
-//// Helper properties to filter actionTraits by type
-//    var saves: [Proficiency] {
-//        proficiencies.filter { $0.type == .savingThrow }
-//    }
-//    var skills: [Proficiency] {
-//        proficiencies.filter { $0.type == .skill }
-//    }
-//    
-//    var traits: [ActionTrait] {
-//        actionTraits.filter { $0.type == .trait }
-//    }
-//    var actions: [ActionTrait] {
-//        actionTraits.filter { $0.type == .action }
-//    }
-//    var bonusActions: [ActionTrait] {
-//        actionTraits.filter { $0.type == .bonusAction }
-//    }
-//    var reactions: [ActionTrait] {
-//        actionTraits.filter { $0.type == .reaction }
-//    }
-//    var legendaryActions: [ActionTrait] {
-//        actionTraits.filter { $0.type == .legendary }
-//    }
-//    var mythicActions: [ActionTrait] {
-//        actionTraits.filter { $0.type == .mythic }
-//    }
-//    
-//    var challengeRating: Double {
-//        switch challenge {
-//            case "1/8": return 1 / 8
-//            case "1/4": return 1 / 4
-//            case "1/2": return 1 / 2
-//            case let value where Double(value) != nil: return Double(value)!
-//            default: return 0.0 // Log this as an error if unexpected
-//        }
-//    }
+    var mainSpeed: String {
+        return speed?.first ?? "0 ft."
+    }
+    
+    /// Checks if the monster has Mythic Actions
+    var isMythic: Bool {
+        return !mythicActions.isEmpty
+    }
+    
+// Helper properties to filter actionTraits by type
+    var saves: [Proficiency] {
+        proficiencies.filter { $0.type == .savingThrow }
+    }
+    var skills: [Proficiency] {
+        proficiencies.filter { $0.type == .skill }
+    }
+    
+    var traits: [ActionTrait] {
+        actionTraits.filter { $0.type == .trait }
+    }
+    var actions: [ActionTrait] {
+        actionTraits.filter { $0.type == .action }
+    }
+    var bonusActions: [ActionTrait] {
+        actionTraits.filter { $0.type == .bonusAction }
+    }
+    var reactions: [ActionTrait] {
+        actionTraits.filter { $0.type == .reaction }
+    }
+    var legendaryActions: [ActionTrait] {
+        actionTraits.filter { $0.type == .legendary }
+    }
+    var mythicActions: [ActionTrait] {
+        actionTraits.filter { $0.type == .mythic }
+    }
+    
+    var challengeRating: Double {
+        switch challenge {
+            case "1/8": return 1 / 8
+            case "1/4": return 1 / 4
+            case "1/2": return 1 / 2
+            case let value where Double(value) != nil: return Double(value)!
+            default: return 0.0 // Log this as an error if unexpected
+        }
+    }
 }
 
-//extension Monster_A5e: Monstrous {
-//    /// Estimated Average Damage Per Round
-//    var averageDamagePerRound: Int {
-//        let actionDamage = actions.reduce(0) { total, action in
-//            total + DamageHelper.parseDamage(from: action.content)
-//        }
-//        let legendaryDamage = legendaryActions.reduce(0) { total, action in
-//            total + DamageHelper.parseDamage(from: action.content)
-//        }
-//        return actionDamage + legendaryDamage
-//    }
-//    
-//    /// Checks if the monster has Legendary Actions
-//    var isLegendary: Bool {
-//        !legendaryActions.isEmpty
-//    }
-//}
+extension Monster_A5e: Monstrous {
+    /// Estimated Average Damage Per Round
+    var averageDamagePerRound: Int {
+        let actionDamage = actions.reduce(0) { total, action in
+            total + DamageHelper.parseDamage(from: action.content)
+        }
+        let legendaryDamage = legendaryActions.reduce(0) { total, action in
+            total + DamageHelper.parseDamage(from: action.content)
+        }
+        return actionDamage + legendaryDamage
+    }
+    
+    /// Checks if the monster has Legendary Actions
+    var isLegendary: Bool {
+        !legendaryActions.isEmpty
+    }
+}
 
 //extension Monster_A5e: ViewDataSource {
 //    static func listViewContent (_ listItem: Any) -> AnyView {
