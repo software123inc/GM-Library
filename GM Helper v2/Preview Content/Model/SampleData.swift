@@ -31,10 +31,15 @@ let samplePreviewContainer: ModelContainer = {
     )
     
     let spellsA5e = (PreviewData.loadJSON(forResource: JsonResourceKey.spellsA5e.rawValue) as [Spell_Ae5]).prefix(5)
+    let spellsWoTC = (PreviewData.loadJSON(forResource: JsonResourceKey.spellsWoTC.rawValue) as [Spell_WoTC]).prefix(5)
+    
+    var combined: [any PersistentModel] = Array(spellsA5e) + Array(spellsWoTC)
+    
+//    combined.append(contentsOf: spellsA5e)
     
     // add spells
-    for spell in spellsA5e {
-        container.mainContext.insert(spell)
+    for mObj in combined {
+        container.mainContext.insert(mObj)
     }
     
     do {

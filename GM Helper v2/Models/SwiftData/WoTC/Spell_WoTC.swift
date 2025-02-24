@@ -1,0 +1,119 @@
+//
+//  Spell_WoTC.swift
+//  GM Helper Beta
+//
+//  Created by Tim W. Newton on 2/20/25.
+//
+
+import SwiftUI
+import SwiftData
+
+@Model
+class Spell_WoTC: Decodable, Nameable {
+    #Index<Spell_WoTC>([\.id], [\.originalId], [\.name], [\.level])
+    var id = UUID()
+    var originalId: String = ""
+    var name: String = ""
+    var desc: [String] = []
+    var higher_level: [String]?
+    var range: String = ""
+    var components: [String] = []
+    var material: String?
+    var ritual:Bool = false
+    var duration: String = ""
+    var concentration:Bool = false
+    var casting_time: String = ""
+    var level: Int = 0
+    var heal_at_slot_level:SpellEffectAtSlotLevel?
+    var attack_type: String?
+    var damage: SpellDamage?
+    var dc:SpellDC?
+    var area_of_effect: AreaOfEffect?
+    var school: URL_WoTC?
+    
+    @Relationship(deleteRule: .cascade, inverse: \URL_WoTC.spell) private var classData: [URL_WoTC] = [] // Single collection for all classes and subclasses; GROK 3
+    var url: String = ""
+    
+    enum CodingKeys: String, CodingKey {
+        case originalId = "index"
+        case name
+        case desc
+        case higher_level
+        case range
+        case components
+        case material
+        case ritual
+        case duration
+        case concentration
+        case casting_time
+        case level
+        case heal_at_slot_level
+        case attack_type
+        case damage
+        case dc
+        case area_of_effect
+        case school
+        case classes
+        case subclasses
+        case url
+    }
+    
+    required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        
+        self.originalId = try container.decode(String.self, forKey: .originalId)
+        self.name = try container.decode(String.self, forKey: .name)
+        self.desc = try container.decode([String].self, forKey: .desc)
+        self.higher_level = try container.decodeIfPresent([String].self, forKey: .higher_level)
+        self.range = try container.decode(String.self, forKey: .range)
+        self.components = try container.decode([String].self, forKey: .components)
+        self.material = try container.decodeIfPresent(String.self, forKey: .material)
+        self.ritual = try container.decode(Bool.self, forKey: .ritual)
+        self.duration = try container.decode(String.self, forKey: .duration)
+        self.concentration = try container.decode(Bool.self, forKey: .concentration)
+        self.casting_time = try container.decode(String.self, forKey: .casting_time)
+        self.level = try container.decode(Int.self, forKey: .level)
+        self.heal_at_slot_level = try container.decodeIfPresent( SpellEffectAtSlotLevel.self, forKey: .heal_at_slot_level )
+        self.attack_type = try container.decodeIfPresent(String.self, forKey: .attack_type)
+        self.damage = try container.decodeIfPresent(SpellDamage.self, forKey: .damage)
+        self.dc = try container.decodeIfPresent(SpellDC.self, forKey: .dc)
+        self.area_of_effect = try container.decodeIfPresent(AreaOfEffect.self, forKey: .area_of_effect)
+        self.school = try container.decodeIfPresent(URL_WoTC.self, forKey: .school)
+        self.url = try container.decode(String.self, forKey: .url)
+        
+        var allUrls: [URL_WoTC] = []
+        if let classes = try container.decodeIfPresent([URL_WoTC].self, forKey: .classes) {
+            allUrls.append(contentsOf: classes.map { $0.type = .characterClass; return $0 })
+        }
+        if let subclasses = try container.decodeIfPresent([URL_WoTC].self, forKey: .subclasses) {
+            allUrls.append(contentsOf: subclasses.map { $0.type = .characterSubclass; return $0; })
+        }
+        
+        classData = allUrls
+    }
+    
+    // Helper properties to filter actionTraits by type
+    var classes: [URL_WoTC] {
+        classData.filter { $0.type == .characterClass }
+    }
+    var subClasses: [URL_WoTC] {
+        classData.filter { $0.type == .characterSubclass }
+    }
+}
+
+//extension Spell_WoTC: ViewDataSource {
+//    static func listViewContent (_ listItem: Any) -> AnyView {
+//        let spell = listItem as! Spell_WoTC
+//        return AnyView(
+//            NavigationLink(destination: SpellWoTCDetailView(spell: spell)) {
+//                VStack(alignment: .leading) {
+//                    Text(spell.name)
+//                        .font(.headline)
+//                    Text("Level \(spell.level) - \(spell.school?.name ?? "")")
+//                        .font(.subheadline)
+//                        .foregroundStyle(.gray)
+//                }
+//            }
+//        )
+//    }
+//}
