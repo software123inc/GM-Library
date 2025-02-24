@@ -19,15 +19,15 @@ class Monster_A5e: Decodable, Nameable {
     var name: String = ""
     var path: String = ""
     var link: String = ""
-//    var filterDimensions: FilterDimensions_A5e? // SwiftData will not create a record in the table, but will embed it in Monster_A5e.
+    var filterDimensions: FilterDimensions_A5e? // SwiftData will not create a record in the table, but will embed it in Monster_A5e.
     var version: String = ""
     var source: String = ""
     var monsterType: String = ""
-//    var hp: HP_A5e?
-//    var ac: AC_A5e?
+    var hp: HP_A5e?
+    var ac: AC_A5e?
     var initiativeModifier: Int = 0
     var speed: [String]?
-//    var abilities: Abilities?
+    var abilities: Abilities?
     var damageVulnerabilities: [String]? = []
     var damageResistances: [String]? = []
     var damageImmunities: [String]? = []
@@ -42,7 +42,7 @@ class Monster_A5e: Decodable, Nameable {
     var player: String?
     var imageURL: String?
     var combat: String?
-//    @Relationship(deleteRule: .cascade, inverse: \MonsterVariant.monsterA5e) var variants: [MonsterVariant]? = []
+    @Relationship(deleteRule: .cascade, inverse: \MonsterVariant.monsterA5e) var variants: [MonsterVariant]? = []
     
     enum CodingKeys: String, CodingKey {
         case sourceId = "Id"
@@ -88,15 +88,15 @@ class Monster_A5e: Decodable, Nameable {
         self.name = try container.decode(String.self, forKey: .name)
         self.path = try container.decode(String.self, forKey: .path)
         self.link = try container.decode(String.self, forKey: .link)
-//        self.filterDimensions = try container.decode(FilterDimensions_A5e.self, forKey: .filterDimensions)
+        self.filterDimensions = try container.decode(FilterDimensions_A5e.self, forKey: .filterDimensions)
         self.version = try container.decode(String.self, forKey: .version)
         self.source = try container.decode(String.self, forKey: .source)
         self.monsterType = try container.decode(String.self, forKey: .monsterType)
-//        self.hp = try container.decodeIfPresent(HP_A5e.self, forKey: .hp)
-//        self.ac = try container.decodeIfPresent(AC_A5e.self, forKey: .ac)
+        self.hp = try container.decodeIfPresent(HP_A5e.self, forKey: .hp)
+        self.ac = try container.decodeIfPresent(AC_A5e.self, forKey: .ac)
         self.initiativeModifier = try container.decode(Int.self, forKey: .initiativeModifier)
         self.speed = try container.decodeIfPresent([String].self, forKey: .speed) // Keep nil for distinction NOT SPECIFIED - no data in JSON file; Grok
-//        self.abilities = try container.decodeIfPresent(Abilities.self, forKey: .abilities)
+        self.abilities = try container.decodeIfPresent(Abilities.self, forKey: .abilities)
         self.damageVulnerabilities = try container.decodeIfPresent([String].self, forKey: .damageVulnerabilities) ?? [] // Keep [] to specify that monster has NONE; Grok
         self.damageResistances = try container.decodeIfPresent([String].self, forKey: .damageResistances) ?? []
         self.damageImmunities = try container.decodeIfPresent([String].self, forKey: .damageImmunities) ?? []
@@ -108,7 +108,7 @@ class Monster_A5e: Decodable, Nameable {
         self.player = try container.decodeIfPresent(String.self, forKey: .player)
         self.imageURL = try container.decodeIfPresent(String.self, forKey: .imageURL)
         self.combat = try container.decodeIfPresent(String.self, forKey: .combat)
-//        self.variants = try container.decodeIfPresent([MonsterVariant].self, forKey: .variants) // Keep nil for optional content; Grok
+        self.variants = try container.decodeIfPresent([MonsterVariant].self, forKey: .variants) // Keep nil for optional content; Grok
         
         // Decode each proficiency and map to Proficiency with appropriate ProficiencyType; GROK 3
 //        var allProficiencies: [Proficiency] = []
