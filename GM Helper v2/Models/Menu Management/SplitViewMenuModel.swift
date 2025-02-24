@@ -52,13 +52,13 @@ class SplitViewSectionMenuModel {
                     PersistentModelListView<Monster_A5e>(navigationTitle: "Monsters A5e")
                 )
             ),
-//            MenuItem(
-//                name: "WoTC 2014",
-//                image: "linea-mini",
-//                contentView: AnyView(
-//                    PersistentModelListView<Monster_WoTC>(navigationTitle: "Monsters WoTC")
-//                )
-//            ),
+            MenuItem(
+                name: "WoTC 2014",
+                image: "linea-mini",
+                contentView: AnyView(
+                    PersistentModelListView<Monster_WoTC>(navigationTitle: "Monsters WoTC")
+                )
+            ),
 //            MenuItem(
 //                name: "Normalized",
 //                image: "linea-mini",

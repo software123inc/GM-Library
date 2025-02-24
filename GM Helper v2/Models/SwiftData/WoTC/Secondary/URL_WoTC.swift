@@ -24,10 +24,7 @@ class URL_WoTC: Decodable, Identifiable {
     var type: UrlType? // New property to categorize the URL
     
     @Relationship(deleteRule: .cascade) var spell: Spell_WoTC? // Single relationship
-    
-//    var spellClassesWoTC:Spell_WoTC? //backreference
-//    var spellSubclassesWoTC:Spell_WoTC? //backreference
-//    var conditionsImmunitiesWotc:Monster_WoTC? // backreference
+    @Relationship(deleteRule: .cascade) var monster: Monster_WoTC? // Single relationship
         
     enum CodingKeys: String, CodingKey {
         case index

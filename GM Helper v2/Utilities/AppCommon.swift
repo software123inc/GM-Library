@@ -16,6 +16,7 @@ class AppCommon {
     let schema = Schema([
         Item.self,
         Monster_A5e.self,
+        Monster_WoTC.self,
         Spell_Ae5.self,
         Spell_WoTC.self
     ])

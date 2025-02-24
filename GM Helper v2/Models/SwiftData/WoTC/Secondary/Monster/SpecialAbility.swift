@@ -15,7 +15,7 @@ class SpecialAbility: Decodable {
     var desc: String?
     var dc: DifficultyCheck?
     
-//    @Relationship(deleteRule: .cascade) var monster: Monster_WoTC? // Single relationship
+    @Relationship(deleteRule: .cascade) var monster: Monster_WoTC? // Single relationship
 
     enum CodingKeys: String, CodingKey {
         case name

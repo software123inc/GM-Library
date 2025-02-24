@@ -31,10 +31,11 @@ let samplePreviewContainer: ModelContainer = {
     )
     
     let monstersA5e = (PreviewData.loadJSON(forResource: JsonResourceKey.monstersA5e.rawValue) as [Monster_A5e]).prefix(5)
+    let monstersWoTC = (PreviewData.loadJSON(forResource: JsonResourceKey.monstersWoTC.rawValue) as [Monster_WoTC]).prefix(5)
     let spellsA5e = (PreviewData.loadJSON(forResource: JsonResourceKey.spellsA5e.rawValue) as [Spell_Ae5]).prefix(5)
     let spellsWoTC = (PreviewData.loadJSON(forResource: JsonResourceKey.spellsWoTC.rawValue) as [Spell_WoTC]).prefix(5)
     
-    var combined: [any PersistentModel] = Array(monstersA5e) + Array(spellsA5e) + Array(spellsWoTC)
+    var combined: [any PersistentModel] = Array(monstersA5e) + Array(monstersWoTC) + Array(spellsA5e) + Array(spellsWoTC)
     
     // add decoded JSON objects to SwiftData
     for mObj in combined {

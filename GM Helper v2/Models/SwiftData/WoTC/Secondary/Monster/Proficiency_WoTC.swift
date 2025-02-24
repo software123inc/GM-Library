@@ -14,8 +14,7 @@ class Proficiency_WoTC: Decodable {
     var value: Int = 0
     var details: URL_WoTC?
     
-//    @Relationship(deleteRule: .cascade) var monster: Monster_WoTC? // Single relationship
-//    var monsterWotc:Monster_WoTC? // backreference
+    @Relationship(deleteRule: .cascade) var monster: Monster_WoTC? // Single relationship
 
     enum CodingKeys: String, CodingKey {
         case value, details = "proficiency"

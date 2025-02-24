@@ -16,8 +16,7 @@ class LegendaryAction: Decodable {
     var attackBonus: Int?
     var dc: DifficultyCheck?
     @Relationship(deleteRule: .cascade, inverse: \MonsterDamage.legendaryAction) var damage: [MonsterDamage]? = []
-
-//    @Relationship(deleteRule: .cascade) var monster: Monster_WoTC? // Single relationship
+    @Relationship(deleteRule: .cascade) var monster: Monster_WoTC? // Single relationship
     
     enum CodingKeys: String, CodingKey {
         case name

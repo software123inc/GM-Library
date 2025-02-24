@@ -19,8 +19,7 @@ class Action: Decodable {
     var dc: DifficultyCheck?
     @Relationship(deleteRule: .cascade, inverse: \MonsterDamage.action) var damage: [MonsterDamage]? = []
     @Relationship(deleteRule: .cascade, inverse: \SubAction.action) var subActions: [SubAction]? = []
-    
-    //    @Relationship(deleteRule: .cascade) var monster: Monster_WoTC? // Single relationship
+    @Relationship(deleteRule: .cascade) var monster: Monster_WoTC? // Single relationship
 
     enum CodingKeys: String, CodingKey {
         case name

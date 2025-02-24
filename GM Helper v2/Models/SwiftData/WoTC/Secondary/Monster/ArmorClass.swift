@@ -14,7 +14,7 @@ class ArmorClass: Decodable {
     var type: String = ""
     var value: Int = 0
     
-//    @Relationship(deleteRule: .cascade) var monster: Monster_WoTC? // Single relationship
+    @Relationship(deleteRule: .cascade) var monster: Monster_WoTC? // Single relationship
 
     enum CodingKeys: String, CodingKey {
         case type, value
