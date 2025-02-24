@@ -25,7 +25,6 @@ protocol MonstrousDTO {
     func toArmorClass() -> Int
     func toArmorType() -> String?
     func toInitiativeModifier() -> Int
-    
     func toSpeed() -> [String]
     func toAbilities() -> Abilities
     func toDamageVulnerabilities() -> [String]?

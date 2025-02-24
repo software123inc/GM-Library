@@ -35,42 +35,42 @@ class Monster: Nameable {
     var conditionImmunities: [String]?
     var senses: [String] = []
     var languages:String = ""
-    @Relationship(deleteRule: .cascade, inverse: \Proficiency.monsterA5e) private var proficiencies: [Proficiency] = [] // Single collection for all proficiencies; GROK 3
+    @Relationship(deleteRule: .cascade, inverse: \Proficiency.monster) private var proficiencies: [Proficiency] = [] // Single collection for all proficiencies; GROK 3
     var challengeRating: Double = 0.0
     var proficiencyBonus: Int?
-    @Relationship(deleteRule: .cascade, inverse: \ActionTrait.monsterA5e) private var actionTraits: [ActionTrait] = [] // Single collection for all traits/actions; GROK 3
+    @Relationship(deleteRule: .cascade, inverse: \ActionTrait.monster) private var actionTraits: [ActionTrait] = [] // Single collection for all traits/actions; GROK 3
     var combat: String?
-    @Relationship(deleteRule: .cascade, inverse: \MonsterVariant.monsterA5e) var variants: [MonsterVariant]? = []
+    @Relationship(deleteRule: .cascade, inverse: \MonsterVariant.monster) var variants: [MonsterVariant]? = []
 //    @Attribute(.externalStorage) var imageData: Data? = nil
     
     init(
         id: UUID = UUID(),
-        sourceId: String,
-        sourceKeyRawValue: String,
-        name: String,
-        link: String,
-        version: String,
+        sourceId: String = "",
+        sourceKeyRawValue: String = "",
+        name: String = "",
+        link: String = "",
+        version: String = "",
         desc: String? = nil,
-        type: String,
+        type: String = "",
         subtype: String? = nil,
         size: String? = nil,
         alignment: String? = nil,
-        hitPoints: Int,
+        hitPoints: Int = 0,
         hitDice: String? = nil,
-        armorClass: Int,
+        armorClass: Int = 0,
         armorType: String? = nil,
-        initiativeModifier: Int,
-        speed: [String],
+        initiativeModifier: Int = 0,
+        speed: [String] = [],
         abilities: Abilities? = nil,
         damageVulnerabilities: [String]? = nil,
         damageResistances: [String]? = nil,
         damageImmunities: [String]? = nil,
         conditionImmunities: [String]? = nil,
-        senses: [String],
-        languages: String,
+        senses: [String] = [],
+        languages: String = "",
         saves: [Proficiency]? = nil,
         skills: [Proficiency]? = nil,
-        challengeRating: Double,
+        challengeRating: Double = 0.0,
         proficiencyBonus: Int? = nil,
         traits: [ActionTrait]? = nil,
         actions: [ActionTrait]? = nil,

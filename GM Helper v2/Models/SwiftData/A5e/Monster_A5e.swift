@@ -268,7 +268,9 @@ extension Monster_A5e: MonstrousDTO {
     func toConditionImmunities() -> [String]? { conditionImmunities?.isEmpty ?? true ? nil : conditionImmunities }
     func toSenses() -> [String] { if let senses { return senses } else { return [] } }
     func toLanguages() -> String { languages?.joined(separator: ", ") ?? "" }
-    func toSaves() -> [Proficiency]? { saves }
+    func toSaves() -> [Proficiency]? {
+        saves
+    }
     func toSkills() -> [Proficiency]? { skills }
     func toChallengeRating() -> Double { challengeRating }
     func toProficiencyBonus() -> Int? { nil }

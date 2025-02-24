@@ -20,7 +20,7 @@ class Proficiency: Decodable, CustomStringConvertible {
     var name: String = "unspecified proficiency"
     var modifier: Int = 0
     var type:ProficiencyType? = nil
-//    @Relationship(deleteRule: .cascade) var monster: Monster? // Single relationship
+    @Relationship(deleteRule: .cascade) var monster: Monster? // Single relationship
     @Relationship(deleteRule: .cascade) var monsterA5e: Monster_A5e? // Single relationship
     
     enum CodingKeys: String, CodingKey {
