@@ -141,162 +141,161 @@ extension Monster_WoTC: Monstrous, ViewDataSource {
     }
 }
 
-//extension Monster_WoTC: MonstrousDTO {
-//    func toSourceId() -> String { sourceId }
-//    func toSourceKeyRawValue() -> String { SourceKey.wotc.rawValue }
-//    func toName() -> String {  name }
-//    func toLink() -> String { url }
-//    func toVersion() -> String { "5.0.0" }
-//    func toDesc() -> String? { nil }
-//    func toType() -> String { type }
-//    func toSubtype() -> String? { subtype }
-//    func toSize() -> String? { size }
-//    func toAlignment() -> String? { alignment }
-//    func toHitPoints() -> Int { hitPoints }
-//    func toHitDice() -> String? { hitPointsRoll }
-//    func toArmorClass() -> Int { armorClasses?.first?.value ?? 0 }
-//    func toArmorType() -> String? { armorClasses?.first?.type }
-//    func toInitiativeModifier() -> Int { 0 }
-//    func toSpeed() -> [String] {
-//        let walkSpeed = speed?.walk ?? ""
-//        let burrowSpeed = speed?.burrow ?? ""
-//        let climbSpeed = speed?.climb ?? ""
-//        let flySpeed = speed?.fly ?? ""
-//        let hoverSpeed = (speed?.hover ?? false) ? "hover" : ""
-//        let swimSpeed = speed?.swim ?? ""
-//        
-//        var speeds: [String] = []
-//        if !walkSpeed.isEmpty { speeds.append(walkSpeed) }
-//        if !burrowSpeed.isEmpty { speeds.append("burrow: \(burrowSpeed)") }
-//        if !climbSpeed.isEmpty { speeds.append("climb: \(climbSpeed)") }
-//        if !flySpeed.isEmpty { speeds.append("fly: \(flySpeed)") }
-//        if !hoverSpeed.isEmpty { speeds.append("hover") }
-//        if !swimSpeed.isEmpty { speeds.append("swim: \(swimSpeed)") }
-//        
-//        return speeds
-//    }
-//    func toAbilities() -> Abilities {
-//        Abilities(str: strength, dex: dexterity, con: constitution, int: intelligence, wis: wisdom, cha: charisma)
-//    }
-//    func toDamageVulnerabilities() -> [String]? { damageVulnerabilities }
-//    func toDamageResistances() -> [String]? { damageResistances }
-//    func toDamageImmunities() -> [String]? { damageImmunities }
-//    func toConditionImmunities() -> [String]? {
-//        var conditionImms: [String] = []
-//        if let conditionImmunities = conditionImmunities {
-//            conditionImmunities.forEach { if let name = $0.name { conditionImms.append(name)} }
-//        }
-//        return nil
-//    }
-//    func toSenses() -> [String] {
-//        let blindsight = senses?.blindsight ?? ""
-//        let darkvision = senses?.darkvision ?? ""
-//        let passivePerception = senses?.passivePerception
-//        let tremorsense = senses?.tremorsense ?? ""
-//        let truesight = senses?.truesight ?? ""
-//        
-//        var senses: [String] = []
-//        if !blindsight.isEmpty { senses.append("blindsight: \(blindsight)") }
-//        if !darkvision.isEmpty { senses.append("darkvision: \(darkvision)") }
-//        if let passivePerception { senses.append("Passive Perception: \(passivePerception)") }
-//        if !tremorsense.isEmpty { senses.append("tremorsense: \(tremorsense)") }
-//        if !truesight.isEmpty { senses.append("truesight: \(truesight)") }
-//        
-//        return senses
-//    }
-//    func toLanguages() -> String { languages }
-//    func toSaves() -> [Proficiency]? { extractProficiencies("Saving Throw: ") }
-//    func toSkills() -> [Proficiency]? { extractProficiencies("Skill: ") }
-//    
-//    func toChallengeRating() -> Double { challengeRating }
-//    func toProficiencyBonus() -> Int? { nil }
-//    func toTraits() -> [ActionTrait]?  {
-//        var traits : [ActionTrait] = []
-//        
-//        if let specialAbilities {
-//            for ability in specialAbilities {
-//                traits
-//                    .append(
-//                        ActionTrait(
-//                            name: ability.name,
-//                            content: ability.desc ?? "",
-//                            type: .trait
-//                        )
-//                    )
-//            }
-//            
-//            return traits
-//        }
-//        
-//        return nil
-//    }
-//    func toActions() -> [ActionTrait]? {
-//        var results = [ActionTrait]()
-//        
-//        if let actions {
-//            for action in actions {
-//                results
-//                    .append(
-//                        ActionTrait(
-//                            name: action.name,
-//                            content: action.desc ?? "",
-//                            type: .action
-//                        )
-//                    )
-//            }
-//            
-//            return results
-//        }
-//        
-//        return nil
-//    }
-//    func toBonusActions() -> [ActionTrait]? { nil }
-//    func toReactions() -> [ActionTrait]? { nil }
-//    func toLegendaryActions() -> [ActionTrait]? {
-//        var results = [ActionTrait]()
-//        
-//        if let legendaryActions {
-//            for action in legendaryActions {
-//                results
-//                    .append(
-//                        ActionTrait(
-//                            name: action.name,
-//                            content: action.desc ?? "",
-//                            type: .legendary
-//                        )
-//                    )
-//            }
-//            
-//            return results
-//        }
-//        
-//        return nil
-//    }
-//    
-//    func toMythicActions() -> [ActionTrait]? { nil }
-//    func toCombat() -> String? { nil }
-//    func toVariants() -> [MonsterVariant]? { nil }
-//    
-//    
-//    // be sure to add trailing space to namePrefix
-//    private func extractProficiencies(_ namePrefix: String) -> [Proficiency]? {
-//        var results: [Proficiency] = []
-//        
-//        if let proficiencies {
-//            let profs = proficiencies.filter({ $0.proficiencyDetails?.name?.contains(namePrefix) ?? false })
-//            
-//            if profs.count > 0 {
-//                for prof in profs {
-//                    let modifier = prof.value
-//                    let name = prof.proficiencyDetails?.name?.replacingOccurrences(of: namePrefix, with: "") ?? ""
-//                    
-//                    results.append(Proficiency(name: name.firstCapitalized, modifier: modifier))
-//                }
-//                
-//                return results
-//            }
-//        }
-//        
-//        return nil
-//    }
-//}
+extension Monster_WoTC: MonstrousDTO {
+    func toSourceId() -> String { sourceId }
+    func toSourceKeyRawValue() -> String { SourceKey.wotc.rawValue }
+    func toName() -> String {  name }
+    func toLink() -> String { url }
+    func toVersion() -> String { "5.0.0" }
+    func toDesc() -> String? { nil }
+    func toType() -> String { type }
+    func toSubtype() -> String? { subtype }
+    func toSize() -> String? { size }
+    func toAlignment() -> String? { alignment }
+    func toHitPoints() -> Int { hitPoints }
+    func toHitDice() -> String? { hitPointsRoll }
+    func toArmorClass() -> Int { armorClasses?.first?.value ?? 0 }
+    func toArmorType() -> String? { armorClasses?.first?.type }
+    func toInitiativeModifier() -> Int { 0 }
+    func toSpeed() -> [String] {
+        let walkSpeed = speed?.walk ?? ""
+        let burrowSpeed = speed?.burrow ?? ""
+        let climbSpeed = speed?.climb ?? ""
+        let flySpeed = speed?.fly ?? ""
+        let hoverSpeed = (speed?.hover ?? false) ? "hover" : ""
+        let swimSpeed = speed?.swim ?? ""
+        
+        var speeds: [String] = []
+        if !walkSpeed.isEmpty { speeds.append(walkSpeed) }
+        if !burrowSpeed.isEmpty { speeds.append("burrow: \(burrowSpeed)") }
+        if !climbSpeed.isEmpty { speeds.append("climb: \(climbSpeed)") }
+        if !flySpeed.isEmpty { speeds.append("fly: \(flySpeed)") }
+        if !hoverSpeed.isEmpty { speeds.append("hover") }
+        if !swimSpeed.isEmpty { speeds.append("swim: \(swimSpeed)") }
+        
+        return speeds
+    }
+    func toAbilities() -> Abilities {
+        Abilities(str: strength, dex: dexterity, con: constitution, int: intelligence, wis: wisdom, cha: charisma)
+    }
+    func toDamageVulnerabilities() -> [String]? { damageVulnerabilities }
+    func toDamageResistances() -> [String]? { damageResistances }
+    func toDamageImmunities() -> [String]? { damageImmunities }
+    func toConditionImmunities() -> [String]? {
+        var conditionImms: [String] = []
+        if let conditionImmunities = conditionImmunities {
+            conditionImmunities.forEach { if let name = $0.name { conditionImms.append(name)} }
+        }
+        return nil
+    }
+    func toSenses() -> [String] {
+        let blindsight = senses?.blindsight ?? ""
+        let darkvision = senses?.darkvision ?? ""
+        let passivePerception = senses?.passivePerception
+        let tremorsense = senses?.tremorsense ?? ""
+        let truesight = senses?.truesight ?? ""
+        
+        var senses: [String] = []
+        if !blindsight.isEmpty { senses.append("blindsight: \(blindsight)") }
+        if !darkvision.isEmpty { senses.append("darkvision: \(darkvision)") }
+        if let passivePerception { senses.append("Passive Perception: \(passivePerception)") }
+        if !tremorsense.isEmpty { senses.append("tremorsense: \(tremorsense)") }
+        if !truesight.isEmpty { senses.append("truesight: \(truesight)") }
+        
+        return senses
+    }
+    func toLanguages() -> String { languages }
+    func toSaves() -> [Proficiency]? { extractProficiencies("Saving Throw: ") }
+    func toSkills() -> [Proficiency]? { extractProficiencies("Skill: ") }
+    
+    func toChallengeRating() -> Double { challengeRating }
+    func toProficiencyBonus() -> Int? { nil }
+    func toTraits() -> [ActionTrait]?  {
+        var traits : [ActionTrait] = []
+        
+        if let specialAbilities {
+            for ability in specialAbilities {
+                traits
+                    .append(
+                        ActionTrait(
+                            name: ability.name,
+                            content: ability.desc ?? "",
+                            type: .trait
+                        )
+                    )
+            }
+            
+            return traits
+        }
+        
+        return nil
+    }
+    func toActions() -> [ActionTrait]? {
+        var results = [ActionTrait]()
+        
+        if let actions {
+            for action in actions {
+                results
+                    .append(
+                        ActionTrait(
+                            name: action.name,
+                            content: action.desc ?? "",
+                            type: .action
+                        )
+                    )
+            }
+            
+            return results
+        }
+        
+        return nil
+    }
+    func toBonusActions() -> [ActionTrait]? { nil }
+    func toReactions() -> [ActionTrait]? { nil }
+    func toLegendaryActions() -> [ActionTrait]? {
+        var results = [ActionTrait]()
+        
+        if let legendaryActions {
+            for action in legendaryActions {
+                results
+                    .append(
+                        ActionTrait(
+                            name: action.name,
+                            content: action.desc ?? "",
+                            type: .legendary
+                        )
+                    )
+            }
+            
+            return results
+        }
+        
+        return nil
+    }
+    
+    func toMythicActions() -> [ActionTrait]? { nil }
+    func toCombat() -> String? { nil }
+    func toVariants() -> [MonsterVariant]? { nil }
+    
+    // be sure to add trailing space to namePrefix
+    private func extractProficiencies(_ namePrefix: String) -> [Proficiency]? {
+        var results: [Proficiency] = []
+        
+        if let proficiencies {
+            let profs = proficiencies.filter({ $0.details?.name?.contains(namePrefix) ?? false })
+            
+            if profs.count > 0 {
+                for prof in profs {
+                    let modifier = prof.value
+                    let name = prof.details?.name?.replacingOccurrences(of: namePrefix, with: "") ?? ""
+                    
+                    results.append(Proficiency(name: name.firstCapitalized, modifier: modifier))
+                }
+                
+                return results
+            }
+        }
+        
+        return nil
+    }
+}

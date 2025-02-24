@@ -25,11 +25,11 @@ struct PersistentModelListView<T:PersistentModel>: View where T:Nameable, T:View
             var descriptor:FetchDescriptor<T>?
             
             switch T.self {
-//                case is Monster.Type:
-//                    descriptor = FetchDescriptor<Monster>(
-//                        predicate: nil,
-//                        sortBy: [.init(\.name, order: .forward)]
-//                    ) as? FetchDescriptor<T>
+                case is Monster.Type:
+                    descriptor = FetchDescriptor<Monster>(
+                        predicate: nil,
+                        sortBy: [.init(\.name, order: .forward)]
+                    ) as? FetchDescriptor<T>
                 case is Monster_A5e.Type:
                     descriptor = FetchDescriptor<Monster_A5e>(
                         predicate: nil,

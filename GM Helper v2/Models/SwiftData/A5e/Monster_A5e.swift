@@ -244,75 +244,40 @@ extension Monster_A5e: ViewDataSource {
     }
 }
 
-//extension Monster_A5e: MonstrousDTO {
-//    func toSourceId() -> String { sourceId }
-//    func toSourceKeyRawValue() -> String { SourceKey.a5e.rawValue }
-//    func toName() -> String {  name }
-//    func toLink() -> String { link }
-//    func toVersion() -> String { version }
-//    func toDesc() -> String? { desc }
-//    func toType() -> String { monsterType }
-//    func toSubtype() -> String? { nil }
-//    func toSize() -> String? { nil }
-//    func toAlignment() -> String? { nil }
-//    func toHitPoints() -> Int { hp?.value ?? 0 }
-//    func toHitDice() -> String? { hp?.notes }
-//    func toArmorClass() -> Int { ac?.value ?? 0 }
-//    func toArmorType() -> String? { ac?.notes }
-//    func toInitiativeModifier() -> Int { initiativeModifier }
-//    
-//    func toSpeed() -> [String] { if let speed { return speed } else { return [] }}
-//    func toAbilities() -> Abilities { abilities ?? Abilities() }
-//    func toDamageVulnerabilities() -> [String]? {
-//        if let damageVulnerabilities, damageVulnerabilities.count > 0 { return damageVulnerabilities } else { return nil }
-//    }
-//    func toDamageResistances() -> [String]? {
-//        if let damageResistances, damageResistances.count > 0 { return damageResistances } else { return nil }
-//    }
-//    func toDamageImmunities() -> [String]? {
-//        if let damageImmunities, damageImmunities.count > 0 { return damageImmunities } else { return nil }
-//    }
-//    func toConditionImmunities() -> [String]? {
-//        if let conditionImmunities, conditionImmunities.count > 0 { return conditionImmunities } else { return nil }
-//    }
-//    func toSenses() -> [String] { if let senses { return senses } else { return [] } }
-//    func toLanguages() -> String { languages?.joined(separator: ", ") ?? "" }
-//    func toSaves() -> [Proficiency]? { saves }
-//    func toSkills() -> [Proficiency]? { skills }
-//    func toChallengeRating() -> Double {
-//        switch challenge {
-//            case "1/8": return 1 / 8
-//            case "1/4": return 1 / 4
-//            case "1/2": return 1 / 2
-//            case let value where Double(value) != nil: return Double(value)!
-//            default: return 0.0 // Log this as an error if unexpected
-//        }
-//    }
-//    func toProficiencyBonus() -> Int? { nil }
-//    func toTraits() -> [ActionTrait]?  {
-////        if let traits, traits.count > 0 { return traits } else { return nil }
-//        traits.isEmpty ? nil : traits
-//    }
-//    func toActions() -> [ActionTrait]? {
-////        if let actions, actions.count > 0 { return actions } else { return nil }
-//        actions.isEmpty ? nil : actions
-//    }
-//    func toBonusActions() -> [ActionTrait]? {
-////        if let bonusActions, bonusActions.count > 0 { return bonusActions } else { return nil }
-//        bonusActions.isEmpty ? nil : bonusActions
-//    }
-//    func toReactions() -> [ActionTrait]? {
-////        if let reactions, reactions.count > 0 { return reactions } else { return nil }
-//        reactions.isEmpty ? nil : reactions
-//    }
-//    func toLegendaryActions() -> [ActionTrait]? {
-////        if let legendaryActions, legendaryActions.count > 0 { return legendaryActions } else { return nil }
-//        legendaryActions.isEmpty ? nil : legendaryActions
-//    }
-//    func toMythicActions() -> [ActionTrait]? {
-////        if let mythicActions, mythicActions.count > 0 { return mythicActions } else { return nil }
-//        mythicActions.isEmpty ? nil : mythicActions
-//    }
-//    func toCombat() -> String? { combat }
-//    func toVariants() -> [MonsterVariant]? { variants }
-//}
+extension Monster_A5e: MonstrousDTO {
+    func toSourceId() -> String { sourceId }
+    func toSourceKeyRawValue() -> String { SourceKey.a5e.rawValue }
+    func toName() -> String {  name }
+    func toLink() -> String { link }
+    func toVersion() -> String { version }
+    func toDesc() -> String? { desc }
+    func toType() -> String { monsterType }
+    func toSubtype() -> String? { nil }
+    func toSize() -> String? { nil }
+    func toAlignment() -> String? { nil }
+    func toHitPoints() -> Int { hp?.value ?? 0 }
+    func toHitDice() -> String? { hp?.notes }
+    func toArmorClass() -> Int { ac?.value ?? 0 }
+    func toArmorType() -> String? { ac?.notes }
+    func toInitiativeModifier() -> Int { initiativeModifier }
+    func toSpeed() -> [String] { if let speed { return speed } else { return [] }}
+    func toAbilities() -> Abilities { abilities ?? Abilities() }
+    func toDamageVulnerabilities() -> [String]? { damageVulnerabilities?.isEmpty ?? true ? nil : damageVulnerabilities }
+    func toDamageResistances() -> [String]? {  damageResistances?.isEmpty ?? true ? nil : damageResistances }
+    func toDamageImmunities() -> [String]? { damageImmunities?.isEmpty ?? true ? nil : damageImmunities }
+    func toConditionImmunities() -> [String]? { conditionImmunities?.isEmpty ?? true ? nil : conditionImmunities }
+    func toSenses() -> [String] { if let senses { return senses } else { return [] } }
+    func toLanguages() -> String { languages?.joined(separator: ", ") ?? "" }
+    func toSaves() -> [Proficiency]? { saves }
+    func toSkills() -> [Proficiency]? { skills }
+    func toChallengeRating() -> Double { challengeRating }
+    func toProficiencyBonus() -> Int? { nil }
+    func toTraits() -> [ActionTrait]?  { traits.isEmpty ? nil : traits }
+    func toActions() -> [ActionTrait]? { actions.isEmpty ? nil : actions }
+    func toBonusActions() -> [ActionTrait]? { bonusActions.isEmpty ? nil : bonusActions }
+    func toReactions() -> [ActionTrait]? { reactions.isEmpty ? nil : reactions }
+    func toLegendaryActions() -> [ActionTrait]? { legendaryActions.isEmpty ? nil : legendaryActions }
+    func toMythicActions() -> [ActionTrait]? { mythicActions.isEmpty ? nil : mythicActions }
+    func toCombat() -> String? { combat }
+    func toVariants() -> [MonsterVariant]? { variants }
+}
