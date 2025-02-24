@@ -156,7 +156,7 @@ class Monster_A5e: Decodable, Nameable {
         return !mythicActions.isEmpty
     }
     
-// Helper properties to filter actionTraits by type
+    // Helper properties to filter actionTraits by type
     var saves: [Proficiency] {
         proficiencies.filter { $0.type == .savingThrow }
     }
