@@ -27,7 +27,7 @@ class ActionTrait: Decodable, CustomStringConvertible {
     var type: ActionType // New property to categorize the action/trait
     
 //    @Relationship(deleteRule: .cascade) var monster: Monstere? // Single relationship
-//    @Relationship(deleteRule: .cascade) var monsterA5e: Monster_A5e? // Single relationship
+    @Relationship(deleteRule: .cascade) var monsterA5e: Monster_A5e? // Single relationship
     @Relationship(deleteRule: .cascade) var monsterVariant: MonsterVariant? // Single relationship
 //
 //    var monsterAction:Monster? = nil

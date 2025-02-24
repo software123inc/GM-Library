@@ -19,7 +19,7 @@ class MonsterVariant: Decodable, CustomStringConvertible, Nameable {
     @Relationship(deleteRule: .cascade, inverse: \ActionTrait.monsterVariant) var traits: [ActionTrait]? = []
     
 //    @Relationship(deleteRule: .cascade) var monster: Monstere? // Single relationship
-//    @Relationship(deleteRule: .cascade) var monsterA5e: Monster_A5e? // Single relationship
+    @Relationship(deleteRule: .cascade) var monsterA5e: Monster_A5e? // Single relationship
     
     enum CodingKeys: String, CodingKey {
         case name = "Name"

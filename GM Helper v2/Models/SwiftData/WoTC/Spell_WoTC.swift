@@ -101,19 +101,19 @@ class Spell_WoTC: Decodable, Nameable {
     }
 }
 
-//extension Spell_WoTC: ViewDataSource {
-//    static func listViewContent (_ listItem: Any) -> AnyView {
-//        let spell = listItem as! Spell_WoTC
-//        return AnyView(
-//            NavigationLink(destination: SpellWoTCDetailView(spell: spell)) {
-//                VStack(alignment: .leading) {
-//                    Text(spell.name)
-//                        .font(.headline)
-//                    Text("Level \(spell.level) - \(spell.school?.name ?? "")")
-//                        .font(.subheadline)
-//                        .foregroundStyle(.gray)
-//                }
-//            }
-//        )
-//    }
-//}
+extension Spell_WoTC: ViewDataSource {
+    static func listViewContent (_ listItem: Any) -> AnyView {
+        let spell = listItem as! Spell_WoTC
+        return AnyView(
+            NavigationLink(destination: SpellWoTCDetailView(spell: spell)) {
+                VStack(alignment: .leading) {
+                    Text(spell.name)
+                        .font(.headline)
+                    Text("Level \(spell.level) - \(spell.school?.name ?? "")")
+                        .font(.subheadline)
+                        .foregroundStyle(.gray)
+                }
+            }
+        )
+    }
+}
