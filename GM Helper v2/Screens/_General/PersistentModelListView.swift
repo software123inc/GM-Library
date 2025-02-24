@@ -30,11 +30,11 @@ struct PersistentModelListView<T:PersistentModel>: View where T:Nameable, T:View
 //                        predicate: nil,
 //                        sortBy: [.init(\.name, order: .forward)]
 //                    ) as? FetchDescriptor<T>
-//                case is Monster_A5e.Type:
-//                    descriptor = FetchDescriptor<Monster_A5e>(
-//                        predicate: nil,
-//                        sortBy: [.init(\.name, order: .forward)]
-//                    ) as? FetchDescriptor<T>
+                case is Monster_A5e.Type:
+                    descriptor = FetchDescriptor<Monster_A5e>(
+                        predicate: nil,
+                        sortBy: [.init(\.name, order: .forward)]
+                    ) as? FetchDescriptor<T>
 //                case is Monster_WoTC.Type:
 //                    descriptor = FetchDescriptor<Monster_WoTC>(
 //                        predicate: nil,
@@ -45,11 +45,11 @@ struct PersistentModelListView<T:PersistentModel>: View where T:Nameable, T:View
                         predicate: nil,
                         sortBy: [.init(\.name, order: .forward)]
                     ) as? FetchDescriptor<T>
-//                case is Spell_WoTC.Type:
-//                    descriptor = FetchDescriptor<Spell_WoTC>(
-//                        predicate: nil,
-//                        sortBy: [.init(\.name, order: .forward)]
-//                    ) as? FetchDescriptor<T>
+                case is Spell_WoTC.Type:
+                    descriptor = FetchDescriptor<Spell_WoTC>(
+                        predicate: nil,
+                        sortBy: [.init(\.name, order: .forward)]
+                    ) as? FetchDescriptor<T>
                 default:
                     break
             }

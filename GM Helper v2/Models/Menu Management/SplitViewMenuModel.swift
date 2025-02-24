@@ -44,14 +44,14 @@ struct SplitViewMenuModel: MenuItemProvider {
 
 class SplitViewSectionMenuModel {
     let sectionMenuItems: [SectionMenuItem] = {
-//        let monsterMenuItems = [
-//            MenuItem(
-//                name: "Level Up A5e",
-//                image: "linea-mini",
-//                contentView: AnyView(
-//                    PersistentModelListView<Monster_A5e>(navigationTitle: "Monsters A5e")
-//                )
-//            ),
+        let monsterMenuItems = [
+            MenuItem(
+                name: "Level Up A5e",
+                image: "linea-mini",
+                contentView: AnyView(
+                    PersistentModelListView<Monster_A5e>(navigationTitle: "Monsters A5e")
+                )
+            ),
 //            MenuItem(
 //                name: "WoTC 2014",
 //                image: "linea-mini",
@@ -67,7 +67,7 @@ class SplitViewSectionMenuModel {
 //                )
 //                
 //            )
-//        ]
+        ]
         
         let spellMenuItems = [
             MenuItem(
@@ -79,15 +79,15 @@ class SplitViewSectionMenuModel {
                     )
                 )
             ),
-//            MenuItem(
-//                name: "Spells WoTC",
-//                image: "linea-mini",
-//                contentView: AnyView(
-//                    PersistentModelListView<Spell_WoTC>(
-//                        navigationTitle: "Spells WoTC"
-//                    )
-//                )
-//            )
+            MenuItem(
+                name: "Spells WoTC",
+                image: "linea-mini",
+                contentView: AnyView(
+                    PersistentModelListView<Spell_WoTC>(
+                        navigationTitle: "Spells WoTC"
+                    )
+                )
+            )
         ]
         
         let settingsMenuItems = [
@@ -112,7 +112,7 @@ class SplitViewSectionMenuModel {
         ]
         
         let sectionItems = [
-//            SectionMenuItem(name: "Monsters", menuItems: monsterMenuItems),
+            SectionMenuItem(name: "Monsters", menuItems: monsterMenuItems),
             SectionMenuItem(name: "Spells", menuItems: spellMenuItems),
             SectionMenuItem(name: "", menuItems: settingsMenuItems),
         ]
