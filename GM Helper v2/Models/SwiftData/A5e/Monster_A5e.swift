@@ -12,7 +12,7 @@ import SwiftData
 // MARK: - Monster Model
 @Model
 class Monster_A5e: Decodable, Nameable {
-//    #Index<Monster_A5e>([\.id], [\.sourceId], [\.name], [\.monsterType], [\.challenge])
+    #Index<Monster_A5e>([\.id], [\.sourceId], [\.name], [\.monsterType], [\.challenge])
     
     var id: UUID = UUID()
     var sourceId: String = ""
@@ -34,10 +34,9 @@ class Monster_A5e: Decodable, Nameable {
     var conditionImmunities: [String]? = []
     var senses: [String]? = []
     var languages: [String]? = []
-//    @Relationship(deleteRule: .cascade, inverse: \Proficiency.monsterA5e) private var proficiencies: [Proficiency] = [] // Single collection for all proficiencies; GROK 3
+    @Relationship(deleteRule: .cascade, inverse: \Proficiency.monsterA5e) private var proficiencies: [Proficiency] = [] // Single collection for all proficiencies; GROK 3
     var challenge: String = ""
-//    @Relationship(deleteRule: .cascade, inverse: \ActionTrait.monsterA5e) private var actionTraits: [ActionTrait] = [] // Single collection for all traits/actions; GROK 3
-//    
+    @Relationship(deleteRule: .cascade, inverse: \ActionTrait.monsterA5e) private var actionTraits: [ActionTrait] = [] // Single collection for all traits/actions; GROK 3
     var desc: String?
     var player: String?
     var imageURL: String?
@@ -111,38 +110,38 @@ class Monster_A5e: Decodable, Nameable {
         self.variants = try container.decodeIfPresent([MonsterVariant].self, forKey: .variants) // Keep nil for optional content; Grok
         
         // Decode each proficiency and map to Proficiency with appropriate ProficiencyType; GROK 3
-//        var allProficiencies: [Proficiency] = []
-//        if let saves = try container.decodeIfPresent([Proficiency].self, forKey: .saves) {
-//            allProficiencies.append(contentsOf: saves.map { $0.type = .savingThrow; return $0 })
-//        }
-//        if let skills = try container.decodeIfPresent([Proficiency].self, forKey: .skills) {
-//            allProficiencies.append(contentsOf: skills.map { $0.type = .skill; return $0 })
-//        }
-//        
-//        proficiencies = allProficiencies
-//        
-//        // Decode each category and map to ActionTraits with appropriate ActionType; GROK 3
-//        var allActionTraits: [ActionTrait] = []
-//        if let traits = try container.decodeIfPresent([ActionTrait].self, forKey: .traits) {
-//            allActionTraits.append(contentsOf: traits.map { $0.type = .trait; return $0 })
-//        }
-//        if let actions = try container.decodeIfPresent([ActionTrait].self, forKey: .actions) {
-//            allActionTraits.append(contentsOf: actions.map { $0.type = .action; return $0 })
-//        }
-//        if let bonusActions = try container.decodeIfPresent([ActionTrait].self, forKey: .bonusActions) {
-//            allActionTraits.append(contentsOf: bonusActions.map { $0.type = .bonusAction; return $0 })
-//        }
-//        if let reactions = try container.decodeIfPresent([ActionTrait].self, forKey: .reactions) {
-//            allActionTraits.append(contentsOf: reactions.map { $0.type = .reaction; return $0 })
-//        }
-//        if let legendaryActions = try container.decodeIfPresent([ActionTrait].self, forKey: .legendaryActions) {
-//            allActionTraits.append(contentsOf: legendaryActions.map { $0.type = .legendary; return $0 })
-//        }
-//        if let mythicActions = try container.decodeIfPresent([ActionTrait].self, forKey: .mythicActions) {
-//            allActionTraits.append(contentsOf: mythicActions.map { $0.type = .mythic; return $0 })
-//        }
-//        
-//        self.actionTraits = allActionTraits
+        var allProficiencies: [Proficiency] = []
+        if let saves = try container.decodeIfPresent([Proficiency].self, forKey: .saves) {
+            allProficiencies.append(contentsOf: saves.map { $0.type = .savingThrow; return $0 })
+        }
+        if let skills = try container.decodeIfPresent([Proficiency].self, forKey: .skills) {
+            allProficiencies.append(contentsOf: skills.map { $0.type = .skill; return $0 })
+        }
+        
+        proficiencies = allProficiencies
+        
+        // Decode each category and map to ActionTraits with appropriate ActionType; GROK 3
+        var allActionTraits: [ActionTrait] = []
+        if let traits = try container.decodeIfPresent([ActionTrait].self, forKey: .traits) {
+            allActionTraits.append(contentsOf: traits.map { $0.type = .trait; return $0 })
+        }
+        if let actions = try container.decodeIfPresent([ActionTrait].self, forKey: .actions) {
+            allActionTraits.append(contentsOf: actions.map { $0.type = .action; return $0 })
+        }
+        if let bonusActions = try container.decodeIfPresent([ActionTrait].self, forKey: .bonusActions) {
+            allActionTraits.append(contentsOf: bonusActions.map { $0.type = .bonusAction; return $0 })
+        }
+        if let reactions = try container.decodeIfPresent([ActionTrait].self, forKey: .reactions) {
+            allActionTraits.append(contentsOf: reactions.map { $0.type = .reaction; return $0 })
+        }
+        if let legendaryActions = try container.decodeIfPresent([ActionTrait].self, forKey: .legendaryActions) {
+            allActionTraits.append(contentsOf: legendaryActions.map { $0.type = .legendary; return $0 })
+        }
+        if let mythicActions = try container.decodeIfPresent([ActionTrait].self, forKey: .mythicActions) {
+            allActionTraits.append(contentsOf: mythicActions.map { $0.type = .mythic; return $0 })
+        }
+        
+        self.actionTraits = allActionTraits
     }
     
     // MARK: - Computed Properties

@@ -15,7 +15,7 @@ enum ProficiencyType: String, Codable {
 
 @Model
 class Proficiency: Decodable, CustomStringConvertible {
-    #Index<Proficiency>([\.name], [\.type])
+    #Index<Proficiency>([\.name])
     var id:UUID = UUID()
     var name: String = "unspecified proficiency"
     var modifier: Int = 0
@@ -32,8 +32,8 @@ class Proficiency: Decodable, CustomStringConvertible {
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
-        self.name = try container.decode(String.self, forKey: .name)
-        self.modifier = try container.decode(Int.self, forKey: .modifier)
+        self.name = try container.decodeIfPresent(String.self, forKey: .name) ?? "unspecified proficiency"
+        self.modifier = try container.decodeIfPresent(Int.self, forKey: .modifier) ?? 0
         self.type = try container.decodeIfPresent(ProficiencyType.self, forKey: .type)
     }
     
