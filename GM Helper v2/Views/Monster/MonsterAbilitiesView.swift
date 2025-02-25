@@ -31,10 +31,8 @@ struct MonsterAbilitiesView: View {
         var body: some View {
             VStack {
                 Text(name.localizedUppercase).fontWeight(.bold)
-                HStack {
-                    Text(String(value))
-                    Text(rollModifier(value: value))
-                }.font(.footnote)
+                Text(String(value))
+                Text(rollModifier(value: value))
             }
             .frame(maxWidth: .infinity)
         }
