@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftData
+import SwiftUI
 
 class AppCommon {
     static let shared = AppCommon()
@@ -22,4 +23,7 @@ class AppCommon {
         Spell_WoTC.self
     ])
     
+    var isLandscape: Bool {
+        UIDevice.current.orientation.isLandscape
+    }
 }

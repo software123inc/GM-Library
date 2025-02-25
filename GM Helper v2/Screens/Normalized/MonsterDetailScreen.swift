@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MonsterDetailScreen: View {
+    @Environment(\.colorScheme) var colorScheme
     var monster: Monster
     
     var body: some View {

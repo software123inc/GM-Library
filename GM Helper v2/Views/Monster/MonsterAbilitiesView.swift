@@ -25,14 +25,23 @@ struct MonsterAbilitiesView: View {
     }
     
     struct ScoreView: View {
+        @Environment(\.horizontalSizeClass) private var horizontalClass
         let name:String
         let value:Int
         
         var body: some View {
             VStack {
                 Text(name.localizedUppercase).fontWeight(.bold)
-                Text(String(value))
-                Text(rollModifier(value: value))
+                if horizontalClass == .compact && !AppCommon.shared.isLandscape {
+                    Text(String(value))
+                    Text(rollModifier(value: value))
+                }
+                else {
+                    HStack {
+                        Text(String(value))
+                        Text(rollModifier(value: value))
+                    }
+                }
             }
             .frame(maxWidth: .infinity)
         }

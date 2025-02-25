@@ -6,11 +6,13 @@
 //
 //  https://stackoverflow.com/questions/58759987/how-do-you-check-if-swiftui-is-in-preview-mode/
 //  https://medium.com/onlyswiftui/fetch-swiftdata-programmatically-f9639f14e6f8
+//  https://stackoverflow.com/questions/56517904/how-do-i-modify-the-background-color-of-a-list-in-swiftui
 
 import SwiftUI
 import SwiftData
 
 struct PersistentModelListView<T:PersistentModel>: View where T:Nameable, T:ViewDataSource {
+    @Environment(\.colorScheme) var colorScheme
     var navigationTitle:String
     @Query private var listItems: [T]
     @State private var search: String = ""
@@ -65,10 +67,14 @@ struct PersistentModelListView<T:PersistentModel>: View where T:Nameable, T:View
     var body: some View {
         NavigationStack {
             List(filteredListItems) { item in
-                T.listViewContent(item)
+                T.listViewContent(item, colorScheme)
+                    .listRowBackground(Color.clear)
+                    .listRowSeparator(.hidden)
             }
             .searchable(text: $search)
             .listStyle(.plain)
+            .background(Color.buff)
+            .scrollContentBackground(.hidden)
             .navigationTitle(navigationTitle)
         }
     }
@@ -90,17 +96,17 @@ extension PersistentModelListView {
 //    }
 //}
 //
-//#Preview("A5e Monster", traits: .sampleData) {
-//    NavigationStack {
-//        PersistentModelListView<Monster_A5e>(navigationTitle: "Monsters A5e")
-//    }
-//}
-
-#Preview("A5e Spells", traits: .sampleData) {
+#Preview("A5e Monster", traits: .sampleData) {
     NavigationStack {
-        PersistentModelListView<Spell_Ae5>(navigationTitle: "Spells A5e")
+        PersistentModelListView<Monster_A5e>(navigationTitle: "Monsters A5e")
     }
 }
+
+//#Preview("A5e Spells", traits: .sampleData) {
+//    NavigationStack {
+//        PersistentModelListView<Spell_Ae5>(navigationTitle: "Spells A5e")
+//    }
+//}
 //
 //#Preview("WoTC Monster", traits: .sampleData) {
 //    NavigationStack {

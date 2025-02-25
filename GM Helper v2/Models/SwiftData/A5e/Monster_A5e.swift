@@ -214,27 +214,29 @@ extension Monster_A5e: Monstrous {
 }
 
 extension Monster_A5e: ViewDataSource {
-    static func listViewContent (_ listItem: Any) -> AnyView {
+    static func listViewContent (_ listItem: Any, _ colorScheme:ColorScheme = .light) -> AnyView {
         let monster = listItem as! Monster_A5e
         
-        if let normalizedMonster = monster.normalizedMonster {            
+        if let normalizedMonster = monster.normalizedMonster {
             return AnyView(
                 NavigationLink(destination: MonsterDetailScreen(monster: normalizedMonster)) {
                     HStack {
-//                        if let image = monster.imageURL, image.count > 0 {
-//                            Image(image)
-//                                .frame(width: 50, height: 50)
-//                                .clipShape(Circle())
-//                        }
-//                        else {
-                            Circle()
-                            .foregroundStyle(.a5EGreen)
-                                .frame(width: 50, height: 50)
-//                        }
+                        //                        if let image = monster.imageURL, image.count > 0 {
+                        //                            Image(image)
+                        //                                .frame(width: 50, height: 50)
+                        //                                .clipShape(Circle())
+                        //                        }
+                        //                        else {
+                        Circle()
+                            .foregroundStyle(.gray)
+                            .frame(width: 50, height: 50)
+                        //                        }
                         
                         VStack(alignment: .leading) {
                             Text(monster.name).font(.headline)
-                            Text("Challenge: \(monster.challenge)").font(.subheadline).foregroundStyle(.gray)
+                            Text("Challenge: \(monster.challenge)")
+                                .font(.subheadline)
+                                .foregroundStyle(colorScheme == .dark ? .white : .gray)
                         }
                         Spacer()
                         if monster.isLegendary {

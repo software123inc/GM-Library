@@ -115,7 +115,7 @@ class Monster_WoTC: Decodable, Nameable {
 }
 
 extension Monster_WoTC: Monstrous, ViewDataSource {
-    static func listViewContent (_ listItem: Any) -> AnyView {
+    static func listViewContent (_ listItem: Any, _ colorScheme:ColorScheme = .light) -> AnyView {
         let monster = listItem as! Monster_WoTC
         
         
@@ -133,14 +133,14 @@ extension Monster_WoTC: Monstrous, ViewDataSource {
 //                            .clipShape(RoundedRectangle(cornerRadius: 8))
 //                        }
                         Circle()
-                            .foregroundStyle(.red)
+                            .foregroundStyle(.gray)
                             .frame(width: 50, height: 50)
                         VStack(alignment: .leading) {
                             Text(monster.name)
                                 .font(.headline)
                             Text(monster.type.capitalized)
                                 .font(.subheadline)
-                                .foregroundColor(.secondary)
+                                .foregroundStyle(colorScheme == .dark ? .white : .gray)
                         }
                     }
                 }
