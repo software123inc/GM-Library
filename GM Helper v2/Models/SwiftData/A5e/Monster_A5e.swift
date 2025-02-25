@@ -42,6 +42,7 @@ class Monster_A5e: Decodable, Nameable {
     var imageURL: String?
     var combat: String?
     @Relationship(deleteRule: .cascade, inverse: \MonsterVariant.monsterA5e) var variants: [MonsterVariant]? = []
+    @Relationship(deleteRule: .cascade, inverse: \Monster.monsterA5e) var normalizedMonster: Monster?
     
     enum CodingKeys: String, CodingKey {
         case sourceId = "Id"
@@ -216,31 +217,36 @@ extension Monster_A5e: ViewDataSource {
     static func listViewContent (_ listItem: Any) -> AnyView {
         let monster = listItem as! Monster_A5e
         
-        return AnyView(
-            NavigationLink(destination: MonsterA5eDetailView(monster: monster)) {
-                HStack {
-                    if let image = monster.imageURL, image.count > 0 {
-                        Image(image)
-                            .frame(width: 50, height: 50)
-                            .clipShape(Circle())
-                    }
-                    else {
-                        Circle()
-                            .foregroundStyle(.clear)
-                            .frame(width: 50, height: 50)
-                    }
-                    
-                    VStack(alignment: .leading) {
-                        Text(monster.name).font(.headline)
-                        Text("Challenge: \(monster.challenge)").font(.subheadline).foregroundStyle(.gray)
-                    }
-                    Spacer()
-                    if monster.isLegendary {
-                        Image(systemName: "star.fill").foregroundStyle(.yellow)
+        if let normalizedMonster = monster.normalizedMonster {            
+            return AnyView(
+                NavigationLink(destination: MonsterDetailScreen(monster: normalizedMonster)) {
+                    HStack {
+//                        if let image = monster.imageURL, image.count > 0 {
+//                            Image(image)
+//                                .frame(width: 50, height: 50)
+//                                .clipShape(Circle())
+//                        }
+//                        else {
+                            Circle()
+                            .foregroundStyle(.a5EGreen)
+                                .frame(width: 50, height: 50)
+//                        }
+                        
+                        VStack(alignment: .leading) {
+                            Text(monster.name).font(.headline)
+                            Text("Challenge: \(monster.challenge)").font(.subheadline).foregroundStyle(.gray)
+                        }
+                        Spacer()
+                        if monster.isLegendary {
+                            Image(systemName: "star.fill").foregroundStyle(.yellow)
+                        }
                     }
                 }
-            }
-        )
+            )
+            
+        } else {
+            return AnyView(EmptyView())
+        }
     }
 }
 

@@ -8,7 +8,7 @@
 import Foundation
 
 protocol MonstrousDTO {
-    func toMonster() -> Monster
+    func toMonster(monsterA5e:Monster_A5e?, monsterWoTC:Monster_WoTC?) -> Monster
     
     func toSourceId() -> String
     func toSourceKeyRawValue() -> String
@@ -48,7 +48,7 @@ protocol MonstrousDTO {
 }
 
 extension MonstrousDTO {
-    func toMonster() -> Monster {
+    func toMonster(monsterA5e:Monster_A5e? = nil, monsterWoTC:Monster_WoTC? = nil) -> Monster {
         Monster(
             sourceId: toSourceId(),
             sourceKeyRawValue: toSourceKeyRawValue(),
@@ -84,7 +84,9 @@ extension MonstrousDTO {
             legendaryActions: toLegendaryActions(),
             mythicActions: toMythicActions(),
             combat: toCombat(),
-            variants: toVariants()
+            variants: toVariants(),
+            monsterA5e: monsterA5e,
+            monsterWoTC: monsterWoTC
         )
     }
 }

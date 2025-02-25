@@ -27,7 +27,7 @@ enum EnvironmentKey: String {
 }
 
 enum SourceKey: String {
-    case a5e
-    case wotc
-    case homebrew
+    case a5e = "A5e"
+    case wotc = "WoTC"
+    case homebrew = "Homebrew"
 }

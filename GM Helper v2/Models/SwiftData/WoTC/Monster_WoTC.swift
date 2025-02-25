@@ -54,6 +54,7 @@ class Monster_WoTC: Decodable, Nameable {
     var image: String?
     var url: String = ""
 
+    @Relationship(deleteRule: .cascade, inverse: \Monster.monsterWoTC) var normalizedMonster: Monster?
 
     enum CodingKeys: String, CodingKey {
         case sourceId = "index"
@@ -116,28 +117,38 @@ class Monster_WoTC: Decodable, Nameable {
 extension Monster_WoTC: Monstrous, ViewDataSource {
     static func listViewContent (_ listItem: Any) -> AnyView {
         let monster = listItem as! Monster_WoTC
-        return AnyView(
-            NavigationLink(destination: MonsterWotcDetailView(monster: monster)) {
-                HStack {
-                    if let imageUrl = monster.image {
-                        AsyncImage(url: URL(string: imageUrl)) { image in
-                            image.resizable()
-                        } placeholder: {
-                            Color.gray
+        
+        
+        if let normalizedMonster = monster.normalizedMonster {
+            return AnyView(
+                NavigationLink(destination: MonsterDetailScreen(monster: normalizedMonster)) {
+                    HStack {
+//                        if let imageUrl = monster.image {
+//                            AsyncImage(url: URL(string: imageUrl)) { image in
+//                                image.resizable()
+//                            } placeholder: {
+//                                Color.gray
+//                            }
+//                            .frame(width: 50, height: 50)
+//                            .clipShape(RoundedRectangle(cornerRadius: 8))
+//                        }
+                        Circle()
+                            .foregroundStyle(.red)
+                            .frame(width: 50, height: 50)
+                        VStack(alignment: .leading) {
+                            Text(monster.name)
+                                .font(.headline)
+                            Text(monster.type.capitalized)
+                                .font(.subheadline)
+                                .foregroundColor(.secondary)
                         }
-                        .frame(width: 50, height: 50)
-                        .clipShape(RoundedRectangle(cornerRadius: 8))
-                    }
-                    VStack(alignment: .leading) {
-                        Text(monster.name)
-                            .font(.headline)
-                        Text(monster.type.capitalized)
-                            .font(.subheadline)
-                            .foregroundColor(.secondary)
                     }
                 }
-            }
-        )
+            )
+        }
+        else {
+            return AnyView(EmptyView())
+        }
     }
 }
 

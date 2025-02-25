@@ -35,8 +35,8 @@ let samplePreviewContainer: ModelContainer = {
     let spellsA5e = (PreviewData.loadJSON(forResource: JsonResourceKey.spellsA5e.rawValue) as [Spell_Ae5]).prefix(5)
     let spellsWoTC = (PreviewData.loadJSON(forResource: JsonResourceKey.spellsWoTC.rawValue) as [Spell_WoTC]).prefix(5)
     
-    let ma:[Monster] = monstersA5e.compactMap({ m in m.toMonster()})
-    let mw:[Monster] = monstersWoTC.compactMap({ m in m.toMonster()})
+    let ma:[Monster] = monstersA5e.compactMap({ m in m.toMonster(monsterA5e: m)})
+    let mw:[Monster] = monstersWoTC.compactMap({ m in m.toMonster(monsterWoTC: m)})
     
     var combined: [any PersistentModel] = ma + mw + Array(monstersA5e) + Array(monstersWoTC) + Array(spellsA5e) + Array(spellsWoTC)
     

@@ -43,6 +43,10 @@ class Monster: Nameable {
     @Relationship(deleteRule: .cascade, inverse: \MonsterVariant.monster) var variants: [MonsterVariant]? = []
 //    @Attribute(.externalStorage) var imageData: Data? = nil
     
+    
+    @Relationship(deleteRule: .cascade) var monsterA5e: Monster_A5e? // Single relationship
+    @Relationship(deleteRule: .cascade) var monsterWoTC: Monster_WoTC? // Single relationship
+    
     init(
         id: UUID = UUID(),
         sourceId: String = "",
@@ -79,7 +83,9 @@ class Monster: Nameable {
         legendaryActions: [ActionTrait]? = nil,
         mythicActions: [ActionTrait]? = nil,
         combat: String? = nil,
-        variants: [MonsterVariant]? = nil
+        variants: [MonsterVariant]? = nil,
+        monsterA5e: Monster_A5e? = nil,
+        monsterWoTC: Monster_WoTC? = nil
     ) {
         self.id = id
         self.sourceId = sourceId
@@ -109,6 +115,9 @@ class Monster: Nameable {
         self.proficiencyBonus = proficiencyBonus
         self.combat = combat
         self.variants = variants
+        
+        self.monsterA5e = monsterA5e
+        self.monsterWoTC = monsterWoTC
         
         var allProficiencies: [Proficiency] = []
         if let saves {
@@ -179,6 +188,32 @@ class Monster: Nameable {
     }
     var mythicActions: [ActionTrait] {
         actionTraits.filter { $0.type == .mythic }
+    }
+    
+    var challengeText: String {
+        let cr:String
+        
+        if challengeRating == 0 {
+            cr = "0"
+        }
+        else if challengeRating <= 0.125 {
+            cr = "1/8"
+        }
+        else if challengeRating <= 0.25 {
+            cr = "1/4"
+        }
+        else if challengeRating <= 0.5 {
+            cr = "1/2"
+        }
+        else {
+            cr = String(Int(challengeRating))
+        }
+        
+        return "CHALLENGE \(cr)"
+    }
+    
+    var allSpeeds: String {
+        self.speed.joined(separator: ", ")
     }
 }
 
