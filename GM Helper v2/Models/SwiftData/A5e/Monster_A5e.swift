@@ -12,7 +12,7 @@ import SDWebImageSwiftUI
 
 // MARK: - Monster Model
 @Model
-class Monster_A5e: Decodable, Nameable {
+class Monster_A5e: Decodable, Nameable, ImageSource {
     #Index<Monster_A5e>([\.id], [\.sourceId], [\.name], [\.monsterType], [\.challenge])
     
     var id: UUID = UUID()

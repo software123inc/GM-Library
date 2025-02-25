@@ -15,20 +15,7 @@ struct MonsterDetailScreen: View {
     var body: some View {
         ScrollView {
             MonsterDetailHeaderView(monster: monster)
-            WebImage(
-                url: URL(string: "https://5e.tools/img/bestiary/MM/\(monster.name.replacingOccurrences(of: " ", with: "%20")).webp"),
-                content: { image in
-                    image
-                },
-                placeholder: {
-                    // if image loading or not found
-                    EmptyView()
-                })
-            .resizable()
-            .aspectRatio(contentMode: .fill)
-            .edgesIgnoringSafeArea(.all)
-//            .frame(width: 100, height: 100)
-            .clipped()
+            MonsterImageView(monster: monster)
             MonsterNarrativeView(monster: monster)
             MonsterDefensesView(monster: monster)
             MonsterAbilitiesView(monster: monster)
@@ -40,12 +27,33 @@ struct MonsterDetailScreen: View {
     }
 }
 
+struct MonsterImageView: View {
+    @Environment(\.colorScheme) var colorScheme
+    @State private var isExpanded: Bool = false
+    
+    var monster: Monster
+        
+    var body: some View {
+        DisclosureGroup(isExpanded: $isExpanded) {
+            monster.mmImage()
+        }
+        label: {
+            Text("Portrait")
+                .font(.headline)
+                .italic()
+                .foregroundStyle(colorScheme == .dark ? .white : .a5EGreen)
+        }
+        .tint(colorScheme == .dark ? .white : .a5EGreen)
+    }
+}
+
+
 #Preview(traits: .sampleData) {
     NavigationStack {
         MonsterDetailScreen(monster: (PreviewData
             .loadJSON(
-                forResource: JsonResourceKey.monstersA5e.rawValue
-            ).first! as Monster_A5e).toMonster()
+                forResource: JsonResourceKey.monstersWoTC.rawValue
+            ).first! as Monster_WoTC).toMonster()
         )
     }
 }

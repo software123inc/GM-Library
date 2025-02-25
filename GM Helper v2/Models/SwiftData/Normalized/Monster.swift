@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftData
 
 @Model
-class Monster: Nameable {
+class Monster: Nameable, ImageSource {
     #Index<Monster>([\.id], [\.sourceId], [\.name], [\.type], [\.challengeRating])
     var id = UUID()
     var sourceId: String = ""

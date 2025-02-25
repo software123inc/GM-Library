@@ -11,14 +11,7 @@ import SwiftUI
 struct ThreeColumnSplitViewSectioned: View {
     @State private var selectedCategoryId: MenuItem.ID?
     @State private var selectedItem: MenuItem?
-//    @State private var visibility: NavigationSplitViewVisibility = .detailOnly
-    
-    let sv:some View = LicenseView()
-    
-    var sv2 : AnyView = AnyView(LicenseView())
-    
     private var dataModel = SplitViewSectionMenuModel()
-    //    private var dataModel = CoffeeEquipmenModel()
     
     var body: some View {
         NavigationSplitView {
@@ -92,7 +85,6 @@ struct ThreeColumnSplitViewSectioned: View {
                     if let detailView = selectedItem.closureView {
                         GreedyContainerView {
                             detailView(selectedItem.id)
-                            
                         }
                     }
                     else {

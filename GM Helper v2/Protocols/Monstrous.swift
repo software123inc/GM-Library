@@ -5,6 +5,8 @@
 //  Created by Tim W. Newton on 2/18/25.
 //
 
+import Foundation
+
 protocol Monstrous {
     var averageDamagePerRound: Int { get }
     var isLegendary: Bool { get }

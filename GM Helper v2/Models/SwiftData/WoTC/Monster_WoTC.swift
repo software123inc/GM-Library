@@ -11,7 +11,7 @@ import SwiftUI
 import SDWebImageSwiftUI
 
 @Model
-class Monster_WoTC: Decodable, Nameable {
+class Monster_WoTC: Decodable, Nameable, ImageSource {
     #Index<Monster_WoTC>(
         [\.id],
         [\.sourceId],
@@ -124,21 +124,22 @@ extension Monster_WoTC: Monstrous, ViewDataSource {
             return AnyView(
                 NavigationLink(destination: MonsterDetailScreen(monster: normalizedMonster)) {
                     HStack {
-                        WebImage(
-                            url: URL(string: "https://5e.tools/img/bestiary/tokens/MM/\(monster.name.replacingOccurrences(of: " ", with: "%20")).webp"),
-                            content: { image in
-                                image
-                            },
-                            placeholder: {
-                                // if image not found
-                                Circle()
-                                    .foregroundStyle(.gray)
-                            })
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .edgesIgnoringSafeArea(.all)
-                            .frame(width: 45, height: 45)
-                            .clipped()
+                        monster.mmImageToken()
+//                        WebImage(
+//                            url: monster.mmImageUrl,
+//                            content: { image in
+//                                image
+//                            },
+//                            placeholder: {
+//                                // if image not found
+//                                Circle()
+//                                    .foregroundStyle(.gray)
+//                            })
+//                            .resizable()
+//                            .aspectRatio(contentMode: .fill)
+//                            .edgesIgnoringSafeArea(.all)
+//                            .frame(width: 45, height: 45)
+//                            .clipped()
                         VStack(alignment: .leading) {
                             Text(monster.name)
                                 .font(.headline)
