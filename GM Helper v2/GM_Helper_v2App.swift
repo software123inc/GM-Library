@@ -7,10 +7,18 @@
 
 import SwiftUI
 import SwiftData
+import SDWebImage
+import SDWebImageSwiftUI
+//import SDWebImage
 
 @main
 struct GM_Helper_v2App: App {
     @Environment(\.scenePhase) private var scenePhase
+    
+    init() {
+        SDImageCodersManager.shared.addCoder(SDImageAWebPCoder.shared)
+        SDWebImageDownloader.shared.setValue("image/webp,image/*,*/*;q=0.8", forHTTPHeaderField:"Accept")
+    }
     
     var sharedModelContainer: ModelContainer = {
         let modelConfiguration = ModelConfiguration(

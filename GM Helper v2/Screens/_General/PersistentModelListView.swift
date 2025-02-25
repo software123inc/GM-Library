@@ -96,23 +96,23 @@ extension PersistentModelListView {
 //    }
 //}
 //
-#Preview("A5e Monster", traits: .sampleData) {
-    NavigationStack {
-        PersistentModelListView<Monster_A5e>(navigationTitle: "Monsters A5e")
-    }
-}
-
+//#Preview("A5e Monster", traits: .sampleData) {
+//    NavigationStack {
+//        PersistentModelListView<Monster_A5e>(navigationTitle: "Monsters A5e")
+//    }
+//}
+//
 //#Preview("A5e Spells", traits: .sampleData) {
 //    NavigationStack {
 //        PersistentModelListView<Spell_Ae5>(navigationTitle: "Spells A5e")
 //    }
 //}
 //
-//#Preview("WoTC Monster", traits: .sampleData) {
-//    NavigationStack {
-//        PersistentModelListView<Monster_WoTC>(navigationTitle: "Monsters WoTC")
-//    }
-//}
+#Preview("WoTC Monster", traits: .sampleData) {
+    NavigationStack {
+        PersistentModelListView<Monster_WoTC>(navigationTitle: "Monsters WoTC")
+    }
+}
 //
 //#Preview("WoTC Spells", traits: .sampleData) {
 //    NavigationStack {

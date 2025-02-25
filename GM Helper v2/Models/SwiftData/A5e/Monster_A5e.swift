@@ -8,6 +8,7 @@
 
 import SwiftUI
 import SwiftData
+import SDWebImageSwiftUI
 
 // MARK: - Monster Model
 @Model
@@ -220,17 +221,22 @@ extension Monster_A5e: ViewDataSource {
         if let normalizedMonster = monster.normalizedMonster {
             return AnyView(
                 NavigationLink(destination: MonsterDetailScreen(monster: normalizedMonster)) {
-                    HStack {
-                        //                        if let image = monster.imageURL, image.count > 0 {
-                        //                            Image(image)
-                        //                                .frame(width: 50, height: 50)
-                        //                                .clipShape(Circle())
-                        //                        }
-                        //                        else {
-                        Circle()
-                            .foregroundStyle(.gray)
-                            .frame(width: 50, height: 50)
-                        //                        }
+                    HStack {                        
+                        WebImage(
+                            url: URL(string: "https://5e.tools/img/bestiary/tokens/XMM/\(monster.name.replacingOccurrences(of: " ", with: "%20")).webp"),
+                            content: { image in
+                                image
+                            },
+                            placeholder: {
+                                // if image loading or not found
+                                Circle()
+                                    .foregroundStyle(.gray)
+                            })
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .edgesIgnoringSafeArea(.all)
+                        .frame(width: 45, height: 45)
+                        .clipped()
                         
                         VStack(alignment: .leading) {
                             Text(monster.name).font(.headline)
