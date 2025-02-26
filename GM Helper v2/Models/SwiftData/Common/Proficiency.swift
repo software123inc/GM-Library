@@ -5,7 +5,7 @@
 //  Created by Tim W. Newton on 2/22/25.
 //
 
-import Foundation
+import SwiftUI
 import SwiftData
 
 enum ProficiencyType: String, Codable {
@@ -44,5 +44,10 @@ class Proficiency: Decodable, CustomStringConvertible {
     
     var description: String {
         "{name: \(name), modifier: \(modifier)}"
+    }
+    
+    @ViewBuilder
+    func detailView(addComma: Bool = false) -> some View {
+        Text("\(name.localizedLowercase.firstCapitalized) +\(modifier)\(addComma ? "," : "")")
     }
 }

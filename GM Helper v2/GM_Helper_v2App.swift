@@ -162,7 +162,6 @@ extension GM_Helper_v2App {
                     default: break
                         
                 }
-//                let m = monster.toMonster()
                 if let m {
                     mainContext.insert(m)
                 }

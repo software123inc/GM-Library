@@ -41,6 +41,7 @@ class Monster: Nameable, ImageSource {
     @Relationship(deleteRule: .cascade, inverse: \ActionTrait.monster) private var actionTraits: [ActionTrait] = [] // Single collection for all traits/actions; GROK 3
     var combat: String?
     @Relationship(deleteRule: .cascade, inverse: \MonsterVariant.monster) var variants: [MonsterVariant]? = []
+    var xp:Int?
 //    @Attribute(.externalStorage) var imageData: Data? = nil
     
     
@@ -84,6 +85,7 @@ class Monster: Nameable, ImageSource {
         mythicActions: [ActionTrait]? = nil,
         combat: String? = nil,
         variants: [MonsterVariant]? = nil,
+        xp:Int? = nil,
         monsterA5e: Monster_A5e? = nil,
         monsterWoTC: Monster_WoTC? = nil
     ) {
@@ -115,6 +117,7 @@ class Monster: Nameable, ImageSource {
         self.proficiencyBonus = proficiencyBonus
         self.combat = combat
         self.variants = variants
+        self.xp = xp
         
         self.monsterA5e = monsterA5e
         self.monsterWoTC = monsterWoTC
@@ -209,7 +212,7 @@ class Monster: Nameable, ImageSource {
             cr = String(Int(challengeRating))
         }
         
-        return "CHALLENGE \(cr)"
+        return cr
     }
     
     var allSpeeds: String {

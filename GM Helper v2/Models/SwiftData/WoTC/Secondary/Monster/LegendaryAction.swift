@@ -20,7 +20,7 @@ class LegendaryAction: Decodable {
     
     enum CodingKeys: String, CodingKey {
         case name
-        case desc = "description"
+        case desc
         case attackBonus = "attack_bonus"
         case dc, damage
     }

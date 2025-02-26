@@ -125,21 +125,6 @@ extension Monster_WoTC: Monstrous, ViewDataSource {
                 NavigationLink(destination: MonsterDetailScreen(monster: normalizedMonster)) {
                     HStack {
                         monster.mmImageToken()
-//                        WebImage(
-//                            url: monster.mmImageUrl,
-//                            content: { image in
-//                                image
-//                            },
-//                            placeholder: {
-//                                // if image not found
-//                                Circle()
-//                                    .foregroundStyle(.gray)
-//                            })
-//                            .resizable()
-//                            .aspectRatio(contentMode: .fill)
-//                            .edgesIgnoringSafeArea(.all)
-//                            .frame(width: 45, height: 45)
-//                            .clipped()
                         VStack(alignment: .leading) {
                             Text(monster.name)
                                 .font(.headline)
@@ -223,7 +208,6 @@ extension Monster_WoTC: MonstrousDTO {
     func toLanguages() -> String { languages }
     func toSaves() -> [Proficiency]? { extractProficiencies("Saving Throw: ") }
     func toSkills() -> [Proficiency]? { extractProficiencies("Skill: ") }
-    
     func toChallengeRating() -> Double { challengeRating }
     func toProficiencyBonus() -> Int? { nil }
     func toTraits() -> [ActionTrait]?  {
@@ -235,7 +219,7 @@ extension Monster_WoTC: MonstrousDTO {
                     .append(
                         ActionTrait(
                             name: ability.name,
-                            content: ability.desc ?? "",
+                            content: ability.desc ?? "no found",
                             type: .trait
                         )
                     )
@@ -292,6 +276,7 @@ extension Monster_WoTC: MonstrousDTO {
     func toMythicActions() -> [ActionTrait]? { nil }
     func toCombat() -> String? { nil }
     func toVariants() -> [MonsterVariant]? { nil }
+    func toXP() -> Int? { xp }
     
     // be sure to add trailing space to namePrefix
     private func extractProficiencies(_ namePrefix: String) -> [Proficiency]? {

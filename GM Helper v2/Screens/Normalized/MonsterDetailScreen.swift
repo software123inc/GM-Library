@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import SDWebImageSwiftUI
 
 struct MonsterDetailScreen: View {
     @Environment(\.colorScheme) var colorScheme
@@ -14,11 +13,27 @@ struct MonsterDetailScreen: View {
     
     var body: some View {
         ScrollView {
-            MonsterDetailHeaderView(monster: monster)
-            MonsterImageView(monster: monster)
-            MonsterNarrativeView(monster: monster)
-            MonsterDefensesView(monster: monster)
-            MonsterAbilitiesView(monster: monster)
+            Group {
+                MonsterDetailHeaderView(monster: monster)
+                DetailsTextView(content: monster.desc).padding([.top], 8)
+                MonsterImageView(monster: monster)
+                MonsterDefensesView(monster: monster)
+                MonsterAbilitiesView(monster: monster)
+                MonsterSavingThrowsView(monster: monster)
+                MonsterSkillsView(monster: monster)
+                MonsterSensesView(monster: monster)
+                MonsterLanguagesView(monster: monster)
+                MonsterXPView(monster: monster)
+            }
+            Group {
+                MonsterTraitsView(monster: monster).padding([.top], 8)
+                MonsterActionsView(monster: monster)
+                MonsterBonusActionsView(monster: monster)
+                MonsterReactionsView(monster: monster)
+                MonsterLegendaryActionsView(monster: monster)
+                MonsterMythicActionsView(monster: monster)
+                MonsterNarrativeView(monster: monster)
+            }
         }
         .padding()
         .background(Color.buff)
@@ -27,28 +42,17 @@ struct MonsterDetailScreen: View {
     }
 }
 
-struct MonsterImageView: View {
-    @Environment(\.colorScheme) var colorScheme
-    @State private var isExpanded: Bool = false
-    
-    var monster: Monster
-        
-    var body: some View {
-        DisclosureGroup(isExpanded: $isExpanded) {
-            monster.mmImage()
-        }
-        label: {
-            Text("Portrait")
-                .font(.headline)
-                .italic()
-                .foregroundStyle(colorScheme == .dark ? .white : .a5EGreen)
-        }
-        .tint(colorScheme == .dark ? .white : .a5EGreen)
+#Preview("A5e", traits: .sampleData) {
+    NavigationStack {
+        MonsterDetailScreen(monster: (PreviewData
+            .loadJSON(
+                forResource: JsonResourceKey.monstersA5e.rawValue
+            ).first! as Monster_A5e).toMonster()
+        )
     }
 }
 
-
-#Preview(traits: .sampleData) {
+#Preview("WoTC", traits: .sampleData) {
     NavigationStack {
         MonsterDetailScreen(monster: (PreviewData
             .loadJSON(

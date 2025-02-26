@@ -11,31 +11,35 @@ import SwiftData
 
 struct SplitViewMenuModel: MenuItemProvider {
     let mainMenuItems = {
-        let monsterA5eSubMenuItems = [ MenuItem(name: "M1 Advanced 5e", image: "swift"),
-                                       MenuItem(name: "M2 Advanced 5e", image: "vulcano")
-        ]
-        
-        let monsterWotcSubMenuItems = [ MenuItem(name: "WoTC 2 Monster", image: "swift"),
-                                        MenuItem(name: "WoTC 2 Monster", image: "vulcano")
-        ]
-        
-        let spellsMenuItems = [ MenuItem(name: "Spell 1", image: "swift"),
-                                MenuItem(name: "Spell 2", image: "vulcano")
-        ]
+//        let monsterA5eSubMenuItems = [ MenuItem(name: "M1 Advanced 5e", image: "swift"),
+//                                       MenuItem(name: "M2 Advanced 5e", image: "vulcano")
+//        ]
+//        
+//        let monsterWotcSubMenuItems = [ MenuItem(name: "WoTC 2 Monster", image: "swift"),
+//                                        MenuItem(name: "WoTC 2 Monster", image: "vulcano")
+//        ]
+//        
+//        let spellsMenuItems = [ MenuItem(name: "Spell 1", image: "swift"),
+//                                MenuItem(name: "Spell 2", image: "vulcano")
+//        ]
         
         let topMenuItems = [
             MenuItem(
                 name: "Monsters A5e",
                 image: "linea-mini"
-//                contentView: AnyView(MonsterA5eListView())
             ),
             MenuItem(
                 name: "Monsters WoTC",
                 image: "linea-mini"
-//                contentView: AnyView(MonsterWotcListView())
             ),
-            MenuItem(name: "Spells A5e", image: "swift-mini", subMenuItems: spellsMenuItems),
-            MenuItem(name: "Spells WoTC", image: "swift-mini", subMenuItems: spellsMenuItems),
+            MenuItem(
+                name: "Spells A5e",
+                image: "swift-mini"
+            ),
+            MenuItem(
+                name: "Spells WoTC"
+                , image: "swift-mini"
+            ),
         ]
         
         return topMenuItems
@@ -74,18 +78,14 @@ class SplitViewSectionMenuModel {
                 name: "Spells A5e",
                 image: "linea-mini",
                 contentView: AnyView(
-                    PersistentModelListView<Spell_Ae5>(
-                        navigationTitle: "Spells A5e"
-                    )
+                    PersistentModelListView<Spell_Ae5>(navigationTitle: "Spells A5e")
                 )
             ),
             MenuItem(
                 name: "Spells WoTC",
                 image: "linea-mini",
                 contentView: AnyView(
-                    PersistentModelListView<Spell_WoTC>(
-                        navigationTitle: "Spells WoTC"
-                    )
+                    PersistentModelListView<Spell_WoTC>(navigationTitle: "Spells WoTC")
                 )
             )
         ]

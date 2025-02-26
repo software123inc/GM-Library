@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DetailsTextView: View {
     var heading: String?
-    var content: String
+    var content: String?
     
     var body: some View {
         VStack(alignment:.leading, spacing: 2) {
@@ -21,8 +21,12 @@ struct DetailsTextView: View {
                 }
                 A5eHorizontalBorderView()
             }
-            Text(content)
-            
+            if let content {
+                Text(content)
+            }
+            else {
+                EmptyView()
+            }
         }
     }
 }

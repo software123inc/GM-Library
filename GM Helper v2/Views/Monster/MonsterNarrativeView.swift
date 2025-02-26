@@ -8,19 +8,14 @@
 import SwiftUI
 
 struct MonsterNarrativeView: View {
+    @Environment(\.colorScheme) var colorScheme
+    @State var expandNarrative: Bool = true
     var monster: Monster
-    @State var expandNarrative: Bool = false
     
     var body: some View {
-        @Environment(\.colorScheme) var colorScheme
-        
         if monster.desc != nil || monster.combat != nil || monster.variants?.first != nil {
             DisclosureGroup(isExpanded: $expandNarrative) {
-                VStack(spacing: 12){
-                    if let desc = monster.desc {
-                        A5eHorizontalBorderView()
-                        DetailsTextView(content: desc)
-                    }
+                VStack(spacing: 8){
                     if let content = monster.combat {
                         DetailsTextView(heading: "Combat", content: content)
                     }
@@ -29,10 +24,15 @@ struct MonsterNarrativeView: View {
                     }
                 }
             } label: {
-                Text("Narrative")
-                    .font(.headline)
-                    .italic()
-                    .foregroundStyle(colorScheme == .dark ? .white : .a5EGreen)
+                VStack(spacing: 0) {
+                    A5eHorizontalBorderView()
+                    HStack {
+                        Text("NARRATIVE")
+                            .foregroundStyle(.a5EGreen)
+                        Spacer()
+                    }
+                    .background(Color.tanned)
+                }
             }
             .padding([.bottom], 12)
             .tint(colorScheme == .dark ? .white : .a5EGreen)

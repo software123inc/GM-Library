@@ -19,7 +19,7 @@ class SpecialAbility: Decodable {
 
     enum CodingKeys: String, CodingKey {
         case name
-        case desc = "description"
+        case desc
         case dc
     }
 

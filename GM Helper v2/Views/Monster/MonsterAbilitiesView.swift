@@ -48,14 +48,7 @@ struct MonsterAbilitiesView: View {
         
         func rollModifier(value:Int) -> String {
             let modifier = (value - 10) / 2
-            var sign = ""
-            
-            if modifier < 0 {
-                sign = "-"
-            }
-            else if modifier > 0 {
-                sign = "+"
-            }
+            let sign = modifier < 0 ? "-" : "+"
             
             return "(\(sign + String(modifier)))"
         }

@@ -8,11 +8,16 @@
 import SwiftUI
 
 protocol ViewDataSource {
+    static func listViewContent (_ anyObject: Any) -> AnyView
     static func listViewContent (_ anyObject: Any, _ colorScheme:ColorScheme) -> AnyView
 }
 
 extension ViewDataSource {
     static func listViewContent (_ anyObject: Any, _ colorScheme:ColorScheme = .light) -> AnyView {
         AnyView(EmptyView())
+    }
+    
+    static func listViewContent (_ anyObject: Any) -> AnyView {
+        listViewContent(anyObject, .light)
     }
 }

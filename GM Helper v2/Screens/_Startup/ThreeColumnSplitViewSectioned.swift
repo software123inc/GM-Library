@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct ThreeColumnSplitViewSectioned: View {
+    @Environment(\.colorScheme) var colorScheme
     @State private var selectedCategoryId: MenuItem.ID?
     @State private var selectedItem: MenuItem?
     private var dataModel = SplitViewSectionMenuModel()
@@ -21,12 +22,15 @@ struct ThreeColumnSplitViewSectioned: View {
                         HStack {
                             Text(item.name)
                                 .font(.system(.title3, design: .rounded))
-                        }
+                                .foregroundStyle(.black)
+                        }.listRowBackground(Color.tanned)
                     }
                 } header: {
                     Text(section.name)
                 }
             }
+            .background(Color.buff)
+            .scrollContentBackground(.hidden)
             .listStyle(.insetGrouped)
             .navigationTitle("Resources")
             .navigationBarTitleDisplayMode(.inline)
@@ -101,6 +105,7 @@ struct ThreeColumnSplitViewSectioned: View {
             .navigationTitle("Item Details")
             .navigationBarTitleDisplayMode(.inline)
         }
+        .tint(Color.a5EGreenTint)
     }
 }
 

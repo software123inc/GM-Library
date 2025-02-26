@@ -12,10 +12,19 @@ struct SplashScreen: View {
     
     var body: some View {
         ZStack {
-            Text("GM Helper")
-                .font(.largeTitle)
-                .foregroundColor(.white)
-            
+            VStack {
+                Image("GM SplashScreen Name")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                Image(systemName: "books.vertical.fill")
+                    .font(.system(size: 48))
+                    .foregroundStyle(.white)
+                Text("Verifying Library...")
+                    .foregroundStyle(.white)
+                ProgressView()
+                    .tint(.white)
+            }
+            .padding(20)
             Spacer()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)

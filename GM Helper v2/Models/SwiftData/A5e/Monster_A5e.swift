@@ -296,4 +296,5 @@ extension Monster_A5e: MonstrousDTO {
     func toMythicActions() -> [ActionTrait]? { mythicActions.isEmpty ? nil : mythicActions }
     func toCombat() -> String? { combat }
     func toVariants() -> [MonsterVariant]? { variants }
+    func toXP() -> Int? { nil }
 }

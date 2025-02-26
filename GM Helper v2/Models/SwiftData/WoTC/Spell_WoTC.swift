@@ -102,7 +102,7 @@ class Spell_WoTC: Decodable, Nameable {
 }
 
 extension Spell_WoTC: ViewDataSource {
-    static func listViewContent (_ listItem: Any) -> AnyView {
+    static func listViewContent (_ listItem: Any, _ colorScheme:ColorScheme = .light) -> AnyView {
         let spell = listItem as! Spell_WoTC
         return AnyView(
             NavigationLink(destination: SpellWoTCDetailView(spell: spell)) {
@@ -111,7 +111,7 @@ extension Spell_WoTC: ViewDataSource {
                         .font(.headline)
                     Text("Level \(spell.level) - \(spell.school?.name ?? "")")
                         .font(.subheadline)
-                        .foregroundStyle(.gray)
+                        .foregroundStyle(colorScheme == .dark ? .white : .gray)
                 }
             }
         )

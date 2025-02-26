@@ -89,11 +89,7 @@
 			},
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The aboleth's spellcasting ability is Charisma (spell save DC 16). It can innately cast the following spells, requiring no components:"
-			},
-			{
-				"Name": "3/day each: detect thoughts (range 120 ft",
-				"Content": "), project image (range 1 mile), phantasmal force"
+				"Content": "The aboleth's spellcasting ability is Charisma (spell save DC 16). It can innately cast the following spells, requiring no components:\n &nbsp;&nbsp;**3/day each:** detect thoughts (range 120 ft), project image (range 1 mile), phantasmal force"
 			},
 			{
 				"Name": "Legendary Resistance (3/Day)",

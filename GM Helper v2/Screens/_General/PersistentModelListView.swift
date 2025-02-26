@@ -90,11 +90,11 @@ extension PersistentModelListView {
     }
 }
 
-//#Preview("Norm Monster", traits: .sampleData) {
-//    NavigationStack {
-//        PersistentModelListView<Monster>(navigationTitle: "Monsters")
-//    }
-//}
+#Preview("Norm Monster", traits: .sampleData) {
+    NavigationStack {
+        PersistentModelListView<Monster>(navigationTitle: "Monsters")
+    }
+}
 //
 //#Preview("A5e Monster", traits: .sampleData) {
 //    NavigationStack {
@@ -108,11 +108,11 @@ extension PersistentModelListView {
 //    }
 //}
 //
-#Preview("WoTC Monster", traits: .sampleData) {
-    NavigationStack {
-        PersistentModelListView<Monster_WoTC>(navigationTitle: "Monsters WoTC")
-    }
-}
+//#Preview("WoTC Monster", traits: .sampleData) {
+//    NavigationStack {
+//        PersistentModelListView<Monster_WoTC>(navigationTitle: "Monsters WoTC")
+//    }
+//}
 //
 //#Preview("WoTC Spells", traits: .sampleData) {
 //    NavigationStack {

@@ -18,13 +18,25 @@ struct MonsterDetailHeaderView: View {
                         .font(.title)
                         .fontWeight(.bold)
                     Spacer()
-                    Text(monster.challengeText)
+                    if monster.xp == nil {
+                        Text("CHALLENGE " + monster.challengeText)
+                    }
                 }
                 HStack {
-                    if monster.isLegendary {
-                        Text("LEGENDARY")
+                    if let size = monster.size {
+                        HStack(spacing: 0) {
+                            Text("\(size) \(monster.type)")
+                            if let subtype = monster.subtype {
+                                Text(" (\(subtype))")
+                            }
+                            if let alignment = monster.alignment {
+                                Text(", \(alignment.localizedLowercase)")
+                            }
+                        }.italic()
                     }
-                    Text(monster.type.localizedUppercase)
+                    else {
+                        Text("\(monster.isLegendary ? "LEGENDARY " : "")" + monster.type.localizedUppercase)
+                    }
                     Spacer()
                 }
             }

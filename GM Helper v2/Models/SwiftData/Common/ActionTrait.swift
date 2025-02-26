@@ -5,11 +5,11 @@
 //  Created by Tim W. Newton on 2/17/25.
 //
 
-import Foundation
+import SwiftUI
 import SwiftData
 
 enum ActionType: String, Codable {
-    case noSet
+    case notSet
     case trait
     case action
     case bonusAction
@@ -29,16 +29,8 @@ class ActionTrait: Decodable, CustomStringConvertible {
     @Relationship(deleteRule: .cascade) var monster: Monster? // Single relationship
     @Relationship(deleteRule: .cascade) var monsterA5e: Monster_A5e? // Single relationship
     @Relationship(deleteRule: .cascade) var monsterVariant: MonsterVariant? // Single relationship
-//
-//    var monsterAction:Monster? = nil
-//    var monsterBonusAction:Monster? = nil
-//    var monsterReaction:Monster? = nil
-//    var monsterLegendaryAction:Monster? = nil
-//    var monsterMythic:Monster? = nil
-//    var monsterTrait:Monster? = nil
-//    var monsterVariantTrait:MonsterVariant? = nil
     
-    init(name: String, content: String, type: ActionType = .noSet) {
+    init(name: String, content: String, type: ActionType = .notSet) {
         self.name = name
         self.content = content
         self.type = type
@@ -55,10 +47,21 @@ class ActionTrait: Decodable, CustomStringConvertible {
         
         self.name = try container.decode(String.self, forKey: .name)
         self.content = try container.decode(String.self, forKey: .content)
-        self.type = try container.decodeIfPresent(ActionType.self, forKey: .type) ?? .noSet
+        self.type = try container.decodeIfPresent(ActionType.self, forKey: .type) ?? .notSet
     }
     
     var description: String {
         "{name: \(name), content: \(content)}"
     }
+    
+    @ViewBuilder
+    func detailView(addComma: Bool = false) -> some View {
+        let text = "***\(name).*** \(content)"
+        HStack {
+            MarkdownText.textView(text)
+            Spacer()
+        }
+    }
 }
+
+

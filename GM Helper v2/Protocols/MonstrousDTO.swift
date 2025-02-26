@@ -44,7 +44,8 @@ protocol MonstrousDTO {
     func toLegendaryActions() -> [ActionTrait]?
     func toMythicActions() -> [ActionTrait]?
     func toCombat() -> String?
-    func toVariants() -> [MonsterVariant]?    
+    func toVariants() -> [MonsterVariant]?
+    func toXP() -> Int?
 }
 
 extension MonstrousDTO {
@@ -85,6 +86,7 @@ extension MonstrousDTO {
             mythicActions: toMythicActions(),
             combat: toCombat(),
             variants: toVariants(),
+            xp: toXP(),
             monsterA5e: monsterA5e,
             monsterWoTC: monsterWoTC
         )

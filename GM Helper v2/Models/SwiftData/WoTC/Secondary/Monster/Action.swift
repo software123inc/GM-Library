@@ -23,7 +23,7 @@ class Action: Decodable {
 
     enum CodingKeys: String, CodingKey {
         case name
-        case desc = "description"
+        case desc
         case multiattackType = "multiattack_type"
         case attackBonus = "attack_bonus"
         case dc, damage, subActions = "actions"
