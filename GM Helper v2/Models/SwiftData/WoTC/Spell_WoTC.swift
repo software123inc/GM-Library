@@ -13,26 +13,33 @@ class Spell_WoTC: Decodable, Nameable {
     #Index<Spell_WoTC>([\.id], [\.originalId], [\.name], [\.level])
     var id = UUID()
     var originalId: String = ""
+    var source: String = "WoTC SRD 2014"
     var name: String = ""
     var desc: [String] = []
-    var higher_level: [String]?
+    var higher_level: [String]? // part of description in A5e
+    var area_of_effect: AreaOfEffect? // Part of description in A5e
+        
     var range: String = ""
-    var components: [String] = []
-    var material: String?
-    var ritual:Bool = false
-    var duration: String = ""
-    var concentration:Bool = false
-    var casting_time: String = ""
     var level: Int = 0
-    var heal_at_slot_level:SpellEffectAtSlotLevel?
-    var attack_type: String?
-    var damage: SpellDamage?
-    var dc:SpellDC?
-    var area_of_effect: AreaOfEffect?
+    var ritual:Bool = false
+    var casting_time: String = ""
+    var duration: String = ""
+    var concentration:Bool = false // Part of duration in A5e
     var school: URL_WoTC?
+    // classes, see helpers below, plus sub-classes
+    var components: [String] = []
+    var material: String? // part of Components in A5e
+    
+    
+    var heal_at_slot_level:SpellEffectAtSlotLevel?
+    var attack_type: String? // covered in desc
+    var damage: SpellDamage? // covered in desc
+    var dc:SpellDC? // covered in desc
     
     @Relationship(deleteRule: .cascade, inverse: \URL_WoTC.spell) private var classData: [URL_WoTC] = [] // Single collection for all classes and subclasses; GROK 3
     var url: String = ""
+    
+    @Relationship(deleteRule: .cascade, inverse: \Spell.spellWoTC) var normalizedSpell: Spell?
     
     enum CodingKeys: String, CodingKey {
         case originalId = "index"
@@ -116,4 +123,28 @@ extension Spell_WoTC: ViewDataSource {
             }
         )
     }
+}
+
+extension Spell_WoTC:SpellDTO {
+    func toSourceId() -> String { originalId }
+    func toSourceKeyRawValue() -> String { SourceKey.a5e.rawValue }
+    func toSource() -> String { source }
+    func toName() -> String { name }
+    func toLink() -> String { url }
+    func toDesc() -> String { desc.joined(separator: "\n") }
+    func toRange() -> String { range }
+    func toLevel() -> Int { level }
+    func toRitual() -> Bool { ritual }
+    func toCastingTime() -> String { casting_time }
+    func toDuration() -> String { duration }
+    func toConcentration() -> Bool { concentration }
+    func toSchool() -> String {
+        guard let schoolName = self.school?.name else { return "" }
+        
+        return schoolName
+    }
+    func toClasses() -> [String] {
+        classes.compactMap( { $0.name } )
+    }
+    func toComponents() -> String { components.joined(separator: ", ") }
 }

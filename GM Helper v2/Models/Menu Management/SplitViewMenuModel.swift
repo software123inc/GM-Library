@@ -78,7 +78,7 @@ class SplitViewSectionMenuModel {
                 name: "Spells A5e",
                 image: "linea-mini",
                 contentView: AnyView(
-                    PersistentModelListView<Spell_Ae5>(navigationTitle: "Spells A5e")
+                    PersistentModelListView<Spell_A5e>(navigationTitle: "Spells A5e")
                 )
             ),
             MenuItem(

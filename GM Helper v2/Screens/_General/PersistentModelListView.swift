@@ -42,8 +42,8 @@ struct PersistentModelListView<T:PersistentModel>: View where T:Nameable, T:View
                         predicate: nil,
                         sortBy: [.init(\.name, order: .forward)]
                     ) as? FetchDescriptor<T>
-                case is Spell_Ae5.Type:
-                    descriptor = FetchDescriptor<Spell_Ae5>(
+                case is Spell_A5e.Type:
+                    descriptor = FetchDescriptor<Spell_A5e>(
                         predicate: nil,
                         sortBy: [.init(\.name, order: .forward)]
                     ) as? FetchDescriptor<T>

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SpellA5eDetailView: View {
-    let spell: Spell_Ae5
+    let spell: Spell_A5e
 
     var body: some View {
         ScrollView {
@@ -59,7 +59,7 @@ struct SpellA5eDetailView: View {
             spell: PreviewData
                 .loadJSON(
                     forResource: JsonResourceKey.spellsA5e.rawValue
-                ).first! as Spell_Ae5
+                ).first! as Spell_A5e
         )
     }
 }

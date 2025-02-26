@@ -78,6 +78,8 @@ struct ThreeColumnSplitViewSectioned: View {
                     }
                 } else {
                     Text("Please select a resource from the sidebar.")
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .background(Color.buff)
                 }
             }
             .navigationTitle("Item List")
@@ -100,6 +102,8 @@ struct ThreeColumnSplitViewSectioned: View {
                     }
                 } else {
                     Text("Please select a item from the list.")
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .background(Color.buff)
                 }
             }
             .navigationTitle("Item Details")

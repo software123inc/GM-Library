@@ -22,7 +22,7 @@ class Monster_WoTC: Decodable, Nameable, ImageSource {
     
     var id:UUID = UUID()
     var sourceId: String = ""
-    var source: String = "WoTC SRD 5.0"
+    var source: String = "WoTC SRD 2014"
     var name: String = ""
     var size: String = ""
     var type: String = ""

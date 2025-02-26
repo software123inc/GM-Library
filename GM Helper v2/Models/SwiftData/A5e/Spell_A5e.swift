@@ -10,26 +10,28 @@ import SwiftUI
 import SwiftData
 
 @Model
-class Spell_Ae5: Decodable, Nameable {
-    #Index<Spell_Ae5>([\.id], [\.name], [\.originalId], [\.level])
+class Spell_A5e: Decodable, Nameable {
+    #Index<Spell_A5e>([\.id], [\.name], [\.originalId], [\.level])
     
     var id:UUID
     var originalId: String = ""
+    var source: String = ""
     var name: String = ""
+    var desc: String = ""
+    var range: String = ""
+    var level: Int = 0
+    var ritual: Bool = false
+    var castingTime: String = ""
+    var duration: String = ""
+    var school: String = ""
+    var classes: [String] = []
+    var components: String = ""
+    
     var path: String = ""
     var link: String = ""
     var version: String = ""
-    var source: String = ""
-    var castingTime: String = ""
-    var components: String = ""
-    var desc: String = ""
-    var duration: String = ""
-    var level: Int = 0
-    var range: String = ""
-    var ritual: Bool = false
-    var school: String = ""
-    var classes: [String] = []
     var filterDimensions: FilterDimensions_A5e?
+    @Relationship(deleteRule: .cascade, inverse: \Spell.spellA5e) var normalizedSpell: Spell?
 
     enum CodingKeys: String, CodingKey {
         case originalId = "Id", name = "Name", path = "Path", link = "Link"
@@ -66,9 +68,9 @@ class Spell_Ae5: Decodable, Nameable {
     }
 }
 
-extension Spell_Ae5:ViewDataSource {
+extension Spell_A5e:ViewDataSource {
     static func listViewContent (_ listItem: Any, _ colorScheme:ColorScheme = .light) -> AnyView {
-        let spell = listItem as! Spell_Ae5
+        let spell = listItem as! Spell_A5e
         
         return AnyView(
             NavigationLink(destination: SpellA5eDetailView(spell: spell)) {
@@ -82,4 +84,22 @@ extension Spell_Ae5:ViewDataSource {
             }
         )
     }
+}
+
+extension Spell_A5e:SpellDTO {
+    func toSourceId() -> String { originalId }
+    func toSourceKeyRawValue() -> String { SourceKey.a5e.rawValue }
+    func toSource() -> String { source }
+    func toName() -> String { name }
+    func toLink() -> String { link }
+    func toDesc() -> String { desc }
+    func toRange() -> String { range }
+    func toLevel() -> Int { level }
+    func toRitual() -> Bool { ritual }
+    func toCastingTime() -> String { castingTime }
+    func toDuration() -> String { duration }
+    func toConcentration() -> Bool { duration.contains("Concentration") }
+    func toSchool() -> String { school }
+    func toClasses() -> [String] { classes }
+    func toComponents() -> String { components }
 }

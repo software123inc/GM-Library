@@ -110,7 +110,7 @@ extension GM_Helper_v2App {
         if SyncManager.userPrefs.importSpellsA5e {
             Task {
                 await asyncImportJson(
-                    value:Spell_Ae5.self,
+                    value:Spell_A5e.self,
                     resource: JsonResourceKey.spellsA5e.rawValue,
                     &SyncManager.userPrefs.importSpellsA5e
                 )

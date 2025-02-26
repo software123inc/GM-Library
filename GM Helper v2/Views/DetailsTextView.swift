@@ -17,6 +17,7 @@ struct DetailsTextView: View {
                 HStack {
                     Text(heading)
                         .font(.headline)
+                        .foregroundStyle(Color.a5EGreenTint)
                     Spacer()
                 }
                 A5eHorizontalBorderView()
