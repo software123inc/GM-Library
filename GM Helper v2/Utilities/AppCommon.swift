@@ -19,6 +19,7 @@ class AppCommon {
         Monster.self,
         Monster_A5e.self,
         Monster_WoTC.self,
+        Spell.self,
         Spell_A5e.self,
         Spell_WoTC.self
     ])

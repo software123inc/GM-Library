@@ -215,46 +215,12 @@ extension Monster_A5e: Monstrous {
 }
 
 extension Monster_A5e: ViewDataSource {
-    static func listViewContent (_ listItem: Any, _ colorScheme:ColorScheme = .light) -> AnyView {
-        let monster = listItem as! Monster_A5e
-        
-        if let normalizedMonster = monster.normalizedMonster {
-            return AnyView(
-                NavigationLink(destination: MonsterDetailScreen(monster: normalizedMonster)) {
-                    HStack {                        
-                        WebImage(
-                            url: URL(string: "https://5e.tools/img/bestiary/tokens/XMM/\(monster.name.replacingOccurrences(of: " ", with: "%20")).webp"),
-                            content: { image in
-                                image
-                            },
-                            placeholder: {
-                                // if image loading or not found
-                                Circle()
-                                    .foregroundStyle(.gray)
-                            })
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .edgesIgnoringSafeArea(.all)
-                        .frame(width: 45, height: 45)
-                        .clipped()
-                        
-                        VStack(alignment: .leading) {
-                            Text(monster.name).font(.headline)
-                            Text("Challenge: \(monster.challenge)")
-                                .font(.subheadline)
-                                .foregroundStyle(colorScheme == .dark ? .white : .gray)
-                        }
-                        Spacer()
-                        if monster.isLegendary {
-                            Image(systemName: "star.fill").foregroundStyle(.yellow)
-                        }
-                    }
-                }
-            )
-            
-        } else {
-            return AnyView(EmptyView())
+    static func listItemViewContent (_ anyObject: Any, _ colorScheme:ColorScheme) -> AnyView {
+        guard let monster = (anyObject as? Monster_A5e)?.normalizedMonster else {
+            return AnyView(EmptyView() )
         }
+        
+        return Monster.listItemViewContent(monster, colorScheme)
     }
 }
 

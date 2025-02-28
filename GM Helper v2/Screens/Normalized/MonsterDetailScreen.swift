@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct MonsterDetailScreen: View {
-    @Environment(\.colorScheme) var colorScheme
-    var monster: Monster
+    @Environment(\.colorScheme) private var colorScheme
+    @State var monster: Monster
     
     var body: some View {
         ScrollView {

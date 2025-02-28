@@ -69,20 +69,10 @@ class Spell_A5e: Decodable, Nameable {
 }
 
 extension Spell_A5e:ViewDataSource {
-    static func listViewContent (_ listItem: Any, _ colorScheme:ColorScheme = .light) -> AnyView {
-        let spell = listItem as! Spell_A5e
+    static func listItemViewContent (_ anyObject: Any, _ colorScheme:ColorScheme = .light) -> AnyView {
+        guard let spell = (anyObject as? Spell_A5e)?.normalizedSpell else { return AnyView(EmptyView() )}
         
-        return AnyView(
-            NavigationLink(destination: SpellA5eDetailView(spell: spell)) {
-                VStack(alignment: .leading) {
-                    Text(spell.name)
-                        .font(.headline)
-                    Text("Level \(spell.level) - \(spell.school)")
-                        .font(.subheadline)
-                        .foregroundStyle(colorScheme == .dark ? .white : .gray)
-                }
-            }
-        )
+        return Spell.listItemViewContent(spell, colorScheme)
     }
 }
 

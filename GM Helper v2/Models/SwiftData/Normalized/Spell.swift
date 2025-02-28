@@ -5,7 +5,7 @@
 //  Created by Tim W. Newton on 2/26/25.
 //
 
-import Foundation
+import SwiftUI
 import SwiftData
 
 @Model
@@ -66,5 +66,54 @@ class Spell: Nameable, Identifiable {
         self.components = components
         self.spellA5e = spellA5e
         self.spellWoTC = spellWoTC
+    }
+    
+    var schoolCleaned: String {
+        return school.replacingOccurrences(of: " (", with: "; ").replacingOccurrences(of: ")", with: "")
+    }
+}
+
+extension Spell:ViewDataSource {
+    static func listItemViewContent (_ listItem: Any, _ colorScheme:ColorScheme = .light) -> AnyView {
+        let spell = listItem as! Spell
+        
+        return AnyView(
+            NavigationLink(destination: SpellDetailScreen( spell: spell)) {
+                VStack(alignment: .leading) {
+                    HStack {
+                        Text(spell.name + " (\(spell.sourceKeyRawValue))")
+                            .font(.custom("DIN Condensed", size: 24))
+                            .foregroundStyle(.a5EGreen)
+                        Spacer()
+                        if spell.concentration {
+                            Image(systemName: "c.circle")
+                                .foregroundStyle(.a5EGreen)
+                        }
+                        if spell.ritual {
+                            Image(systemName: "r.circle")
+                                .foregroundStyle(.a5EGreen)
+                        }
+                    }
+                    Text("Level \(spell.level) - \(spell.school)")
+                        .font(.subheadline)
+                        .foregroundStyle(colorScheme == .dark ? .white : .gray)
+                }
+            }
+        )
+    }
+    
+    static func listFooterViewContent (_ colorScheme:ColorScheme) -> AnyView? {
+        AnyView(
+            HStack {
+                Spacer()
+                Image(systemName: "c.circle").font(.caption)
+                Text("= Concentration").font(.caption)
+                Spacer()
+                Image(systemName: "r.circle").font(.caption)
+                Text("= Ritual").font(.caption)
+                Spacer()
+            }
+            .foregroundStyle(.a5EGreen)
+        )
     }
 }

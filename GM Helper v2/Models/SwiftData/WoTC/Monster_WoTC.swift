@@ -116,29 +116,12 @@ class Monster_WoTC: Decodable, Nameable, ImageSource {
 }
 
 extension Monster_WoTC: Monstrous, ViewDataSource {
-    static func listViewContent (_ listItem: Any, _ colorScheme:ColorScheme = .light) -> AnyView {
-        let monster = listItem as! Monster_WoTC
-        
-        
-        if let normalizedMonster = monster.normalizedMonster {
-            return AnyView(
-                NavigationLink(destination: MonsterDetailScreen(monster: normalizedMonster)) {
-                    HStack {
-                        monster.mmImageToken()
-                        VStack(alignment: .leading) {
-                            Text(monster.name)
-                                .font(.headline)
-                            Text(monster.type.capitalized)
-                                .font(.subheadline)
-                                .foregroundStyle(colorScheme == .dark ? .white : .gray)
-                        }
-                    }
-                }
-            )
+    static func listItemViewContent (_ anyObject: Any, _ colorScheme:ColorScheme) -> AnyView {
+        guard let monster = (anyObject as? Monster_WoTC)?.normalizedMonster else {
+            return AnyView(EmptyView() )
         }
-        else {
-            return AnyView(EmptyView())
-        }
+        
+        return Monster.listItemViewContent(monster, colorScheme)
     }
 }
 

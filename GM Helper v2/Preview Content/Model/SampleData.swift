@@ -38,7 +38,12 @@ let samplePreviewContainer: ModelContainer = {
     let ma:[Monster] = monstersA5e.compactMap({ m in m.toMonster(monsterA5e: m)})
     let mw:[Monster] = monstersWoTC.compactMap({ m in m.toMonster(monsterWoTC: m)})
     
-    var combined: [any PersistentModel] = ma + mw + Array(monstersA5e) + Array(monstersWoTC) + Array(spellsA5e) + Array(spellsWoTC)
+    let sa:[Spell] = spellsA5e.compactMap({ s in s.toSpell(spellA5e: s)})
+    let sw:[Spell] = spellsWoTC.compactMap({ s in s.toSpell(spellWoTC: s)})
+    
+    var combined: [any PersistentModel] = ma + mw  + Array(monstersA5e) + Array(monstersWoTC) + Array(spellsA5e) + Array(spellsWoTC)
+    combined.append(contentsOf: sa)
+    combined.append(contentsOf: sw)
     
     // add decoded JSON objects to SwiftData
     for mObj in combined {

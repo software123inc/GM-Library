@@ -109,25 +109,16 @@ class Spell_WoTC: Decodable, Nameable {
 }
 
 extension Spell_WoTC: ViewDataSource {
-    static func listViewContent (_ listItem: Any, _ colorScheme:ColorScheme = .light) -> AnyView {
-        let spell = listItem as! Spell_WoTC
-        return AnyView(
-            NavigationLink(destination: SpellWoTCDetailView(spell: spell)) {
-                VStack(alignment: .leading) {
-                    Text(spell.name)
-                        .font(.headline)
-                    Text("Level \(spell.level) - \(spell.school?.name ?? "")")
-                        .font(.subheadline)
-                        .foregroundStyle(colorScheme == .dark ? .white : .gray)
-                }
-            }
-        )
+    static func listItemViewContent (_ anyObject: Any, _ colorScheme:ColorScheme = .light) -> AnyView {
+        guard let spell = (anyObject as? Spell_WoTC)?.normalizedSpell else { return AnyView(EmptyView() )}
+        
+        return Spell.listItemViewContent(spell, colorScheme)
     }
 }
 
 extension Spell_WoTC:SpellDTO {
     func toSourceId() -> String { originalId }
-    func toSourceKeyRawValue() -> String { SourceKey.a5e.rawValue }
+    func toSourceKeyRawValue() -> String { SourceKey.wotc.rawValue }
     func toSource() -> String { source }
     func toName() -> String { name }
     func toLink() -> String { url }

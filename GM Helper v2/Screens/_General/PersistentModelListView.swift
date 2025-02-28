@@ -30,7 +30,12 @@ struct PersistentModelListView<T:PersistentModel>: View where T:Nameable, T:View
                 case is Monster.Type:
                     descriptor = FetchDescriptor<Monster>(
                         predicate: nil,
-                        sortBy: [.init(\.name, order: .forward)]
+                        sortBy: [.init(\.name, order: .forward), .init(\.sourceKeyRawValue, order: .forward)]
+                    ) as? FetchDescriptor<T>
+                case is Spell.Type:
+                    descriptor = FetchDescriptor<Spell>(
+                        predicate: nil,
+                        sortBy: [.init(\.name, order: .forward), .init(\.sourceKeyRawValue, order: .forward) ]
                     ) as? FetchDescriptor<T>
                 case is Monster_A5e.Type:
                     descriptor = FetchDescriptor<Monster_A5e>(
@@ -67,7 +72,7 @@ struct PersistentModelListView<T:PersistentModel>: View where T:Nameable, T:View
     var body: some View {
         NavigationStack {
             List(filteredListItems) { item in
-                T.listViewContent(item, colorScheme)
+                T.listItemViewContent(item, colorScheme)
                     .listRowBackground(Color.clear)
                     .listRowSeparator(.hidden)
             }
@@ -77,6 +82,11 @@ struct PersistentModelListView<T:PersistentModel>: View where T:Nameable, T:View
             .scrollContentBackground(.hidden)
             .navigationTitle(navigationTitle)
         }
+//        if let footerView = T.listFooterViewContent(colorScheme) {
+//            footerView
+//                .padding([.top], 12)
+//                .frame(idealHeight: 100, maxHeight: 100)
+//        }
     }
 }
 
@@ -89,10 +99,16 @@ extension PersistentModelListView {
         }
     }
 }
-
-#Preview("Norm Monster", traits: .sampleData) {
+//
+//#Preview("Norm Monster", traits: .sampleData) {
+//    NavigationStack {
+//        PersistentModelListView<Monster>(navigationTitle: "Monsters")
+//    }
+//}
+//
+#Preview("Norm Spells", traits: .sampleData) {
     NavigationStack {
-        PersistentModelListView<Monster>(navigationTitle: "Monsters")
+        PersistentModelListView<Spell>(navigationTitle: "Spells")
     }
 }
 //
@@ -104,7 +120,7 @@ extension PersistentModelListView {
 //
 //#Preview("A5e Spells", traits: .sampleData) {
 //    NavigationStack {
-//        PersistentModelListView<Spell_Ae5>(navigationTitle: "Spells A5e")
+//        PersistentModelListView<Spell_A5e>(navigationTitle: "Spells A5e")
 //    }
 //}
 //

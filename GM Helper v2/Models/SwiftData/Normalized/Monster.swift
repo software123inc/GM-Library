@@ -239,15 +239,15 @@ extension Monster: Monstrous {
 }
 
 extension Monster: ViewDataSource {
-    static func listViewContent (_ listItem: Any) -> AnyView {
-        let monster = listItem as! Monster
+    static func listItemViewContent (_ anyObject: Any, _ colorScheme:ColorScheme) -> AnyView {
+        let monster = anyObject as! Monster
         
         return AnyView(
-            NavigationLink(destination: Text("\(monster.name), \(monster.sourceKeyRawValue)")) {
+            NavigationLink(destination: MonsterDetailScreen(monster: monster)) {
                 HStack {
                     VStack(alignment: .leading) {
                         Text(monster.name).font(.headline)
-                        Text("Challenge: \(monster.challengeRating)").font(.subheadline).foregroundStyle(.gray)
+                        Text("Challenge: \(monster.challengeText)").font(.subheadline).foregroundStyle(.gray)
                     }
                     Spacer()
                     if monster.isLegendary {
