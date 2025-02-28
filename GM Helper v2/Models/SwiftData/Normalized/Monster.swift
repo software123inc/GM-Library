@@ -245,6 +245,7 @@ extension Monster: ViewDataSource {
         return AnyView(
             NavigationLink(destination: MonsterDetailScreen(monster: monster)) {
                 HStack {
+                    monster.mmImageToken()
                     VStack(alignment: .leading) {
                         Text(monster.name).font(.headline)
                         Text("Challenge: \(monster.challengeText)").font(.subheadline).foregroundStyle(.gray)
