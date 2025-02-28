@@ -70,7 +70,10 @@ class Spell_A5e: Decodable, Nameable {
 
 extension Spell_A5e:ViewDataSource {
     static func listItemViewContent (_ anyObject: Any, _ colorScheme:ColorScheme = .light) -> AnyView {
-        guard let spell = (anyObject as? Spell_A5e)?.normalizedSpell else { return AnyView(EmptyView() )}
+        guard let spell = (anyObject as? Spell_A5e)?.normalizedSpell else {
+            debugPrint("Failed to create object view for \(String(describing: anyObject)), has normalizedSpell: \(String(describing: (anyObject as? Spell_A5e)?.normalizedSpell))")
+            return AnyView(EmptyView()
+        )}
         
         return Spell.listItemViewContent(spell, colorScheme)
     }

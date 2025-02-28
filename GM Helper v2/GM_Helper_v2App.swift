@@ -9,7 +9,6 @@ import SwiftUI
 import SwiftData
 import SDWebImage
 import SDWebImageSwiftUI
-//import SDWebImage
 
 @main
 struct GM_Helper_v2App: App {
@@ -102,7 +101,6 @@ extension GM_Helper_v2App {
                 )
                 
                 insertNormalizedMonsters(value: Monster_A5e.self)
-                
                 saveDefaultData();
             }
         }
@@ -115,6 +113,7 @@ extension GM_Helper_v2App {
                     &SyncManager.userPrefs.importSpellsA5e
                 )
                 
+                insertNormalizeSpells(value: Spell_A5e.self)
                 saveDefaultData();
             }
         }
@@ -128,7 +127,6 @@ extension GM_Helper_v2App {
                 )
                 
                 insertNormalizedMonsters(value: Monster_WoTC.self)
-                
                 saveDefaultData();
             }
         }
@@ -141,6 +139,7 @@ extension GM_Helper_v2App {
                     &SyncManager.userPrefs.importSpellsWoTC
                 )
                 
+                insertNormalizeSpells(value: Spell_WoTC.self)
                 saveDefaultData();
             }
         }
@@ -159,7 +158,9 @@ extension GM_Helper_v2App {
                     case is Monster_WoTC.Type:
                         let mm = monster as! Monster_WoTC
                         m = monster.toMonster(monsterWoTC: mm)
-                    default: break
+                    default:
+                        debugPrint("Unhandled normalized monster type: \(T.self)")
+                        break
                         
                 }
                 if let m {
@@ -167,7 +168,36 @@ extension GM_Helper_v2App {
                 }
             }
             
-            debugPrint("Saved normalized monsters from: \(T.self)")
+            debugPrint("Saved normalized monsters from: \(T.self), count: \(monsters.count)")
+        }
+    }
+    
+    private func insertNormalizeSpells<T:SwiftData.PersistentModel>(value: T.Type) where T:SpellDTO, T:Nameable {
+        let mainContext = sharedModelContainer.mainContext
+        let fetcher = FetchDescriptor<T>(sortBy: [.init(\T.name)])
+        if let results = try? mainContext.fetch(fetcher) {
+            for result in results {
+                var target:Spell?
+                switch T.self {
+                    case is Spell_A5e.Type:
+                        let item = result as! Spell_A5e
+                        target = result.toSpell(spellA5e: item)
+                    case is Spell_WoTC.Type:
+                        let item = result as! Spell_WoTC
+                        target = result.toSpell(spellWoTC: item)
+                    default:
+                        debugPrint("Unhandled normalized spell type: \(T.self)")
+                        break
+                        
+                }
+                if let target {
+                    mainContext.insert(target)
+                }
+            }
+            
+            debugPrint(
+                "Saved normalized spells from: \(T.self), count: \(results.count)"
+            )
         }
     }
     

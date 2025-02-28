@@ -11,18 +11,6 @@ import SwiftData
 
 struct SplitViewMenuModel: MenuItemProvider {
     let mainMenuItems = {
-//        let monsterA5eSubMenuItems = [ MenuItem(name: "M1 Advanced 5e", image: "swift"),
-//                                       MenuItem(name: "M2 Advanced 5e", image: "vulcano")
-//        ]
-//        
-//        let monsterWotcSubMenuItems = [ MenuItem(name: "WoTC 2 Monster", image: "swift"),
-//                                        MenuItem(name: "WoTC 2 Monster", image: "vulcano")
-//        ]
-//        
-//        let spellsMenuItems = [ MenuItem(name: "Spell 1", image: "swift"),
-//                                MenuItem(name: "Spell 2", image: "vulcano")
-//        ]
-        
         let topMenuItems = [
             MenuItem(
                 name: "Monsters A5e",

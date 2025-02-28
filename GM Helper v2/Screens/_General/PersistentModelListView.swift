@@ -82,11 +82,6 @@ struct PersistentModelListView<T:PersistentModel>: View where T:Nameable, T:View
             .scrollContentBackground(.hidden)
             .navigationTitle(navigationTitle)
         }
-//        if let footerView = T.listFooterViewContent(colorScheme) {
-//            footerView
-//                .padding([.top], 12)
-//                .frame(idealHeight: 100, maxHeight: 100)
-//        }
     }
 }
 
