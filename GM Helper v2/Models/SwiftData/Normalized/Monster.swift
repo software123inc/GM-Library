@@ -243,11 +243,13 @@ extension Monster: ViewDataSource {
                 HStack {
                     monster.mmImageToken()
                     VStack(alignment: .leading) {
-                        Text(monster.name).font(.headline)
+                        Text(monster.name)
+                            .font(.custom("DIN Condensed", size: 24))
+//                            .font(.headline)
                         Text("*\(monster.type)*, Challenge: \(monster.challengeText)")
-                            .font(.subheadline)
-                            .foregroundStyle(colorScheme == .dark ? .white : .gray)
+                            .font(.caption)
                     }
+                    .foregroundStyle(colorScheme == .dark ? .black : .primary)
                     Spacer()
                     if monster.isLegendary {
                         Image(systemName: "star.fill").foregroundStyle(.yellow)

@@ -16,6 +16,7 @@ struct PersistentModelListView<T:PersistentModel>: View where T:Nameable, T:View
     var navigationTitle:String
     @Query private var listItems: [T]
     @State private var search: String = ""
+    @State private var selectedItem: T? = nil
     
     init(navigationTitle:String = "") {
         if ProcessInfo.processInfo.environment[EnvironmentKey.xcodePreviewMode.rawValue] != "1" {
@@ -71,13 +72,11 @@ struct PersistentModelListView<T:PersistentModel>: View where T:Nameable, T:View
     
     var body: some View {
         NavigationStack {
-            List(filteredListItems) { item in
+            List(filteredListItems, selection: $selectedItem) { item in
                 T.listItemViewContent(item, colorScheme)
-                    .listRowBackground(Color.clear)
                     .listRowSeparator(.hidden)
             }
             .searchable(text: $search)
-            .listStyle(.plain)
             .background(Color.buff)
             .scrollContentBackground(.hidden)
             .navigationTitle(navigationTitle)

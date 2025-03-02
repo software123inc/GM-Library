@@ -83,7 +83,6 @@ extension Spell:ViewDataSource {
                     HStack {
                         Text(spell.name + " (\(spell.sourceKeyRawValue))")
                             .font(.custom("DIN Condensed", size: 24))
-                            .foregroundStyle(.a5EGreen)
                         Spacer()
                         if spell.concentration {
                             Image(systemName: "c.circle")
@@ -95,9 +94,9 @@ extension Spell:ViewDataSource {
                         }
                     }
                     Text("Level \(spell.level) - \(spell.school)")
-                        .font(.subheadline)
-                        .foregroundStyle(colorScheme == .dark ? .white : .gray)
+                        .font(.caption)
                 }
+                .foregroundStyle(colorScheme == .dark ? .black : .primary)
             }
         )
     }
