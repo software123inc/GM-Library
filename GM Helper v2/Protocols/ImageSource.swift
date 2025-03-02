@@ -18,34 +18,43 @@ protocol ImageSource: Nameable {
 
 extension ImageSource {
     var imageName: String {
-        self.name
+        "MM/\(self.name)"
     }
     
     var mmImageUrl: URL? { get {
-        URL(string: "https://5e.tools/img/bestiary/MM/\(self.imageName.replacingOccurrences(of: " ", with: "%20")).webp")
+        URL(string: "https://5e.tools/img/bestiary/\(self.imageName.replacingOccurrences(of: " ", with: "%20")).webp")
     } }
     
     var mmImageTokenUrl: URL? { get {
-        URL(string: "https://5e.tools/img/bestiary/tokens/MM/\(self.imageName.replacingOccurrences(of: " ", with: "%20")).webp")
+        let urlString =  "https://5e.tools/img/bestiary/tokens/\(self.imageName.replacingOccurrences(of: " ", with: "%20")).webp"
+//        debugPrint(urlString)
+        
+        return URL(string: urlString)
     } }
     
     func mmImageToken() -> AnyView {
-        AnyView(
+        
+        return AnyView(
             WebImage(
                 url: self.mmImageTokenUrl,
                 content: { image in
-                    image
+                    image.resizable()
                 },
                 placeholder: {
-                    // if image not found
-                    Circle()
-                        .foregroundStyle(.gray)
+                    Image(systemName: "lizard.circle")
+                        .resizable()
+                        .foregroundStyle(.a5EGreen)
+                        .opacity(0.3)
                 })
-            .resizable()
-            .aspectRatio(contentMode: .fill)
+            .onFailure { error in
+//                debugPrint(error.localizedDescription)
+            }
+            .indicator(Indicator.progress) // SwiftUI indicator component
             .edgesIgnoringSafeArea(.all)
             .frame(width: 45, height: 45)
             .clipped()
+            .transition(.fade) // Fade Transition
+            .scaledToFill()
         )
     }
     

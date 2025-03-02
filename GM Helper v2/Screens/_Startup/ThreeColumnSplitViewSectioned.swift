@@ -77,9 +77,23 @@ struct ThreeColumnSplitViewSectioned: View {
                         Text("Unhandled Content.")
                     }
                 } else {
-                    Text("Please select a resource from the sidebar.")
-                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-                        .background(Color.buff)
+                    ZStack {
+                        Image("library_candlelight")
+                            .resizable()
+                            .scaledToFill()
+                            .edgesIgnoringSafeArea(.all)
+//                            )
+                        Text("Please select a resource from the sidebar")
+                            .bold()
+                            .padding()
+                            .background(Color.white).opacity(0.80)
+                            .clipShape(RoundedRectangle(cornerRadius: 10))
+                    }
+                    
+//                    Text("Please select a resource from the sidebar.")
+//                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+////                        .background(Color.buff)
+//                        .backgroundImage("library_candlelight")
                 }
             }
             .navigationTitle("Item List")
@@ -109,7 +123,7 @@ struct ThreeColumnSplitViewSectioned: View {
             .navigationTitle("Item Details")
             .navigationBarTitleDisplayMode(.inline)
         }
-        .tint(Color.a5EGreenTint)
+        .tint(colorScheme == .dark ? .white : Color.a5EGreenTint)
     }
 }
 

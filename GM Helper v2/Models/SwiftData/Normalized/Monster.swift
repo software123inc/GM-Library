@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftData
 
 @Model
-class Monster: Nameable, ImageSource {
+class Monster: Nameable {
     #Index<Monster>([\.id], [\.sourceId], [\.name], [\.type], [\.challengeRating])
     var id = UUID()
     var sourceId: String = ""
@@ -40,9 +40,7 @@ class Monster: Nameable, ImageSource {
     var proficiencyBonus: Int?
     @Relationship(deleteRule: .cascade, inverse: \ActionTrait.monster) private var actionTraits: [ActionTrait] = [] // Single collection for all traits/actions; GROK 3
     var combat: String?
-    @Relationship(deleteRule: .cascade, inverse: \MonsterVariant.monster) var variants: [MonsterVariant]? = []
     var xp:Int?
-//    @Attribute(.externalStorage) var imageData: Data? = nil
     
     
     @Relationship(deleteRule: .cascade) var monsterA5e: Monster_A5e? // Single relationship
@@ -84,7 +82,6 @@ class Monster: Nameable, ImageSource {
         legendaryActions: [ActionTrait]? = nil,
         mythicActions: [ActionTrait]? = nil,
         combat: String? = nil,
-        variants: [MonsterVariant]? = nil,
         xp:Int? = nil,
         monsterA5e: Monster_A5e? = nil,
         monsterWoTC: Monster_WoTC? = nil
@@ -116,7 +113,6 @@ class Monster: Nameable, ImageSource {
         self.challengeRating = challengeRating
         self.proficiencyBonus = proficiencyBonus
         self.combat = combat
-        self.variants = variants
         self.xp = xp
         
         self.monsterA5e = monsterA5e
@@ -248,7 +244,9 @@ extension Monster: ViewDataSource {
                     monster.mmImageToken()
                     VStack(alignment: .leading) {
                         Text(monster.name).font(.headline)
-                        Text("Challenge: \(monster.challengeText)").font(.subheadline).foregroundStyle(.gray)
+                        Text("*\(monster.type)*, Challenge: \(monster.challengeText)")
+                            .font(.subheadline)
+                            .foregroundStyle(colorScheme == .dark ? .white : .gray)
                     }
                     Spacer()
                     if monster.isLegendary {
@@ -257,5 +255,15 @@ extension Monster: ViewDataSource {
                 }
             }
         )
+    }
+}
+
+extension Monster: ImageSource {
+    var imageName: String {
+        if let a5e = self.monsterA5e {
+            return a5e.imageName
+        }
+        
+        return "MM/\(self.name)"
     }
 }

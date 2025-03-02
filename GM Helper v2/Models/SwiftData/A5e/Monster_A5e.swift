@@ -12,7 +12,7 @@ import SDWebImageSwiftUI
 
 // MARK: - Monster Model
 @Model
-class Monster_A5e: Decodable, Nameable, ImageSource {
+class Monster_A5e: Decodable, Nameable {
     #Index<Monster_A5e>([\.id], [\.sourceId], [\.name], [\.monsterType], [\.challenge])
     
     var id: UUID = UUID()
@@ -24,6 +24,8 @@ class Monster_A5e: Decodable, Nameable, ImageSource {
     var version: String = ""
     var source: String = ""
     var monsterType: String = ""
+    var size: String?
+    var xp: Int?
     var hp: HP_A5e?
     var ac: AC_A5e?
     var initiativeModifier: Int = 0
@@ -42,7 +44,6 @@ class Monster_A5e: Decodable, Nameable, ImageSource {
     var player: String?
     var imageURL: String?
     var combat: String?
-    @Relationship(deleteRule: .cascade, inverse: \MonsterVariant.monsterA5e) var variants: [MonsterVariant]? = []
     @Relationship(deleteRule: .cascade, inverse: \Monster.monsterA5e) var normalizedMonster: Monster?
     
     enum CodingKeys: String, CodingKey {
@@ -54,6 +55,8 @@ class Monster_A5e: Decodable, Nameable, ImageSource {
         case version = "Version"
         case source = "Source"
         case monsterType = "Type"
+        case size = "Size"
+        case xp = "XP"
         case hp = "HP"
         case ac = "AC"
         case initiativeModifier = "InitiativeModifier"
@@ -78,7 +81,6 @@ class Monster_A5e: Decodable, Nameable, ImageSource {
         case player = "Player"
         case imageURL = "ImageURL"
         case combat = "Combat"
-        case variants = "Variants"
     }
     
     // MARK: - Initializers
@@ -93,6 +95,8 @@ class Monster_A5e: Decodable, Nameable, ImageSource {
         self.version = try container.decode(String.self, forKey: .version)
         self.source = try container.decode(String.self, forKey: .source)
         self.monsterType = try container.decode(String.self, forKey: .monsterType)
+        self.size = try container.decodeIfPresent(String.self, forKey: .size)
+        self.xp = try container.decodeIfPresent(Int.self, forKey: .xp)
         self.hp = try container.decodeIfPresent(HP_A5e.self, forKey: .hp)
         self.ac = try container.decodeIfPresent(AC_A5e.self, forKey: .ac)
         self.initiativeModifier = try container.decode(Int.self, forKey: .initiativeModifier)
@@ -109,7 +113,6 @@ class Monster_A5e: Decodable, Nameable, ImageSource {
         self.player = try container.decodeIfPresent(String.self, forKey: .player)
         self.imageURL = try container.decodeIfPresent(String.self, forKey: .imageURL)
         self.combat = try container.decodeIfPresent(String.self, forKey: .combat)
-        self.variants = try container.decodeIfPresent([MonsterVariant].self, forKey: .variants) // Keep nil for optional content; Grok
         
         // Decode each proficiency and map to Proficiency with appropriate ProficiencyType; GROK 3
         var allProficiencies: [Proficiency] = []
@@ -233,7 +236,7 @@ extension Monster_A5e: MonstrousDTO {
     func toDesc() -> String? { desc }
     func toType() -> String { monsterType }
     func toSubtype() -> String? { nil }
-    func toSize() -> String? { nil }
+    func toSize() -> String? { size }
     func toAlignment() -> String? { nil }
     func toHitPoints() -> Int { hp?.value ?? 0 }
     func toHitDice() -> String? { hp?.notes }
@@ -261,6 +264,13 @@ extension Monster_A5e: MonstrousDTO {
     func toLegendaryActions() -> [ActionTrait]? { legendaryActions.isEmpty ? nil : legendaryActions }
     func toMythicActions() -> [ActionTrait]? { mythicActions.isEmpty ? nil : mythicActions }
     func toCombat() -> String? { combat }
-    func toVariants() -> [MonsterVariant]? { variants }
-    func toXP() -> Int? { nil }
+    func toXP() -> Int? { xp }
+}
+
+extension Monster_A5e: ImageSource {
+    var imageName: String {
+        guard let imageURL = self.imageURL, !imageURL.isEmpty else { return "MM/" + self.name }
+        
+        return imageURL
+    }
 }

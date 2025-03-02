@@ -10,7 +10,7 @@ import SDWebImageSwiftUI
 
 struct MonsterImageView: View {
     @Environment(\.colorScheme) var colorScheme
-    @State private var isExpanded: Bool = false
+    @State private var isExpanded: Bool = true
     
     var monster: Monster
         

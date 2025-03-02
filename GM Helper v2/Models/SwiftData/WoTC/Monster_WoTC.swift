@@ -258,7 +258,6 @@ extension Monster_WoTC: MonstrousDTO {
     
     func toMythicActions() -> [ActionTrait]? { nil }
     func toCombat() -> String? { nil }
-    func toVariants() -> [MonsterVariant]? { nil }
     func toXP() -> Int? { xp }
     
     // be sure to add trailing space to namePrefix

@@ -30,7 +30,7 @@ let samplePreviewContainer: ModelContainer = {
         configurations: ModelConfiguration(isStoredInMemoryOnly: true)
     )
     
-    let monstersA5e = (PreviewData.loadJSON(forResource: JsonResourceKey.monstersA5e.rawValue) as [Monster_A5e]).prefix(5)
+    let monstersA5e = (PreviewData.loadJSON(forResource: JsonResourceKey.monstersA5e.rawValue) as [Monster_A5e]).prefix(15)
     let monstersWoTC = (PreviewData.loadJSON(forResource: JsonResourceKey.monstersWoTC.rawValue) as [Monster_WoTC]).prefix(5)
     let spellsA5e = (PreviewData.loadJSON(forResource: JsonResourceKey.spellsA5e.rawValue) as [Spell_A5e]).prefix(5)
     let spellsWoTC = (PreviewData.loadJSON(forResource: JsonResourceKey.spellsWoTC.rawValue) as [Spell_WoTC]).prefix(5)

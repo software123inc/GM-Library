@@ -13,21 +13,14 @@ struct MonsterNarrativeView: View {
     var monster: Monster
     
     var body: some View {
-        if monster.desc != nil || monster.combat != nil || monster.variants?.first != nil {
+        if let combat = monster.combat, !combat.isEmpty {
             DisclosureGroup(isExpanded: $expandNarrative) {
-                VStack(spacing: 8){
-                    if let content = monster.combat {
-                        DetailsTextView(heading: "Combat", content: content)
-                    }
-                    if let content = monster.variants?.first {
-                        DetailsTextView(heading: "Variant: \(content.name)", content: content.desc)
-                    }
-                }
+                DetailsTextView(heading: "Combat", content: combat)
             } label: {
                 VStack(spacing: 0) {
                     A5eHorizontalBorderView()
                     HStack {
-                        Text("NARRATIVE")
+                        Text("OTHER")
                             .foregroundStyle(.a5EGreen)
                         Spacer()
                     }

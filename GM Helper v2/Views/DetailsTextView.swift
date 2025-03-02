@@ -23,7 +23,7 @@ struct DetailsTextView: View {
                 A5eHorizontalBorderView()
             }
             if let content {
-                Text(content)
+                MarkdownText.textView(content)
             }
             else {
                 EmptyView()

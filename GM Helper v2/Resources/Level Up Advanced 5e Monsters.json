@@ -11,6 +11,8 @@
 		"Version": "3.2.7",
 		"Source": "Level Up Monstrous Menagerie",
 		"Type": "Aberration",
+		"Size": "Large",
+		"XP": 7200,
 		"HP": {
 			"Value": 171,
 			"Notes": "(18d10 + 72; bloodied 85)"
@@ -140,28 +142,8 @@
 		],
 		"Desc": "Aboleths are hyper-intelligent amphibians that lurk in underwater caves and strange ruined cities, guarding ancient secrets and sending forth charmed thralls to advance their intricate schemes.",
 		"Player": "",
-		"ImageURL": "Aboleth",
-        "Combat": "The aboleth strikes as many enemies as possible with its tentacles in order to infect them with the Sea Change, and then uses Baleful Charm on the biggest threats. When hurt, it uses Slimy Cloud and escapes through a hidden exit. Its thralls sacrifice themselves to cover its retreat.",
-        "Variants": [
-            {
-                "Name": "Ancient Aboleth",
-                "Description": "The ancient aboleth is an elite monster, equivalent to two CR 11 monsters (14,400 XP). It is Huge and has 342 (36d10 + 144; bloodied 171) hit points. The aboleth has the following additional legendary actions, which it can use only while bloodied:",
-                "Traits": [
-                    {
-                        "Name": "Elite Recovery.",
-                        "Content": "The aboleth ends one negative effect currently affecting it. It can use this action as long as it has at least 1 hit point, even while unconscious or incapacitated."
-                    },
-                    {
-                        "Name": "Look Upon My Works (1/Day).",
-                        "Content": "Each creature within 90 feet makes a DC 16 Wisdom saving throw. On a failure, the creature sees a fragmentary vision of the aboleth’s memories, taking 33 (6d10) psychic damage. After taking the damage, the creature forgets the vision, but it may learn one piece of lore."
-                    },
-                    {
-                        "Name": "Lunging Attack.",
-                        "Content": "The aboleth moves up to its swim speed without provoking opportunity attacks and makes a tentacle attack."
-                    }
-                ]
-            }
-        ]
+		"ImageURL": "",
+        "Combat": "The aboleth strikes as many enemies as possible with its tentacles in order to infect them with the Sea Change, and then uses Baleful Charm on the biggest threats. When hurt, it uses Slimy Cloud and escapes through a hidden exit. Its thralls sacrifice themselves to cover its retreat."
 	},
 	{
 		"Id": "Aboleth_Thrall",
@@ -175,6 +157,8 @@
 		"Version": "3.2.7",
 		"Source": "Level Up Monstrous Menagerie",
 		"Type": "Humanoid",
+		"Size": "Medium",
+		"XP": 450,
 		"HP": {
 			"Value": 45,
 			"Notes": "(7d8 + 14; bloodied 22)"
@@ -244,9 +228,10 @@
 		],
 		"MythicActions": [
 		],
-		"Desc": "",
+		"Desc": "Aboleths are hyper-intelligent amphibians that lurk in underwater caves and strange ruined cities, guarding ancient secrets and sending forth charmed thralls to advance their intricate schemes.",
 		"Player": "",
-		"ImageURL": "Aboleth"
+		"ImageURL": "MM/Acolyte",
+        "Combat": "When protecting their master, thralls move into melee range with the most dangerous opponents, sacrificing themselves for the aboleth. They fight to the death."
 	},
 	{
 		"Id": "Abominable_Snowman",
@@ -259,7 +244,9 @@
 		},
 		"Version": "3.2.7",
 		"Source": "Level Up Monstrous Menagerie",
-		"Type": "Monstrosity",
+		"Type": "Elite Monstrosity",
+		"Size": "Huge",
+		"XP": 2200,
 		"HP": {
 			"Value": 136,
 			"Notes": "(16d10 + 48; bloodied 68)"
@@ -308,7 +295,7 @@
 				"Modifier": 3
 			}
 		],
-		"Challenge": "4",
+		"Challenge": "8",
 		"Traits": [
 			{
 				"Name": "Camouflage",
@@ -361,13 +348,12 @@
 		],
 		"Reactions": [
 		],
-		"LegendaryActions": [
-		],
+		"LegendaryActions": [],
 		"MythicActions": [
 		],
-		"Desc": "",
+		"Desc": "The abominable snowman is an elite monster, equivalent to two CR 4 monsters (2,200 XP). It is Huge and has 136 (16d10 + 48; bloodied 68) hit points.",
 		"Player": "",
-		"ImageURL": ""
+		"ImageURL": "XMM/Abominable%20Yeti"
 	},
 	{
 		"Id": "Accursed_Guardian_Naga",
@@ -380,7 +366,9 @@
 		},
 		"Version": "3.2.7",
 		"Source": "Level Up Monstrous Menagerie",
-		"Type": "Monstrosity",
+		"Type": "Monstrosity (fiend)",
+		"Size": "Large",
+		"XP": 5900,
 		"HP": {
 			"Value": 136,
 			"Notes": "(16d10 + 48; bloodied 68)"
@@ -535,9 +523,10 @@
 		],
 		"MythicActions": [
 		],
-		"Desc": "",
+		"Desc": "In remote corners across the world, nagas guard repositories of arcane  knowledge and religious wisdom.\n***Immortal Nature.*** A naga doesn’t require air, sustenance, or sleep.",
 		"Player": "",
-		"ImageURL": "Naga, Guardian"
+		"ImageURL": "XMM/Guardian%20Naga",
+		"Combat": "The guardian naga casts flame strike on groups of enemies. Otherwise it either bites or spits poison. It might cast hold person against a creature immune to poison or one it believes has a low Wisdom. The guardian naga dies in defense of its lair."
 	},
 	{
 		"Id": "Accursed_Spirit_Naga",
@@ -550,7 +539,9 @@
 		},
 		"Version": "3.2.7",
 		"Source": "Level Up Monstrous Menagerie",
-		"Type": "Monstrosity",
+		"Type": "Monstrosity (fiend)",
+		"Size": "Large",
+		"XP": 2900,
 		"HP": {
 			"Value": 85,
 			"Notes": "(10d10 + 30; bloodied 42)"
@@ -661,9 +652,10 @@
 		],
 		"MythicActions": [
 		],
-		"Desc": "",
+		"Desc": "In remote corners across the world, nagas guard repositories of arcane  knowledge and religious wisdom.\n***Immortal Nature.*** A naga doesn’t require air, sustenance, or sleep.",
 		"Player": "",
-		"ImageURL": "Naga, Guardian"
+		"ImageURL": "XMM/Spirit%20Naga",
+		"Combat": "The spirit naga tries to cast charm person and *dominate person* before combat starts. In combat, it casts hypnotic pattern or *lightning bolt* if it can target two or more opponents. Otherwise, it bites in melee or casts blight from a distance. It casts shield whenever necessary. It fights to the death."
 	},
 	{
 		"Id": "Acolyte",
@@ -677,6 +669,8 @@
 		"Version": "3.2.7",
 		"Source": "Level Up Monstrous Menagerie",
 		"Type": "Humanoid",
+		"Size": "Medium",
+		"XP": 50,
 		"HP": {
 			"Value": 11,
 			"Notes": "(2d8 + 2; bloodied 5)"
@@ -784,6 +778,8 @@
 		"Version": "3.2.7",
 		"Source": "Level Up Monstrous Menagerie",
 		"Type": "Dragon",
+		"Size": "Huge",
+		"XP": 18000,
 		"HP": {
 			"Value": 220,
 			"Notes": "(21d12 + 84; bloodied 110)"
@@ -880,11 +876,7 @@
 			},
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The dragon's spellcasting ability is Charisma (save DC 19). It can innately cast the following spells, requiring no material components.†"
-			},
-			{
-				"Name": "",
-				"Content": "† †3/day each:†calm emotions, charm person, mass suggestion, modify memory"
+				"Content": "The dragon's spellcasting ability is Charisma (save DC 19). It can innately cast the following spells, requiring no material components.\n\n&nbsp;&nbsp;**3/day each:** calm emotions, charm person, mass suggestion, modify memory"
 			}
 		],
 		"Actions": [
@@ -941,9 +933,10 @@
 		],
 		"MythicActions": [
 		],
-		"Desc": "",
 		"Player": "",
-		"ImageURL": "dragon, amethyst"
+		"ImageURL": "FTD/Adult%20Amethyst%20Dragon",
+		"Desc": "Dragons are winged, scaled creatures that resemble immense reptiles.",
+		"Combat": "While individual dragons have their own personalities and tactics, most rely heavily on their breath weapons. They use them whenever they can, preferably from maximum distance and while flying above their enemies.\n\nWhen fighting in the open, dragons often circle above their enemies as they wait for their breath weapons to recharge. They only close to melee if their enemies deal significant damage with ranged attacks, or if they can savage an enemy cut off from its allies. Once bloodied, dragons become more aggressive, attacking with bite and claws when their breath weapons aren’t available.\n\nIf a dragon is protecting its lair, it utilizes lair features, traps, allies, and architecture such as escape tunnels to keep up a hit-and-run fight, reappearing only when it has a fully-recharged breath weapon. If the dragon is forced into melee combat, it uses its bite and claws against a single foe. If it has legendary actions like Roar and Wing Attack, it uses them to disperse its other enemies.\n\nIf reduced to less than one-fourth its hit points while fighting in the open, a dragon flies away. However, it fights to the death to defend its lair, unless it can regain the upper hand through tricks or bargains."
 	},
 	{
 		"Id": "Adult_Black_Dragon",
@@ -957,6 +950,8 @@
 		"Version": "3.2.7",
 		"Source": "Level Up Monstrous Menagerie",
 		"Type": "Dragon",
+		"Size": "Huge",
+		"XP": 18000,
 		"HP": {
 			"Value": 253,
 			"Notes": "(22d12 + 110; bloodied 126)"
@@ -1049,11 +1044,7 @@
 			},
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The dragon's spellcasting ability is Charisma (save DC 17). It can innately cast the following spells, requiring no material components.†"
-			},
-			{
-				"Name": "",
-				"Content": "† †3/day each:†fog cloud, pass without trace, legend lore, speak with dead"
+				"Content": "The dragon's spellcasting ability is Charisma (save DC 17). It can innately cast the following spells, requiring no material components.\n\n&nbsp;&nbsp;**3/day each:** *fog cloud, pass without trace, legend lore, speak with dead*"
 			}
 		],
 		"Actions": [
@@ -1110,9 +1101,10 @@
 		],
 		"MythicActions": [
 		],
-		"Desc": "",
+		"Desc": "Dragons are winged, scaled creatures that resemble immense reptiles.",
 		"Player": "",
-		"ImageURL": "dragon, black"
+		"ImageURL": "",
+		"Combat": "While individual dragons have their own personalities and tactics, most rely heavily on their breath weapons. They use them whenever they can, preferably from maximum distance and while flying above their enemies.\n\nWhen fighting in the open, dragons often circle above their enemies as they wait for their breath weapons to recharge. They only close to melee if their enemies deal significant damage with ranged attacks, or if they can savage an enemy cut off from its allies. Once bloodied, dragons become more aggressive, attacking with bite and claws when their breath weapons aren’t available.\n\nIf a dragon is protecting its lair, it utilizes lair features, traps, allies, and architecture such as escape tunnels to keep up a hit-and-run fight, reappearing only when it has a fully-recharged breath weapon. If the dragon is forced into melee combat, it uses its bite and claws against a single foe. If it has legendary actions like Roar and Wing Attack, it uses them to disperse its other enemies.\n\nIf reduced to less than one-fourth its hit points while fighting in the open, a dragon flies away. However, it fights to the death to defend its lair, unless it can regain the upper hand through tricks or bargains."
 	},
 	{
 		"Id": "Adult_Black_Dragon_Lich",
@@ -1125,7 +1117,9 @@
 		},
 		"Version": "3.2.7",
 		"Source": "Level Up Monstrous Menagerie",
-		"Type": "Undead",
+		"Type": "Undead (dragon)",
+		"Size": "Huge",
+		"XP": 18000,
 		"HP": {
 			"Value": 253,
 			"Notes": "(22d12 + 110; bloodied 126)"
@@ -1213,11 +1207,7 @@
 			},
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The dragon's spellcasting ability is Charisma (save DC 17). It can innately cast the following spells, requiring no material components.†"
-			},
-			{
-				"Name": "",
-				"Content": "3/day each: animate dead, fog cloud, legend lore, pass without trace, speak with dead"
+				"Content": "The dragon's spellcasting ability is Charisma (save DC 17). It can innately cast the following spells, requiring no material components.\n\n **3/day each:** *animate dead, fog cloud, legend lore, pass without trace, speak with dead*"
 			},
 			{
 				"Name": "Legendary Resistance (3/Day)",
@@ -1298,9 +1288,10 @@
 		],
 		"MythicActions": [
 		],
-		"Desc": "",
 		"Player": "",
-		"ImageURL": ""
+		"ImageURL": "XMM/Dracolich",
+		"Desc": "Dragons are winged, scaled creatures that resemble immense reptiles. A dragon lich retains all the statistics of the original dragon except as noted within",
+		"Combat": "While individual dragons have their own personalities and tactics, most rely heavily on their breath weapons. They use them whenever they can, preferably from maximum distance and while flying above their enemies.\n\nWhen fighting in the open, dragons often circle above their enemies as they wait for their breath weapons to recharge. They only close to melee if their enemies deal significant damage with ranged attacks, or if they can savage an enemy cut off from its allies. Once bloodied, dragons become more aggressive, attacking with bite and claws when their breath weapons aren’t available.\n\nIf a dragon is protecting its lair, it utilizes lair features, traps, allies, and architecture such as escape tunnels to keep up a hit-and-run fight, reappearing only when it has a fully-recharged breath weapon. If the dragon is forced into melee combat, it uses its bite and claws against a single foe. If it has legendary actions like Roar and Wing Attack, it uses them to disperse its other enemies.\n\nIf reduced to less than one-fourth its hit points while fighting in the open, a dragon flies away. However, it fights to the death to defend its lair, unless it can regain the upper hand through tricks or bargains."
 	},
 	{
 		"Id": "Adult_Blue_Dragon",
@@ -1314,6 +1305,8 @@
 		"Version": "3.2.7",
 		"Source": "Level Up Monstrous Menagerie",
 		"Type": "Dragon",
+		"Size": "Huge",
+		"XP": 22000,
 		"HP": {
 			"Value": 275,
 			"Notes": "(22d12 + 132; bloodied 137)"
@@ -1405,11 +1398,7 @@
 			},
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The dragon's spellcasting ability is Charisma (save DC 18). It can innately cast the following spells, requiring no material components.†"
-			},
-			{
-				"Name": "",
-				"Content": "† †3/day each:†blur, silent image, blight, hypnotic pattern"
+				"Content": "The dragon's spellcasting ability is Charisma (save DC 18). It can innately cast the following spells, requiring no material components.\n\n&nbsp;&nbsp;**3/day each:** blur, silent image, blight, hypnotic pattern"
 			}
 		],
 		"Actions": [
@@ -1470,9 +1459,10 @@
 		],
 		"MythicActions": [
 		],
-		"Desc": "",
+		"Desc": "Dragons are winged, scaled creatures that resemble immense reptiles.",
 		"Player": "",
-		"ImageURL": ""
+		"ImageURL": "",
+		"Combat": "While individual dragons have their own personalities and tactics, most rely heavily on their breath weapons. They use them whenever they can, preferably from maximum distance and while flying above their enemies.\n\nWhen fighting in the open, dragons often circle above their enemies as they wait for their breath weapons to recharge. They only close to melee if their enemies deal significant damage with ranged attacks, or if they can savage an enemy cut off from its allies. Once bloodied, dragons become more aggressive, attacking with bite and claws when their breath weapons aren’t available.\n\nIf a dragon is protecting its lair, it utilizes lair features, traps, allies, and architecture such as escape tunnels to keep up a hit-and-run fight, reappearing only when it has a fully-recharged breath weapon. If the dragon is forced into melee combat, it uses its bite and claws against a single foe. If it has legendary actions like Roar and Wing Attack, it uses them to disperse its other enemies.\n\nIf reduced to less than one-fourth its hit points while fighting in the open, a dragon flies away. However, it fights to the death to defend its lair, unless it can regain the upper hand through tricks or bargains."
 	},
 	{
 		"Id": "Adult_Brass_Dragon",
@@ -1485,7 +1475,9 @@
 		},
 		"Version": "3.2.7",
 		"Source": "Level Up Monstrous Menagerie",
-		"Type": "Dragon",
+		"Type": "Dragon (Shapechanger)",
+		"Size": "Huge",
+		"XP": 15000,
 		"HP": {
 			"Value": 161,
 			"Notes": "(14d12 + 70; bloodied 80)"
@@ -1591,11 +1583,7 @@
 			},
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The dragon's spellcasting ability is Charisma (save DC 16). It can innately cast the following spells, requiring no material components.†"
-			},
-			{
-				"Name": "",
-				"Content": "† †3/day each:†comprehend languages, identify, commune, legend lore"
+				"Content": "The dragon's spellcasting ability is Charisma (save DC 16). It can innately cast the following spells, requiring no material components.\n\n&nbsp;&nbsp;**3/day each:** comprehend languages, identify, commune, legend lore"
 			}
 		],
 		"Actions": [
@@ -1668,9 +1656,10 @@
 		],
 		"MythicActions": [
 		],
-		"Desc": "",
+		"Desc": "Dragons are winged, scaled creatures that resemble immense reptiles.",
 		"Player": "",
-		"ImageURL": ""
+		"ImageURL": "",
+		"Combat": "While individual dragons have their own personalities and tactics, most rely heavily on their breath weapons. They use them whenever they can, preferably from maximum distance and while flying above their enemies.\n\nWhen fighting in the open, dragons often circle above their enemies as they wait for their breath weapons to recharge. They only close to melee if their enemies deal significant damage with ranged attacks, or if they can savage an enemy cut off from its allies. Once bloodied, dragons become more aggressive, attacking with bite and claws when their breath weapons aren’t available.\n\nIf a dragon is protecting its lair, it utilizes lair features, traps, allies, and architecture such as escape tunnels to keep up a hit-and-run fight, reappearing only when it has a fully-recharged breath weapon. If the dragon is forced into melee combat, it uses its bite and claws against a single foe. If it has legendary actions like Roar and Wing Attack, it uses them to disperse its other enemies.\n\nIf reduced to less than one-fourth its hit points while fighting in the open, a dragon flies away. However, it fights to the death to defend its lair, unless it can regain the upper hand through tricks or bargains."
 	},
 	{
 		"Id": "Adult_Bronze_Dragon",
@@ -1683,7 +1672,9 @@
 		},
 		"Version": "3.2.7",
 		"Source": "Level Up Monstrous Menagerie",
-		"Type": "Dragon",
+		"Type": "Dragon (Shapechanger)",
+		"Size": "Huge",
+		"XP": 20000,
 		"HP": {
 			"Value": 287,
 			"Notes": "(23d12 + 138; bloodied 143)"
@@ -1773,11 +1764,7 @@
 			},
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The dragon's spellcasting ability is Charisma (save DC 18). It can innately cast the following spells, requiring no material components.†"
-			},
-			{
-				"Name": "",
-				"Content": "† †3/day each:†fog cloud, speak with animals,†commune with nature, speak with plants"
+				"Content": "The dragon's spellcasting ability is Charisma (save DC 18). It can innately cast the following spells, requiring no material components.\n\n&nbsp;&nbsp;**3/day each:** fog cloud, speak with animals,†commune with nature, speak with plants"
 			}
 		],
 		"Actions": [
@@ -1850,9 +1837,10 @@
 		],
 		"MythicActions": [
 		],
-		"Desc": "",
+		"Desc": "Dragons are winged, scaled creatures that resemble immense reptiles.",
 		"Player": "",
-		"ImageURL": ""
+		"ImageURL": "",
+		"Combat": "While individual dragons have their own personalities and tactics, most rely heavily on their breath weapons. They use them whenever they can, preferably from maximum distance and while flying above their enemies.\n\nWhen fighting in the open, dragons often circle above their enemies as they wait for their breath weapons to recharge. They only close to melee if their enemies deal significant damage with ranged attacks, or if they can savage an enemy cut off from its allies. Once bloodied, dragons become more aggressive, attacking with bite and claws when their breath weapons aren’t available.\n\nIf a dragon is protecting its lair, it utilizes lair features, traps, allies, and architecture such as escape tunnels to keep up a hit-and-run fight, reappearing only when it has a fully-recharged breath weapon. If the dragon is forced into melee combat, it uses its bite and claws against a single foe. If it has legendary actions like Roar and Wing Attack, it uses them to disperse its other enemies.\n\nIf reduced to less than one-fourth its hit points while fighting in the open, a dragon flies away. However, it fights to the death to defend its lair, unless it can regain the upper hand through tricks or bargains."
 	},
 	{
 		"Id": "Adult_Copper_Dragon",
@@ -1866,6 +1854,8 @@
 		"Version": "3.2.7",
 		"Source": "Level Up Monstrous Menagerie",
 		"Type": "Dragon",
+		"Size": "Huge",
+		"XP": 18000,
 		"HP": {
 			"Value": 253,
 			"Notes": "(22d12 + 110; bloodied 126)"
@@ -1951,11 +1941,7 @@
 			},
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The dragon's spellcasting ability is Charisma (save DC 17). It can innately cast the following spells, requiring no material components.†"
-			},
-			{
-				"Name": "",
-				"Content": "† †3/day each:†hideous laughter, suggestion, mislead, polymorph"
+				"Content": "The dragon's spellcasting ability is Charisma (save DC 17). It can innately cast the following spells, requiring no material components.\n\n&nbsp;&nbsp;**3/day each:** hideous laughter, suggestion, mislead, polymorph"
 			}
 		],
 		"Actions": [
@@ -2028,9 +2014,10 @@
 		],
 		"MythicActions": [
 		],
-		"Desc": "",
+		"Desc": "Dragons are winged, scaled creatures that resemble immense reptiles.",
 		"Player": "",
-		"ImageURL": ""
+		"ImageURL": "",
+		"Combat": "While individual dragons have their own personalities and tactics, most rely heavily on their breath weapons. They use them whenever they can, preferably from maximum distance and while flying above their enemies.\n\nWhen fighting in the open, dragons often circle above their enemies as they wait for their breath weapons to recharge. They only close to melee if their enemies deal significant damage with ranged attacks, or if they can savage an enemy cut off from its allies. Once bloodied, dragons become more aggressive, attacking with bite and claws when their breath weapons aren’t available.\n\nIf a dragon is protecting its lair, it utilizes lair features, traps, allies, and architecture such as escape tunnels to keep up a hit-and-run fight, reappearing only when it has a fully-recharged breath weapon. If the dragon is forced into melee combat, it uses its bite and claws against a single foe. If it has legendary actions like Roar and Wing Attack, it uses them to disperse its other enemies.\n\nIf reduced to less than one-fourth its hit points while fighting in the open, a dragon flies away. However, it fights to the death to defend its lair, unless it can regain the upper hand through tricks or bargains."
 	},
 	{
 		"Id": "Adult_Earth_Dragon",
@@ -2044,6 +2031,8 @@
 		"Version": "3.2.7",
 		"Source": "Level Up Monstrous Menagerie",
 		"Type": "Dragon",
+		"Size": "Huge",
+		"XP": 20000,
 		"HP": {
 			"Value": 287,
 			"Notes": "(23d12 + 138; bloodied 143)"
@@ -2146,11 +2135,7 @@
 			},
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The dragon's spellcasting ability is Charisma (save DC 15). It can innately cast the following spells, requiring no material components.†"
-			},
-			{
-				"Name": "",
-				"Content": "† †3/day each:†locate animals or plants, spike growth, stone shape, wall of stone"
+				"Content": "The dragon's spellcasting ability is Charisma (save DC 15). It can innately cast the following spells, requiring no material components.\n\n&nbsp;&nbsp;**3/day each:** locate animals or plants, spike growth, stone shape, wall of stone"
 			}
 		],
 		"Actions": [
@@ -2199,9 +2184,10 @@
 		],
 		"MythicActions": [
 		],
-		"Desc": "",
+		"Desc": "Dragons are winged, scaled creatures that resemble immense reptiles.",
 		"Player": "",
-		"ImageURL": ""
+		"ImageURL": "",
+		"Combat": "While individual dragons have their own personalities and tactics, most rely heavily on their breath weapons. They use them whenever they can, preferably from maximum distance and while flying above their enemies.\n\nWhen fighting in the open, dragons often circle above their enemies as they wait for their breath weapons to recharge. They only close to melee if their enemies deal significant damage with ranged attacks, or if they can savage an enemy cut off from its allies. Once bloodied, dragons become more aggressive, attacking with bite and claws when their breath weapons aren’t available.\n\nIf a dragon is protecting its lair, it utilizes lair features, traps, allies, and architecture such as escape tunnels to keep up a hit-and-run fight, reappearing only when it has a fully-recharged breath weapon. If the dragon is forced into melee combat, it uses its bite and claws against a single foe. If it has legendary actions like Roar and Wing Attack, it uses them to disperse its other enemies.\n\nIf reduced to less than one-fourth its hit points while fighting in the open, a dragon flies away. However, it fights to the death to defend its lair, unless it can regain the upper hand through tricks or bargains."
 	},
 	{
 		"Id": "Adult_Emerald_Dragon",
@@ -2215,6 +2201,8 @@
 		"Version": "3.2.7",
 		"Source": "Level Up Monstrous Menagerie",
 		"Type": "Dragon",
+		"Size": "Huge",
+		"XP": 18000,
 		"HP": {
 			"Value": 241,
 			"Notes": "(23d12 + 92; bloodied 120)"
@@ -2311,11 +2299,7 @@
 			},
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The dragon's spellcasting ability is Charisma (save DC 18). It can innately cast the following spells, requiring no material components.†"
-			},
-			{
-				"Name": "",
-				"Content": "† †3/day each:†confusion, dominate person, hideous laughter, suggestion"
+				"Content": "The dragon's spellcasting ability is Charisma (save DC 18). It can innately cast the following spells, requiring no material components.\n\n&nbsp;&nbsp;**3/day each:** confusion, dominate person, hideous laughter, suggestion"
 			}
 		],
 		"Actions": [
@@ -2372,9 +2356,10 @@
 		],
 		"MythicActions": [
 		],
-		"Desc": "",
+		"Desc": "Dragons are winged, scaled creatures that resemble immense reptiles.",
 		"Player": "",
-		"ImageURL": ""
+		"ImageURL": "/FTD/Adult%20Emerald%20Dragon",
+		"Combat": "While individual dragons have their own personalities and tactics, most rely heavily on their breath weapons. They use them whenever they can, preferably from maximum distance and while flying above their enemies.\n\nWhen fighting in the open, dragons often circle above their enemies as they wait for their breath weapons to recharge. They only close to melee if their enemies deal significant damage with ranged attacks, or if they can savage an enemy cut off from its allies. Once bloodied, dragons become more aggressive, attacking with bite and claws when their breath weapons aren’t available.\n\nIf a dragon is protecting its lair, it utilizes lair features, traps, allies, and architecture such as escape tunnels to keep up a hit-and-run fight, reappearing only when it has a fully-recharged breath weapon. If the dragon is forced into melee combat, it uses its bite and claws against a single foe. If it has legendary actions like Roar and Wing Attack, it uses them to disperse its other enemies.\n\nIf reduced to less than one-fourth its hit points while fighting in the open, a dragon flies away. However, it fights to the death to defend its lair, unless it can regain the upper hand through tricks or bargains."
 	},
 	{
 		"Id": "Adult_Gold_Dragon",
@@ -2387,7 +2372,9 @@
 		},
 		"Version": "3.2.7",
 		"Source": "Level Up Monstrous Menagerie",
-		"Type": "Dragon",
+		"Type": "Dragon (Shapechanger)",
+		"Size": "Huge",
+		"XP": 25000,
 		"HP": {
 			"Value": 324,
 			"Notes": "(24d12 + 168; bloodied 162)"
@@ -2477,11 +2464,7 @@
 			},
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The dragon's spellcasting ability is Charisma (save DC 21). It can innately cast the following spells, requiring no material components.†"
-			},
-			{
-				"Name": "",
-				"Content": "† †3/day each:†bless, healing word,†banishment, greater restoration"
+				"Content": "The dragon's spellcasting ability is Charisma (save DC 21). It can innately cast the following spells, requiring no material components.\n\n&nbsp;&nbsp;**3/day each:** bless, healing word,†banishment, greater restoration"
 			}
 		],
 		"Actions": [
@@ -2558,9 +2541,10 @@
 		],
 		"MythicActions": [
 		],
-		"Desc": "",
+		"Desc": "Dragons are winged, scaled creatures that resemble immense reptiles.",
 		"Player": "",
-		"ImageURL": ""
+		"ImageURL": "",
+		"Combat": "While individual dragons have their own personalities and tactics, most rely heavily on their breath weapons. They use them whenever they can, preferably from maximum distance and while flying above their enemies.\n\nWhen fighting in the open, dragons often circle above their enemies as they wait for their breath weapons to recharge. They only close to melee if their enemies deal significant damage with ranged attacks, or if they can savage an enemy cut off from its allies. Once bloodied, dragons become more aggressive, attacking with bite and claws when their breath weapons aren’t available.\n\nIf a dragon is protecting its lair, it utilizes lair features, traps, allies, and architecture such as escape tunnels to keep up a hit-and-run fight, reappearing only when it has a fully-recharged breath weapon. If the dragon is forced into melee combat, it uses its bite and claws against a single foe. If it has legendary actions like Roar and Wing Attack, it uses them to disperse its other enemies.\n\nIf reduced to less than one-fourth its hit points while fighting in the open, a dragon flies away. However, it fights to the death to defend its lair, unless it can regain the upper hand through tricks or bargains."
 	},
 	{
 		"Id": "Adult_Green_Dragon",
@@ -2574,6 +2558,8 @@
 		"Version": "3.2.7",
 		"Source": "Level Up Monstrous Menagerie",
 		"Type": "Dragon",
+		"Size": "Huge",
+		"XP": 20000,
 		"HP": {
 			"Value": 287,
 			"Notes": "(25d12 + 125; bloodied 143)"
@@ -2672,11 +2658,7 @@
 			},
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The dragon's spellcasting ability is Charisma (save DC 17). It can innately cast the following spells, requiring no material components.†"
-			},
-			{
-				"Name": "",
-				"Content": "† †3/day each:†animal messenger, tongues, modify memory, scrying"
+				"Content": "The dragon's spellcasting ability is Charisma (save DC 17). It can innately cast the following spells, requiring no material components.\n\n&nbsp;&nbsp;**3/day each:** animal messenger, tongues, modify memory, scrying"
 			}
 		],
 		"Actions": [
@@ -2737,9 +2719,10 @@
 		],
 		"MythicActions": [
 		],
-		"Desc": "",
+		"Desc": "Dragons are winged, scaled creatures that resemble immense reptiles.",
 		"Player": "",
-		"ImageURL": ""
+		"ImageURL": "",
+		"Combat": "While individual dragons have their own personalities and tactics, most rely heavily on their breath weapons. They use them whenever they can, preferably from maximum distance and while flying above their enemies.\n\nWhen fighting in the open, dragons often circle above their enemies as they wait for their breath weapons to recharge. They only close to melee if their enemies deal significant damage with ranged attacks, or if they can savage an enemy cut off from its allies. Once bloodied, dragons become more aggressive, attacking with bite and claws when their breath weapons aren’t available.\n\nIf a dragon is protecting its lair, it utilizes lair features, traps, allies, and architecture such as escape tunnels to keep up a hit-and-run fight, reappearing only when it has a fully-recharged breath weapon. If the dragon is forced into melee combat, it uses its bite and claws against a single foe. If it has legendary actions like Roar and Wing Attack, it uses them to disperse its other enemies.\n\nIf reduced to less than one-fourth its hit points while fighting in the open, a dragon flies away. However, it fights to the death to defend its lair, unless it can regain the upper hand through tricks or bargains."
 	},
 	{
 		"Id": "Adult_Red_Dragon",
@@ -2753,6 +2736,8 @@
 		"Version": "3.2.7",
 		"Source": "Level Up Monstrous Menagerie",
 		"Type": "Dragon",
+		"Size": "Huge",
+		"XP": 25000,
 		"HP": {
 			"Value": 310,
 			"Notes": "(23d12 + 161; bloodied 155)"
@@ -2842,11 +2827,7 @@
 			},
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The dragon's spellcasting ability is Charisma (save DC 19). It can innately cast the following spells, requiring no material components.†"
-			},
-			{
-				"Name": "",
-				"Content": "† †3/day each:†command, hold person, glyph of warding, wall of fire"
+				"Content": "The dragon's spellcasting ability is Charisma (save DC 19). It can innately cast the following spells, requiring no material components.\n\n&nbsp;&nbsp;**3/day each:** command, hold person, glyph of warding, wall of fire"
 			}
 		],
 		"Actions": [
@@ -2907,9 +2888,10 @@
 		],
 		"MythicActions": [
 		],
-		"Desc": "",
+		"Desc": "Dragons are winged, scaled creatures that resemble immense reptiles.",
 		"Player": "",
-		"ImageURL": ""
+		"ImageURL": "",
+		"Combat": "While individual dragons have their own personalities and tactics, most rely heavily on their breath weapons. They use them whenever they can, preferably from maximum distance and while flying above their enemies.\n\nWhen fighting in the open, dragons often circle above their enemies as they wait for their breath weapons to recharge. They only close to melee if their enemies deal significant damage with ranged attacks, or if they can savage an enemy cut off from its allies. Once bloodied, dragons become more aggressive, attacking with bite and claws when their breath weapons aren’t available.\n\nIf a dragon is protecting its lair, it utilizes lair features, traps, allies, and architecture such as escape tunnels to keep up a hit-and-run fight, reappearing only when it has a fully-recharged breath weapon. If the dragon is forced into melee combat, it uses its bite and claws against a single foe. If it has legendary actions like Roar and Wing Attack, it uses them to disperse its other enemies.\n\nIf reduced to less than one-fourth its hit points while fighting in the open, a dragon flies away. However, it fights to the death to defend its lair, unless it can regain the upper hand through tricks or bargains."
 	},
 	{
 		"Id": "Adult_River_Dragon",
@@ -2923,6 +2905,8 @@
 		"Version": "3.2.7",
 		"Source": "Level Up Monstrous Menagerie",
 		"Type": "Dragon",
+		"Size": "Huge",
+		"XP": 18000,
 		"HP": {
 			"Value": 252,
 			"Notes": "(24d12 + 96; bloodied 126)"
@@ -3037,11 +3021,7 @@
 			},
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The dragon's spellcasting ability is Charisma (save DC 15). It can innately cast the following spells, requiring no material components.†"
-			},
-			{
-				"Name": "",
-				"Content": "† †3/day each:†create or destroy water, fog cloud, control water, freedom of movement"
+				"Content": "The dragon's spellcasting ability is Charisma (save DC 15). It can innately cast the following spells, requiring no material components.\n\n&nbsp;&nbsp;**3/day each:** create or destroy water, fog cloud, control water, freedom of movement"
 			}
 		],
 		"Actions": [
@@ -3098,9 +3078,10 @@
 		],
 		"MythicActions": [
 		],
-		"Desc": "",
+		"Desc": "Dragons are winged, scaled creatures that resemble immense reptiles.",
 		"Player": "",
-		"ImageURL": ""
+		"ImageURL": "",
+		"Combat": "While individual dragons have their own personalities and tactics, most rely heavily on their breath weapons. They use them whenever they can, preferably from maximum distance and while flying above their enemies.\n\nWhen fighting in the open, dragons often circle above their enemies as they wait for their breath weapons to recharge. They only close to melee if their enemies deal significant damage with ranged attacks, or if they can savage an enemy cut off from its allies. Once bloodied, dragons become more aggressive, attacking with bite and claws when their breath weapons aren’t available.\n\nIf a dragon is protecting its lair, it utilizes lair features, traps, allies, and architecture such as escape tunnels to keep up a hit-and-run fight, reappearing only when it has a fully-recharged breath weapon. If the dragon is forced into melee combat, it uses its bite and claws against a single foe. If it has legendary actions like Roar and Wing Attack, it uses them to disperse its other enemies.\n\nIf reduced to less than one-fourth its hit points while fighting in the open, a dragon flies away. However, it fights to the death to defend its lair, unless it can regain the upper hand through tricks or bargains."
 	},
 	{
 		"Id": "Adult_Sapphire_Dragon",
@@ -3114,6 +3095,8 @@
 		"Version": "3.2.7",
 		"Source": "Level Up Monstrous Menagerie",
 		"Type": "Dragon",
+		"Size": "Huge",
+		"XP": 22000,
 		"HP": {
 			"Value": 304,
 			"Notes": "(29d12 + 116; bloodied 152)"
@@ -3221,11 +3204,7 @@
 			},
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The dragon's spellcasting ability is Charisma (save DC 18). It can innately cast the following spells, requiring no material components.†"
-			},
-			{
-				"Name": "",
-				"Content": "† †3/day each:†comprehend languages, detect thoughts, telekinesis, wall of force"
+				"Content": "The dragon's spellcasting ability is Charisma (save DC 18). It can innately cast the following spells, requiring no material components.\n\n&nbsp;&nbsp;**3/day each:** *comprehend languages, detect thoughts, telekinesis, wall of force*"
 			}
 		],
 		"Actions": [
@@ -3278,9 +3257,10 @@
 		],
 		"MythicActions": [
 		],
-		"Desc": "",
+		"ImageURL": "FTD/Adult%20Sapphire%20Dragon",		
+		"Desc": "Dragons are winged, scaled creatures that resemble immense reptiles.",
 		"Player": "",
-		"ImageURL": ""
+		"Combat": "While individual dragons have their own personalities and tactics, most rely heavily on their breath weapons. They use them whenever they can, preferably from maximum distance and while flying above their enemies.\n\nWhen fighting in the open, dragons often circle above their enemies as they wait for their breath weapons to recharge. They only close to melee if their enemies deal significant damage with ranged attacks, or if they can savage an enemy cut off from its allies. Once bloodied, dragons become more aggressive, attacking with bite and claws when their breath weapons aren’t available.\n\nIf a dragon is protecting its lair, it utilizes lair features, traps, allies, and architecture such as escape tunnels to keep up a hit-and-run fight, reappearing only when it has a fully-recharged breath weapon. If the dragon is forced into melee combat, it uses its bite and claws against a single foe. If it has legendary actions like Roar and Wing Attack, it uses them to disperse its other enemies.\n\nIf reduced to less than one-fourth its hit points while fighting in the open, a dragon flies away. However, it fights to the death to defend its lair, unless it can regain the upper hand through tricks or bargains."
 	},
 	{
 		"Id": "Adult_Shadow_Dragon",
@@ -3294,6 +3274,8 @@
 		"Version": "3.2.7",
 		"Source": "Level Up Monstrous Menagerie",
 		"Type": "Dragon",
+		"Size": "Huge",
+		"XP": 22000,
 		"HP": {
 			"Value": 212,
 			"Notes": "(17d12 + 102; bloodied 106)"
@@ -3407,11 +3389,7 @@
 			},
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The dragon's spellcasting ability is Charisma (save DC 20). It can innately cast the following spells, requiring no material components.†"
-			},
-			{
-				"Name": "",
-				"Content": "† †3/day each:†darkness, detect evil and good, bane, create undead"
+				"Content": "The dragon's spellcasting ability is Charisma (save DC 20). It can innately cast the following spells, requiring no material components.\n\n&nbsp;&nbsp;**3/day each:** darkness, detect evil and good, bane, create undead"
 			}
 		],
 		"Actions": [
@@ -3466,7 +3444,9 @@
 		],
 		"Desc": "",
 		"Player": "",
-		"ImageURL": ""
+		"ImageURL": "XMM/Shadow%20Dragon",
+		"Desc": "Dragons are winged, scaled creatures that resemble immense reptiles.",
+		"Combat": "While individual dragons have their own personalities and tactics, most rely heavily on their breath weapons. They use them whenever they can, preferably from maximum distance and while flying above their enemies.\n\nWhen fighting in the open, dragons often circle above their enemies as they wait for their breath weapons to recharge. They only close to melee if their enemies deal significant damage with ranged attacks, or if they can savage an enemy cut off from its allies. Once bloodied, dragons become more aggressive, attacking with bite and claws when their breath weapons aren’t available.\n\nIf a dragon is protecting its lair, it utilizes lair features, traps, allies, and architecture such as escape tunnels to keep up a hit-and-run fight, reappearing only when it has a fully-recharged breath weapon. If the dragon is forced into melee combat, it uses its bite and claws against a single foe. If it has legendary actions like Roar and Wing Attack, it uses them to disperse its other enemies.\n\nIf reduced to less than one-fourth its hit points while fighting in the open, a dragon flies away. However, it fights to the death to defend its lair, unless it can regain the upper hand through tricks or bargains."
 	},
 	{
 		"Id": "Adult_Silver_Dragon",
@@ -3479,7 +3459,9 @@
 		},
 		"Version": "3.2.7",
 		"Source": "Level Up Monstrous Menagerie",
-		"Type": "Dragon",
+		"Type": "Dragon (Shapechanger)",
+		"Size": "Huge",
+		"XP": 22000,
 		"HP": {
 			"Value": 283,
 			"Notes": "(21d12 + 147; bloodied 141)"
@@ -3568,11 +3550,7 @@
 			},
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The dragon's spellcasting ability is Charisma (save DC 19). It can innately cast the following spells, requiring no material components.†"
-			},
-			{
-				"Name": "",
-				"Content": "† †3/day each:†charm person, faerie fire,†awaken, geas"
+				"Content": "The dragon's spellcasting ability is Charisma (save DC 19). It can innately cast the following spells, requiring no material components.\n\n&nbsp;&nbsp;**3/day each:** charm person, faerie fire,†awaken, geas"
 			}
 		],
 		"Actions": [
@@ -3645,9 +3623,10 @@
 		],
 		"MythicActions": [
 		],
-		"Desc": "",
+		"Desc": "Dragons are winged, scaled creatures that resemble immense reptiles.",
 		"Player": "",
-		"ImageURL": ""
+		"ImageURL": "",
+		"Combat": "While individual dragons have their own personalities and tactics, most rely heavily on their breath weapons. They use them whenever they can, preferably from maximum distance and while flying above their enemies.\n\nWhen fighting in the open, dragons often circle above their enemies as they wait for their breath weapons to recharge. They only close to melee if their enemies deal significant damage with ranged attacks, or if they can savage an enemy cut off from its allies. Once bloodied, dragons become more aggressive, attacking with bite and claws when their breath weapons aren’t available.\n\nIf a dragon is protecting its lair, it utilizes lair features, traps, allies, and architecture such as escape tunnels to keep up a hit-and-run fight, reappearing only when it has a fully-recharged breath weapon. If the dragon is forced into melee combat, it uses its bite and claws against a single foe. If it has legendary actions like Roar and Wing Attack, it uses them to disperse its other enemies.\n\nIf reduced to less than one-fourth its hit points while fighting in the open, a dragon flies away. However, it fights to the death to defend its lair, unless it can regain the upper hand through tricks or bargains."
 	},
 	{
 		"Id": "Adult_White_Dragon",
@@ -3661,6 +3640,8 @@
 		"Version": "3.2.7",
 		"Source": "Level Up Monstrous Menagerie",
 		"Type": "Dragon",
+		"Size": "Huge",
+		"XP": 15000,
 		"HP": {
 			"Value": 250,
 			"Notes": "(20d12 + 120; bloodied 125)"
@@ -3746,11 +3727,7 @@
 			},
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The dragon's spellcasting ability is Charisma (save DC 15). It can innately cast the following spells, requiring no material components.†"
-			},
-			{
-				"Name": "",
-				"Content": "† †3/day each:†dominate beast, fire shield, animal friendship, sleet storm"
+				"Content": "The dragon's spellcasting ability is Charisma (save DC 15). It can innately cast the following spells, requiring no material components.\n\n&nbsp;&nbsp;**3/day each:** dominate beast, fire shield, animal friendship, sleet storm"
 			}
 		],
 		"Actions": [
@@ -3807,9 +3784,10 @@
 		],
 		"MythicActions": [
 		],
-		"Desc": "",
+		"Desc": "Dragons are winged, scaled creatures that resemble immense reptiles.",
 		"Player": "",
-		"ImageURL": ""
+		"ImageURL": "",
+		"Combat": "While individual dragons have their own personalities and tactics, most rely heavily on their breath weapons. They use them whenever they can, preferably from maximum distance and while flying above their enemies.\n\nWhen fighting in the open, dragons often circle above their enemies as they wait for their breath weapons to recharge. They only close to melee if their enemies deal significant damage with ranged attacks, or if they can savage an enemy cut off from its allies. Once bloodied, dragons become more aggressive, attacking with bite and claws when their breath weapons aren’t available.\n\nIf a dragon is protecting its lair, it utilizes lair features, traps, allies, and architecture such as escape tunnels to keep up a hit-and-run fight, reappearing only when it has a fully-recharged breath weapon. If the dragon is forced into melee combat, it uses its bite and claws against a single foe. If it has legendary actions like Roar and Wing Attack, it uses them to disperse its other enemies.\n\nIf reduced to less than one-fourth its hit points while fighting in the open, a dragon flies away. However, it fights to the death to defend its lair, unless it can regain the upper hand through tricks or bargains."
 	},
 	{
 		"Id": "Air_Elemental",
@@ -3823,6 +3801,8 @@
 		"Version": "3.2.7",
 		"Source": "Level Up Monstrous Menagerie",
 		"Type": "Elemental",
+		"Size": "Large",
+		"XP": 1800,
 		"HP": {
 			"Value": 90,
 			"Notes": "(12d10 + 24; bloodied 45)"
@@ -3908,9 +3888,10 @@
 		],
 		"MythicActions": [
 		],
-		"Desc": "",
+		"Desc": "Spellcasters and other powerful beings draw upon the animating life force of the pure elements—air, earth, fire, and water—to manifest elementals.\n\n ***Elemental Nature.*** An elemental doesn’t require air, sustenance, or sleep.",
 		"Player": "",
-		"ImageURL": ""
+		"ImageURL": "",
+		"Combat": "The elemental uses Whirlwind when it can scoop up at least three creatures. If possible, it ends this movement in the air so creatures inside it take additional falling damage. Otherwise, it makes a slam attack on creatures within its reach or sharing its space. Elementals retreat only if ordered to do so."
 	},
 	{
 		"Id": "Aklea",
@@ -3923,7 +3904,9 @@
 		},
 		"Version": "3.2.7",
 		"Source": "Level Up Monstrous Menagerie",
-		"Type": "Celestial",
+		"Type": "Celestial (Titan)",
+		"Size": "Gargantuan",
+		"XP": 82000,
 		"HP": {
 			"Value": 656,
 			"Notes": "(32d20 + 320; bloodied 328)"
@@ -4080,9 +4063,10 @@
 		],
 		"MythicActions": [
 		],
-		"Desc": "",
+		"Desc": "Titans are towering demigods with divine blood coursing through their veins. Aklea is an elite monster, equivalent to two CR 22 monsters (82,000 XP). She has 656 (32d20 + 320; bloodied 328) hit points.",
 		"Player": "",
-		"ImageURL": ""
+		"ImageURL": "XMM/Empyrean",
+		"Combat": "The empyrean flies at least 50 feet in the air, raining lightning bolts and flame strikes on land-bound foes. It attacks flying enemies with its maul. It uses Shout whenever it can and then attacks stunned creatures with its maul. If not on the Material Plane, it uses plane shift when reduced to 100 hit points or fewer."
 	},
 	{
 		"Id": "Alchemist",
@@ -4096,6 +4080,8 @@
 		"Version": "3.2.7",
 		"Source": "Level Up Monstrous Menagerie",
 		"Type": "Humanoid",
+		"Size": "Medium",
+		"XP": 2300,
 		"HP": {
 			"Value": 91,
 			"Notes": "(14d8 + 28; bloodied 45)"
@@ -4249,6 +4235,8 @@
 		"Version": "3.2.7",
 		"Source": "Level Up Monstrous Menagerie",
 		"Type": "Beast",
+		"Size": "Huge",
+		"XP": 700,
 		"HP": {
 			"Value": 57,
 			"Notes": "(6d12 + 18; bloodied 28)"
@@ -4303,7 +4291,7 @@
 		],
 		"MythicActions": [
 		],
-		"Desc": "",
+		"Desc": "The stuff of legend in cold and temperate lands, dinosaurs rule arid grasslands and steaming fens and jungles.",
 		"Player": "",
 		"ImageURL": ""
 	},
@@ -4318,7 +4306,9 @@
 		},
 		"Version": "3.2.7",
 		"Source": "Level Up Monstrous Menagerie",
-		"Type": "Humanoid",
+		"Type": "Humanoid (Shapechanger)",
+		"Size": "Medium",
+		"XP": 2300,
 		"HP": {
 			"Value": 104,
 			"Notes": "(16d8 + 32; bloodied 52)"
@@ -4425,9 +4415,10 @@
 		],
 		"MythicActions": [
 		],
-		"Desc": "",
+		"Desc": "A lycanthrope is a humanoid who transforms into an animal during the full moon.\n\nThe alpha werewolf is CR 6 (2,300 XP) and has 104 (16d8 + 32; bloodied 52) hit points. It is immune to damage from nonmagical, non-silvered weapons.",
 		"Player": "",
-		"ImageURL": ""
+		"ImageURL": "XMM/Werewolf",
+		"Combat": "Most werewolves prefer to fight in humanoid or wolf form, but some fight openly in hybrid form. The werewolf prefers to attack with surprise or alongside allies. When bloodied, a werewolf lacking self-control instinctively switches to hybrid form and uses Frenzied Bite. A werewolf flees when reduced to 15 hit points or fewer."
 	},
 	{
 		"Id": "Amethyst_Dragon_Wyrmling",
@@ -4441,6 +4432,8 @@
 		"Version": "3.2.7",
 		"Source": "Level Up Monstrous Menagerie",
 		"Type": "Dragon",
+		"Size": "Medium",
+		"XP": 450,
 		"HP": {
 			"Value": 45,
 			"Notes": "(7d8 + 14; bloodied 22)"
@@ -4529,9 +4522,10 @@
 		],
 		"MythicActions": [
 		],
-		"Desc": "",
+		"Desc": "Dragons are winged, scaled creatures that resemble immense reptiles.",
 		"Player": "",
-		"ImageURL": ""
+		"ImageURL": "FTD/Amethyst%20Dragon%20Wyrmling",
+		"Combat": "While individual dragons have their own personalities and tactics, most rely heavily on their breath weapons. They use them whenever they can, preferably from maximum distance and while flying above their enemies.\n\nWhen fighting in the open, dragons often circle above their enemies as they wait for their breath weapons to recharge. They only close to melee if their enemies deal significant damage with ranged attacks, or if they can savage an enemy cut off from its allies. Once bloodied, dragons become more aggressive, attacking with bite and claws when their breath weapons aren’t available.\n\nIf a dragon is protecting its lair, it utilizes lair features, traps, allies, and architecture such as escape tunnels to keep up a hit-and-run fight, reappearing only when it has a fully-recharged breath weapon. If the dragon is forced into melee combat, it uses its bite and claws against a single foe. If it has legendary actions like Roar and Wing Attack, it uses them to disperse its other enemies.\n\nIf reduced to less than one-fourth its hit points while fighting in the open, a dragon flies away. However, it fights to the death to defend its lair, unless it can regain the upper hand through tricks or bargains."
 	},
 	{
 		"Id": "Ancient_Aboleth",
@@ -4545,6 +4539,8 @@
 		"Version": "3.2.7",
 		"Source": "Level Up Monstrous Menagerie",
 		"Type": "Aberration",
+		"Size": "Large",
+		"XP": 14400,
 		"HP": {
 			"Value": 342,
 			"Notes": "(36d10 + 144; bloodied 171)"
@@ -4688,9 +4684,9 @@
 		],
 		"MythicActions": [
 		],
-		"Desc": "",
+		"Desc": "Aboleths are hyper-intelligent amphibians that lurk in underwater caves and strange ruined cities, guarding ancient secrets and sending forth charmed thralls to advance their intricate schemes.\n\nThe ancient aboleth is an elite monster, equivalent to two CR 11 monsters (14,400 XP). It is Huge and has 342 (36d10 + 144; bloodied 171) hit points.",
 		"Player": "",
-		"ImageURL": ""
+		"ImageURL": "XMM/Aboleth"
 	},
 	{
 		"Id": "Ancient_Amethyst_Dragon",
@@ -4704,6 +4700,8 @@
 		"Version": "3.2.7",
 		"Source": "Level Up Monstrous Menagerie",
 		"Type": "Dragon",
+		"Size": "Gargantuan",
+		"XP": 50000,
 		"HP": {
 			"Value": 313,
 			"Notes": "(19d20 + 114; bloodied 156)"
@@ -4800,15 +4798,11 @@
 			},
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The dragon's spellcasting ability is Charisma (save DC 22). It can innately cast the following spells, requiring no material components.†"
+				"Content": "The dragon's spellcasting ability is Charisma (save DC 22). It can innately cast the following spells, requiring no material components.\n\n&nbsp;&nbsp;**3/day each:** calm emotions, charm person, mass suggestion, modify memory"
 			},
 			{
 				"Name": "",
-				"Content": "† †3/day each:†calm emotions, charm person, mass suggestion, modify memory"
-			},
-			{
-				"Name": "",
-				"Content": "† †1/day:†plane shift, project image"
+				"Content": "† †1/day:** plane shift, project image"
 			}
 		],
 		"Actions": [
@@ -4867,7 +4861,10 @@
 		],
 		"Desc": "",
 		"Player": "",
-		"ImageURL": ""
+		"Desc": "Dragons are winged, scaled creatures that resemble immense reptiles.",
+		"Player": "",
+		"ImageURL": "FTD/Ancient%20Amethyst%20Dragon",
+		"Combat": "While individual dragons have their own personalities and tactics, most rely heavily on their breath weapons. They use them whenever they can, preferably from maximum distance and while flying above their enemies.\n\nWhen fighting in the open, dragons often circle above their enemies as they wait for their breath weapons to recharge. They only close to melee if their enemies deal significant damage with ranged attacks, or if they can savage an enemy cut off from its allies. Once bloodied, dragons become more aggressive, attacking with bite and claws when their breath weapons aren’t available.\n\nIf a dragon is protecting its lair, it utilizes lair features, traps, allies, and architecture such as escape tunnels to keep up a hit-and-run fight, reappearing only when it has a fully-recharged breath weapon. If the dragon is forced into melee combat, it uses its bite and claws against a single foe. If it has legendary actions like Roar and Wing Attack, it uses them to disperse its other enemies.\n\nIf reduced to less than one-fourth its hit points while fighting in the open, a dragon flies away. However, it fights to the death to defend its lair, unless it can regain the upper hand through tricks or bargains."
 	},
 	{
 		"Id": "Ancient_Black_Dragon",
@@ -4881,6 +4878,8 @@
 		"Version": "3.2.7",
 		"Source": "Level Up Monstrous Menagerie",
 		"Type": "Dragon",
+		"Size": "Gargantuan",
+		"XP": 50000,
 		"HP": {
 			"Value": 367,
 			"Notes": "(21d20 + 147; bloodied 183)"
@@ -4974,11 +4973,7 @@
 			},
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The dragon's spellcasting ability is Charisma (save DC 19). It can innately cast the following spells, requiring no material components.†"
-			},
-			{
-				"Name": "",
-				"Content": "† †3/day each:†fog cloud, pass without trace, legend lore, speak with dead"
+				"Content": "The dragon's spellcasting ability is Charisma (save DC 19). It can innately cast the following spells, requiring no material components.\n\n&nbsp;&nbsp;**3/day each:** fog cloud, pass without trace, legend lore, speak with dead"
 			},
 			{
 				"Name": "",
@@ -5039,9 +5034,10 @@
 		],
 		"MythicActions": [
 		],
-		"Desc": "",
+		"Desc": "Dragons are winged, scaled creatures that resemble immense reptiles.",
 		"Player": "",
-		"ImageURL": ""
+		"ImageURL": "XMM/Ancient%20Black%20Dragon",
+		"Combat": "While individual dragons have their own personalities and tactics, most rely heavily on their breath weapons. They use them whenever they can, preferably from maximum distance and while flying above their enemies.\n\nWhen fighting in the open, dragons often circle above their enemies as they wait for their breath weapons to recharge. They only close to melee if their enemies deal significant damage with ranged attacks, or if they can savage an enemy cut off from its allies. Once bloodied, dragons become more aggressive, attacking with bite and claws when their breath weapons aren’t available.\n\nIf a dragon is protecting its lair, it utilizes lair features, traps, allies, and architecture such as escape tunnels to keep up a hit-and-run fight, reappearing only when it has a fully-recharged breath weapon. If the dragon is forced into melee combat, it uses its bite and claws against a single foe. If it has legendary actions like Roar and Wing Attack, it uses them to disperse its other enemies.\n\nIf reduced to less than one-fourth its hit points while fighting in the open, a dragon flies away. However, it fights to the death to defend its lair, unless it can regain the upper hand through tricks or bargains."
 	},
 	{
 		"Id": "Ancient_Blue_Dragon",
@@ -5055,6 +5051,8 @@
 		"Version": "3.2.7",
 		"Source": "Level Up Monstrous Menagerie",
 		"Type": "Dragon",
+		"Size": "Gargantuan",
+		"XP": 75000,
 		"HP": {
 			"Value": 407,
 			"Notes": "(22d20 + 176; bloodied 203)"
@@ -5146,15 +5144,11 @@
 			},
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The dragon's spellcasting ability is Charisma (save DC 21). It can innately cast the following spells, requiring no material components.†"
+				"Content": "The dragon's spellcasting ability is Charisma (save DC 21). It can innately cast the following spells, requiring no material components.\n\n&nbsp;&nbsp;**3/day each:** blur, silent image, blight, hypnotic pattern"
 			},
 			{
 				"Name": "",
-				"Content": "† †3/day each:†blur, silent image, blight, hypnotic pattern"
-			},
-			{
-				"Name": "",
-				"Content": "† †1/day each:†control water, mirage arcane"
+				"Content": "† †1/day each:** control water, mirage arcane"
 			}
 		],
 		"Actions": [
@@ -5215,9 +5209,10 @@
 		],
 		"MythicActions": [
 		],
-		"Desc": "",
+		"Desc": "Dragons are winged, scaled creatures that resemble immense reptiles.",
 		"Player": "",
-		"ImageURL": ""
+		"ImageURL": "XMM/Ancient%20Blue%20Dragon",
+		"Combat": "While individual dragons have their own personalities and tactics, most rely heavily on their breath weapons. They use them whenever they can, preferably from maximum distance and while flying above their enemies.\n\nWhen fighting in the open, dragons often circle above their enemies as they wait for their breath weapons to recharge. They only close to melee if their enemies deal significant damage with ranged attacks, or if they can savage an enemy cut off from its allies. Once bloodied, dragons become more aggressive, attacking with bite and claws when their breath weapons aren’t available.\n\nIf a dragon is protecting its lair, it utilizes lair features, traps, allies, and architecture such as escape tunnels to keep up a hit-and-run fight, reappearing only when it has a fully-recharged breath weapon. If the dragon is forced into melee combat, it uses its bite and claws against a single foe. If it has legendary actions like Roar and Wing Attack, it uses them to disperse its other enemies.\n\nIf reduced to less than one-fourth its hit points while fighting in the open, a dragon flies away. However, it fights to the death to defend its lair, unless it can regain the upper hand through tricks or bargains."
 	},
 	{
 		"Id": "Ancient_Brass_Dragon",
@@ -5231,6 +5226,8 @@
 		"Version": "3.2.7",
 		"Source": "Level Up Monstrous Menagerie",
 		"Type": "Dragon",
+		"Size": "Gargantuan",
+		"XP": 41000,
 		"HP": {
 			"Value": 367,
 			"Notes": "(21d20 + 147; bloodied 183)"
@@ -5336,15 +5333,11 @@
 			},
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The dragon's spellcasting ability is Charisma (save DC 19). It can innately cast the following spells, requiring no material components.†"
+				"Content": "The dragon's spellcasting ability is Charisma (save DC 19). It can innately cast the following spells, requiring no material components.\n\n&nbsp;&nbsp;**3/day each:** comprehend languages, identify, commune, legend lore"
 			},
 			{
 				"Name": "",
-				"Content": "† †3/day each:†comprehend languages, identify, commune, legend lore"
-			},
-			{
-				"Name": "",
-				"Content": "† †1/day:†teleport, true seeing"
+				"Content": "† †1/day:** teleport, true seeing"
 			}
 		],
 		"Actions": [
@@ -5417,9 +5410,10 @@
 		],
 		"MythicActions": [
 		],
-		"Desc": "",
+		"Desc": "Dragons are winged, scaled creatures that resemble immense reptiles.",
 		"Player": "",
-		"ImageURL": ""
+		"ImageURL": "XMM/Ancient%20Brass%20Dragon",
+		"Combat": "While individual dragons have their own personalities and tactics, most rely heavily on their breath weapons. They use them whenever they can, preferably from maximum distance and while flying above their enemies.\n\nWhen fighting in the open, dragons often circle above their enemies as they wait for their breath weapons to recharge. They only close to melee if their enemies deal significant damage with ranged attacks, or if they can savage an enemy cut off from its allies. Once bloodied, dragons become more aggressive, attacking with bite and claws when their breath weapons aren’t available.\n\nIf a dragon is protecting its lair, it utilizes lair features, traps, allies, and architecture such as escape tunnels to keep up a hit-and-run fight, reappearing only when it has a fully-recharged breath weapon. If the dragon is forced into melee combat, it uses its bite and claws against a single foe. If it has legendary actions like Roar and Wing Attack, it uses them to disperse its other enemies.\n\nIf reduced to less than one-fourth its hit points while fighting in the open, a dragon flies away. However, it fights to the death to defend its lair, unless it can regain the upper hand through tricks or bargains."
 	},
 	{
 		"Id": "Ancient_Bronze_Dragon",
@@ -5432,7 +5426,9 @@
 		},
 		"Version": "3.2.7",
 		"Source": "Level Up Monstrous Menagerie",
-		"Type": "Dragon",
+		"Type": "Dragon",		
+		"Size": "Gargantuan",
+		"XP": 62000,
 		"HP": {
 			"Value": 425,
 			"Notes": "(23d20 + 184; bloodied 212)"
@@ -5522,15 +5518,11 @@
 			},
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The dragon's spellcasting ability is Charisma (save DC 20). It can innately cast the following spells, requiring no material components.†"
+				"Content": "The dragon's spellcasting ability is Charisma (save DC 20). It can innately cast the following spells, requiring no material components.\n\n&nbsp;&nbsp;**3/day each:** fog cloud, speak with animals,†commune with nature, speak with plants"
 			},
 			{
 				"Name": "",
-				"Content": "† †3/day each:†fog cloud, speak with animals,†commune with nature, speak with plants"
-			},
-			{
-				"Name": "",
-				"Content": "† †1/day:†control weather, etherealness"
+				"Content": "† †1/day:** control weather, etherealness"
 			}
 		],
 		"Actions": [
@@ -5603,9 +5595,10 @@
 		],
 		"MythicActions": [
 		],
-		"Desc": "",
+		"Desc": "Dragons are winged, scaled creatures that resemble immense reptiles.",
 		"Player": "",
-		"ImageURL": ""
+		"ImageURL": "XMM/Ancient%20Bronze%20Dragon",
+		"Combat": "While individual dragons have their own personalities and tactics, most rely heavily on their breath weapons. They use them whenever they can, preferably from maximum distance and while flying above their enemies.\n\nWhen fighting in the open, dragons often circle above their enemies as they wait for their breath weapons to recharge. They only close to melee if their enemies deal significant damage with ranged attacks, or if they can savage an enemy cut off from its allies. Once bloodied, dragons become more aggressive, attacking with bite and claws when their breath weapons aren’t available.\n\nIf a dragon is protecting its lair, it utilizes lair features, traps, allies, and architecture such as escape tunnels to keep up a hit-and-run fight, reappearing only when it has a fully-recharged breath weapon. If the dragon is forced into melee combat, it uses its bite and claws against a single foe. If it has legendary actions like Roar and Wing Attack, it uses them to disperse its other enemies.\n\nIf reduced to less than one-fourth its hit points while fighting in the open, a dragon flies away. However, it fights to the death to defend its lair, unless it can regain the upper hand through tricks or bargains."
 	},
 	{
 		"Id": "Ancient_Copper_Dragon",
@@ -5704,15 +5697,11 @@
 			},
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The dragon's spellcasting ability is Charisma (save DC 19). It can innately cast the following spells, requiring no material components.†"
+				"Content": "The dragon's spellcasting ability is Charisma (save DC 19). It can innately cast the following spells, requiring no material components.\n\n&nbsp;&nbsp;**3/day each:** hideous laughter, suggestion, mislead, polymorph"
 			},
 			{
 				"Name": "",
-				"Content": "† †3/day each:†hideous laughter, suggestion, mislead, polymorph"
-			},
-			{
-				"Name": "",
-				"Content": "† †1/day:†irresistible dance, mass suggestion"
+				"Content": "† †1/day:** irresistible dance, mass suggestion"
 			}
 		],
 		"Actions": [
@@ -5903,15 +5892,11 @@
 			},
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The dragon's spellcasting ability is Charisma (save DC 17). It can innately cast the following spells, requiring no material components.†"
+				"Content": "The dragon's spellcasting ability is Charisma (save DC 17). It can innately cast the following spells, requiring no material components.\n\n&nbsp;&nbsp;**3/day each:** locate animals or plants, spike growth, stone shape, wall of stone"
 			},
 			{
 				"Name": "",
-				"Content": "† †3/day each:†locate animals or plants, spike growth, stone shape, wall of stone"
-			},
-			{
-				"Name": "",
-				"Content": "† †1/day:†earthquake, move earth"
+				"Content": "† †1/day:** earthquake, move earth"
 			}
 		],
 		"Actions": [
@@ -6072,15 +6057,11 @@
 			},
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The dragon's spellcasting ability is Charisma (save DC 21). It can innately cast the following spells, requiring no material components.†"
+				"Content": "The dragon's spellcasting ability is Charisma (save DC 21). It can innately cast the following spells, requiring no material components.\n\n&nbsp;&nbsp;**3/day each:** confusion, dominate person, hideous laughter, suggestion"
 			},
 			{
 				"Name": "",
-				"Content": "† †3/day each:†confusion, dominate person, hideous laughter, suggestion"
-			},
-			{
-				"Name": "",
-				"Content": "† †1/day:†irresistible dance, symbol"
+				"Content": "† †1/day:** irresistible dance, symbol"
 			}
 		],
 		"Actions": [
@@ -6242,15 +6223,11 @@
 			},
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The dragon's spellcasting ability is Charisma (save DC 25). It can innately cast the following spells, requiring no material components.†"
+				"Content": "The dragon's spellcasting ability is Charisma (save DC 25). It can innately cast the following spells, requiring no material components.\n\n&nbsp;&nbsp;**3/day each:** bless, healing word,†banishment, greater restoration"
 			},
 			{
 				"Name": "",
-				"Content": "† †3/day each:†bless, healing word,†banishment, greater restoration"
-			},
-			{
-				"Name": "",
-				"Content": "† †1/day:†divine word, hallow"
+				"Content": "† †1/day:** divine word, hallow"
 			}
 		],
 		"Actions": [
@@ -6445,15 +6422,11 @@
 			},
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The dragon's spellcasting ability is Charisma (save DC 19). It can innately cast the following spells, requiring no material components.†"
+				"Content": "The dragon's spellcasting ability is Charisma (save DC 19). It can innately cast the following spells, requiring no material components.\n\n&nbsp;&nbsp;**3/day each:** animal messenger, tongues, modify memory, scrying"
 			},
 			{
 				"Name": "",
-				"Content": "† †3/day each:†animal messenger, tongues, modify memory, scrying"
-			},
-			{
-				"Name": "",
-				"Content": "† †1/day:†mass suggestion, telepathic bond"
+				"Content": "† †1/day:** mass suggestion, telepathic bond"
 			}
 		],
 		"Actions": [
@@ -6619,15 +6592,11 @@
 			},
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The dragon's spellcasting ability is Charisma (save DC 22). It can innately cast the following spells, requiring no material components.†"
+				"Content": "The dragon's spellcasting ability is Charisma (save DC 22). It can innately cast the following spells, requiring no material components.\n\n&nbsp;&nbsp;**3/day each:** command, hold person, glyph of warding, wall of fire"
 			},
 			{
 				"Name": "",
-				"Content": "† †3/day each:†command, hold person, glyph of warding, wall of fire"
-			},
-			{
-				"Name": "",
-				"Content": "† †1/day each:†antimagic field, dominate monster"
+				"Content": "† †1/day each:** antimagic field, dominate monster"
 			}
 		],
 		"Actions": [
@@ -6822,15 +6791,11 @@
 			},
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The dragon's spellcasting ability is Charisma (save DC 20). It can innately cast the following spells, requiring no material components.†"
+				"Content": "The dragon's spellcasting ability is Charisma (save DC 20). It can innately cast the following spells, requiring no material components.\n\n&nbsp;&nbsp;**3/day each:** create or destroy water, fog cloud, control water, freedom of movement"
 			},
 			{
 				"Name": "",
-				"Content": "† †3/day each:†create or destroy water, fog cloud, control water, freedom of movement"
-			},
-			{
-				"Name": "",
-				"Content": "† †1/day each:†control weather, wall of ice"
+				"Content": "† †1/day each:** control weather, wall of ice"
 			}
 		],
 		"Actions": [
@@ -7010,15 +6975,11 @@
 			},
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The dragon's spellcasting ability is Charisma (save DC 20). It can innately cast the following spells, requiring no material components.†"
+				"Content": "The dragon's spellcasting ability is Charisma (save DC 20). It can innately cast the following spells, requiring no material components.\n\n&nbsp;&nbsp;**3/day each:** comprehend languages, detect thoughts, telekinesis, wall of force"
 			},
 			{
 				"Name": "",
-				"Content": "† †3/day each:†comprehend languages, detect thoughts, telekinesis, wall of force"
-			},
-			{
-				"Name": "",
-				"Content": "† †1/day:†etherealness, mind blank"
+				"Content": "† †1/day:** etherealness, mind blank"
 			}
 		],
 		"Actions": [
@@ -7077,7 +7038,7 @@
 		],
 		"Desc": "",
 		"Player": "",
-		"ImageURL": ""
+		"ImageURL": "FTD/Ancient%20Sapphire%20Dragon"
 	},
 	{
 		"Id": "Ancient_Shadow_Dragon",
@@ -7205,15 +7166,11 @@
 			},
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The dragon's spellcasting ability is Charisma (save DC 23). It can innately cast the following spells, requiring no material components.†"
+				"Content": "The dragon's spellcasting ability is Charisma (save DC 23). It can innately cast the following spells, requiring no material components.\n\n&nbsp;&nbsp;**3/day each:** darkness, detect evil and good, bane, create undead"
 			},
 			{
 				"Name": "",
-				"Content": "† †3/day each:†darkness, detect evil and good, bane, create undead"
-			},
-			{
-				"Name": "",
-				"Content": "† †1/day:†hallow, magic jar"
+				"Content": "† †1/day:** hallow, magic jar"
 			}
 		],
 		"Actions": [
@@ -7272,7 +7229,7 @@
 		],
 		"Desc": "",
 		"Player": "",
-		"ImageURL": ""
+		"ImageURL": "XMM/Shadow%20Dragon"
 	},
 	{
 		"Id": "Ancient_Silver_Dragon",
@@ -7374,15 +7331,11 @@
 			},
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The dragon's spellcasting ability is Charisma (save DC 23). It can innately cast the following spells, requiring no material components.†"
+				"Content": "The dragon's spellcasting ability is Charisma (save DC 23). It can innately cast the following spells, requiring no material components.\n\n&nbsp;&nbsp;**3/day each:** charm person, faerie fire,†awaken, geas"
 			},
 			{
 				"Name": "",
-				"Content": "† †3/day each:†charm person, faerie fire,†awaken, geas"
-			},
-			{
-				"Name": "",
-				"Content": "† †1/day:†heroes' feast, telepathic bond"
+				"Content": "† †1/day:** heroes' feast, telepathic bond"
 			}
 		],
 		"Actions": [
@@ -7556,15 +7509,11 @@
 			},
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The dragon's spellcasting ability is Charisma (save DC 18). It can innately cast the following spells, requiring no material components.†"
+				"Content": "The dragon's spellcasting ability is Charisma (save DC 18). It can innately cast the following spells, requiring no material components.\n\n&nbsp;&nbsp;**3/day each:** dominate beast, fire shield, animal friendship, sleet storm"
 			},
 			{
 				"Name": "",
-				"Content": "† †3/day each:†dominate beast, fire shield, animal friendship, sleet storm"
-			},
-			{
-				"Name": "",
-				"Content": "† †1/day each:†control weather, wall of ice"
+				"Content": "† †1/day each:** control weather, wall of ice"
 			}
 		],
 		"Actions": [
@@ -7700,7 +7649,7 @@
 		"Actions": [
 			{
 				"Name": "Weapon",
-				"Content": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit:† 7 (1d10 + 2) bludgeoning, piercing, or slashing damage, depending on weapon."
+				"Content": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit:**  7 (1d10 + 2) bludgeoning, piercing, or slashing damage, depending on weapon."
 			}
 		],
 		"BonusActions": [
@@ -7876,7 +7825,7 @@
 			},
 			{
 				"Name": "Acid Glob",
-				"Content": "Ranged Weapon Attack: +5 to hit, range 30/90 feet, one target. Hit:† 7 (1d8 + 3) acid damage."
+				"Content": "Ranged Weapon Attack: +5 to hit, range 30/90 feet, one target. Hit:**  7 (1d8 + 3) acid damage."
 			},
 			{
 				"Name": "Burrowing Ambush (1/Day)",
@@ -18457,6 +18406,8 @@
 		"Version": "3.2.7",
 		"Source": "Level Up Monstrous Menagerie",
 		"Type": "Celestial",
+		"Size": "Medium",
+		"XP": 5900,
 		"HP": {
 			"Value": 153,
 			"Notes": "(18d8 + 72; bloodied 76)"
@@ -18552,7 +18503,7 @@
 			},
 			{
 				"Name": "Celestial Hammer (Deva Form Only)",
-				"Content": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit:† 8 (1d8 + 4) bludgeoning damage plus 17 (5d6) radiant damage. On a hit, the target can't make opportunity attacks against the deva until the beginning of the target's next turn."
+				"Content": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit:**  8 (1d8 + 4) bludgeoning damage plus 17 (5d6) radiant damage. On a hit, the target can't make opportunity attacks against the deva until the beginning of the target's next turn."
 			},
 			{
 				"Name": "Divine Blast",
@@ -18577,7 +18528,8 @@
 		],
 		"Desc": "",
 		"Player": "",
-		"ImageURL": ""
+		"ImageURL": "",
+        "Combat": "Against an isolated foe, the deva flies by the target, using Celestial Hammer and escaping out of range. Against a foe with an inferior ranged attack, it uses Divine Blast from a distance. In other circumstances, it closes to melee range and uses Radiant Energy and Celestial Hammer. Angels have no fear and rarely retreat."
 	},
 	{
 		"Id": "Diplodocus",
@@ -21835,7 +21787,7 @@
 		"Traits": [
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The efreeti's innate spellcasting ability is Charisma (spell save DC 15). It can innately cast the following spells, requiring no material components:†"
+				"Content": "The efreeti's innate spellcasting ability is Charisma (spell save DC 15). It can innately cast the following spells, requiring no material components:** "
 			},
 			{
 				"Name": "",
@@ -21973,7 +21925,7 @@
 		"Traits": [
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The efreeti's innate spellcasting ability is Charisma (spell save DC 15). It can innately cast the following spells, requiring no material components:†"
+				"Content": "The efreeti's innate spellcasting ability is Charisma (spell save DC 15). It can innately cast the following spells, requiring no material components:** "
 			},
 			{
 				"Name": "",
@@ -22284,7 +22236,7 @@
 		"BonusActions": [
 			{
 				"Name": "Bite",
-				"Content": "Melee Weapon Attack: +9 to hit, reach 5 ft., one target that is grappled, incapacitated, restrained, willing, or unaware of the vampire's presence. Hit:† 10 (1d10 + 5) piercing damage plus 21 (6d6) necrotic damage. The target's hit point maximum is reduced by an amount equal to the necrotic damage dealt, and the vampire regains this number of hit points. The reduction lasts until the target finishes a long rest. If the target is reduced to 0 hit points by this attack, it dies and rises the following night as a vampire spawn in the vampire's thrall. Before the target first rises as a vampire spawn, a bless, gentle repose, or similar spell cast on the body prevents this transformation."
+				"Content": "Melee Weapon Attack: +9 to hit, reach 5 ft., one target that is grappled, incapacitated, restrained, willing, or unaware of the vampire's presence. Hit:**  10 (1d10 + 5) piercing damage plus 21 (6d6) necrotic damage. The target's hit point maximum is reduced by an amount equal to the necrotic damage dealt, and the vampire regains this number of hit points. The reduction lasts until the target finishes a long rest. If the target is reduced to 0 hit points by this attack, it dies and rises the following night as a vampire spawn in the vampire's thrall. Before the target first rises as a vampire spawn, a bless, gentle repose, or similar spell cast on the body prevents this transformation."
 			}
 		],
 		"Reactions": [
@@ -23205,11 +23157,7 @@
 		"Traits": [
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The dragon's innate spellcasting ability is Charisma (spell save DC 13). It can innately cast spells, requiring no material components. The dragon gains additional spells as it ages.†"
-			},
-			{
-				"Name": "",
-				"Content": "5 years old, at will: dancing lights, mage hand, minor illusion"
+				"Content": "The dragon's innate spellcasting ability is Charisma (spell save DC 13). It can innately cast spells, requiring no material components. The dragon gains additional spells as it ages.\n\n 5 years old, at will: dancing lights, mage hand, minor illusion"
 			},
 			{
 				"Name": "",
@@ -23332,11 +23280,7 @@
 		"Traits": [
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The dragon's innate spellcasting ability is Charisma (spell save DC 13). It can innately cast spells, requiring no material components. The dragon gains additional spells as it ages.†"
-			},
-			{
-				"Name": "",
-				"Content": "5 years old, at will: dancing lights, mage hand, minor illusion"
+				"Content": "The dragon's innate spellcasting ability is Charisma (spell save DC 13). It can innately cast spells, requiring no material components. The dragon gains additional spells as it ages.\n\n 5 years old, at will: dancing lights, mage hand, minor illusion"
 			},
 			{
 				"Name": "",
@@ -23793,7 +23737,7 @@
 			},
 			{
 				"Name": "Celestial Hammer (Deva Form Only)",
-				"Content": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit:† 8 (1d8 + 4) bludgeoning damage plus 17 (5d6) radiant damage. On a hit, the target can't make opportunity attacks against the deva until the beginning of the target's next turn."
+				"Content": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit:**  8 (1d8 + 4) bludgeoning damage plus 17 (5d6) radiant damage. On a hit, the target can't make opportunity attacks against the deva until the beginning of the target's next turn."
 			},
 			{
 				"Name": "Divine Blast",
@@ -31503,15 +31447,11 @@
 			},
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The dragon's spellcasting ability is Charisma (save DC 19). It can innately cast the following spells, requiring no material components.†"
+				"Content": "The dragon's spellcasting ability is Charisma (save DC 19). It can innately cast the following spells, requiring no material components.\n\n&nbsp;&nbsp;**3/day each:** fog cloud, pass without trace, legend lore, speak with dead"
 			},
 			{
 				"Name": "",
-				"Content": "† †3/day each:†fog cloud, pass without trace, legend lore, speak with dead"
-			},
-			{
-				"Name": "",
-				"Content": "† †1/day each:†create undead, insect plague, time stop"
+				"Content": "† †1/day each:** create undead, insect plague, time stop"
 			}
 		],
 		"Actions": [
@@ -31699,15 +31639,11 @@
 			},
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The dragon's spellcasting ability is Charisma (save DC 21). It can innately cast the following spells, requiring no material components.†"
+				"Content": "The dragon's spellcasting ability is Charisma (save DC 21). It can innately cast the following spells, requiring no material components.\n\n&nbsp;&nbsp;**3/day each:** blur, silent image, blight, hypnotic pattern"
 			},
 			{
 				"Name": "",
-				"Content": "† †3/day each:†blur, silent image, blight, hypnotic pattern"
-			},
-			{
-				"Name": "",
-				"Content": "† †1/day each:†control water, mirage arcane,†antipathy/sympathy"
+				"Content": "† †1/day each:** control water, mirage arcane,†antipathy/sympathy"
 			}
 		],
 		"Actions": [
@@ -31897,15 +31833,11 @@
 			},
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The dragon's spellcasting ability is Charisma (save DC 25). It can innately cast the following spells, requiring no material components.†"
+				"Content": "The dragon's spellcasting ability is Charisma (save DC 25). It can innately cast the following spells, requiring no material components.\n\n&nbsp;&nbsp;**3/day each:** bless, healing word,†banishment, greater restoration"
 			},
 			{
 				"Name": "",
-				"Content": "† †3/day each:†bless, healing word,†banishment, greater restoration"
-			},
-			{
-				"Name": "",
-				"Content": "† †1/day each:†divine word, hallow, holy aura"
+				"Content": "† †1/day each:** divine word, hallow, holy aura"
 			}
 		],
 		"Actions": [
@@ -32124,15 +32056,11 @@
 			},
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The dragon's spellcasting ability is Charisma (save DC 19). It can innately cast the following spells, requiring no material components.†"
+				"Content": "The dragon's spellcasting ability is Charisma (save DC 19). It can innately cast the following spells, requiring no material components.\n\n&nbsp;&nbsp;**3/day each:** animal messenger, tongues, modify memory, scrying"
 			},
 			{
 				"Name": "",
-				"Content": "† †3/day each:†animal messenger, tongues, modify memory, scrying"
-			},
-			{
-				"Name": "",
-				"Content": "† †1/day:†mass suggestion, telepathic bond,†glibness"
+				"Content": "† †1/day:** mass suggestion, telepathic bond,†glibness"
 			}
 		],
 		"Actions": [
@@ -32322,15 +32250,11 @@
 			},
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The dragon's spellcasting ability is Charisma (save DC 22). It can innately cast the following spells, requiring no material components.†"
+				"Content": "The dragon's spellcasting ability is Charisma (save DC 22). It can innately cast the following spells, requiring no material components.\n\n&nbsp;&nbsp;**3/day each:** command, hold person, glyph of warding, wall of fire"
 			},
 			{
 				"Name": "",
-				"Content": "† †3/day each:†command, hold person, glyph of warding, wall of fire"
-			},
-			{
-				"Name": "",
-				"Content": "† †1/day each:†antimagic field, dominate monster, storm of vengeance"
+				"Content": "† †1/day each:** antimagic field, dominate monster, storm of vengeance"
 			}
 		],
 		"Actions": [
@@ -32520,15 +32444,11 @@
 			},
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The dragon's spellcasting ability is Charisma (save DC 18). It can innately cast the following spells, requiring no material components.†"
+				"Content": "The dragon's spellcasting ability is Charisma (save DC 18). It can innately cast the following spells, requiring no material components.\n\n&nbsp;&nbsp;**3/day each:** dominate beast, fire shield, animal friendship, sleet storm"
 			},
 			{
 				"Name": "",
-				"Content": "† †3/day each:†dominate beast, fire shield, animal friendship, sleet storm"
-			},
-			{
-				"Name": "",
-				"Content": "† †1/day each:†control weather, wall of ice, reverse gravity"
+				"Content": "† †1/day each:** control weather, wall of ice, reverse gravity"
 			}
 		],
 		"Actions": [
@@ -33714,6 +33634,8 @@
 		"Version": "3.2.7",
 		"Source": "Level Up Monstrous Menagerie",
 		"Type": "Monstrosity",
+		"Size": "Large",
+		"XP": 5900,
 		"HP": {
 			"Value": 136,
 			"Notes": "(16d10 + 48; bloodied 68)"
@@ -33860,9 +33782,10 @@
 		],
 		"MythicActions": [
 		],
-		"Desc": "",
+		"Desc": "In remote corners across the world, nagas guard repositories of arcane  knowledge and religious wisdom.\n***Immortal Nature.*** A naga doesn’t require air, sustenance, or sleep.",
 		"Player": "",
-		"ImageURL": ""
+		"ImageURL": "XMM/Guardian%20Naga",
+		"Combat": "The guardian naga casts flame strike on groups of enemies. Otherwise it either bites or spits poison. It might cast hold person against a creature immune to poison or one it believes has a low Wisdom. The guardian naga dies in defense of its lair."
 	},
 	{
 		"Id": "Half-Red_Dragon_Veteran",
@@ -34122,7 +34045,7 @@
 		],
 		"Desc": "",
 		"Player": "",
-		"ImageURL": ""
+		"ImageURL": "WDMM/Shadow%20Assassin"
 	},
 	{
 		"Id": "Harpy",
@@ -47476,11 +47399,7 @@
 			},
 			{
 				"Name": "",
-				"Content": "At will: detect magic, fireball†"
-			},
-			{
-				"Name": "",
-				"Content": "3/day each: hold monster, sending"
+				"Content": "At will: detect magic, fireball\n\n 3/day each: hold monster, sending"
 			},
 			{
 				"Name": "Lawful Evil",
@@ -47639,11 +47558,7 @@
 			},
 			{
 				"Name": "",
-				"Content": "At will: detect magic, fireball†"
-			},
-			{
-				"Name": "",
-				"Content": "3/day each: hold monster, sending"
+				"Content": "At will: detect magic, fireball\n\n 3/day each: hold monster, sending"
 			},
 			{
 				"Name": "Lawful Evil",
@@ -47868,6 +47783,8 @@
 		"Version": "3.2.7",
 		"Source": "Level Up Monstrous Menagerie",
 		"Type": "Celestial",
+		"Size": "Large",
+		"XP": 15000,
 		"HP": {
 			"Value": 250,
 			"Notes": "(20d10 + 140; bloodied 125)"
@@ -48011,7 +47928,8 @@
 		],
 		"Desc": "",
 		"Player": "",
-		"ImageURL": ""
+		"ImageURL": "",
+		"Combat": "The planetar prefers to attack its strongest opponent with its flaming sword, using Heavenly Bolt against creatures it can’t reach and against groups. The planetar stays near allies to protect them with its parry. Angels have no fear and rarely retreat."
 	},
 	{
 		"Id": "Plesiosaurus",
@@ -52037,7 +51955,7 @@
 		],
 		"Desc": "",
 		"Player": "",
-		"ImageURL": ""
+		"ImageURL": "FTD/Adult%20Sapphire%20Dragon."
 	},
 	{
 		"Id": "Satyr",
@@ -53559,7 +53477,7 @@
 		],
 		"Desc": "",
 		"Player": "",
-		"ImageURL": ""
+		"ImageURL": "XMM/Shadow%20Dragon"
 	},
 	{
 		"Id": "Shadow_Elf_Champion_Warrior",
@@ -55417,6 +55335,8 @@
 		"Version": "3.2.7",
 		"Source": "Level Up Monstrous Menagerie",
 		"Type": "Celestial",
+		"Size": "Large",
+		"XP": 33000,
 		"HP": {
 			"Value": 319,
 			"Notes": "(22d10 + 198; bloodied 159)"
@@ -55576,7 +55496,201 @@
 		],
 		"Desc": "",
 		"Player": "",
-		"ImageURL": ""
+		"ImageURL": "XMM/Solar",
+		"Combat": "The solar uses Column of Flame if it can scorch many enemies, or its holy sword otherwise. It uses T eleport to escape danger and pursue particular foes. Angels know no fear, and the solar will die if it believes it is necessary, but it is aware of its own strategic value and will retreat from a losing battle."
+	},
+	{
+		"Id": "Solar_Counselor",
+		"Name": "Solar Counselor",
+		"Path": "",
+		"Link": "/my/statblocks/Solar",
+		"FilterDimensions": {
+			"Level": "21",
+			"Type": "Elite Celestial"
+		},
+		"Version": "3.2.7",
+		"Source": "Level Up Monstrous Menagerie",
+		"Type": "Celestial",
+		"Size": "Large",
+		"XP": 66000,
+		"HP": {
+			"Value": 638,
+			"Notes": "(44d10 + 198; bloodied 159)"
+		},
+		"AC": {
+			"Value": 21,
+			"Notes": "(natural armor)"
+		},
+		"InitiativeModifier": 0,
+		"Speed": [
+			"50 ft.",
+			"fly 150 ft."
+		],
+		"Abilities": {
+			"Str": 28,
+			"Dex": 22,
+			"Con": 28,
+			"Int": 22,
+			"Wis": 30,
+			"Cha": 30
+		},
+		"DamageVulnerabilities": [
+		],
+		"DamageResistances": [
+			"Radiant; Damage From Nonmagical Weapons"
+		],
+		"DamageImmunities": [
+			"Necrotic",
+			"Poison"
+		],
+		"ConditionImmunities": [
+			"Charmed",
+			"Exhaustion",
+			"Frightened",
+			"Poisoned"
+		],
+		"Senses": [
+			"Truesight 120 Ft.",
+			"Passive Perception 27"
+		],
+		"Languages": [
+			"All",
+			"Telepathy 120 Ft."
+		],
+		"Saves": [
+			{
+				"Name": "Wis",
+				"Modifier": 17
+			},
+			{
+				"Name": "Cha",
+				"Modifier": 17
+			}
+		],
+		"Skills": [
+			{
+				"Name": "Athletics",
+				"Modifier": 16
+			},
+			{
+				"Name": "History",
+				"Modifier": 16
+			},
+			{
+				"Name": "Insight",
+				"Modifier": 17
+			},
+			{
+				"Name": "Perception",
+				"Modifier": 17
+			},
+			{
+				"Name": "Religion",
+				"Modifier": 17
+			}
+		],
+		"Challenge": "21",
+		"Traits": [
+			{
+				"Name": "Champion of Truth",
+				"Content": "The solar automatically detects lies. Additionally, it cannot lie."
+			},
+			{
+				"Name": "Innate Spellcasting",
+				"Content": "The solar's spellcasting ability is Charisma (spell save DC 25). The solar can innately cast the following spells, requiring no material components:"
+			},
+			{
+				"Name": "",
+				"Content": "1/day each: commune, control weather, resurrection"
+			},
+			{
+				"Name": "Legendary Resistance (3/Day)",
+				"Content": "When the solar fails a saving throw, it can choose to succeed instead. When it does so, it wards itself with its sword, which dissolves into glowing particles of light. The solar's sword re-forms at the beginning of its next turn. Until then, the solar has no sword and can't use Forceful Parry or attack with its holy sword."
+			},
+			{
+				"Name": "Magic Resistance",
+				"Content": "The solar has advantage on saving throws against spells and magical effects."
+			}
+		],
+		"Actions": [
+			{
+				"Name": "Multiattack",
+				"Content": "The solar attacks twice with its holy sword."
+			},
+			{
+				"Name": "Holy Sword",
+				"Content": "Melee Weapon Attack: +16 to hit, reach 10 ft., one target. Hit: †23 (4d6 + 9) slashing damage plus 21 (6d6) radiant damage."
+			},
+			{
+				"Name": "Column of Flame",
+				"Content": "Flame erupts in a 10-foot-radius, 30-foot-tall cylinder centered on a point the solar can see within 60 feet of it. Each creature in the area makes a DC 21 Dexterity saving throw, taking 21 (6d6) fire damage and 21 (6d6) radiant damage of a failure, or half as much damage on a success."
+			}
+		],
+		"BonusActions": [
+		],
+		"Reactions": [
+			{
+				"Name": "Forceful Parry (While Bloodied)",
+				"Content": "When a creature misses the solar with a melee attack, the solar's parrying sword sparks with energy. The attacker takes 21 (6d6) lightning damage and makes a DC 24 Constitution saving throw. On a failure, it is pushed 10 feet away and falls prone."
+			}
+		],
+		"LegendaryActions": [
+			{
+				"Name": "The solar can take 3 legendary actions, choosing from the options below",
+				"Content": "Only one legendary action can be used at a time and only at the end of another creature's turn. The solar regains spent legendary actions at the start of its turn."
+			},
+			{
+				"Name": "Teleport",
+				"Content": "The solar magically teleports up to 120 feet to an empty space it can see."
+			},
+			{
+				"Name": "Heal (3/Day)",
+				"Content": "The solar touches a creature other than itself, magically healing 60 hit points of damage and ending any blindness, curse, deafness, disease, or poison on the target.†"
+			},
+			{
+				"Name": "Deafening Command (Costs 2 Actions)",
+				"Content": "The solar speaks an echoing command. Each creature of the solar's choice within 30 feet that can hear the solar and understands a language makes a DC 24 Charisma saving throw. Each creature that succeeds on the saving throw takes 21 (6d6) thunder damage. Each creature that fails its saving throw immediately takes a certain action, depending on the solar's command. This is a magical charm effect."
+			},
+			{
+				"Name": "Abase yourself! The creature falls prone",
+				"Content": ""
+			},
+			{
+				"Name": "Approach! The creature must use its reaction, if available, to move up to its Speed toward the solar by the most direct route that avoids hazards, not avoiding opportunity attacks",
+				"Content": "†"
+			},
+			{
+				"Name": "Flee! The creature must use its reaction, if available, to move up to its Speed away from the solar, not avoiding opportunity attacks",
+				"Content": ""
+			},
+			{
+				"Name": "Surrender! The creature drops anything it is holding",
+				"Content": ""
+			},
+			{
+				"Name": "Elite Recovery (Bloodied).",
+				"Content": "The solar ends one negative effect currently affecting it. It can use this action as long as it has at least 1 hit point, even while unconscious or incapacitated."
+			},
+			{
+				"Name": "Seeking Sword (Costs 2 Actions, Bloodied).",
+				"Content": "The solar uses Teleport and attacks with its holy sword."
+			},
+			{
+				"Name": "Divine Gaze (1/Day, Gaze, Bloodied).",
+				"Content": "The solar targets a creature within 120 feet. The target makes a DC 21 Charisma saving throw. On a failure, the target takes 49 (14d6) radiant damage and is blinded for 24 hours or until the blindness is magically removed."
+			},
+			{
+				"Name": "Light of Judgment (1/Day, Bloodied).",
+				"Content": "A column of radiance shines down from the heavens in a 30-foot-radius, 100-foot-high cylinder centered on the solar. Each creature of the solar’s choice in the area makes a DC 21 Charisma saving throw, taking 70 (20d6) radiant damage on a failed save or half damage on a success."
+			}
+		
+		],
+		"MythicActions": [
+		],
+		"Desc": "The solar counselor is an elite monster, equivalent to two CR 21 monsters (66,000 XP). It has 638 (44d10 + 396; bloodied 319) hit points. The solar has the following additional legendary actions, which it can use only while bloodied.",
+		"Player": "",
+		"ImageURL": "XMM/Solar",
+		"Combat": "The solar uses Column of Flame if it can scorch many enemies, or its holy sword otherwise. It uses T eleport to escape danger and pursue particular foes. Angels know no fear, and the solar will die if it believes it is necessary, but it is aware of its own strategic value and will retreat from a losing battle."
 	},
 	{
 		"Id": "Soldier",
@@ -55669,8 +55783,7 @@
 		],
 		"Reactions": [
 		],
-		"LegendaryActions": [
-		],
+		"LegendaryActions": [],
 		"MythicActions": [
 		],
 		"Desc": "",
@@ -56355,6 +56468,8 @@
 		"Version": "3.2.7",
 		"Source": "Level Up Monstrous Menagerie",
 		"Type": "Monstrosity",
+		"Size": "Large",
+		"XP": 2900,
 		"HP": {
 			"Value": 85,
 			"Notes": "(10d10 + 30; bloodied 42)"
@@ -56485,9 +56600,10 @@
 		],
 		"MythicActions": [
 		],
-		"Desc": "",
+		"Desc": "In remote corners across the world, nagas guard repositories of arcane  knowledge and religious wisdom.\n***Immortal Nature.*** A naga doesn’t require air, sustenance, or sleep.",
 		"Player": "",
-		"ImageURL": ""
+		"ImageURL": "XMM/Spirit%20Naga",
+		"Combat": "The spirit naga tries to cast charm person and *dominate person* before combat starts. In combat, it casts hypnotic pattern or *lightning bolt* if it can target two or more opponents. Otherwise, it bites in melee or casts blight from a distance. It casts shield whenever necessary. It fights to the death."
 	},
 	{
 		"Id": "Sprite",
@@ -60587,7 +60703,7 @@
 		"BonusActions": [
 			{
 				"Name": "Bite",
-				"Content": "Melee Weapon Attack: +9 to hit, reach 5 ft., one target that is grappled, incapacitated, restrained, willing, or unaware of the vampire's presence. Hit:† 10 (1d10 + 5) piercing damage plus 21 (6d6) necrotic damage. The target's hit point maximum is reduced by an amount equal to the necrotic damage dealt, and the vampire regains this number of hit points. The reduction lasts until the target finishes a long rest. If the target is reduced to 0 hit points by this attack, it dies and rises the following night as a vampire spawn in the vampire's thrall. Before the target first rises as a vampire spawn, a bless, gentle repose, or similar spell cast on the body prevents this transformation."
+				"Content": "Melee Weapon Attack: +9 to hit, reach 5 ft., one target that is grappled, incapacitated, restrained, willing, or unaware of the vampire's presence. Hit:**  10 (1d10 + 5) piercing damage plus 21 (6d6) necrotic damage. The target's hit point maximum is reduced by an amount equal to the necrotic damage dealt, and the vampire regains this number of hit points. The reduction lasts until the target finishes a long rest. If the target is reduced to 0 hit points by this attack, it dies and rises the following night as a vampire spawn in the vampire's thrall. Before the target first rises as a vampire spawn, a bless, gentle repose, or similar spell cast on the body prevents this transformation."
 			}
 		],
 		"Reactions": [
@@ -60754,7 +60870,7 @@
 		"BonusActions": [
 			{
 				"Name": "Bite",
-				"Content": "Melee Weapon Attack: +9 to hit, reach 5 ft., one target that is grappled, incapacitated, restrained, willing, or unaware of the vampire's presence. Hit:† 10 (1d10 + 5) piercing damage plus 21 (6d6) necrotic damage. The target's hit point maximum is reduced by an amount equal to the necrotic damage dealt, and the vampire regains this number of hit points. The reduction lasts until the target finishes a long rest. If the target is reduced to 0 hit points by this attack, it dies and rises the following night as a vampire spawn in the vampire's thrall. Before the target first rises as a vampire spawn, a bless, gentle repose, or similar spell cast on the body prevents this transformation."
+				"Content": "Melee Weapon Attack: +9 to hit, reach 5 ft., one target that is grappled, incapacitated, restrained, willing, or unaware of the vampire's presence. Hit:**  10 (1d10 + 5) piercing damage plus 21 (6d6) necrotic damage. The target's hit point maximum is reduced by an amount equal to the necrotic damage dealt, and the vampire regains this number of hit points. The reduction lasts until the target finishes a long rest. If the target is reduced to 0 hit points by this attack, it dies and rises the following night as a vampire spawn in the vampire's thrall. Before the target first rises as a vampire spawn, a bless, gentle repose, or similar spell cast on the body prevents this transformation."
 			}
 		],
 		"Reactions": [
@@ -60945,7 +61061,7 @@
 		"BonusActions": [
 			{
 				"Name": "Bite",
-				"Content": "Melee Weapon Attack: +9 to hit, reach 5 ft., one target that is grappled, incapacitated, restrained, willing, or unaware of the vampire's presence. Hit:† 10 (1d10 + 5) piercing damage plus 21 (6d6) necrotic damage. The target's hit point maximum is reduced by an amount equal to the necrotic damage dealt, and the vampire regains this number of hit points. The reduction lasts until the target finishes a long rest. If the target is reduced to 0 hit points by this attack, it dies and rises the following night as a vampire spawn in the vampire's thrall. Before the target first rises as a vampire spawn, a bless, gentle repose, or similar spell cast on the body prevents this transformation."
+				"Content": "Melee Weapon Attack: +9 to hit, reach 5 ft., one target that is grappled, incapacitated, restrained, willing, or unaware of the vampire's presence. Hit:**  10 (1d10 + 5) piercing damage plus 21 (6d6) necrotic damage. The target's hit point maximum is reduced by an amount equal to the necrotic damage dealt, and the vampire regains this number of hit points. The reduction lasts until the target finishes a long rest. If the target is reduced to 0 hit points by this attack, it dies and rises the following night as a vampire spawn in the vampire's thrall. Before the target first rises as a vampire spawn, a bless, gentle repose, or similar spell cast on the body prevents this transformation."
 			}
 		],
 		"Reactions": [
@@ -61228,7 +61344,7 @@
 		"BonusActions": [
 			{
 				"Name": "Bite",
-				"Content": "Melee Weapon Attack: +9 to hit, reach 5 ft., one target that is grappled, incapacitated, restrained, willing, or unaware of the vampire's presence. Hit:† 10 (1d10 + 5) piercing damage plus 21 (6d6) necrotic damage. The target's hit point maximum is reduced by an amount equal to the necrotic damage dealt, and the vampire regains this number of hit points. The reduction lasts until the target finishes a long rest. If the target is reduced to 0 hit points by this attack, it dies and rises the following night as a vampire spawn in the vampire's thrall. Before the target first rises as a vampire spawn, a bless, gentle repose, or similar spell cast on the body prevents this transformation."
+				"Content": "Melee Weapon Attack: +9 to hit, reach 5 ft., one target that is grappled, incapacitated, restrained, willing, or unaware of the vampire's presence. Hit:**  10 (1d10 + 5) piercing damage plus 21 (6d6) necrotic damage. The target's hit point maximum is reduced by an amount equal to the necrotic damage dealt, and the vampire regains this number of hit points. The reduction lasts until the target finishes a long rest. If the target is reduced to 0 hit points by this attack, it dies and rises the following night as a vampire spawn in the vampire's thrall. Before the target first rises as a vampire spawn, a bless, gentle repose, or similar spell cast on the body prevents this transformation."
 			}
 		],
 		"Reactions": [
@@ -65064,11 +65180,7 @@
 			},
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The dragon's spellcasting ability is Charisma (save DC 19). It can innately cast the following spells, requiring no material components.†"
-			},
-			{
-				"Name": "",
-				"Content": "† †3/day each:†calm emotions, charm person"
+				"Content": "The dragon's spellcasting ability is Charisma (save DC 19). It can innately cast the following spells, requiring no material components.\n\n&nbsp;&nbsp;**3/day each:** calm emotions, charm person"
 			}
 		],
 		"Actions": [
@@ -65201,11 +65313,7 @@
 			},
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The dragon's spellcasting ability is Charisma (save DC 14). It can innately cast the following spells, requiring no material components.†"
-			},
-			{
-				"Name": "",
-				"Content": "† †3/day each:†fog cloud, pass without trace"
+				"Content": "The dragon's spellcasting ability is Charisma (save DC 14). It can innately cast the following spells, requiring no material components.\n\n&nbsp;&nbsp;**3/day each:** fog cloud, pass without trace"
 			}
 		],
 		"Actions": [
@@ -65336,11 +65444,7 @@
 			},
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The dragon's spellcasting ability is Charisma (save DC 15). It can innately cast the following spells, requiring no material components.†"
-			},
-			{
-				"Name": "",
-				"Content": "† †3/day each:†blur, silent image"
+				"Content": "The dragon's spellcasting ability is Charisma (save DC 15). It can innately cast the following spells, requiring no material components.\n\n&nbsp;&nbsp;**3/day each:** blur, silent image"
 			}
 		],
 		"Actions": [
@@ -65482,11 +65586,7 @@
 			},
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The dragon's spellcasting ability is Charisma (save DC 14). It can innately cast the following spells, requiring no material components.†"
-			},
-			{
-				"Name": "",
-				"Content": "† †3/day each:†comprehend languages,"
+				"Content": "The dragon's spellcasting ability is Charisma (save DC 14). It can innately cast the following spells, requiring no material components.\n\n&nbsp;&nbsp;**3/day each:** comprehend languages,"
 			}
 		],
 		"Actions": [
@@ -65623,11 +65723,7 @@
 			},
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The dragon's spellcasting ability is Charisma (save DC 15). It can innately cast the following spells, requiring no material components.†"
-			},
-			{
-				"Name": "",
-				"Content": "† †3/day each:†fog cloud, speak with animals"
+				"Content": "The dragon's spellcasting ability is Charisma (save DC 15). It can innately cast the following spells, requiring no material components.\n\n&nbsp;&nbsp;**3/day each:** fog cloud, speak with animals"
 			}
 		],
 		"Actions": [
@@ -65796,11 +65892,7 @@
 			},
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The dragon's spellcasting ability is Charisma (save DC 15). It can innately cast the following spells, requiring no material components.†"
-			},
-			{
-				"Name": "",
-				"Content": "† †3/day each:†hideous laughter, suggestion"
+				"Content": "The dragon's spellcasting ability is Charisma (save DC 15). It can innately cast the following spells, requiring no material components.\n\n&nbsp;&nbsp;**3/day each:** hideous laughter, suggestion"
 			}
 		],
 		"Actions": [
@@ -65951,11 +66043,7 @@
 			},
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The dragon's spellcasting ability is Charisma (save DC 12). It can innately cast the following spells, requiring no material components.†"
-			},
-			{
-				"Name": "",
-				"Content": "† †3/day each:†locate animals or plants, spike growth"
+				"Content": "The dragon's spellcasting ability is Charisma (save DC 12). It can innately cast the following spells, requiring no material components.\n\n&nbsp;&nbsp;**3/day each:** locate animals or plants, spike growth"
 			}
 		],
 		"Actions": [
@@ -66088,11 +66176,7 @@
 			},
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The dragon's spellcasting ability is Charisma (save DC 15). It can innately cast the following spells, requiring no material components.†"
-			},
-			{
-				"Name": "",
-				"Content": "† †3/day each:†hideous laughter, suggestion"
+				"Content": "The dragon's spellcasting ability is Charisma (save DC 15). It can innately cast the following spells, requiring no material components.\n\n&nbsp;&nbsp;**3/day each:** hideous laughter, suggestion"
 			}
 		],
 		"Actions": [
@@ -66221,11 +66305,7 @@
 			},
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The dragon's spellcasting ability is Charisma (save DC 17). It can innately cast the following spells, requiring no material components.†"
-			},
-			{
-				"Name": "",
-				"Content": "† †3/day each:†bless, healing word"
+				"Content": "The dragon's spellcasting ability is Charisma (save DC 17). It can innately cast the following spells, requiring no material components.\n\n&nbsp;&nbsp;**3/day each:** bless, healing word"
 			}
 		],
 		"Actions": [
@@ -66372,11 +66452,7 @@
 			},
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The dragon's spellcasting ability is Charisma (save DC 14). It can innately cast the following spells, requiring no material components.†"
-			},
-			{
-				"Name": "",
-				"Content": "† †3/day each:†animal messenger, tongues"
+				"Content": "The dragon's spellcasting ability is Charisma (save DC 14). It can innately cast the following spells, requiring no material components.\n\n&nbsp;&nbsp;**3/day each:** animal messenger, tongues"
 			}
 		],
 		"Actions": [
@@ -66505,11 +66581,7 @@
 			},
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The dragon's spellcasting ability is Charisma (save DC 16). It can innately cast the following spells, requiring no material components.†"
-			},
-			{
-				"Name": "",
-				"Content": "† †3/day each:†command, hold person"
+				"Content": "The dragon's spellcasting ability is Charisma (save DC 16). It can innately cast the following spells, requiring no material components.\n\n&nbsp;&nbsp;**3/day each:** command, hold person"
 			}
 		],
 		"Actions": [
@@ -66761,11 +66833,7 @@
 			},
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The dragon's spellcasting ability is Charisma (save DC 13). It can innately cast the following spells, requiring no material components.†"
-			},
-			{
-				"Name": "",
-				"Content": "† †3/day each:†create or destroy water, fog cloud"
+				"Content": "The dragon's spellcasting ability is Charisma (save DC 13). It can innately cast the following spells, requiring no material components.\n\n&nbsp;&nbsp;**3/day each:** create or destroy water, fog cloud"
 			}
 		],
 		"Actions": [
@@ -66905,11 +66973,7 @@
 			},
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The dragon's spellcasting ability is Charisma (save DC 15). It can innately cast the following spells, requiring no material components.†"
-			},
-			{
-				"Name": "",
-				"Content": "† †3/day each:†comprehend languages, detect thoughts"
+				"Content": "The dragon's spellcasting ability is Charisma (save DC 15). It can innately cast the following spells, requiring no material components.\n\n&nbsp;&nbsp;**3/day each:** comprehend languages, detect thoughts"
 			}
 		],
 		"Actions": [
@@ -66940,7 +67004,7 @@
 		],
 		"Desc": "",
 		"Player": "",
-		"ImageURL": ""
+		"ImageURL": "FTD/Adult%20Sapphire%20Dragon."
 	},
 	{
 		"Id": "Young_Shadow_Dragon",
@@ -67063,11 +67127,7 @@
 			},
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The dragon's spellcasting ability is Charisma (save DC 16). It can innately cast the following spells, requiring no material components.†"
-			},
-			{
-				"Name": "",
-				"Content": "† †3/day each:†darkness, detect evil and good"
+				"Content": "The dragon's spellcasting ability is Charisma (save DC 16). It can innately cast the following spells, requiring no material components.\n\n&nbsp;&nbsp;**3/day each:** darkness, detect evil and good"
 			}
 		],
 		"Actions": [
@@ -67098,7 +67158,7 @@
 		],
 		"Desc": "",
 		"Player": "",
-		"ImageURL": ""
+		"ImageURL": "XMM/Shadow%20Dragon"
 	},
 	{
 		"Id": "Young_Silver_Dragon",
@@ -67195,11 +67255,7 @@
 			},
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The dragon's spellcasting ability is Charisma (save DC 17). It can innately cast the following spells, requiring no material components.†"
-			},
-			{
-				"Name": "",
-				"Content": "† †3/day each:†charm person, faerie fire"
+				"Content": "The dragon's spellcasting ability is Charisma (save DC 17). It can innately cast the following spells, requiring no material components.\n\n&nbsp;&nbsp;**3/day each:** charm person, faerie fire"
 			}
 		],
 		"Actions": [
@@ -67333,11 +67389,7 @@
 			},
 			{
 				"Name": "Innate Spellcasting",
-				"Content": "The dragon's spellcasting ability is Charisma (save DC 13). It can innately cast the following spells, requiring no material components.†"
-			},
-			{
-				"Name": "",
-				"Content": "† †3/day each:†animal friendship, sleet storm"
+				"Content": "The dragon's spellcasting ability is Charisma (save DC 13). It can innately cast the following spells, requiring no material components.\n\n&nbsp;&nbsp;**3/day each:** animal friendship, sleet storm"
 			}
 		],
 		"Actions": [
