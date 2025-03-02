@@ -77,23 +77,14 @@ struct ThreeColumnSplitViewSectioned: View {
                         Text("Unhandled Content.")
                     }
                 } else {
-                    ZStack {
-                        Image("library_candlelight")
-                            .resizable()
-                            .scaledToFill()
-                            .edgesIgnoringSafeArea(.all)
-//                            )
-                        Text("Please select a resource from the sidebar")
-                            .bold()
-                            .padding()
-                            .background(Color.white).opacity(0.80)
-                            .clipShape(RoundedRectangle(cornerRadius: 10))
+                    VStack {
+                        Spacer()
+                        Image(systemName: "books.vertical.fill")
+                            .foregroundStyle(Color.launchScreenBackground)
+                            .font(.system(size: 48))
+                            .frame(maxWidth: .infinity)
+                        Spacer()
                     }
-                    
-//                    Text("Please select a resource from the sidebar.")
-//                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-////                        .background(Color.buff)
-//                        .backgroundImage("library_candlelight")
                 }
             }
             .navigationTitle("Item List")
@@ -115,9 +106,12 @@ struct ThreeColumnSplitViewSectioned: View {
                         }
                     }
                 } else {
-                    Text("Please select a item from the list.")
-                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-                        .background(Color.buff)
+                    ZStack {
+                        Image("mystic_chamber")
+                            .resizable()
+                            .scaledToFill()
+                            .edgesIgnoringSafeArea(.bottom)
+                    }
                 }
             }
             .navigationTitle("Item Details")

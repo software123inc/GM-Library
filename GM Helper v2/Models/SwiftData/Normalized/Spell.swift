@@ -101,19 +101,4 @@ extension Spell:ViewDataSource {
             }
         )
     }
-    
-    static func listFooterViewContent (_ colorScheme:ColorScheme) -> AnyView? {
-        AnyView(
-            HStack {
-                Spacer()
-                Image(systemName: "c.circle").font(.caption)
-                Text("= Concentration").font(.caption)
-                Spacer()
-                Image(systemName: "r.circle").font(.caption)
-                Text("= Ritual").font(.caption)
-                Spacer()
-            }
-            .foregroundStyle(.a5EGreen)
-        )
-    }
 }
