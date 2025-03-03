@@ -79,7 +79,7 @@ struct PersistentModelListView<T:PersistentModel>: View where T:Nameable, T:View
                 }
                 else {
                     T.listItemViewContent(item, colorScheme)
-                        .background(.clear) // when selected, will appear .white/.gray
+                        .background(Color.clear) // when selected, will appear .white/.gray
                 }
             }
             .searchable(text: $search)
