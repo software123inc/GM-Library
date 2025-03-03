@@ -73,14 +73,21 @@ struct PersistentModelListView<T:PersistentModel>: View where T:Nameable, T:View
     var body: some View {
         NavigationStack {
             List(filteredListItems, selection: $selectedItem) { item in
-                T.listItemViewContent(item, colorScheme)
-                    .listRowSeparator(.hidden)
+                if UIDevice.current.userInterfaceIdiom == .phone {
+                    T.listItemViewContent(item, colorScheme)
+                        .listRowBackground(Color.clear) // must not applied to iPad
+                }
+                else {
+                    T.listItemViewContent(item, colorScheme)
+                        .background(.clear) // when selected, will appear .white/.gray
+                }
             }
             .searchable(text: $search)
             .background(Color.buff)
             .scrollContentBackground(.hidden)
             .navigationTitle(navigationTitle)
         }
+        
     }
 }
 

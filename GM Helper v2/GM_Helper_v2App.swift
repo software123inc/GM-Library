@@ -168,7 +168,7 @@ extension GM_Helper_v2App {
                 }
             }
             
-            debugPrint("Saved normalized monsters from: \(T.self), count: \(monsters.count)")
+//            debugPrint("Saved normalized monsters from: \(T.self), count: \(monsters.count)")
         }
     }
     
@@ -195,9 +195,7 @@ extension GM_Helper_v2App {
                 }
             }
             
-            debugPrint(
-                "Saved normalized spells from: \(T.self), count: \(results.count)"
-            )
+//            debugPrint("Saved normalized spells from: \(T.self), count: \(results.count)")
         }
     }
     

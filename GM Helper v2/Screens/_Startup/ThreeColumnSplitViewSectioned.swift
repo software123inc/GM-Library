@@ -117,7 +117,7 @@ struct ThreeColumnSplitViewSectioned: View {
             .navigationTitle("Item Details")
             .navigationBarTitleDisplayMode(.inline)
         }
-        .tint(colorScheme == .dark ? .white : Color.a5EGreenTint)
+        .tint(colorScheme == .dark ? .white : .gray) //Color.a5EGreenTint)
     }
 }
 

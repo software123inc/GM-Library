@@ -245,7 +245,6 @@ extension Monster: ViewDataSource {
                     VStack(alignment: .leading) {
                         Text(monster.name)
                             .font(.custom("DIN Condensed", size: 24))
-//                            .font(.headline)
                         Text("*\(monster.type)*, Challenge: \(monster.challengeText)")
                             .font(.caption)
                     }

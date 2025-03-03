@@ -79,11 +79,17 @@ extension Spell:ViewDataSource {
         
         return AnyView(
             NavigationLink(destination: SpellDetailScreen( spell: spell)) {
-                VStack(alignment: .leading) {
-                    HStack {
+                HStack {
+                    VStack(alignment: .leading) {
                         Text(spell.name + " (\(spell.sourceKeyRawValue))")
                             .font(.custom("DIN Condensed", size: 24))
-                        Spacer()
+                        
+                        Text("Level \(spell.level) - \(spell.school)")
+                            .font(.caption)
+                    }
+                    .foregroundStyle(colorScheme == .dark ? .black : .primary)
+                    Spacer()
+                    HStack {
                         if spell.concentration {
                             Image(systemName: "c.circle")
                                 .foregroundStyle(.a5EGreen)
@@ -93,10 +99,7 @@ extension Spell:ViewDataSource {
                                 .foregroundStyle(.a5EGreen)
                         }
                     }
-                    Text("Level \(spell.level) - \(spell.school)")
-                        .font(.caption)
                 }
-                .foregroundStyle(colorScheme == .dark ? .black : .primary)
             }
         )
     }
