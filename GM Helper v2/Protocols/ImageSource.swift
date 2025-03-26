@@ -45,8 +45,8 @@ extension ImageSource {
                         .resizable()
                         .foregroundStyle(.a5EGreen)
                         .opacity(0.3)
-                })
-            .onFailure { error in
+                }
+            ).onFailure { error in
 //                debugPrint(error.localizedDescription)
             }
             .indicator(Indicator.progress) // SwiftUI indicator component
