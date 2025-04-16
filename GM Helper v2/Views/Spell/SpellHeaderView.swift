@@ -20,8 +20,14 @@ struct SpellHeaderView: View {
                 Spacer()
             }
             HStack {
-                Text("\(spell.level.ordinal)-level (\(spell.schoolCleaned.localizedLowercase))")
-                    .italic()
+                if spell.level == 0 {
+                    Text("Cantrip (\(spell.schoolCleaned.localizedLowercase))")
+                        .italic()
+                }
+                else {
+                    Text("\(spell.level.ordinal)-level (\(spell.schoolCleaned.localizedLowercase))")
+                        .italic()
+                }
                 Spacer()
             }
         }

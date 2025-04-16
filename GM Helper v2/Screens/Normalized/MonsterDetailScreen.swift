@@ -26,7 +26,7 @@ struct MonsterDetailScreen: View {
                 MonsterXPView(monster: monster)
             }
             Group {
-                MonsterTraitsView(monster: monster).padding([.top], 8)
+                MonsterTraitsView(monster: monster, isA5e: monster.monsterA5e == nil).padding([.top], 8)
                 MonsterActionsView(monster: monster)
                 MonsterBonusActionsView(monster: monster)
                 MonsterReactionsView(monster: monster)
