@@ -94,21 +94,6 @@ class ActionTrait: Decodable, CustomStringConvertible {
                 }
             }
             .padding()
-//            .sheet(isPresented: $showSpellSheet) {
-//                if let spell = selectedSpell {
-//                    NavigationStack {
-//                        SpellDetailScreen(spell: spell)
-//                            .toolbar {
-//                                ToolbarItem(placement: .cancellationAction) {
-//                                    Button("Close") {
-//                                        showSpellSheet = false
-//                                        selectedSpell = nil
-//                                    }
-//                                }
-//                            }
-//                    }
-//                }
-//            }
         }
     }
 }
