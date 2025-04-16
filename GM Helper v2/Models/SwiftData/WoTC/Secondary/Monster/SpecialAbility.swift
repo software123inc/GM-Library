@@ -14,6 +14,7 @@ class SpecialAbility: Decodable {
     var name: String = ""
     var desc: String?
     var dc: DifficultyCheck?
+    var spellCasting:SpellCasting?
     
     @Relationship(deleteRule: .cascade) var monster: Monster_WoTC? // Single relationship
 
@@ -21,6 +22,7 @@ class SpecialAbility: Decodable {
         case name
         case desc
         case dc
+        case spellcasting
     }
 
     required init(from decoder: Decoder) throws {
@@ -28,7 +30,24 @@ class SpecialAbility: Decodable {
         name = try container.decode(String.self, forKey: .name)
         desc = try container.decodeIfPresent(String.self, forKey: .desc)
         dc = try container.decodeIfPresent(DifficultyCheck.self, forKey: .dc)
+        spellCasting = try container.decodeIfPresent(SpellCasting.self, forKey: .spellcasting)
     }
 }
 
-
+@Model
+class SpellCasting: Decodable {
+    var id:UUID = UUID()
+    var slots: SpellSlots?
+    var spells: [URL_WoTC]?
+    
+    enum CodingKeys: String, CodingKey {
+        case slots
+        case spells
+    }
+    
+    required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        slots = try container.decodeIfPresent(SpellSlots.self, forKey: .slots)
+        spells = try container.decodeIfPresent([URL_WoTC].self, forKey: .spells)
+    }
+}

@@ -749,23 +749,28 @@
 		"Actions": [
 			{
 				"Name": "Club",
-				"Content": "Melee Weapon Attack: +2 to hit, reach 5 ft., one target. Hit: 2 (1d4) bludgeoning damage."
+				"Content": "Melee Weapon Attack: +2 to hit, reach 5 ft., one target. Hit: 2 (1d4) bludgeoning damage.",
+                "Sort Order": 1
 			},
 			{
 				"Name": "Sacred Flame (Cantrip; V, S)",
-				"Content": "One creature the acolyte can see within 60 feet makes a DC 12 Dexterity saving throw, taking 4 (1d8) radiant damage on a failure. This spell ignores cover."
+                "Content": "One creature the acolyte can see within 60 feet makes a DC 12 Dexterity saving throw, taking 4 (1d8) radiant damage on a failure. This spell ignores cover.",
+                "Sort Order": 2
 			},
 			{
 				"Name": "Bless (1st-Level; V, S, M, Concentration)",
-				"Content": "Up to three creatures within 30 feet add a d4 to attack rolls and saving throws for 1 minute."
+                "Content": "Up to three creatures within 30 feet add a d4 to attack rolls and saving throws for 1 minute.",
+                "Sort Order": 3
 			},
 			{
 				"Name": "Cure Wounds (1st-Level; V, S)",
-				"Content": "The acolyte touches a willing living creature, restoring 6 (1d8 + 2) hit points to it."
+                "Content": "The acolyte touches a willing living creature, restoring 6 (1d8 + 2) hit points to it.",
+                "Sort Order": 4
 			},
 			{
 				"Name": "An acolyte is a priest in training or an assistant to a more senior member of the clergy",
-				"Content": "While acolytes may be found acting as servants or messengers in major temples, an acolyte may also be the only representative of their faith serving a village or roadside shrine."
+                "Content": "While acolytes may be found acting as servants or messengers in major temples, an acolyte may also be the only representative of their faith serving a village or roadside shrine.",
+                "Sort Order": 5
 			}
 		],
 		"BonusActions": [

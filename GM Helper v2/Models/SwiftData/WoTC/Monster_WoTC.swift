@@ -198,11 +198,40 @@ extension Monster_WoTC: MonstrousDTO {
         
         if let specialAbilities {
             for ability in specialAbilities {
-                traits
-                    .append(
+                var spells: [ActionTrait] = []
+                
+                if let abilitySpells = ability.spellCasting?.spells, let slots = ability.spellCasting?.slots {
+                    var name:String
+                    
+                    for i in 0...9 {
+                        let spellsBySlot = abilitySpells.filter { $0.level == i }
+                        if spellsBySlot.count > 0 {
+                            let content = spellsBySlot.compactMap { $0.name?.localizedLowercase }.joined(separator: ", ")
+                            if let slotsAvailable = slots.slotsAvailable(forLevel: i) {
+                                switch i {
+                                    case 0:
+                                        name = "Cantrips (at will)"
+                                    default:
+                                        name = "\(i.ordinal)-level (\(slotsAvailable) slots)"
+                                }
+                                
+                                let at = ActionTrait(
+                                    name: name,
+                                    content: content,
+                                    sortOrder: i
+                                )
+                                
+                                spells.append(at)
+                            }
+                        }
+                    }
+                }
+                
+                traits.append(
                         ActionTrait(
                             name: ability.name,
                             content: ability.desc ?? "no found",
+                            spells: spells.count > 0 ? spells : nil,
                             type: .trait
                         )
                     )

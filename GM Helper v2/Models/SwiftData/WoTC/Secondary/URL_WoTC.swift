@@ -20,6 +20,7 @@ class URL_WoTC: Decodable, Identifiable {
     var id = UUID()
     var index: String?
     var name: String?
+    var level: Int?
     var url: String?
     var type: UrlType? // New property to categorize the URL
     
@@ -29,13 +30,15 @@ class URL_WoTC: Decodable, Identifiable {
     enum CodingKeys: String, CodingKey {
         case index
         case name
+        case level
         case url
         case type
     }
     
-    init(index: String? = nil, name: String? = nil, url: String? = nil, type: UrlType? = nil) {
+    init(index: String? = nil, name: String? = nil, level: Int? = nil, url: String? = nil, type: UrlType? = nil) {
         self.index = index
         self.name = name
+        self.level = level
         self.url = url
         self.type = type
     }
@@ -45,8 +48,8 @@ class URL_WoTC: Decodable, Identifiable {
         
         self.index = try container.decodeIfPresent(String.self, forKey: .index)
         self.name = try container.decodeIfPresent(String.self, forKey: .name)
+        self.level = try container.decodeIfPresent(Int.self, forKey: .level)
         self.url = try container.decodeIfPresent(String.self, forKey: .url)
-        self.type = try container
-            .decodeIfPresent(UrlType.self, forKey: .type)
+        self.type = try container.decodeIfPresent(UrlType.self, forKey: .type)
     }
 }
