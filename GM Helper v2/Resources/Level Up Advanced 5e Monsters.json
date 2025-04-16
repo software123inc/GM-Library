@@ -450,35 +450,44 @@
 			},
 			{
 				"Name": "Spellcasting",
-				"Content": "The naga is an 11th level spellcaster. Its spellcasting ability is Wisdom (spell save DC 16). The naga has the following cleric spells prepared, which it can cast with only vocalized components:"
-			},
-			{
-				"Name": "",
-				"Content": "Cantrips (at will): mending, thaumaturgy"
-			},
-			{
-				"Name": "",
-				"Content": "1st-level (4 slots): command, cure wounds, false life"
-			},
-			{
-				"Name": "",
-				"Content": "2nd-level (3 slots): calm emotions, hold person, locate object"
-			},
-			{
-				"Name": "",
-				"Content": "3rd-level (3 slots) clairvoyance, create food and water"
-			},
-			{
-				"Name": "",
-				"Content": "4th-level (3 slots): divination, freedom of movement"
-			},
-			{
-				"Name": "",
-				"Content": "5th-level (2 slots): flame strike, geas, scrying"
-			},
-			{
-				"Name": "",
-				"Content": "6th-level (1 slot): forbiddance"
+				"Content": "The naga is an 11th level spellcaster. Its spellcasting ability is Wisdom (spell save DC 16). The naga has the following cleric spells prepared, which it can cast with only vocalized components:",
+                "Spells": [
+                    {
+                        "Name": "Cantrips (at will)",
+                        "Content": "mending, thaumaturgy",
+                        "Sort Order": 0
+                    },
+                    {
+                        "Name": "1st-level (4 slots)",
+                        "Content": "command, cure wounds, false life",
+                        "Sort Order": 1
+                    },
+                    {
+                        "Name": "2nd-level (3 slots)",
+                        "Content": "calm emotions, hold person, locate object",
+                        "Sort Order": 2
+                    },
+                    {
+                        "Name": "3rd-level (3 slots)",
+                        "Content": "clairvoyance, create food and water",
+                        "Sort Order": 3
+                    },
+                    {
+                        "Name": "4th-level (3 slots)",
+                        "Content": "divination, freedom of movement",
+                        "Sort Order": 4
+                    },
+                    {
+                        "Name": "5th-level (2 slots)",
+                        "Content": "flame strike, geas, scrying",
+                        "Sort Order": 5
+                    },
+                    {
+                        "Name": "6th-level (1 slot)",
+                        "Content": "forbiddance",
+                        "Sort Order": 6
+                    }
+                ]
 			}
 		],
 		"Actions": [
@@ -8143,15 +8152,19 @@
 		"Traits": [
 			{
 				"Name": "Spellcasting",
-				"Content": "The apprentice mage is a 2nd level spellcaster. Their spellcasting ability is Intelligence (spell save DC 12, +4 to hit with spell attacks). They have the following wizard spells prepared:"
-			},
-			{
-				"Name": "",
-				"Content": "Cantrips (at will): fire bolt, light, prestidigitation"
-			},
-			{
-				"Name": "",
-				"Content": "1st-level (3 slots): detect magic, magic missile, shield"
+				"Content": "The apprentice mage is a 2nd level spellcaster. Their spellcasting ability is Intelligence (spell save DC 12, +4 to hit with spell attacks). They have the following wizard spells prepared:",
+                "Spells": [
+                    {
+                        "Name": "Cantrips (at will)",
+                        "Content": "fire bolt, light, prestidigitation",
+                        "Sort Order": 0
+                    },
+                    {
+                        "Name": "1st-level (3 slots)",
+                        "Content": "detect magic, magic missile, shield",
+                        "Sort Order": 1
+                    }
+                ]
 			}
 		],
 		"Actions": [
@@ -8274,47 +8287,59 @@
 			},
 			{
 				"Name": "Spellcasting",
-				"Content": "The arcane blademaster is a 20th level spellcaster. Their spellcasting ability is Intelligence (spell save DC 19, +11 to hit with spell attacks). The arcane blademaster has the following wizard spells prepared:"
-			},
-			{
-				"Name": "",
-				"Content": "Cantrips (at will): acid splash, fire bolt, shocking grasp, true strike"
-			},
-			{
-				"Name": "",
-				"Content": "1st-level (4 slots): burning hands, charm person, magic missile, sleep"
-			},
-			{
-				"Name": "",
-				"Content": "2nd-level (3 slots): magic weapon, misty step, see invisibility"
-			},
-			{
-				"Name": "",
-				"Content": "3rd-level (3 slots): dispel magic, fireball, fly, lightning bolt, tongues"
-			},
-			{
-				"Name": "",
-				"Content": "4th-level (3 slots): fire shield, stoneskin, wall of fire"
-			},
-			{
-				"Name": "",
-				"Content": "5th-level (3 slots): cone of cold, conjure elemental, hold monster, telekinesis"
-			},
-			{
-				"Name": "",
-				"Content": "6th-level (2 slots): globe of invulnerability, sunbeam"
-			},
-			{
-				"Name": "",
-				"Content": "7th-level (2 slots): teleport, unholy star"
-			},
-			{
-				"Name": "",
-				"Content": "8th-level (1 slot): power word stun"
-			},
-			{
-				"Name": "",
-				"Content": "9th-level (1 slot): meteor swarm"
+				"Content": "The arcane blademaster is a 20th level spellcaster. Their spellcasting ability is Intelligence (spell save DC 19, +11 to hit with spell attacks). The arcane blademaster has the following wizard spells prepared:",
+                "Spells": [
+                    {
+                        "Name": "Cantrips (at will)",
+                        "Content": "acid splash, fire bolt, shocking grasp, true strike",
+                        "Sort Order": 0
+                    },
+                    {
+                        "Name": "1st-level (4 slots)",
+                        "Content": "burning hands, charm person, magic missile, sleepy",
+                        "Sort Order": 1
+                    },
+                    {
+                        "Name": "2nd-level (3 slots)",
+                        "Content": "magic weapon, misty step, see invisibility",
+                        "Sort Order": 2
+                    },
+                    {
+                        "Name": "3rd-level (3 slots)",
+                        "Content": "dispel magic, fireball, fly, lightning bolt, tongues",
+                        "Sort Order": 3
+                    },
+                    {
+                        "Name": "4th-level (3 slots)",
+                        "Content": "fire shield, stoneskin, wall of fire",
+                        "Sort Order": 4
+                    },
+                    {
+                        "Name": "5th-level (3 slots)",
+                        "Content": "cone of cold, conjure elemental, hold monster, telekinesis",
+                        "Sort Order": 5
+                    },
+                    {
+                        "Name": "6th-level (2 slots)",
+                        "Content": "globe of invulnerability, sunbeam",
+                        "Sort Order": 6
+                    },
+                    {
+                        "Name": "7th-level (2 slots)",
+                        "Content": "teleport, unholy star",
+                        "Sort Order": 7
+                    },
+                    {
+                        "Name": "8th-level (1 slot)",
+                        "Content": "power word stun",
+                        "Sort Order": 8
+                    },
+                    {
+                        "Name": "9th-level (1 slot)",
+                        "Content": "meteor swarm",
+                        "Sort Order": 8
+                    }
+                ]
 			},
 			{
 				"Name": "Superior Heavy Armor Master",
@@ -8675,47 +8700,59 @@
 			},
 			{
 				"Name": "Spellcasting",
-				"Content": "The archmage is an 18th level spellcaster. Their spellcasting ability is Intelligence (spell save DC 17, +9 to hit with spell attacks). The archmage can cast shield at level 1 and alter self at level 2 without expending a spell slot. They have the following wizard spells prepared:"
-			},
-			{
-				"Name": "",
-				"Content": "Cantrips (at will): fire bolt, light, mage hand, message, prestidigitation"
-			},
-			{
-				"Name": "",
-				"Content": "1st-level (4 slots): detect magic, identify, mage armor, shield"
-			},
-			{
-				"Name": "",
-				"Content": "2nd-level (4 slots): alter self, detect thoughts, suggestion"
-			},
-			{
-				"Name": "",
-				"Content": "3rd-level (3 slots): counterspell, lightning bolt, sending"
-			},
-			{
-				"Name": "",
-				"Content": "4th-level (3 slots): confusion, hallucinatory terrain, locate creature"
-			},
-			{
-				"Name": "",
-				"Content": "5th-level (3 slots): cone of cold, mislead, scrying"
-			},
-			{
-				"Name": "",
-				"Content": "6th-level (1 slot): globe of invulnerability, true seeing"
-			},
-			{
-				"Name": "",
-				"Content": "7th-level (1 slot): teleport"
-			},
-			{
-				"Name": "",
-				"Content": "8th-level (1 slot): mind blank"
-			},
-			{
-				"Name": "",
-				"Content": "9th-level (1 slot): foresight"
+				"Content": "The archmage is an 18th level spellcaster. Their spellcasting ability is Intelligence (spell save DC 17, +9 to hit with spell attacks). The archmage can cast shield at level 1 and alter self at level 2 without expending a spell slot. They have the following wizard spells prepared:",
+                "Spells": [
+                    {
+                        "Name": "Cantrips (at will)",
+                        "Content": "fire bolt, light, mage hand, message, prestidigitation",
+                        "Sort Order": 0
+                    },
+                    {
+                        "Name": "1st-level (4 slots)",
+                        "Content": "detect magic, identify, mage armor, shield",
+                        "Sort Order": 1
+                    },
+                    {
+                        "Name": "2nd-level (4 slots)",
+                        "Content": "alter self, detect thoughts, suggestion",
+                        "Sort Order": 2
+                    },
+                    {
+                        "Name": "3rd-level (3 slots)",
+                        "Content": "counterspell, lightning bolt, sending",
+                        "Sort Order": 3
+                    },
+                    {
+                        "Name": "4th-level (3 slots)",
+                        "Content": "confusion, hallucinatory terrain, locate creature",
+                        "Sort Order": 4
+                    },
+                    {
+                        "Name": "5th-level (3 slots)",
+                        "Content": "cone of cold, mislead, scrying",
+                        "Sort Order": 5
+                    },
+                    {
+                        "Name": "6th-level (1 slot)",
+                        "Content": "globe of invulnerability, true seeing",
+                        "Sort Order": 6
+                    },
+                    {
+                        "Name": "7th-level (1 slot)",
+                        "Content": "teleport",
+                        "Sort Order": 7
+                    },
+                    {
+                        "Name": "8th-level (1 slot)",
+                        "Content": "mind blank",
+                        "Sort Order": 8
+                    },
+                    {
+                        "Name": "9th-level (1 slot)",
+                        "Content": "foresight",
+                        "Sort Order": 9
+                    }
+                ]
 			}
 		],
 		"Actions": [
@@ -8863,47 +8900,59 @@
 			},
 			{
 				"Name": "Spellcasting",
-				"Content": "The archpriest is a 20th level spellcaster. Their spellcasting ability is Wisdom (spell save DC 18, +10 to hit with spell attacks). The archpriest has the following cleric spells prepared."
-			},
-			{
-				"Name": "",
-				"Content": "Cantrips (at will): light, mending, sacred flame, spare the dying, thaumaturgy"
-			},
-			{
-				"Name": "",
-				"Content": "1st-level (4 slots): bane, bless, cure wounds, inflict wounds"
-			},
-			{
-				"Name": "",
-				"Content": "2nd-level (3 slots): hold person, lesser restoration, spiritual weapon"
-			},
-			{
-				"Name": "",
-				"Content": "3rd-level (3 slots): bestow curse, dispel magic, revivify"
-			},
-			{
-				"Name": "",
-				"Content": "4th-level (3 slots): banishment, guardian of faith, stone shape"
-			},
-			{
-				"Name": "",
-				"Content": "5th-level (3 slots): contagion, flame strike, greater restoration, mass cure wounds"
-			},
-			{
-				"Name": "",
-				"Content": "6th-level (2 slots): blade barrier, planar ally, true seeing"
-			},
-			{
-				"Name": "",
-				"Content": "7th-level (2 slots): conjure celestial, divine word, fire storm"
-			},
-			{
-				"Name": "",
-				"Content": "8th-level (1 slot): antimagic field"
-			},
-			{
-				"Name": "",
-				"Content": "9th-level (1 slot): mass heal"
+				"Content": "The archpriest is a 20th level spellcaster. Their spellcasting ability is Wisdom (spell save DC 18, +10 to hit with spell attacks). The archpriest has the following cleric spells prepared.",
+                "Spells": [
+                    {
+                        "Name": "Cantrips (at will)",
+                        "Content": "light, mending, sacred flame, spare the dying, thaumaturgy",
+                        "Sort Order": 0
+                    },
+                    {
+                        "Name": "1st-level (4 slots)",
+                        "Content": "bane, bless, cure wounds, inflict wounds",
+                        "Sort Order": 1
+                    },
+                    {
+                        "Name": "2nd-level (3 slots)",
+                        "Content": "hold person, lesser restoration, spiritual weapon",
+                        "Sort Order": 2
+                    },
+                    {
+                        "Name": "3rd-level (3 slots)",
+                        "Content": "bestow curse, dispel magic, revivify",
+                        "Sort Order": 3
+                    },
+                    {
+                        "Name": "4th-level (3 slots)",
+                        "Content": "banishment, guardian of faith, stone shape",
+                        "Sort Order": 4
+                    },
+                    {
+                        "Name": "5th-level (3 slots)",
+                        "Content": "contagion, flame strike, greater restoration, mass cure wounds",
+                        "Sort Order": 5
+                    },
+                    {
+                        "Name": "6th-level (2 slots)",
+                        "Content": "blade barrier, planar ally, true seeing",
+                        "Sort Order": 6
+                    },
+                    {
+                        "Name": "7th-level (2 slots)",
+                        "Content": "conjure celestial, divine word, fire storm",
+                        "Sort Order": 7
+                    },
+                    {
+                        "Name": "8th-level (1 slot)",
+                        "Content": "antimagic field",
+                        "Sort Order": 8
+                    },
+                    {
+                        "Name": "9th-level (1 slot)",
+                        "Content": "mass heal",
+                        "Sort Order": 9
+                    }
+                ]
 			}
 		],
 		"Actions": [
@@ -17005,19 +17054,24 @@
 			},
 			{
 				"Name": "Spellcasting",
-				"Content": "The cult fanatic is a 4th level spellcaster. Their spellcasting ability is Wisdom (spell save DC 12, +4 to hit with spell attacks). They have the following cleric spells prepared:"
-			},
-			{
-				"Name": "",
-				"Content": "Cantrips (at will): light, sacred flame, thaumaturgy"
-			},
-			{
-				"Name": "",
-				"Content": "1st-level (4 slots): ceremony, command, detect evil and good, inflict wounds"
-			},
-			{
-				"Name": "",
-				"Content": "2nd-level (3 slots): blindness/deafness, hold person"
+				"Content": "The cult fanatic is a 4th level spellcaster. Their spellcasting ability is Wisdom (spell save DC 12, +4 to hit with spell attacks). They have the following cleric spells prepared:",
+                "Spells": [
+                    {
+                        "Name": "Cantrips (at will)",
+                        "Content": "light, sacred flame, thaumaturgy",
+                        "Sort Order": 0
+                    },
+                    {
+                        "Name": "1st-level (4 slots)",
+                        "Content": "ceremony, command, detect evil and good, inflict wounds",
+                        "Sort Order": 1
+                    },
+                    {
+                        "Name": "2nd-level (3 slots)",
+                        "Content": "blindness/deafness, hold person",
+                        "Sort Order": 2
+                    }
+                ]
 			}
 		],
 		"Actions": [
@@ -19834,19 +19888,24 @@
 			},
 			{
 				"Name": "Spellcasting",
-				"Content": "The cult fanatic is a 4th level spellcaster. Their spellcasting ability is Wisdom (spell save DC 12, +4 to hit with spell attacks). They have the following cleric spells prepared:"
-			},
-			{
-				"Name": "",
-				"Content": "Cantrips (at will): light, sacred flame, thaumaturgy"
-			},
-			{
-				"Name": "",
-				"Content": "1st-level (4 slots): ceremony, command, detect evil and good, inflict wounds"
-			},
-			{
-				"Name": "",
-				"Content": "2nd-level (3 slots): blindness/deafness, hold person"
+				"Content": "The cult fanatic is a 4th level spellcaster. Their spellcasting ability is Wisdom (spell save DC 12, +4 to hit with spell attacks). They have the following cleric spells prepared:",
+                "Spells": [
+                    {
+                        "Name": "Cantrips (at will)",
+                        "Content": "light, sacred flame, thaumaturgy",
+                        "Sort Order": 0
+                    },
+                    {
+                        "Name": "1st-level (4 slots)",
+                        "Content": "ceremony, command, detect evil and good, inflict wounds",
+                        "Sort Order": 1
+                    },
+                    {
+                        "Name": "2nd-level (3 slots)",
+                        "Content": "blindness/deafness, hold person",
+                        "Sort Order": 2
+                    }
+                ]
 			}
 		],
 		"Actions": [
@@ -21022,19 +21081,24 @@
 		"Traits": [
 			{
 				"Name": "Spellcasting",
-				"Content": "The druid is a 4th level spellcaster. Their spellcasting ability is Wisdom (spell save DC 12, +4 to hit with spell attacks). They have the following druid spells prepared:"
-			},
-			{
-				"Name": "",
-				"Content": "Cantrips (at will): druidcraft, produce flame, shillelagh"
-			},
-			{
-				"Name": "",
-				"Content": "1st-level (4 slots): entangle, longstrider, speak with animals, thunderwave"
-			},
-			{
-				"Name": "",
-				"Content": "2nd-level (3 slots): animal messenger, barkskin"
+				"Content": "The druid is a 4th level spellcaster. Their spellcasting ability is Wisdom (spell save DC 12, +4 to hit with spell attacks). They have the following druid spells prepared:",
+                "Spells": [
+                    {
+                        "Name": "Cantrips (at will)",
+                        "Content": "druidcraft, produce flame, shillelagh",
+                        "Sort Order": 0
+                    },
+                    {
+                        "Name": "1st-level (4 slots)",
+                        "Content": "entangle, longstrider, speak with animals, thunderwave",
+                        "Sort Order": 1
+                    },
+                    {
+                        "Name": "2nd-level (3 slots)",
+                        "Content": "animal messenger, barkskin",
+                        "Sort Order": 2
+                    }
+                ]
 			}
 		],
 		"Actions": [
@@ -25358,31 +25422,39 @@
 			},
 			{
 				"Name": "Spellcasting",
-				"Content": "The mage is a 9th level spellcaster. Their spellcasting ability is Intelligence (spell save DC 14, +6 to hit with spell attacks). They have the following wizard spells prepared:"
-			},
-			{
-				"Name": "",
-				"Content": "Cantrips (at will): fire bolt, light, mage hand, prestidigitation"
-			},
-			{
-				"Name": "",
-				"Content": "1st-level (4 slots): detect magic, identify, mage armor, shield"
-			},
-			{
-				"Name": "",
-				"Content": "2nd-level (3 slots): alter self, misty step"
-			},
-			{
-				"Name": "",
-				"Content": "3rd-level (3 slots): hypnotic pattern, counterspell, fireball"
-			},
-			{
-				"Name": "",
-				"Content": "4th-level (3 slots): dimension door, greater invisibility"
-			},
-			{
-				"Name": "",
-				"Content": "5th-level (1 slot): cone of cold"
+				"Content": "The mage is a 9th level spellcaster. Their spellcasting ability is Intelligence (spell save DC 14, +6 to hit with spell attacks). They have the following wizard spells prepared:",
+                "Spells": [
+                    {
+                        "Name": "Cantrips (at will)",
+                        "Content": "fire bolt, light, mage hand, prestidigitation",
+                        "Sort Order": 0
+                    },
+                    {
+                        "Name": "1st-level (4 slots)",
+                        "Content": "detect magic, identify, mage armor, shield",
+                        "Sort Order": 1
+                    },
+                    {
+                        "Name": "2nd-level (3 slots)",
+                        "Content": "alter self, misty step",
+                        "Sort Order": 2
+                    },
+                    {
+                        "Name": "3rd-level (3 slots)",
+                        "Content": "hypnotic pattern, counterspell, fireball",
+                        "Sort Order": 3
+                    },
+                    {
+                        "Name": "4th-level (3 slots)",
+                        "Content": "dimension door, greater invisibility",
+                        "Sort Order": 4
+                    },
+                    {
+                        "Name": "5th-level (1 slot)",
+                        "Content": "cone of cold",
+                        "Sort Order": 5
+                    }
+                ]
 			}
 		],
 		"Actions": [
@@ -33722,35 +33794,44 @@
 			},
 			{
 				"Name": "Spellcasting",
-				"Content": "The naga is an 11th level spellcaster. Its spellcasting ability is Wisdom (spell save DC 16). The naga has the following cleric spells prepared, which it can cast with only vocalized components:"
-			},
-			{
-				"Name": "",
-				"Content": "Cantrips (at will): mending, thaumaturgy"
-			},
-			{
-				"Name": "",
-				"Content": "1st-level (4 slots): command, cure wounds"
-			},
-			{
-				"Name": "",
-				"Content": "2nd-level (3 slots): calm emotions, hold person"
-			},
-			{
-				"Name": "",
-				"Content": "3rd-level (3 slots) clairvoyance, create food and water"
-			},
-			{
-				"Name": "",
-				"Content": "4th-level (3 slots): divination, freedom of movement"
-			},
-			{
-				"Name": "",
-				"Content": "5th-level (2 slots): flame strike, geas"
-			},
-			{
-				"Name": "",
-				"Content": "6th-level (1 slot): forbiddance"
+				"Content": "The naga is an 11th level spellcaster. Its spellcasting ability is Wisdom (spell save DC 16). The naga has the following cleric spells prepared, which it can cast with only vocalized components:",
+                "Spells": [
+                    {
+                        "Name": "Cantrips (at will)",
+                        "Content": "mending, thaumaturgy",
+                        "Sort Order": 0
+                    },
+                    {
+                        "Name": "1st-level (4 slots)",
+                        "Content": "command, cure wounds",
+                        "Sort Order": 1
+                    },
+                    {
+                        "Name": "2nd-level (3 slots)",
+                        "Content": "calm emotions, hold person",
+                        "Sort Order": 2
+                    },
+                    {
+                        "Name": "3rd-level (3 slots)",
+                        "Content": "clairvoyance, create food and water",
+                        "Sort Order": 3
+                    },
+                    {
+                        "Name": "4th-level (3 slots)",
+                        "Content": "divination, freedom of movement",
+                        "Sort Order": 4
+                    },
+                    {
+                        "Name": "5th-level (2 slots)",
+                        "Content": "flame strike, geas",
+                        "Sort Order": 5
+                    },
+                    {
+                        "Name": "6th-level (1 slot)",
+                        "Content": "forbiddance",
+                        "Sort Order": 6
+                    }
+                ]
 			}
 		],
 		"Actions": [
@@ -34623,35 +34704,44 @@
 		"Traits": [
 			{
 				"Name": "Spellcasting",
-				"Content": "The priest is an 11th level spellcaster. Their spellcasting ability is Wisdom (spell save DC 15, +7 to hit with spell attacks). They have the following cleric spells prepared:"
-			},
-			{
-				"Name": "",
-				"Content": "Cantrips (at will): light, sacred flame, thaumaturgy"
-			},
-			{
-				"Name": "",
-				"Content": "1st-level (4 slots): ceremony, detect evil and good, healing word"
-			},
-			{
-				"Name": "",
-				"Content": "2nd-level (3 slots): augury, hold person, zone of truth"
-			},
-			{
-				"Name": "",
-				"Content": "3rd-level (3 slots): daylight, remove curse"
-			},
-			{
-				"Name": "",
-				"Content": "4th-level (3 slots): divination, guardian of faith, revivify"
-			},
-			{
-				"Name": "",
-				"Content": "5th-level (2 slots): flame strike, greater restoration, raise dead"
-			},
-			{
-				"Name": "",
-				"Content": "6th-level (1 slots): heal"
+				"Content": "The priest is an 11th level spellcaster. Their spellcasting ability is Wisdom (spell save DC 15, +7 to hit with spell attacks). They have the following cleric spells prepared:",
+                "Spells": [
+                    {
+                        "Name": "Cantrips (at will)",
+                        "Content": "light, sacred flame, thaumaturgy",
+                        "Sort Order": 0
+                    },
+                    {
+                        "Name": "1st-level (4 slots)",
+                        "Content": "ceremony, detect evil and good, healing word",
+                        "Sort Order": 1
+                    },
+                    {
+                        "Name": "2nd-level (3 slots)",
+                        "Content": "augury, hold person, zone of truth",
+                        "Sort Order": 2
+                    },
+                    {
+                        "Name": "3rd-level (3 slots)",
+                        "Content": "daylight, remove curse",
+                        "Sort Order": 3
+                    },
+                    {
+                        "Name": "4th-level (3 slots)",
+                        "Content": "divination, guardian of faith, revivify",
+                        "Sort Order": 4
+                    },
+                    {
+                        "Name": "5th-level (2 slots)",
+                        "Content": "flame strike, greater restoration, raise dead",
+                        "Sort Order": 5
+                    },
+                    {
+                        "Name": "6th-level (1 slot)",
+                        "Content": "heal",
+                        "Sort Order": 5
+                    }
+                ]
 			}
 		],
 		"Actions": [
@@ -40109,43 +40199,54 @@
 			},
 			{
 				"Name": "Spellcasting",
-				"Content": "The lich is a 16th level spellcaster. Its spellcasting ability is Intelligence (spell save DC 20, +12 to hit with spell attacks). The lich has the following wizard spells prepared:"
-			},
-			{
-				"Name": "",
-				"Content": "Cantrips (at will): fire bolt, mage hand, prestidigitation"
-			},
-			{
-				"Name": "",
-				"Content": "1st-level (4 slots): detect magic, shield, silent image, thunderwave"
-			},
-			{
-				"Name": "",
-				"Content": "2nd-level (3 slots): blur, detect thoughts, locate object"
-			},
-			{
-				"Name": "",
-				"Content": "3rd-level (3 slots): animate dead, dispel magic, fireball"
-			},
-			{
-				"Name": "",
-				"Content": "4th-level (3 slots): confusion, dimension door"
-			},
-			{
-				"Name": "",
-				"Content": "5th-level (2 slots): geas, scrying"
-			},
-			{
-				"Name": "",
-				"Content": "6th-level (1 slot): create undead, disintegrate"
-			},
-			{
-				"Name": "",
-				"Content": "7th-level (1 slot): finger of death, teleport"
-			},
-			{
-				"Name": "",
-				"Content": "8th-level (1 slot): power word stun"
+				"Content": "The lich is a 16th level spellcaster. Its spellcasting ability is Intelligence (spell save DC 20, +12 to hit with spell attacks). The lich has the following wizard spells prepared:",
+                "Spells": [
+                    {
+                        "Name": "Cantrips (at will)",
+                        "Content": "fire bolt, mage hand, prestidigitation",
+                        "Sort Order": 0
+                    },
+                    {
+                        "Name": "1st-level (4 slots)",
+                        "Content": "detect magic, shield, silent image, thunderwave",
+                        "Sort Order": 1
+                    },
+                    {
+                        "Name": "2nd-level (3 slots)",
+                        "Content": "blur, detect thoughts, locate object",
+                        "Sort Order": 2
+                    },
+                    {
+                        "Name": "3rd-level (3 slots)",
+                        "Content": "animate dead, dispel magic, fireball",
+                        "Sort Order": 3
+                    },
+                    {
+                        "Name": "4th-level (3 slots)",
+                        "Content": "confusion, dimension door",
+                        "Sort Order": 4
+                    },
+                    {
+                        "Name": "5th-level (2 slots)",
+                        "Content": "geas, scrying",
+                        "Sort Order": 5
+                    },
+                    {
+                        "Name": "6th-level (1 slot)",
+                        "Content": "create undead, disintegrate",
+                        "Sort Order": 6
+                    },
+                    {
+                        "Name": "7th-level (1 slot)",
+                        "Content": "finger of death, teleport",
+                        "Sort Order": 7
+                    },
+                    {
+                        "Name": "8th-level (1 slot)",
+                        "Content": "power word stun",
+                        "Sort Order": 8
+                    }
+                ]
 			},
 			{
 				"Name": "Tongueless Utterance",
@@ -40718,31 +40819,39 @@
 		"Traits": [
 			{
 				"Name": "Spellcasting",
-				"Content": "The mage is a 9th level spellcaster. Their spellcasting ability is Intelligence (spell save DC 14, +6 to hit with spell attacks). They have the following wizard spells prepared:"
-			},
-			{
-				"Name": "",
-				"Content": "Cantrips (at will): fire bolt, light, mage hand, prestidigitation"
-			},
-			{
-				"Name": "",
-				"Content": "1st-level (4 slots): detect magic, identify, mage armor, shield"
-			},
-			{
-				"Name": "",
-				"Content": "2nd-level (3 slots): alter self, misty step"
-			},
-			{
-				"Name": "",
-				"Content": "3rd-level (3 slots): clairvoyance, counterspell, fireball"
-			},
-			{
-				"Name": "",
-				"Content": "4th-level (3 slots): dimension door, greater invisibility"
-			},
-			{
-				"Name": "",
-				"Content": "5th-level (1 slot): cone of cold"
+				"Content": "The mage is a 9th level spellcaster. Their spellcasting ability is Intelligence (spell save DC 14, +6 to hit with spell attacks). They have the following wizard spells prepared:",
+                "Spells": [
+                    {
+                        "Name": "Cantrips (at will)",
+                        "Content": "fire bolt, light, mage hand, prestidigitation",
+                        "Sort Order": 0
+                    },
+                    {
+                        "Name": "1st-level (4 slots)",
+                        "Content": "detect magic, identify, mage armor, shield",
+                        "Sort Order": 1
+                    },
+                    {
+                        "Name": "2nd-level (3 slots)",
+                        "Content": "alter self, misty step",
+                        "Sort Order": 2
+                    },
+                    {
+                        "Name": "3rd-level (3 slots)",
+                        "Content": "clairvoyance, counterspell, fireball",
+                        "Sort Order": 3
+                    },
+                    {
+                        "Name": "4th-level (3 slots)",
+                        "Content": "dimension door, greater invisibility",
+                        "Sort Order": 4
+                    },
+                    {
+                        "Name": "5th-level (3 slots)",
+                        "Content": "cone of cold",
+                        "Sort Order": 5
+                    }
+                ]
 			}
 		],
 		"Actions": [
@@ -43240,23 +43349,29 @@
 		"Traits": [
 			{
 				"Name": "Spellcasting",
-				"Content": "The minstrel is a 5th level spellcaster. Their spellcasting ability is Charisma (spell save DC 13, +5 to hit with spell attacks). They have the following bard spells prepared:"
-			},
-			{
-				"Name": "",
-				"Content": "Cantrips (at will): light, mage hand, minor illusion, vicious mockery"
-			},
-			{
-				"Name": "",
-				"Content": "1st-level (4 slots): charm person, disguise self, healing word"
-			},
-			{
-				"Name": "",
-				"Content": "2nd-level (3 slots): enthrall, invisibility, shatter"
-			},
-			{
-				"Name": "",
-				"Content": "3rd-level (2 slots): hypnotic pattern, major image"
+				"Content": "The minstrel is a 5th level spellcaster. Their spellcasting ability is Charisma (spell save DC 13, +5 to hit with spell attacks). They have the following bard spells prepared:",
+                "Spells": [
+                    {
+                        "Name": "Cantrips (at will)",
+                        "Content": "light, mage hand, minor illusion, vicious mockery",
+                        "Sort Order": 0
+                    },
+                    {
+                        "Name": "1st-level (4 slots)",
+                        "Content": "charm person, disguise self, healing word",
+                        "Sort Order": 1
+                    },
+                    {
+                        "Name": "2nd-level (3 slots)",
+                        "Content": "enthrall, invisibility, shatter",
+                        "Sort Order": 2
+                    },
+                    {
+                        "Name": "3rd-level (2 slots)",
+                        "Content": "hypnotic pattern, major image",
+                        "Sort Order": 3
+                    }
+                ]
 			}
 		],
 		"Actions": [
@@ -44161,35 +44276,44 @@
 			},
 			{
 				"Name": "Spellcasting",
-				"Content": "The mummy lord is an 11th level spellcaster. Its spellcasting ability is Wisdom (spell save DC 17, +9 to hit with spell attacks). The mummy lord has the following cleric spells prepared, which it can cast without material components:"
-			},
-			{
-				"Name": "",
-				"Content": "Cantrips (at will): guidance, thaumaturgy"
-			},
-			{
-				"Name": "",
-				"Content": "1st-level (4 slots): create or destroy water, detect magic"
-			},
-			{
-				"Name": "",
-				"Content": "2nd-level (3 slots): augury, gentle repose"
-			},
-			{
-				"Name": "",
-				"Content": "3rd-level (3 slots): animate dead, dispel magic"
-			},
-			{
-				"Name": "",
-				"Content": "4th-level (3 slots): divination, guardian of faith"
-			},
-			{
-				"Name": "",
-				"Content": "5th-level (2 slots): contagion"
-			},
-			{
-				"Name": "",
-				"Content": "6th-level (1 slot): harm"
+				"Content": "The mummy lord is an 11th level spellcaster. Its spellcasting ability is Wisdom (spell save DC 17, +9 to hit with spell attacks). The mummy lord has the following cleric spells prepared, which it can cast without material components:",
+                "Spells": [
+                    {
+                        "Name": "Cantrips (at will)",
+                        "Content": "guidance, thaumaturgy",
+                        "Sort Order": 0
+                    },
+                    {
+                        "Name": "1st-level (4 slots)",
+                        "Content": "create or destroy water, detect magic",
+                        "Sort Order": 1
+                    },
+                    {
+                        "Name": "2nd-level (3 slots)",
+                        "Content": "augury, gentle repose",
+                        "Sort Order": 2
+                    },
+                    {
+                        "Name": "3rd-level (3 slots)",
+                        "Content": "animate dead, dispel magic",
+                        "Sort Order": 3
+                    },
+                    {
+                        "Name": "4th-level (3 slots)",
+                        "Content": "divination, guardian of faith",
+                        "Sort Order": 4
+                    },
+                    {
+                        "Name": "5th-level (2 slots)",
+                        "Content": "divination, guardian of faith",
+                        "Sort Order": 5
+                    },
+                    {
+                        "Name": "6th-level (1 slot)",
+                        "Content": "harm",
+                        "Sort Order": 6
+                    }
+                ]
 			}
 		],
 		"Actions": [
@@ -44671,31 +44795,39 @@
 		"Traits": [
 			{
 				"Name": "Spellcasting",
-				"Content": "The mage is a 9th level spellcaster. Their spellcasting ability is Intelligence (spell save DC 14, +6 to hit with spell attacks). They have the following wizard spells prepared:"
-			},
-			{
-				"Name": "",
-				"Content": "Cantrips (at will): fire bolt, light, mage hand, prestidigitation"
-			},
-			{
-				"Name": "",
-				"Content": "1st-level (4 slots): detect magic, identify, mage armor, shield"
-			},
-			{
-				"Name": "",
-				"Content": "2nd-level (3 slots): alter self, misty step"
-			},
-			{
-				"Name": "",
-				"Content": "3rd-level (3 slots): animate dead, counterspell, fireball"
-			},
-			{
-				"Name": "",
-				"Content": "4th-level (3 slots): dimension door, greater invisibility"
-			},
-			{
-				"Name": "",
-				"Content": "5th-level (1 slot): cone of cold"
+				"Content": "The mage is a 9th level spellcaster. Their spellcasting ability is Intelligence (spell save DC 14, +6 to hit with spell attacks). They have the following wizard spells prepared:",
+                "Spells": [
+                    {
+                        "Name": "Cantrips (at will)",
+                        "Content": "fire bolt, light, mage hand, prestidigitation",
+                        "Sort Order": 0
+                    },
+                    {
+                        "Name": "1st-level (4 slots)",
+                        "Content": "detect magic, identify, mage armor, shield",
+                        "Sort Order": 1
+                    },
+                    {
+                        "Name": "2nd-level (3 slots)",
+                        "Content": "alter self, misty step",
+                        "Sort Order": 2
+                    },
+                    {
+                        "Name": "3rd-level (3 slots)",
+                        "Content": "animate dead, counterspell, fireball",
+                        "Sort Order": 3
+                    },
+                    {
+                        "Name": "4th-level (3 slots)",
+                        "Content": "dimension door, greater invisibility",
+                        "Sort Order": 4
+                    },
+                    {
+                        "Name": "5th-level (1 slot)",
+                        "Content": "cone of cold",
+                        "Sort Order": 5
+                    }
+                ]
 			}
 		],
 		"Actions": [
@@ -45963,23 +46095,29 @@
 			},
 			{
 				"Name": "Spellcasting",
-				"Content": "The minstrel is a 5th level spellcaster. Their spellcasting ability is Charisma (spell save DC 13, +5 to hit with spell attacks). They have the following bard spells prepared:"
-			},
-			{
-				"Name": "",
-				"Content": "Cantrips (at will): light, mage hand, minor illusion, vicious mockery"
-			},
-			{
-				"Name": "",
-				"Content": "1st-level (4 slots): charm person, disguise self, healing word"
-			},
-			{
-				"Name": "",
-				"Content": "2nd-level (3 slots): enthrall, invisibility, shatter"
-			},
-			{
-				"Name": "",
-				"Content": "3rd-level (2 slots): hypnotic pattern, major image"
+				"Content": "The minstrel is a 5th level spellcaster. Their spellcasting ability is Charisma (spell save DC 13, +5 to hit with spell attacks). They have the following bard spells prepared:",
+                "Spells": [
+                    {
+                        "Name": "Cantrips (at will)",
+                        "Content": "light, mage hand, minor illusion, vicious mockery",
+                        "Sort Order": 0
+                    },
+                    {
+                        "Name": "1st-level (4 slots)",
+                        "Content": "charm person, disguise self, healing word",
+                        "Sort Order": 1
+                    },
+                    {
+                        "Name": "2nd-level (3 slots)",
+                        "Content": "enthrall, invisibility, shatter",
+                        "Sort Order": 2
+                    },
+                    {
+                        "Name": "3rd-level (2 slots)",
+                        "Content": "hypnotic pattern, major image",
+                        "Sort Order": 3
+                    }
+                ]
 			}
 		],
 		"Actions": [
@@ -48318,23 +48456,29 @@
 		"Traits": [
 			{
 				"Name": "Spellcasting",
-				"Content": "The priest is a 5th level spellcaster. Their spellcasting ability is Wisdom (spell save DC 13, +5 to hit with spell attacks). They have the following cleric spells prepared:"
-			},
-			{
-				"Name": "",
-				"Content": "Cantrips (at will): light, sacred flame, thaumaturgy"
-			},
-			{
-				"Name": "",
-				"Content": "1st-level (4 slots): ceremony, detect evil and good, guiding bolt, healing word"
-			},
-			{
-				"Name": "",
-				"Content": "2nd-level (3 slots): lesser restoration, zone of truth"
-			},
-			{
-				"Name": "",
-				"Content": "3rd-level (2 slots): dispel magic, spirit guardians"
+				"Content": "The priest is a 5th level spellcaster. Their spellcasting ability is Wisdom (spell save DC 13, +5 to hit with spell attacks). They have the following cleric spells prepared:",
+                "Spells": [
+                    {
+                        "Name": "Cantrips (at will)",
+                        "Content": "light, sacred flame, thaumaturgy",
+                        "Sort Order": 0
+                    },
+                    {
+                        "Name": "1st-level (4 slots)",
+                        "Content": "ceremony, detect evil and good, guiding bolt, healing word",
+                        "Sort Order": 1
+                    },
+                    {
+                        "Name": "2nd-level (3 slots)",
+                        "Content": "lesser restoration, zone of truth",
+                        "Sort Order": 2
+                    },
+                    {
+                        "Name": "3rd-level (2 slots)",
+                        "Content": "dispel magic, spirit guardians",
+                        "Sort Order": 3
+                    }
+                ]
 			}
 		],
 		"Actions": [
@@ -52527,23 +52671,29 @@
 		"Traits": [
 			{
 				"Name": "Spellcasting",
-				"Content": "The imperator is a 5th level spellcaster. Its spellcasting ability is Intelligence (spell save DC 14, +6 to hit with spell attacks). It has the following cleric and wizard spells prepared:"
-			},
-			{
-				"Name": "",
-				"Content": "Cantrips (at will): light, sacred flame"
-			},
-			{
-				"Name": "",
-				"Content": "1st-level (4 slots): create or destroy water, healing word"
-			},
-			{
-				"Name": "",
-				"Content": "2nd-level (3 slots): burning gust of wind, lesser restoration"
-			},
-			{
-				"Name": "",
-				"Content": "3rd-level (2 slots): major image, venomous fireball"
+				"Content": "The imperator is a 5th level spellcaster. Its spellcasting ability is Intelligence (spell save DC 14, +6 to hit with spell attacks). It has the following cleric and wizard spells prepared:",
+                "Spells": [
+                    {
+                        "Name": "Cantrips (at will)",
+                        "Content": "light, sacred flame",
+                        "Sort Order": 0
+                    },
+                    {
+                        "Name": "1st-level (4 slots)",
+                        "Content": "create or destroy water, healing word",
+                        "Sort Order": 1
+                    },
+                    {
+                        "Name": "2nd-level (3 slots)",
+                        "Content": "burning gust of wind, lesser restoration",
+                        "Sort Order": 2
+                    },
+                    {
+                        "Name": "3rd-level (2 slots)",
+                        "Content": "major image, venomous fireball",
+                        "Sort Order": 3
+                    }
+                ]
 			}
 		],
 		"Actions": [
@@ -53703,35 +53853,44 @@
 			},
 			{
 				"Name": "Spellcasting",
-				"Content": "The priest is an 11th level spellcaster. Their spellcasting ability is Wisdom (spell save DC 15, +7 to hit with spell attacks). They have the following cleric spells prepared:"
-			},
-			{
-				"Name": "",
-				"Content": "Cantrips (at will): guidance, spare the dying, thaumaturgy"
-			},
-			{
-				"Name": "",
-				"Content": "1st-level (4 slots): animal friendship, ceremony, detect poison and disease"
-			},
-			{
-				"Name": "",
-				"Content": "2nd-level (3 slots): augury, lesser restoration, web"
-			},
-			{
-				"Name": "",
-				"Content": "3rd-level (3 slots): bestow curse, remove curse"
-			},
-			{
-				"Name": "",
-				"Content": "4th-level (3 slots): divination, freedom of movement, guardian of faith"
-			},
-			{
-				"Name": "",
-				"Content": "5th-level (2 slots): greater restoration, insect plague, raise dead"
-			},
-			{
-				"Name": "",
-				"Content": "6th-level (1 slots): word of recall"
+				"Content": "The priest is an 11th level spellcaster. Their spellcasting ability is Wisdom (spell save DC 15, +7 to hit with spell attacks). They have the following cleric spells prepared:",
+                "Spells": [
+                    {
+                        "Name": "Cantrips (at will)",
+                        "Content": "guidance, spare the dying, thaumaturgy",
+                        "Sort Order": 0
+                    },
+                    {
+                        "Name": "1st-level (4 slots)",
+                        "Content": "animal friendship, ceremony, detect poison and disease",
+                        "Sort Order": 1
+                    },
+                    {
+                        "Name": "2nd-level (3 slots)",
+                        "Content": "augury, lesser restoration, web",
+                        "Sort Order": 2
+                    },
+                    {
+                        "Name": "3rd-level (3 slots)",
+                        "Content": "bestow curse, remove curse",
+                        "Sort Order": 3
+                    },
+                    {
+                        "Name": "4th-level (3 slots)",
+                        "Content": "divination, freedom of movement, guardian of faith",
+                        "Sort Order": 4
+                    },
+                    {
+                        "Name": "5th-level (2 slots)",
+                        "Content": "greater restoration, insect plague, raise dead",
+                        "Sort Order": 5
+                    },
+                    {
+                        "Name": "6th-level (1 slot)",
+                        "Content": "word of recall",
+                        "Sort Order": 6
+                    }
+                ]
 			}
 		],
 		"Actions": [
@@ -53850,31 +54009,39 @@
 			},
 			{
 				"Name": "Spellcasting",
-				"Content": "The mage is a 9th level spellcaster. Their spellcasting ability is Intelligence (spell save DC 14, +6 to hit with spell attacks). They have the following wizard spells prepared:"
-			},
-			{
-				"Name": "",
-				"Content": "Cantrips (at will): fire bolt, light, mage hand, prestidigitation"
-			},
-			{
-				"Name": "",
-				"Content": "1st-level (4 slots): detect magic, identify, mage armor, shield"
-			},
-			{
-				"Name": "",
-				"Content": "2nd-level (3 slots): alter self, misty step"
-			},
-			{
-				"Name": "",
-				"Content": "3rd-level (3 slots): clairvoyance, counterspell, lightning bolt"
-			},
-			{
-				"Name": "",
-				"Content": "4th-level (3 slots): dimension door, greater invisibility"
-			},
-			{
-				"Name": "",
-				"Content": "5th-level (1 slot): cloudkill"
+				"Content": "The mage is a 9th level spellcaster. Their spellcasting ability is Intelligence (spell save DC 14, +6 to hit with spell attacks). They have the following wizard spells prepared:",
+                "Spells": [
+                    {
+                        "Name": "Cantrips (at will)",
+                        "Content": "fire bolt, light, mage hand, prestidigitation",
+                        "Sort Order": 0
+                    },
+                    {
+                        "Name": "1st-level (4 slots)",
+                        "Content": "detect magic, identify, mage armor, shield",
+                        "Sort Order": 1
+                    },
+                    {
+                        "Name": "2nd-level (3 slots)",
+                        "Content": "alter self, misty step",
+                        "Sort Order": 2
+                    },
+                    {
+                        "Name": "3rd-level (3 slots)",
+                        "Content": "clairvoyance, counterspell, lightning bolt",
+                        "Sort Order": 3
+                    },
+                    {
+                        "Name": "4th-level (3 slots)",
+                        "Content": "dimension door, greater invisibility",
+                        "Sort Order": 4
+                    },
+                    {
+                        "Name": "5th-level (1 slot)",
+                        "Content": "cloudkill",
+                        "Sort Order": 5
+                    }
+                ]
 			}
 		],
 		"Actions": [
@@ -56548,31 +56715,39 @@
 			},
 			{
 				"Name": "Spellcasting",
-				"Content": "The naga is a 9th level spellcaster. Its spellcasting ability is Intelligence (spell save DC 14). The naga has the following wizard spells prepared, which it can cast with only vocalized components:"
-			},
-			{
-				"Name": "",
-				"Content": "Cantrips (at will): mage hand, minor illusion"
-			},
-			{
-				"Name": "",
-				"Content": "1st-level (4 slots): charm person, shield"
-			},
-			{
-				"Name": "",
-				"Content": "2nd-level (3 slots): detect thoughts, levitate"
-			},
-			{
-				"Name": "",
-				"Content": "3rd-level (3 slots) hypnotic pattern, lightning bolt"
-			},
-			{
-				"Name": "",
-				"Content": "4th-level (3 slots): arcane eye, blight"
-			},
-			{
-				"Name": "",
-				"Content": "5th-level (1 slots): dominate person"
+				"Content": "The naga is a 9th level spellcaster. Its spellcasting ability is Intelligence (spell save DC 14). The naga has the following wizard spells prepared, which it can cast with only vocalized components:",
+                "Spells": [
+                    {
+                        "Name": "Cantrips (at will)",
+                        "Content": "mage hand, minor illusion",
+                        "Sort Order": 0
+                    },
+                    {
+                        "Name": "1st-level (4 slots)",
+                        "Content": "charm person, shield",
+                        "Sort Order": 1
+                    },
+                    {
+                        "Name": "2nd-level (3 slots)",
+                        "Content": "detect thoughts, levitate",
+                        "Sort Order": 2
+                    },
+                    {
+                        "Name": "3rd-level (3 slots)",
+                        "Content": "hypnotic pattern, lightning bolt",
+                        "Sort Order": 3
+                    },
+                    {
+                        "Name": "4th-level (3 slots)",
+                        "Content": "arcane eye, blight",
+                        "Sort Order": 4
+                    },
+                    {
+                        "Name": "5th-level (1 slot)",
+                        "Content": "dominate person",
+                        "Sort Order": 5
+                    }
+                ]
 			}
 		],
 		"Actions": [
@@ -60006,23 +60181,29 @@
 		"Traits": [
 			{
 				"Name": "Spellcasting",
-				"Content": "The priest is a 5th level spellcaster. Their spellcasting ability is Wisdom (spell save DC 13, +5 to hit with spell attacks). They have the following cleric spells prepared:"
-			},
-			{
-				"Name": "",
-				"Content": "Cantrips (at will): sacred flame, thaumaturgy, minor illusion"
-			},
-			{
-				"Name": "",
-				"Content": "1st-level (4 slots): ceremony, detect evil and good, healing word, disguise self"
-			},
-			{
-				"Name": "",
-				"Content": "2nd-level (3 slots): lesser restoration, invisibility"
-			},
-			{
-				"Name": "",
-				"Content": "3rd-level (2 slots): spirit guardians, major image"
+				"Content": "The priest is a 5th level spellcaster. Their spellcasting ability is Wisdom (spell save DC 13, +5 to hit with spell attacks). They have the following cleric spells prepared:",
+                "Spells": [
+                    {
+                        "Name": "Cantrips (at will)",
+                        "Content": "sacred flame, thaumaturgy, minor illusion",
+                        "Sort Order": 0
+                    },
+                    {
+                        "Name": "1st-level (4 slots)",
+                        "Content": "ceremony, detect evil and good, healing word, disguise self",
+                        "Sort Order": 1
+                    },
+                    {
+                        "Name": "2nd-level (3 slots)",
+                        "Content": "lesser restoration, invisibility",
+                        "Sort Order": 2
+                    },
+                    {
+                        "Name": "3rd-level (2 slots)",
+                        "Content": "spirit guardians, major image",
+                        "Sort Order": 3
+                    }
+                ]
 			}
 		],
 		"Actions": [
@@ -61022,27 +61203,34 @@
 			},
 			{
 				"Name": "Spellcasting",
-				"Content": "The vampire is a 7th level spellcaster. Its spellcasting ability is Intelligence (spell save DC 15). It has the following wizard spells prepared:"
-			},
-			{
-				"Name": "",
-				"Content": "Cantrips (at will): mage hand, minor illusion"
-			},
-			{
-				"Name": "",
-				"Content": "1st-level (4 slots): disguise self, shield"
-			},
-			{
-				"Name": "",
-				"Content": "2nd-level (3 slots): darkness, misty step"
-			},
-			{
-				"Name": "",
-				"Content": "3rd-level (3 slots): animate dead, fireball "
-			},
-			{
-				"Name": "",
-				"Content": "4th-level (1 slot): blight"
+				"Content": "The vampire is a 7th level spellcaster. Its spellcasting ability is Intelligence (spell save DC 15). It has the following wizard spells prepared:",
+                "Spells": [
+                    {
+                        "Name": "Cantrips (at will)",
+                        "Content": "mage hand, minor illusion",
+                        "Sort Order": 0
+                    },
+                    {
+                        "Name": "1st-level (4 slots)",
+                        "Content": "disguise self, shield",
+                        "Sort Order": 1
+                    },
+                    {
+                        "Name": "2nd-level (3 slots)",
+                        "Content": "darkness, misty step",
+                        "Sort Order": 2
+                    },
+                    {
+                        "Name": "3rd-level (3 slots)",
+                        "Content": "animate dead, fireball",
+                        "Sort Order": 3
+                    },
+                    {
+                        "Name": "4th-level (1 slot)",
+                        "Content": "blight",
+                        "Sort Order": 4
+                    }
+                ]
 			}
 		],
 		"Actions": [
@@ -62189,23 +62377,29 @@
 			},
 			{
 				"Name": "Spellcasting",
-				"Content": "The priest is a 5th level spellcaster. Their spellcasting ability is Wisdom (spell save DC 13, +5 to hit with spell attacks). They have the following cleric spells prepared:"
-			},
-			{
-				"Name": "",
-				"Content": "Cantrips (at will): guidance, sacred flame, thaumaturgy"
-			},
-			{
-				"Name": "",
-				"Content": "1st-level (4 slots): ceremony, detect evil and good, guiding bolt,bless"
-			},
-			{
-				"Name": "",
-				"Content": "2nd-level (3 slots): lesser restoration,arcane eye"
-			},
-			{
-				"Name": "",
-				"Content": "3rd-level (2 slots): dispel magic, spirit guardians"
+				"Content": "The priest is a 5th level spellcaster. Their spellcasting ability is Wisdom (spell save DC 13, +5 to hit with spell attacks). They have the following cleric spells prepared:",
+                "Spells": [
+                    {
+                        "Name": "Cantrips (at will)",
+                        "Content": "guidance, sacred flame, thaumaturgy",
+                        "Sort Order": 0
+                    },
+                    {
+                        "Name": "1st-level (4 slots)",
+                        "Content": "bless, ceremony, detect evil and good, guiding bolt",
+                        "Sort Order": 1
+                    },
+                    {
+                        "Name": "2nd-level (3 slots)",
+                        "Content": "arcane eye, lesser restoration",
+                        "Sort Order": 2
+                    },
+                    {
+                        "Name": "3rd-level (2 slots)",
+                        "Content": "dispel magic, spirit guardians",
+                        "Sort Order": 3
+                    }
+                ]
 			}
 		],
 		"Actions": [

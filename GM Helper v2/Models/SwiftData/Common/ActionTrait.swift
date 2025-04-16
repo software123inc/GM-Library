@@ -63,7 +63,7 @@ class ActionTrait: Decodable, CustomStringConvertible {
     }
     
     @ViewBuilder
-    func detailView(addComma: Bool = false, onNameTap: ((String) -> Void)? = nil) -> some View {
+    func detailView(addComma: Bool = false, colorScheme:ColorScheme = .light, onNameTap: ((String) -> Void)? = nil) -> some View {
         let text = "***\(name).*** \(content)"
         
         HStack {
@@ -73,19 +73,21 @@ class ActionTrait: Decodable, CustomStringConvertible {
         if let spells = spells?.sorted(by: { lhs, rhs -> Bool in lhs.sortOrder < rhs.sortOrder}), !spells.isEmpty {
             VStack {
                 ForEach(spells) { spell in
-                    let spellNames = spell.content.split(separator: ",").map { $0.trimmingCharacters(in: .whitespaces) }
+                    let spellNames = spell.content.split(separator: ",")
+                        .map { $0.trimmingCharacters(in: .whitespaces) }
+                        .sorted(by: {lhs, rhs -> Bool in lhs < rhs})
                     
                     VStack(alignment: .leading) {
                         MarkdownText.textView("**\(spell.name):** ")
                         ForEach(spellNames, id:\.self) { spellName in
                             Text(spellName)
-                                .foregroundStyle(.blue)
+                                .foregroundStyle(colorScheme == .dark ? .black : .blue) // iPad/iPhone OK
                                 .underline(true)
                                 .padding(.leading, 16)
                                 .gesture(
                                     TapGesture()
                                         .onEnded { _ in
-                                            onNameTap?(spellName.capitalized)
+                                            onNameTap?(spellName.smartCased())
                                         }
                                 )
                         }

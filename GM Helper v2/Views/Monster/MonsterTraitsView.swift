@@ -9,6 +9,7 @@ import SwiftUI
 import SwiftData
 
 struct MonsterTraitsView: View {
+    @Environment(\.colorScheme) private var colorScheme
     @Environment(\.modelContext) private var modelContext
     @State private var selectedSpell: Spell?
     @State private var showSpellSheet: Bool = false
@@ -19,7 +20,7 @@ struct MonsterTraitsView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             ForEach(monster.traits.sorted(by: { lhs, rhs -> Bool in lhs.name < rhs.name})) { row in
-                row.detailView() { spellName in
+                row.detailView(colorScheme:colorScheme) { spellName in
                     var fetchDescriptor = FetchDescriptor<Spell>(
                         predicate: #Predicate {
                             $0.name == spellName && (($0.spellA5e == nil) == isA5e)
