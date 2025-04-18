@@ -114,6 +114,18 @@ extension Spell_WoTC: ViewDataSource {
         
         return Spell.listItemViewContent(spell, colorScheme)
     }
+    
+    static func listItemFooterViewContent (_ colorScheme:ColorScheme = .light) -> AnyView {
+        AnyView(
+            HStack(spacing: 4) {
+                Image(systemName: "c.circle").foregroundStyle(.a5EGreen)
+                Text("= Concentration")
+                Image(systemName: "r.circle").foregroundStyle(.a5EGreen)
+                Text("= Reaction")
+                Spacer()
+            }.padding()
+        )
+    }
 }
 
 extension Spell_WoTC:SpellDTO {

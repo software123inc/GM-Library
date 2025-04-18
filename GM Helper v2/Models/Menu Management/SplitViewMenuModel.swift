@@ -51,13 +51,6 @@ class SplitViewSectionMenuModel {
                     PersistentModelListView<Monster_WoTC>(navigationTitle: "Monsters WoTC")
                 )
             ),
-//            MenuItem(
-//                name: "Normalized",
-//                image: "linea-mini",
-//                contentView: AnyView(
-//                    PersistentModelListView<Monster>(navigationTitle: "Monsters")
-//                )
-//            )
         ]
         
         let spellMenuItems = [

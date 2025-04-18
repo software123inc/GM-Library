@@ -251,10 +251,20 @@ extension Monster: ViewDataSource {
                     .foregroundStyle(colorScheme == .dark ? .black : .primary)
                     Spacer()
                     if monster.isLegendary {
-                        Image(systemName: "star.fill").foregroundStyle(.yellow)
+                        Image(systemName: "l.circle").foregroundStyle(.a5EGreen)
                     }
                 }
             }
+        )
+    }
+    
+    static func listItemFooterViewContent (_ colorScheme:ColorScheme = .light) -> AnyView {
+        AnyView(
+            HStack(spacing: 4) {
+                Image(systemName: "l.circle").foregroundStyle(.a5EGreen)
+                Text("= Legendary")
+                Spacer()
+            }.padding()
         )
     }
 }

@@ -123,6 +123,16 @@ extension Monster_WoTC: Monstrous, ViewDataSource {
         
         return Monster.listItemViewContent(monster, colorScheme)
     }
+    
+    static func listItemFooterViewContent (_ colorScheme:ColorScheme = .light) -> AnyView {
+        AnyView(
+            HStack(spacing: 4) {
+                Image(systemName: "l.circle").foregroundStyle(.a5EGreen)
+                Text("= Legendary")
+                Spacer()
+            }.padding()
+        )
+    }
 }
 
 extension Monster_WoTC: MonstrousDTO {

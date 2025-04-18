@@ -72,22 +72,24 @@ struct PersistentModelListView<T:PersistentModel>: View where T:Nameable, T:View
     
     var body: some View {
         NavigationStack {
-            List(filteredListItems, selection: $selectedItem) { item in
-                if UIDevice.current.userInterfaceIdiom == .phone {
-                    T.listItemViewContent(item, colorScheme)
-                        .listRowBackground(Color.clear) // must not applied to iPad
+            VStack {
+                List(filteredListItems, selection: $selectedItem) { item in
+                    if UIDevice.current.userInterfaceIdiom == .phone {
+                        T.listItemViewContent(item, colorScheme)
+                            .listRowBackground(Color.clear) // must not applied to iPad
+                    }
+                    else {
+                        T.listItemViewContent(item, colorScheme)
+                            .background(Color.clear) // when selected, will appear .white/.gray
+                    }
                 }
-                else {
-                    T.listItemViewContent(item, colorScheme)
-                        .background(Color.clear) // when selected, will appear .white/.gray
-                }
+                .searchable(text: $search)
+                T.listItemFooterViewContent(colorScheme)
             }
-            .searchable(text: $search)
+            .navigationTitle(navigationTitle)
             .background(Color.buff)
             .scrollContentBackground(.hidden)
-            .navigationTitle(navigationTitle)
         }
-        
     }
 }
 
@@ -100,39 +102,27 @@ extension PersistentModelListView {
         }
     }
 }
-//
-//#Preview("Norm Monster", traits: .sampleData) {
-//    NavigationStack {
-//        PersistentModelListView<Monster>(navigationTitle: "Monsters")
-//    }
-//}
+
+#Preview("Norm Monster", traits: .sampleData) {
+    PersistentModelListView<Monster>(navigationTitle: "Monsters")
+}
 //
 #Preview("Norm Spells", traits: .sampleData) {
-    NavigationStack {
-        PersistentModelListView<Spell>(navigationTitle: "Spells")
-    }
+    PersistentModelListView<Spell>(navigationTitle: "Spells")
 }
 //
 //#Preview("A5e Monster", traits: .sampleData) {
-//    NavigationStack {
-//        PersistentModelListView<Monster_A5e>(navigationTitle: "Monsters A5e")
-//    }
+//    PersistentModelListView<Monster_A5e>(navigationTitle: "Monsters A5e")
 //}
 //
 //#Preview("A5e Spells", traits: .sampleData) {
-//    NavigationStack {
-//        PersistentModelListView<Spell_A5e>(navigationTitle: "Spells A5e")
-//    }
+//    PersistentModelListView<Spell_A5e>(navigationTitle: "Spells A5e")
 //}
 //
 //#Preview("WoTC Monster", traits: .sampleData) {
-//    NavigationStack {
-//        PersistentModelListView<Monster_WoTC>(navigationTitle: "Monsters WoTC")
-//    }
+//    PersistentModelListView<Monster_WoTC>(navigationTitle: "Monsters WoTC")
 //}
 //
 //#Preview("WoTC Spells", traits: .sampleData) {
-//    NavigationStack {
-//        PersistentModelListView<Spell_WoTC>(navigationTitle: "Spells WoTC")
-//    }
+//    PersistentModelListView<Spell_WoTC>(navigationTitle: "Spells WoTC")
 //}

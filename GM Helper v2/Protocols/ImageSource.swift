@@ -64,6 +64,10 @@ extension ImageSource {
                 url: self.mmImageUrl,
                 content: { image in
                     image
+                        .resizable()
+                        .aspectRatio(contentMode: .fit) // or .fill
+                        .frame(height: 200)
+                    
                 },
                 placeholder: {
                     // if image not found

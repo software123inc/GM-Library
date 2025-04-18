@@ -916,7 +916,7 @@
 				"Content": "The dragon psionically emits a wave of crushing mental pressure. Each creature within 20 feet makes a DC 19 Wisdom saving throw, taking 16 (3d10) psychic damage on a failed save or half damage on a success. Creatures charmed by the dragon make this saving throw with disadvantage.†"
 			},
 			{
-				"Name": "Concussive Breath (Recharge 5ñ6)",
+				"Name": "Concussive Breath (Recharge 5-6)",
 				"Content": "The dragon psionically unleashes telekinetic energy in a 60-foot cone. Each creature in that area makes a DC 18 Constitution saving throw, taking 60 (11d10) force damage on a failed save or half damage on a success.††"
 			}
 		],
@@ -1088,7 +1088,7 @@
 				"Content": "The dragon targets a creature within 60 feet, forcing it to make a DC 19 Dexterity saving throw. The creature takes 22 (4d10) acid damage on a failure or half damage on a success. A creature that fails the save also takes 5 (1d10) ongoing acid damage. A creature can use an action to end the ongoing damage."
 			},
 			{
-				"Name": "Acid Breath (Recharge 5ñ6)",
+				"Name": "Acid Breath (Recharge 5-6)",
 				"Content": "The dragon exhales sizzling acid in a 60-foot-long, 5-foot-wide line. Each creature in that area makes a DC 19 Dexterity saving throw, taking 63 (14d8) acid damage on a failed save or half damage on a success. A creature that fails the save is blinded until the end of its next turn."
 			}
 		],
@@ -1275,7 +1275,7 @@
 				"Content": "The dragon targets a creature within 60 feet, forcing it to make a DC 19 Dexterity saving throw. The creature takes 22 (4d10) acid damage on a failure or half damage on a success. A creature that fails the save also takes 5 (1d10) ongoing acid damage. A creature can use an action to end the ongoing damage."
 			},
 			{
-				"Name": "Acid Breath (Recharge 5ñ6)",
+				"Name": "Acid Breath (Recharge 5-6)",
 				"Content": "The dragon exhales sizzling acid or necrotic energy in a 60-foot-long, 5-foot-wide line. Each creature in that area makes a DC 19 Dexterity saving throw, taking 31 (7d8) acid damage and 31 (7d8) necrotic damage on a failed save or half damage on a success. A creature that fails the save is blinded until the end of its next turn."
 			}
 		],
@@ -1442,7 +1442,7 @@
 				"Content": "The dragon targets a creature within 60 feet, forcing it to make a DC 20 Dexterity saving throw. The creature takes 16 (3d10) lightning damage on a failure or half damage on a success. Also on a failure, the lightning jumps. Choose a creature within 30 feet of the target that hasn't been hit by this ability on this turn, and repeat the effect against it, possibly causing the lightning to jump again."
 			},
 			{
-				"Name": "Lightning Breath (Recharge 5ñ6)",
+				"Name": "Lightning Breath (Recharge 5-6)",
 				"Content": "The dragon exhales a 90-foot-long, 5-foot wide-line of lightning. Each creature in that area makes a DC 20 Dexterity saving throw, taking 77 (14d10) lightning damage on a failed save or half damage on a success. A creature that fails the save can't take reactions until the end of its next turn."
 			},
 			{
@@ -1631,7 +1631,7 @@
 				"Content": "† The dragon targets a creature within 60 feet, forcing it to make a DC 18 Dexterity saving throw. The creature takes 11 (2d10) fire damage on a failure or half damage on a success. A creature that fails the saving throw also takes 5 (1d10) ongoing fire damage. A creature can use an action to end the ongoing damage."
 			},
 			{
-				"Name": "Breath Weapons (Recharge 5ñ6)",
+				"Name": "Breath Weapons (Recharge 5-6)",
 				"Content": "The dragon uses one of the following breath weapons:"
 			},
 			{
@@ -1812,7 +1812,7 @@
 				"Content": "† The dragon targets one creature within 60 feet, forcing it to make a DC 20 Dexterity saving throw. The creature takes 22 (4d10) lightning damage on a failure or half damage on a success. If the initial target is touching a body of water, all other creatures within 20 feet of it and touching the same body of water must also make the saving throw against this damage."
 			},
 			{
-				"Name": "Breath Weapons (Recharge 5ñ6)",
+				"Name": "Breath Weapons (Recharge 5-6)",
 				"Content": "The dragon uses one of the following breath weapons:"
 			},
 			{
@@ -1989,7 +1989,7 @@
 				"Content": "The dragon targets a creature within 60 feet, forcing it to make a DC 19 Dexterity saving throw. The creature takes 16 (3d10) acid damage on a failure or half damage on a success. A creature that fails the save also takes 5 (1d10) ongoing acid damage. A creature can use an action to end the ongoing damage."
 			},
 			{
-				"Name": "Breath Weapons (Recharge 5ñ6)",
+				"Name": "Breath Weapons (Recharge 5-6)",
 				"Content": "The dragon uses one of the following breath weapons:"
 			},
 			{
@@ -2171,7 +2171,7 @@
 				"Content": "Melee Weapon Attack: +12 to hit, reach 5 ft., one target. Hit: 19 (3d8 + 6) bludgeoning damage."
 			},
 			{
-				"Name": "Scouring Breath (Recharge 5ñ6)",
+				"Name": "Scouring Breath (Recharge 5-6)",
 				"Content": "The dragon exhales scouring sand and stones in a 60-foot cone. Each creature in that area makes a DC 20 Dexterity saving throw, taking 56 (16d6) slashing damage on a failed save or half damage on a success. A creature that fails the save is also blinded until the end of its next turn."
 			},
 			{
@@ -2339,7 +2339,7 @@
 				"Content": "The dragon psionically emits a wave of crushing mental pressure. Each creature within 20 feet makes a DC 18 Wisdom saving throw, taking 16 (3d10) psychic damage on a failed save or half damage on a success. Confused creatures make this saving throw with disadvantage.†"
 			},
 			{
-				"Name": "Maddening Breath (Recharge 5ñ6)",
+				"Name": "Maddening Breath (Recharge 5-6)",
 				"Content": "The dragon screams, stripping flesh from bones and reason from minds in a 60-foot cone. Each creature in that area makes a DC 18 Constitution saving throw, taking 71 (13d10) thunder damage on a failed save or half damage on a success. Creatures that fail this saving throw by 10 or more are also psionically confused until the end of their next turn.††"
 			}
 		],
@@ -2512,7 +2512,7 @@
 				"Content": "† The dragon targets one creature within 60 feet, forcing it to make a DC 25 Dexterity saving throw. The creature takes 27 (5d10) fire damage on a failure or half on a success. Liquid gold pools in a 5-foot-square occupied by the creature and remains hot for 1 minute. A creature that ends its turn in the gold or enters it for the first time on a turn takes 22 (4d10) fire damage."
 			},
 			{
-				"Name": "Breath Weapons (Recharge 5ñ6)",
+				"Name": "Breath Weapons (Recharge 5-6)",
 				"Content": "The dragon uses one of the following breath weapons:"
 			},
 			{
@@ -2702,7 +2702,7 @@
 				"Content": "The dragon targets a creature within 60 feet, forcing it to make a DC 19 Dexterity saving throw. The creature takes 22 (4d10) poison damage on a failure or half damage on a success. A creature that fails the save is also poisoned for 1 minute. The creature repeats the saving throw at the end of each of its turns, taking 11 (2d10) poison damage on a failure and ending the effect on a success."
 			},
 			{
-				"Name": "Poison Breath (Recharge 5ñ6)",
+				"Name": "Poison Breath (Recharge 5-6)",
 				"Content": "The dragon exhales poisonous gas in a 60-foot cone. Each creature in that area makes a DC 19 Constitution saving throw, taking 63 (18d6) poison damage on a failed save or half damage on a success. A creature with immunity to poison damage that fails the save takes no damage, but its poison immunity is reduced to resistance for the next hour."
 			},
 			{
@@ -2875,7 +2875,7 @@
 				"Content": "The dragon targets a creature within 60 feet, forcing it to make a DC 21 Dexterity saving throw. The creature takes 22 (4d10) fire damage on a failure or half damage on a success. A creature that fails the save also takes 5 (1d10) ongoing fire damage. A creature can use an action to end the ongoing damage."
 			},
 			{
-				"Name": "Fire Breath (Recharge 5ñ6)",
+				"Name": "Fire Breath (Recharge 5-6)",
 				"Content": "The dragon exhales a blast of fire in a 60-foot cone. Each creature in that area makes a DC 21 Dexterity saving throw, taking 73 (21d6) fire damage on a failed save or half damage on a success. A creature that fails the saving throw also takes 5 (1d10) ongoing fire damage. While affected by this ongoing damage, it is frightened of the dragon. A creature can use an action to end the ongoing damage."
 			}
 		],
@@ -3057,7 +3057,7 @@
 				"Content": "Melee Weapon Attack: +11 to hit, reach 5 ft., one target. Hit: 18 (3d8 + 5) slashing damage.†"
 			},
 			{
-				"Name": "Torrential Breath (Recharge 5ñ6)",
+				"Name": "Torrential Breath (Recharge 5-6)",
 				"Content": "The dragon exhales water in a 60-foot-long, 5-foot-wide line. Each creature in the area makes a DC 18 Dexterity saving throw, taking 56 (16d6) bludgeoning damage on a failed save or half damage on a success. A creature that fails the save is also knocked prone and is pushed up to 30 feet away. A creature that impacts a solid object takes an extra 10 (3d6) bludgeoning damage.†"
 			}
 		],
@@ -3244,7 +3244,7 @@
 				"Content": "The dragon psionically emits a wave of crushing mental pressure. Each creature within 20 feet makes a DC 18 Wisdom saving throw, taking 16 (3d10) psychic damage on a failed save or half damage on a success. Creatures suffering ongoing psychic damage make this saving throw with disadvantage.†"
 			},
 			{
-				"Name": "Discognitive Breath (Recharge 5ñ6)",
+				"Name": "Discognitive Breath (Recharge 5-6)",
 				"Content": "The dragon unleashes psychic energy in a 60-foot cone. Each creature in that area makes a DC 18 Intelligence saving throw, taking 60 (11d10) psychic damage and 11 (2d10) ongoing psychic damage on a failed save or half as much psychic damage and no ongoing psychic damage on a success. The ongoing damage ends if a creature falls unconscious. A creature can also use an action to ground itself in reality, ending the ongoing damage.†"
 			},
 			{
@@ -3429,7 +3429,7 @@
 				"Content": "The dragon targets a creature within 60 feet, forcing it to make a DC 16 Dexterity saving throw. On a failure, it is grappled by tendrils of shadow (escape DC 20) and restrained while grappled this way. The effect ends if the dragon is incapacitated or uses this ability again.††"
 			},
 			{
-				"Name": "Anguished Breath (Recharge 5ñ6)",
+				"Name": "Anguished Breath (Recharge 5-6)",
 				"Content": "The dragon exhales a shadowy maelstrom of anguish in a 60-foot cone. Each creature in that area makes a DC 20 Wisdom saving throw, taking 67 (15d8) necrotic damage and gaining a level of strife on a failed save or half damage on a success."
 			}
 		],
@@ -3598,7 +3598,7 @@
 				"Content": "The creature targets one creature within 60 feet, forcing it to make a DC 21 Constitution saving throw. The creature takes 16 (3d10) cold damage on a failure or half damage on a success. On a failure, the creature's Speed is also halved until the end of its next turn. Flying creatures immediately fall unless they are magically kept aloft."
 			},
 			{
-				"Name": "Breath Weapons (Recharge 5ñ6)",
+				"Name": "Breath Weapons (Recharge 5-6)",
 				"Content": "The dragon uses one of the following breath weapons:"
 			},
 			{
@@ -3771,7 +3771,7 @@
 				"Content": "The dragon targets a creature within 60 feet, forcing it to make a DC 19 Dexterity saving throw. On a failure, the target takes 16 (3d10) cold damage, and its speed is reduced to 0 until the end of its next turn. On a success, it takes half damage."
 			},
 			{
-				"Name": "Cold Breath (Recharge 5ñ6)",
+				"Name": "Cold Breath (Recharge 5-6)",
 				"Content": "The dragon exhales a 60-foot cone of frost. Each creature in the area makes a DC 19 Constitution saving throw. On a failure, it takes 52 (15d6) cold damage, and its speed is reduced to 0 until the end of its next turn. On a success, it takes half damage."
 			}
 		],
@@ -3895,7 +3895,7 @@
 				"Content": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 14 (3d6 + 4) bludgeoning damage."
 			},
 			{
-				"Name": "Whirlwind (Recharge 5ñ6)",
+				"Name": "Whirlwind (Recharge 5-6)",
 				"Content": "The elemental takes the form of a whirlwind, flies up to half of its fly speed without provoking opportunity attacks, and then resumes its normal form. When a creature shares its space with the whirlwind for the first time during this movement, that creature makes a DC 15 Strength saving throw. On a failure, the creature is carried inside the elemental's space until the whirlwind ends, taking 3 (1d6) bludgeoning damage for each 10 feet it is carried, and falls prone at the end of the movement. The whirlwind can carry one Large creature or up to four Medium or smaller creatures."
 			}
 		],
@@ -4076,7 +4076,7 @@
 				"Content": "The empyrean flies up to half its fly speed."
 			},
 			{
-				"Name": "Shout (Recharge 5ñ6)",
+				"Name": "Shout (Recharge 5-6)",
 				"Content": "Each creature within 120 feet that can hear the empyrean makes a DC 25 Constitution saving throw. On a failure, a creature takes 24 (7d6) thunder damage and is stunned until the end of the empyrean's next turn. On a success, a creature takes half damage."
 			}
 		],
@@ -4529,7 +4529,7 @@
 				"Content": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 13 (2d10 + 2) piercing damage."
 			},
 			{
-				"Name": "Concussive Breath (Recharge 5ñ6)",
+				"Name": "Concussive Breath (Recharge 5-6)",
 				"Content": "The dragon psionically unleashes telekinetic energy in a 15-foot cone. Each creature in that area makes a DC 12 Constitution saving throw, taking 16 (3d10) force damage on a failed save or half damage on a success.†"
 			}
 		],
@@ -4842,7 +4842,7 @@
 				"Content": "The dragon psionically emits a wave of crushing mental pressure. Each creature within 20 feet makes a DC 22 Wisdom saving throw, taking 22 (4d10) psychic damage on a failed save or half damage on a success. Creatures charmed by the dragon make this saving throw with disadvantage.†"
 			},
 			{
-				"Name": "Concussive Breath (Recharge 5ñ6)",
+				"Name": "Concussive Breath (Recharge 5-6)",
 				"Content": "The dragon psionically unleashes telekinetic energy in a 90-foot cone. Each creature in that area makes a DC 21 Constitution saving throw, taking 82 (15d10) force damage on a failed save or half damage on a success.††"
 			}
 		],
@@ -5021,7 +5021,7 @@
 				"Content": "The dragon targets a creature within 60 feet, forcing it to make a DC 22 Dexterity saving throw. The creature takes 22 (4d10) acid damage on a failure or half damage on a success. A creature that fails the save also takes 11 (2d10) ongoing acid damage. A creature can use an action to end the ongoing damage."
 			},
 			{
-				"Name": "Acid Breath (Recharge 5ñ6)",
+				"Name": "Acid Breath (Recharge 5-6)",
 				"Content": "The dragon exhales sizzling acid in a 90-foot-long, 10-foot-wide line. Each creature in that area makes a DC 22 Dexterity saving throw, taking 85 (19d8) acid damage on a failed save or half damage on a success. A creature that fails the save is blinded until the end of its next turn."
 			}
 		],
@@ -5192,7 +5192,7 @@
 				"Content": "The dragon targets a creature within 60 feet, forcing it to make a DC 24 Dexterity saving throw. The creature takes 22 (4d10) lightning damage on a failure or half damage on a success. Also on a failure, the lightning jumps. Choose a creature within 30 feet of the target that hasn't been hit by this ability on this turn, and repeat the effect against it, possibly causing the lightning to jump again."
 			},
 			{
-				"Name": "Lightning Breath (Recharge 5ñ6)",
+				"Name": "Lightning Breath (Recharge 5-6)",
 				"Content": "The dragon exhales a 120-foot-long, 10-foot-wide line of lightning. Each creature in that area makes a DC 24 Dexterity saving throw, taking 94 (17d10) lightning damage on a failed save or half damage on a success. A creature that fails the save can't take reactions until the end of its next turn."
 			},
 			{
@@ -5385,7 +5385,7 @@
 				"Content": "The dragon targets a creature within 60 feet, forcing it to make a DC 22 Dexterity saving throw. The creature takes 22 (4d10) fire damage on a failure or half damage on a success. A creature that fails the saving throw also takes 11 (2d10) ongoing fire damage. A creature can use an action to end the ongoing damage."
 			},
 			{
-				"Name": "Breath Weapons (Recharge 5ñ6)",
+				"Name": "Breath Weapons (Recharge 5-6)",
 				"Content": "The dragon uses one of the following breath weapons:"
 			},
 			{
@@ -5570,7 +5570,7 @@
 				"Content": "† The dragon targets one creature within 60 feet, forcing it to make a DC 23 Dexterity saving throw. The creature takes 22 (4d10) lightning damage on a failure or half damage on a success. If the initial target is touching a body of water, all other creatures within 20 feet of it and touching the same body of water must also make the saving throw against this damage."
 			},
 			{
-				"Name": "Breath Weapons (Recharge 5ñ6)",
+				"Name": "Breath Weapons (Recharge 5-6)",
 				"Content": "The dragon uses one of the following breath weapons:"
 			},
 			{
@@ -5749,7 +5749,7 @@
 				"Content": "The dragon targets a creature within 60 feet, forcing it to make a DC 22 Dexterity saving throw. The creature takes 22 (4d10) acid damage on a failure or half damage on a success. A creature that fails the save also takes 11 (2d10) ongoing acid damage. A creature can use an action to end the ongoing damage."
 			},
 			{
-				"Name": "Breath Weapons (Recharge 5ñ6)",
+				"Name": "Breath Weapons (Recharge 5-6)",
 				"Content": "The dragon uses one of the following breath weapons:"
 			},
 			{
@@ -5932,7 +5932,7 @@
 				"Content": "Melee Weapon Attack: +15 to hit, reach 10 ft., one target. Hit: 21 (3d8 + 8) bludgeoning damage, and the target is pushed up to 10 feet away, falling prone if it impacts a wall or other solid object. This attack deals an extra 9 (2d8) bludgeoning damage if the target was already prone."
 			},
 			{
-				"Name": "Scouring Breath (Recharge 5ñ6)",
+				"Name": "Scouring Breath (Recharge 5-6)",
 				"Content": "The dragon exhales scouring sand and stones in a 90-foot cone. Each creature in that area makes a DC 23 Dexterity saving throw, taking 70 (20d6) slashing damage on a failed save or half damage on a success. A creature that fails the save is also blinded until the end of its next turn."
 			},
 			{
@@ -6101,7 +6101,7 @@
 				"Content": "The dragon psionically emits a wave of crushing mental pressure. Each creature within 20 feet makes a DC 21 Wisdom saving throw, taking 22 (4d10) psychic damage on a failed save or half damage on a success. Confused creatures make this saving throw with disadvantage.†"
 			},
 			{
-				"Name": "Maddening Breath (Recharge 5ñ6)",
+				"Name": "Maddening Breath (Recharge 5-6)",
 				"Content": "The dragon screams, stripping flesh from bones and reason from minds in a 90-foot cone. Each creature in that area makes a DC 21 Constitution saving throw, taking 88 (16d10) thunder damage on a failed save or half damage on a success. Creatures that fail this saving throw by 10 or more are also psionically confused until the end of their next turn.††"
 			}
 		],
@@ -6275,7 +6275,7 @@
 				"Content": "† The dragon targets one creature within 60 feet, forcing it to make a DC 25 Dexterity saving throw. The creature takes 27 (5d10) fire damage on a failure or half on a success. Liquid gold pools in a 5-foot-square occupied by the creature and remains hot for 1 minute. A creature that ends its turn in the gold or enters it for the first time on a turn takes 22 (4d10) fire damage."
 			},
 			{
-				"Name": "Breath Weapons (Recharge 5ñ6)",
+				"Name": "Breath Weapons (Recharge 5-6)",
 				"Content": "The dragon uses one of the following breath weapons:"
 			},
 			{
@@ -6470,7 +6470,7 @@
 				"Content": "The dragon targets a creature within 60 feet, forcing it to make a DC 22 Dexterity saving throw. The creature takes 22 (4d10) poison damage on a failure or half damage on a success. A creature that fails the save is also poisoned for 1 minute. The creature repeats the saving throw at the end of each of its turns, taking 11 (2d10) poison damage on a failure and ending the effect on a success."
 			},
 			{
-				"Name": "Poison Breath (Recharge 5ñ6)",
+				"Name": "Poison Breath (Recharge 5-6)",
 				"Content": "The dragon exhales poisonous gas in a 90-foot cone. Each creature in that area makes a DC 22 Constitution saving throw, taking 80 (23d6) poison damage on a failed save or half damage on a success. A creature with immunity to poison damage that fails the save takes no damage, but its poison immunity is reduced to resistance for the next hour."
 			},
 			{
@@ -6644,7 +6644,7 @@
 				"Content": "The dragon targets a creature within 60 feet, forcing it to make a DC 22 Dexterity saving throw. The creature takes 22 (4d10) fire damage on a failure or half damage on a success. A creature that fails the save also takes 11 (2d10) ongoing fire damage. A creature can use an action to end the ongoing damage."
 			},
 			{
-				"Name": "Fire Breath (Recharge 5ñ6)",
+				"Name": "Fire Breath (Recharge 5-6)",
 				"Content": "The dragon exhales a blast of fire in a 90-foot cone. Each creature in that area makes a DC 25 Dexterity saving throw, taking 98 (28d6) fire damage on a failed save or half damage on a success. A creature that fails the saving throw also takes 11 (2d10) ongoing fire damage. While affected by this ongoing damage, it is frightened of the dragon. A creature can use an action to end the ongoing damage."
 			}
 		],
@@ -6831,7 +6831,7 @@
 				"Content": "Melee Weapon Attack: +14 to hit, reach 10 ft., one target. Hit: 20 (3d8 + 7) slashing damage.†"
 			},
 			{
-				"Name": "Torrential Breath (Recharge 5ñ6)",
+				"Name": "Torrential Breath (Recharge 5-6)",
 				"Content": "The dragon exhales water in a 90-foot-long, 10-foot-wide line. Each creature in the area makes a DC 20 Dexterity saving throw, taking 66 (19d6) bludgeoning damage on a failed save or half damage on a success. A creature that fails the save is also knocked prone and is pushed up to 60 feet away. A creature that impacts a solid object takes an extra 21 (6d6) bludgeoning damage.†"
 			}
 		],
@@ -7019,7 +7019,7 @@
 				"Content": "The dragon psionically emits a wave of crushing mental pressure. Each creature within 20 feet makes a DC 21 Wisdom saving throw, taking 22 (4d10) psychic damage on a failed save or half damage on a success. Creatures suffering ongoing psychic damage make this saving throw with disadvantage.††"
 			},
 			{
-				"Name": "Discognitive Breath (Recharge 5ñ6)",
+				"Name": "Discognitive Breath (Recharge 5-6)",
 				"Content": "The dragon unleashes psychic energy in a 90-foot cone. Each creature in that area makes a DC 21 Intelligence saving throw, taking 66 (12d10) psychic damage and 22 (4d10) ongoing psychic damage on a failed save or half damage and no ongoing psychic damage on a success. The ongoing damage ends if a creature falls unconscious. A creature can use an action to ground itself in reality, ending the ongoing damage.†"
 			},
 			{
@@ -7210,7 +7210,7 @@
 				"Content": "The dragon targets a creature within 60 feet, forcing it to make a DC 18 Dexterity saving throw. On a failure, it is grappled by tendrils of shadow (escape DC 23) and restrained while grappled this way. The effect ends if the dragon is incapacitated or uses this ability again.††"
 			},
 			{
-				"Name": "Anguished Breath (Recharge 5ñ6)",
+				"Name": "Anguished Breath (Recharge 5-6)",
 				"Content": "The dragon exhales a shadowy maelstrom of anguish in a 90-foot cone. Each creature in that area makes a DC 23 Wisdom saving throw, taking 81 (18d8) necrotic damage and gaining a level of strife on a failed save or half damage on a success.†"
 			}
 		],
@@ -7383,7 +7383,7 @@
 				"Content": "† The dragon targets a creature within 60 feet, forcing it to make a DC 24 Constitution saving throw. The target takes 22 (4d10) cold damage on a failure or half damage on a success. On a failure, the creature's Speed is also halved until the end of its next turn. Flying creatures immediately fall unless they are magically kept aloft."
 			},
 			{
-				"Name": "Breath Weapons (Recharge 5ñ6)",
+				"Name": "Breath Weapons (Recharge 5-6)",
 				"Content": "The dragon uses one of the following breath weapons:"
 			},
 			{
@@ -7557,7 +7557,7 @@
 				"Content": "The dragon targets a creature within 60 feet, forcing it to make a DC 23 Dexterity saving throw. On a failure, the target takes 22 (4d10) cold damage, and its speed is reduced to 0 until the end of its next turn. On a success, it takes half damage."
 			},
 			{
-				"Name": "Cold Breath (Recharge 5ñ6)",
+				"Name": "Cold Breath (Recharge 5-6)",
 				"Content": "The dragon exhales a 90-foot cone of frost. Each creature in the area makes a DC 23 Constitution saving throw. On a failure, it takes 66 (19d6) cold damage, and its speed is reduced to 0 until the end of its next turn. On a success, it takes half damage."
 			}
 		],
@@ -8595,7 +8595,7 @@
 		],
 		"BonusActions": [
 			{
-				"Name": "Faerie Step (Recharge 5ñ6)",
+				"Name": "Faerie Step (Recharge 5-6)",
 				"Content": "The archfey magically teleports up to 60 feet to a space it can see."
 			}
 		],
@@ -10724,7 +10724,7 @@
 		"Type": "Beast",
 		"HP": {
 			"Value": 1,
-			"Notes": "(1d4 ñ 1)"
+			"Notes": "(1d4 - 1)"
 		},
 		"AC": {
 			"Value": 12,
@@ -11009,7 +11009,7 @@
 				"Content": "Melee Weapon Attack: +10 to hit, reach 5 ft., one target. Hit: 21 (3d10 + 5) bludgeoning damage. The target is grappled (escape DC 17) and restrained while grappled. The behir can grapple two creatures at once."
 			},
 			{
-				"Name": "Lightning Breath (Recharge 5ñ6)",
+				"Name": "Lightning Breath (Recharge 5-6)",
 				"Content": "The behir breathes a line of lightning 5 feet wide and 20 feet long. Creatures in the area make a DC 16 Dexterity saving throw, taking 56 (16d6) lightning damage on a failed save or half damage on a success."
 			}
 		],
@@ -11137,7 +11137,7 @@
 				"Content": "Melee Weapon Attack: +10 to hit, reach 5 ft., one target. Hit: 21 (3d10 + 5) bludgeoning damage. The target is grappled (escape DC 17) and restrained while grappled. The behir can grapple two creatures at once."
 			},
 			{
-				"Name": "Lightning Breath (Recharge 5ñ6)",
+				"Name": "Lightning Breath (Recharge 5-6)",
 				"Content": "The behir breathes a line of lightning 5 feet wide and 20 feet long. Creatures in the area make a DC 16 Dexterity saving throw, taking 56 (16d6) lightning damage on a failed save or half damage on a success."
 			}
 		],
@@ -11455,7 +11455,7 @@
 				"Content": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 13 (2d10 + 2) piercing damage."
 			},
 			{
-				"Name": "Acid Breath (Recharge 5ñ6)",
+				"Name": "Acid Breath (Recharge 5-6)",
 				"Content": "The dragon exhales sizzling acid in a 20-foot-long, 5-foot-wide line. Each creature in that area makes a DC 11 Dexterity saving throw, taking 13 (3d8) acid damage on a failed save or half damage on a success."
 			}
 		],
@@ -11770,7 +11770,7 @@
 		],
 		"BonusActions": [
 			{
-				"Name": "Teleport (Recharge 4ñ6)",
+				"Name": "Teleport (Recharge 4-6)",
 				"Content": "The blink dog magically teleports up to 40 feet to an unoccupied space it can see."
 			}
 		],
@@ -11954,7 +11954,7 @@
 				"Content": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 19 (3d10 + 3) piercing damage."
 			},
 			{
-				"Name": "Lightning Breath (Recharge 5ñ6)",
+				"Name": "Lightning Breath (Recharge 5-6)",
 				"Content": "The dragon exhales a 30-foot-long, 5-foot-wide line of lightning. Each creature in that area makes a DC 12 Dexterity saving throw, taking 22 (4d10) lightning damage on a failed save or half damage on a success."
 			}
 		],
@@ -12671,7 +12671,7 @@
 				"Content": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 13 (2d10 + 2) piercing damage."
 			},
 			{
-				"Name": "Breath Weapons (Recharge 5ñ6)",
+				"Name": "Breath Weapons (Recharge 5-6)",
 				"Content": "The dragon uses one of the following breath weapons:"
 			},
 			{
@@ -12771,7 +12771,7 @@
 				"Content": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 14 (2d10 + 3) piercing damage."
 			},
 			{
-				"Name": "Breath Weapons (Recharge 5ñ6)",
+				"Name": "Breath Weapons (Recharge 5-6)",
 				"Content": "The dragon uses one of the following breath weapons:"
 			},
 			{
@@ -13149,7 +13149,7 @@
 		],
 		"Actions": [
 			{
-				"Name": "Leap (Recharge 5ñ6)",
+				"Name": "Leap (Recharge 5-6)",
 				"Content": "The bulette leaps up to half its Speed horizontally and half its Speed vertically without provoking opportunity attacks, and can land in a space containing one or more creatures. Each creature in its space when it lands makes a DC 15 Dexterity saving throw, taking 18 (4d6 + 4) bludgeoning damage and being knocked prone on a failure. On a success, the creature takes half damage and is pushed 5 feet to a space of its choice. If that space is occupied, the creature is knocked prone."
 			},
 			{
@@ -14337,7 +14337,7 @@
 				"Content": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 9 (2d4 + 4) slashing damage, or 14 (4d4 + 4) slashing damage against a prone target."
 			},
 			{
-				"Name": "Breath Weapon (Recharge 5ñ6)",
+				"Name": "Breath Weapon (Recharge 5-6)",
 				"Content": "The dragon head breathes fire in a 15-foot cone. Creatures in the area make a DC 15 Dexterity saving throw, taking 21 (6d6) fire damage on a failed save or half damage on a success."
 			}
 		],
@@ -14771,7 +14771,7 @@
 		],
 		"BonusActions": [
 			{
-				"Name": "Overclock (Recharge 5ñ6)",
+				"Name": "Overclock (Recharge 5-6)",
 				"Content": "The sentinel takes the Dash action."
 			}
 		],
@@ -15500,7 +15500,7 @@
 				"Content": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 13 (2d10 + 2) piercing damage."
 			},
 			{
-				"Name": "Breath Weapons (Recharge 5ñ6)",
+				"Name": "Breath Weapons (Recharge 5-6)",
 				"Content": "The dragon uses one of the following breath weapons:"
 			},
 			{
@@ -16971,7 +16971,7 @@
 		],
 		"BonusActions": [
 			{
-				"Name": "Overclock (Recharge 5ñ6)",
+				"Name": "Overclock (Recharge 5-6)",
 				"Content": "The crusher takes the Dash action."
 			}
 		],
@@ -20068,7 +20068,7 @@
 				"Content": "Melee Weapon Attack: +13 to hit, reach 15 ft., one target. Hit: 46 (6d12 + 7) bludgeoning damage. If the target is a creature, it makes a DC 21 Strength saving throw. On a failure, it is pushed 15 feet away from the dragon turtle and knocked prone."
 			},
 			{
-				"Name": "Steam Breath (Recharge 5ñ6)",
+				"Name": "Steam Breath (Recharge 5-6)",
 				"Content": "The dragon turtle exhales steam in a 90-foot cone. Each creature in the area makes a DC 20 Constitution saving throw, taking 52 (15d6) fire damage on a failed save or half as much on a successful one."
 			},
 			{
@@ -20299,7 +20299,7 @@
 				"Content": "Ranged Weapon Attack: +4 to hit, range 20/60 ft., one target. Hit: 9 (2d6 + 2) bludgeoning damage."
 			},
 			{
-				"Name": "Spit (Recharge 5ñ6)",
+				"Name": "Spit (Recharge 5-6)",
 				"Content": "The gargoyle spits a steam of water 5 feet wide and 30 feet long. Each creature in the area makes a DC 12 Strength saving throw, taking 10 (3d6) bludgeoning damage and being pushed up to 15 feet from the gargoyle on a failure. On a success, a creature takes half damage."
 			}
 		],
@@ -21655,7 +21655,7 @@
 				"Content": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 13 (2d10 + 2) piercing damage.†"
 			},
 			{
-				"Name": "Scouring Breath (Recharge 5ñ6)",
+				"Name": "Scouring Breath (Recharge 5-6)",
 				"Content": "The dragon breathes scouring sand and stones in a 15-foot cone. Each creature in that area makes a DC 12 Dexterity saving throw, taking 10 (3d6) slashing damage on a failed save or half damage on a success."
 			}
 		],
@@ -22615,7 +22615,7 @@
 				"Content": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 13 (2d10 + 2) piercing damage."
 			},
 			{
-				"Name": "Maddening Breath (Recharge 5ñ6)",
+				"Name": "Maddening Breath (Recharge 5-6)",
 				"Content": "The dragon screams, stripping flesh from bone in a 15-foot cone. Each creature in that area makes a DC 11 Constitution saving throw, taking 16 (3d10) thunder damage on a failed save or half damage on a success."
 			}
 		],
@@ -22785,7 +22785,7 @@
 				"Content": "The empyrean flies up to half its fly speed."
 			},
 			{
-				"Name": "Shout (Recharge 5ñ6)",
+				"Name": "Shout (Recharge 5-6)",
 				"Content": "Each creature within 120 feet that can hear the empyrean makes a DC 25 Constitution saving throw. On a failure, a creature takes 24 (7d6) thunder damage and is stunned until the end of the empyrean's next turn. On a success, a creature takes half damage."
 			}
 		],
@@ -23033,7 +23033,7 @@
 		],
 		"BonusActions": [
 			{
-				"Name": "Web (Recharge 5ñ6)",
+				"Name": "Web (Recharge 5-6)",
 				"Content": "Ranged Weapon Attack: +5 to hit, range 20/60 ft., one Large or smaller creature. Hit: The creature is restrained by webs. As an action, a creature can make a DC 11 Strength check, breaking the webs on a success. The effect also ends if the webs are destroyed. They have AC 10, 1 hit point, and immunity to all damage except slashing, fire, and force."
 			}
 		],
@@ -23256,7 +23256,7 @@
 				"Content": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 1 piercing damage."
 			},
 			{
-				"Name": "Euphoria Breath (Recharge 5ñ6)",
+				"Name": "Euphoria Breath (Recharge 5-6)",
 				"Content": "The dragon breathes an intoxicating gas at a creature within 5 feet. The target makes a DC 11 Wisdom saving throw. On a failure, the target is confused for 1 minute. The target repeats the saving throw at the end of each of its turns, ending the effect on a success."
 			},
 			{
@@ -23383,7 +23383,7 @@
 				"Content": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 1 piercing damage."
 			},
 			{
-				"Name": "Euphoria Breath (Recharge 5ñ6)",
+				"Name": "Euphoria Breath (Recharge 5-6)",
 				"Content": "The dragon breathes an intoxicating gas at a creature within 5 feet. The target makes a DC 11 Wisdom saving throw. On a failure, the target is confused for 1 minute. The target repeats the saving throw at the end of each of its turns, ending the effect on a success."
 			},
 			{
@@ -23681,7 +23681,7 @@
 		],
 		"BonusActions": [
 			{
-				"Name": "Faerie Step (Recharge 5ñ6)",
+				"Name": "Faerie Step (Recharge 5-6)",
 				"Content": "The noble magically teleports up to 60 feet to a space it can see."
 			}
 		],
@@ -24504,7 +24504,7 @@
 				"Content": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 13 (2d8 + 4) fire damage, and the target suffers 5 (1d10) ongoing fire damage. A creature can use an action to end the ongoing damage."
 			},
 			{
-				"Name": "Wildfire (Recharge 4ñ6)",
+				"Name": "Wildfire (Recharge 4-6)",
 				"Content": "The elemental moves up to half its Speed without provoking opportunity attacks. It can enter the spaces of hostile creatures but not end this movement there. When a creature shares its space with the elemental for the first time during this movement, the creature is subject to the elemental's Fiery Aura and the elemental can make a slam attack against that creature."
 			}
 		],
@@ -25783,7 +25783,7 @@
 		"Type": "Beast",
 		"HP": {
 			"Value": 1,
-			"Notes": "(1d4 ñ 1)"
+			"Notes": "(1d4 - 1)"
 		},
 		"AC": {
 			"Value": 11,
@@ -26915,7 +26915,7 @@
 				"Content": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 24 (6d6 + 4) bludgeoning damage."
 			},
 			{
-				"Name": "Whirlwind (Recharge 5ñ6)",
+				"Name": "Whirlwind (Recharge 5-6)",
 				"Content": "The elemental takes the form of a whirlwind, flies up to half of its fly speed without provoking opportunity attacks, and then resumes its normal form. When a creature shares its space with the whirlwind for the first time during this movement, that creature makes a DC 15 Strength saving throw. On a failure, the creature is carried inside the elemental's space until the whirlwind ends, taking 3 (1d6) bludgeoning damage for each 10 feet it is carried, and falls prone at the end of the movement. The whirlwind can carry one Large creature or up to four Medium or smaller creatures."
 			}
 		],
@@ -28002,7 +28002,7 @@
 				"Content": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 24 (4d8 + 4) fire damage, and the target suffers 5 (1d10) ongoing fire damage. A creature can use an action to end the ongoing damage."
 			},
 			{
-				"Name": "Wildfire (Recharge 4ñ6)",
+				"Name": "Wildfire (Recharge 4-6)",
 				"Content": "The elemental moves up to half its Speed without provoking opportunity attacks. It can enter the spaces of hostile creatures but not end this movement there. When a creature shares its space with the elemental for the first time during this movement, the creature is subject to the elemental's Fiery Aura and the elemental can make a slam attack against that creature."
 			}
 		],
@@ -29188,7 +29188,7 @@
 		],
 		"BonusActions": [
 			{
-				"Name": "Web (Recharge 5ñ6)",
+				"Name": "Web (Recharge 5-6)",
 				"Content": "Ranged Weapon Attack: +5 to hit, range 20/60 feet., one Large or smaller creature. Hit: The creature is restrained by a web. As an action, a creature can make a DC 12 Strength check, breaking the web on a success. The effect also ends if the web is destroyed. The web is an object with AC 10, 1 hit point, and immunity to all forms of damage except slashing, fire, and force."
 			}
 		],
@@ -29811,7 +29811,7 @@
 		],
 		"BonusActions": [
 			{
-				"Name": "Blinding Bile (Recharge 5ñ6)",
+				"Name": "Blinding Bile (Recharge 5-6)",
 				"Content": "Ranged Weapon Attack: +2 to hit, range 20/60 ft., one creature. Hit: 3 (1d6) acid damage, and the target is blinded until the end of the mouther's next turn."
 			}
 		],
@@ -31207,7 +31207,7 @@
 				"Content": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 9 (1d10 + 4) piercing damage."
 			},
 			{
-				"Name": "Breath Weapons (Recharge 5ñ6)",
+				"Name": "Breath Weapons (Recharge 5-6)",
 				"Content": "The dragon uses one of the following breath weapons:"
 			},
 			{
@@ -31298,7 +31298,7 @@
 				"Content": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 16 (2d10 + 5) bludgeoning damage."
 			},
 			{
-				"Name": "Petrifying Breath (Recharge 5ñ6)",
+				"Name": "Petrifying Breath (Recharge 5-6)",
 				"Content": "The gorgon exhales petrifying gas in a 30-foot cone. Each creature in the area makes a DC 14 Constitution saving throw. On a failure, a creature is restrained as it begins to turn to stone. At the beginning of the gorgon's next turn, the creature repeats the saving throw. On a success, the effect ends. On a failure, the creature is petrified. This petrification can be removed with greater restoration or similar magic."
 			}
 		],
@@ -31558,7 +31558,7 @@
 				"Content": "The dragon targets a creature within 60 feet, forcing it to make a DC 22 Dexterity saving throw. The creature takes 22 (4d10) acid damage on a failure or half damage on a success. A creature that fails the save also takes 11 (2d10) ongoing acid damage. A creature can use an action to end the ongoing damage."
 			},
 			{
-				"Name": "Acid Breath (Recharge 5ñ6)",
+				"Name": "Acid Breath (Recharge 5-6)",
 				"Content": "The dragon exhales sizzling acid in a 90-foot-long, 10-foot-wide line. Each creature in that area makes a DC 22 Dexterity saving throw, taking 85 (19d8) acid damage on a failed save or half damage on a success. A creature that fails the save is blinded until the end of its next turn."
 			}
 		],
@@ -31750,7 +31750,7 @@
 				"Content": "The dragon targets a creature within 60 feet, forcing it to make a DC 24 Dexterity saving throw. The creature takes 22 (4d10) lightning damage on a failure or half damage on a success. Also on a failure, the lightning jumps. Choose a creature within 30 feet of the target that hasn't been hit by this ability on this turn, and repeat the effect against it, possibly causing the lightning to jump again."
 			},
 			{
-				"Name": "Lightning Breath (Recharge 5ñ6)",
+				"Name": "Lightning Breath (Recharge 5-6)",
 				"Content": "The dragon exhales a 120-foot-long, 10-foot-wide line of lightning. Each creature in that area makes a DC 24 Dexterity saving throw, taking 94 (17d10) lightning damage on a failed save or half damage on a success. A creature that fails the save can't take reactions until the end of its next turn."
 			},
 			{
@@ -31948,7 +31948,7 @@
 				"Content": "† The dragon targets one creature within 60 feet, forcing it to make a DC 25 Dexterity saving throw. The creature takes 27 (5d10) fire damage on a failure or half on a success. Liquid gold pools in a 5-foot-square occupied by the creature and remains hot for 1 minute. A creature that ends its turn in the gold or enters it for the first time on a turn takes 22 (4d10) fire damage."
 			},
 			{
-				"Name": "Breath Weapons (Recharge 5ñ6)",
+				"Name": "Breath Weapons (Recharge 5-6)",
 				"Content": "The dragon uses one of the following breath weapons:"
 			},
 			{
@@ -32167,7 +32167,7 @@
 				"Content": "The dragon targets a creature within 60 feet, forcing it to make a DC 22 Dexterity saving throw. The creature takes 22 (4d10) poison damage on a failure or half damage on a success. A creature that fails the save is also poisoned for 1 minute. The creature repeats the saving throw at the end of each of its turns, taking 11 (2d10) poison damage on a failure and ending the effect on a success."
 			},
 			{
-				"Name": "Poison Breath (Recharge 5ñ6)",
+				"Name": "Poison Breath (Recharge 5-6)",
 				"Content": "The dragon exhales poisonous gas in a 90-foot cone. Each creature in that area makes a DC 22 Constitution saving throw, taking 80 (23d6) poison damage on a failed save or half damage on a success. A creature with immunity to poison damage that fails the save takes no damage, but its poison immunity is reduced to resistance for the next hour."
 			},
 			{
@@ -32365,7 +32365,7 @@
 				"Content": "The dragon targets a creature within 60 feet, forcing it to make a DC 22 Dexterity saving throw. The creature takes 22 (4d10) fire damage on a failure or half damage on a success. A creature that fails the save also takes 11 (2d10) ongoing fire damage. A creature can use an action to end the ongoing damage."
 			},
 			{
-				"Name": "Fire Breath (Recharge 5ñ6)",
+				"Name": "Fire Breath (Recharge 5-6)",
 				"Content": "The dragon exhales a blast of fire in a 90-foot cone. Each creature in that area makes a DC 25 Dexterity saving throw, taking 98 (28d6) fire damage on a failed save or half damage on a success. A creature that fails the saving throw also takes 11 (2d10) ongoing fire damage. While affected by this ongoing damage, it is frightened of the dragon. A creature can use an action to end the ongoing damage."
 			}
 		],
@@ -32555,7 +32555,7 @@
 				"Content": "The dragon targets a creature within 60 feet, forcing it to make a DC 23 Dexterity saving throw. On a failure, the target takes 22 (4d10) cold damage, and its speed is reduced to 0 until the end of its next turn. On a success, it takes half damage."
 			},
 			{
-				"Name": "Cold Breath (Recharge 5ñ6)",
+				"Name": "Cold Breath (Recharge 5-6)",
 				"Content": "The dragon exhales a 90-foot cone of frost. Each creature in the area makes a DC 23 Constitution saving throw. On a failure, it takes 66 (19d6) cold damage, and its speed is reduced to 0 until the end of its next turn. On a success, it takes half damage."
 			}
 		],
@@ -32876,7 +32876,7 @@
 				"Content": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 13 (2d10 + 2) piercing damage."
 			},
 			{
-				"Name": "Poison Breath (Recharge 5ñ6)",
+				"Name": "Poison Breath (Recharge 5-6)",
 				"Content": "The dragon exhales poisonous gas in a 15-foot cone. Each creature in that area makes a DC 11 Constitution saving throw, taking 14 (4d6) poison damage on a failed save or half damage on a success.†"
 			}
 		],
@@ -34114,7 +34114,7 @@
 				"Content": "Ranged Weapon Attack: +6 to hit, range 30/120 ft., one target. Hit: 6 (1d6 + 3) piercing damage plus 10 (3d6) poison damage."
 			},
 			{
-				"Name": "Anguished Breath (Recharge 5ñ6)",
+				"Name": "Anguished Breath (Recharge 5-6)",
 				"Content": "The assassin exhales a shadowy maelstrom of anguish in a 15-foot cone. Each creature in that area makes a DC 12 Wisdom saving throw, taking 22 (4d8) necrotic damage on a failed save or half damage on a success."
 			}
 		],
@@ -34236,7 +34236,7 @@
 		"Type": "Beast",
 		"HP": {
 			"Value": 1,
-			"Notes": "(1d4 ñ 1)"
+			"Notes": "(1d4 - 1)"
 		},
 		"AC": {
 			"Value": 13,
@@ -37628,7 +37628,7 @@
 				"Content": "Melee Weapon Attack: +12 to hit, reach 10 ft., one target. Hit: 29 (4d10 + 7) slashing damage."
 			},
 			{
-				"Name": "Poison Breath (Recharge 5ñ6)",
+				"Name": "Poison Breath (Recharge 5-6)",
 				"Content": "The guardian exhales poisonous gas in a 15-foot cone. Each creature in the area makes a DC 18 Constitution saving throw, taking 45 (10d8) poison damage on a failure or half damage on a success."
 			}
 		],
@@ -38683,7 +38683,7 @@
 				"Content": "The empyrean flies up to half its fly speed."
 			},
 			{
-				"Name": "Shout (Recharge 5ñ6)",
+				"Name": "Shout (Recharge 5-6)",
 				"Content": "Each creature within 120 feet that can hear the empyrean makes a DC 25 Constitution saving throw. On a failure, a creature takes 24 (7d6) thunder damage and is stunned until the end of the empyrean's next turn. On a success, a creature takes half damage."
 			}
 		],
@@ -46409,7 +46409,7 @@
 		"Type": "Beast",
 		"HP": {
 			"Value": 1,
-			"Notes": "(1d4 ñ 1)"
+			"Notes": "(1d4 - 1)"
 		},
 		"AC": {
 			"Value": 11,
@@ -47052,7 +47052,7 @@
 				"Content": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 8 (2d4 + 3) slashing damage, plus an additional 5 (2d4) slashing damage if the target is prone."
 			},
 			{
-				"Name": "Blood-Curdling Scream (Recharge 5ñ6)",
+				"Name": "Blood-Curdling Scream (Recharge 5-6)",
 				"Content": "The phase monster unleashes a horrific screech. Each creature within 60 feet that can hear it makes a DC 13 Wisdom saving throw. On a failure, it is frightened for 1 minute. While frightened by Blood-Curdling Scream, a creature must take the Dash action and move away from the phase monster by the safest available route on each of its turns, unless there is nowhere to move. If the creature ends its turn in a location where it doesn't have line of sight to the phase monster, the creature makes a Wisdom saving throw. On a successful save, it is no longer frightened."
 			}
 		],
@@ -49369,7 +49369,7 @@
 		"Type": "Beast",
 		"HP": {
 			"Value": 1,
-			"Notes": "(1d4 ñ 1)"
+			"Notes": "(1d4 - 1)"
 		},
 		"AC": {
 			"Value": 13,
@@ -49662,7 +49662,7 @@
 		"Type": "Beast",
 		"HP": {
 			"Value": 1,
-			"Notes": "(1d4 ñ 1)"
+			"Notes": "(1d4 - 1)"
 		},
 		"AC": {
 			"Value": 11,
@@ -49737,7 +49737,7 @@
 		"Type": "Beast",
 		"HP": {
 			"Value": 1,
-			"Notes": "(1d4 ñ1)"
+			"Notes": "(1d4 -1)"
 		},
 		"AC": {
 			"Value": 12,
@@ -49882,7 +49882,7 @@
 				"Content": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 20 (3d10 + 4) piercing damage."
 			},
 			{
-				"Name": "Fire Breath (Recharge 5ñ6)",
+				"Name": "Fire Breath (Recharge 5-6)",
 				"Content": "The dragon exhales a blast of fire in a 15-foot cone. Each creature in that area makes a DC 15 Dexterity saving throw, taking 24 (7d6) fire damage on a failed save or half damage on a success."
 			}
 		],
@@ -50281,7 +50281,7 @@
 				"Content": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 11 (2d6 + 4) bludgeoning damage, and the target is grappled (escape DC 15) if it's a Large or smaller creature. Until this grapple ends, the creature can't breathe, and the revenant can't strangle any other creature."
 			},
 			{
-				"Name": "Burning Hatred (Recharge 4ñ6)",
+				"Name": "Burning Hatred (Recharge 4-6)",
 				"Content": "The revenant targets the focus of its Fearsome Pursuit, assuming the creature is within 30 feet. The target makes a DC 15 Wisdom saving throw. On a failure, it takes 14 (4d6) psychic damage and is paralyzed until the end of its next turn. On a success, it takes half damage and is frightened until the end of its next turn."
 			}
 		],
@@ -50669,7 +50669,7 @@
 				"Content": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 13 (2d10 + 2) piercing damage."
 			},
 			{
-				"Name": "Torrential Breath (Recharge 5ñ6)",
+				"Name": "Torrential Breath (Recharge 5-6)",
 				"Content": "The dragon exhales water in a 15-foot-long, 5-foot-wide line. Each creature in the area makes a DC 11 Dexterity saving throw, taking 14 (4d6) bludgeoning damage on a failed save or half damage on a success."
 			}
 		],
@@ -52095,7 +52095,7 @@
 				"Content": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 19 (3d10 + 3) piercing damage."
 			},
 			{
-				"Name": "Discognitive Breath (Recharge 5ñ6)",
+				"Name": "Discognitive Breath (Recharge 5-6)",
 				"Content": "The dragon unleashes psychic energy in a 15-foot cone. Each creature in that area makes a DC 12 Intelligence saving throw, taking 22 (4d10) psychic damage on a failed save or half damage on a success."
 			}
 		],
@@ -52410,7 +52410,7 @@
 				"Content": "Each creature of the scarecrow's choice within 30 feet that can see the scarecrow makes a DC 13 Wisdom saving throw. On a failure, it is magically frightened for 1 minute. It repeats the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, it is immune to Scare for 24 hours."
 			},
 			{
-				"Name": "Fire Breath (Recharge 4ñ6)",
+				"Name": "Fire Breath (Recharge 4-6)",
 				"Content": "The scarecrow exhales fire in a 30-foot cone. Each creature in the area makes a DC 13 Dexterity saving throw, taking 14 (4d6) fire damage on a failed save or half damage on a success."
 			},
 			{
@@ -52448,7 +52448,7 @@
 		"Type": "Beast",
 		"HP": {
 			"Value": 1,
-			"Notes": "(1d4 ñ 1)"
+			"Notes": "(1d4 - 1)"
 		},
 		"AC": {
 			"Value": 11,
@@ -53219,7 +53219,7 @@
 		"Type": "Beast",
 		"HP": {
 			"Value": 1,
-			"Notes": "(1d4 ñ 1)"
+			"Notes": "(1d4 - 1)"
 		},
 		"AC": {
 			"Value": 11,
@@ -53623,7 +53623,7 @@
 				"Content": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 18 (3d10 + 2) piercing damage.†"
 			},
 			{
-				"Name": "Anguished Breath (Recharge 5ñ6)",
+				"Name": "Anguished Breath (Recharge 5-6)",
 				"Content": "The dragon exhales a shadowy maelstrom of anguish in a 15-foot cone. Each creature in that area makes a DC 12 Wisdom saving throw, taking 22 (4d8) necrotic damage on a failed save or half damage on a success."
 			}
 		],
@@ -54833,7 +54833,7 @@
 				"Content": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 20 (3d10 + 4) piercing damage."
 			},
 			{
-				"Name": "Breath Weapons (Recharge 5ñ6)",
+				"Name": "Breath Weapons (Recharge 5-6)",
 				"Content": "The dragon uses one of the following breath weapons:"
 			},
 			{
@@ -56559,7 +56559,7 @@
 		"Type": "Beast",
 		"HP": {
 			"Value": 1,
-			"Notes": "(1d4 ñ 1)"
+			"Notes": "(1d4 - 1)"
 		},
 		"AC": {
 			"Value": 12,
@@ -57498,7 +57498,7 @@
 		],
 		"BonusActions": [
 			{
-				"Name": "Slow (Recharge 5ñ6)",
+				"Name": "Slow (Recharge 5-6)",
 				"Content": "The guardian targets one or more creatures within 30 feet. Each target makes a DC 17 Wisdom saving throw. On a failure, the target is slowed for 1 minute. A target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 			}
 		],
@@ -57889,7 +57889,7 @@
 		],
 		"BonusActions": [
 			{
-				"Name": "Slow (Recharge 5ñ6)",
+				"Name": "Slow (Recharge 5-6)",
 				"Content": "The guardian targets one or more creatures within 30 feet. Each target makes a DC 17 Wisdom saving throw. On a failure, the target is slowed for 1 minute. A target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 			}
 		],
@@ -58035,7 +58035,7 @@
 				"Content": "Ranged Weapon Attack: +12 to hit, range 60/240 ft., one target. Hit: 44 (10d6 + 9) bludgeoning damage. If the target is a Large or smaller creature, it makes a DC 22 Strength saving throw, falling prone on a failure."
 			},
 			{
-				"Name": "Lightning Strike (Recharge 5ñ6)",
+				"Name": "Lightning Strike (Recharge 5-6)",
 				"Content": "The giant throws a lightning bolt at a point it can see within 500 feet. Each creature within 10 feet of that point makes a DC 18 Dexterity saving throw, taking 56 (16d6) lightning damage on a success or half the damage on a failure."
 			},
 			{
@@ -58191,7 +58191,7 @@
 				"Content": "Ranged Weapon Attack: +12 to hit, range 60/240 ft., one target. Hit: 44 (10d6 + 9) bludgeoning damage. If the target is a Large or smaller creature, it makes a DC 22 Strength saving throw, falling prone on a failure."
 			},
 			{
-				"Name": "Lightning Strike (Recharge 5ñ6)",
+				"Name": "Lightning Strike (Recharge 5-6)",
 				"Content": "The giant throws a lightning bolt at a point it can see within 500 feet. Each creature within 10 feet of that point makes a DC 18 Dexterity saving throw, taking 56 (16d6) lightning damage on a success or half the damage on a failure."
 			},
 			{
@@ -58853,7 +58853,7 @@
 		"Type": "Beast",
 		"HP": {
 			"Value": 28,
-			"Notes": "(8d8 ñ 8; bloodied 14)"
+			"Notes": "(8d8 - 8; bloodied 14)"
 		},
 		"AC": {
 			"Value": 13,
@@ -58945,7 +58945,7 @@
 		"Type": "Beast",
 		"HP": {
 			"Value": 17,
-			"Notes": "(5d8 ñ 5; bloodied 8)"
+			"Notes": "(5d8 - 5; bloodied 8)"
 		},
 		"AC": {
 			"Value": 11,
@@ -59036,7 +59036,7 @@
 		"Type": "Beast",
 		"HP": {
 			"Value": 17,
-			"Notes": "(5d8 ñ 5; bloodied 8)"
+			"Notes": "(5d8 - 5; bloodied 8)"
 		},
 		"AC": {
 			"Value": 12,
@@ -59257,7 +59257,7 @@
 				"Content": ""
 			},
 			{
-				"Name": "Radiant Breath (Recharge 5ñ6)",
+				"Name": "Radiant Breath (Recharge 5-6)",
 				"Content": "The tarrasque exhales radiant energy in a 90-foot cone. Each creature in that area makes a DC 27 Constitution saving throw, taking 105 (30d6) radiant damage on a failed save or half damage on a success.†"
 			}
 		],
@@ -59691,7 +59691,7 @@
 				"Content": "Melee Weapon Attack: +13 to hit, reach 15 ft., one target. Hit: 46 (6d12 + 7) bludgeoning damage. If the target is a creature, it makes a DC 21 Strength saving throw. On a failure, it is pushed 15 feet away from the dragon turtle and knocked prone."
 			},
 			{
-				"Name": "Steam Breath (Recharge 5ñ6)",
+				"Name": "Steam Breath (Recharge 5-6)",
 				"Content": "The dragon turtle exhales steam in a 90-foot cone. Each creature in the area makes a DC 20 Constitution saving throw, taking 52 (15d6) fire damage on a failed save or half as much on a successful one."
 			},
 			{
@@ -63169,7 +63169,7 @@
 		"Type": "Beast",
 		"HP": {
 			"Value": 1,
-			"Notes": "(1d4 ñ 1)"
+			"Notes": "(1d4 - 1)"
 		},
 		"AC": {
 			"Value": 13,
@@ -64232,7 +64232,7 @@
 				"Content": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 11 (2d6+4) piercing damage. If the target is a creature, it makes a DC 14 Strength saving throw, falling prone on a failure."
 			},
 			{
-				"Name": "Cold Breath (Recharge 5ñ6)",
+				"Name": "Cold Breath (Recharge 5-6)",
 				"Content": "The wolf exhales frost in a 15-foot cone. Each creature in the area makes a DC 12 Dexterity saving throw, taking 18 (4d8) cold damage on a failure or half damage on a success."
 			}
 		],
@@ -65401,7 +65401,7 @@
 				"Content": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 12 (2d8 + 3) slashing damage.†"
 			},
 			{
-				"Name": "Concussive Breath (Recharge 5ñ6)",
+				"Name": "Concussive Breath (Recharge 5-6)",
 				"Content": "The dragon psionically unleashes telekinetic energy in a 30-foot cone. Each creature in that area makes a DC 15 Constitution saving throw, taking 44 (8d10) force damage on a failed save or half damage on a success."
 			}
 		],
@@ -65534,7 +65534,7 @@
 				"Content": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 13 (2d8 + 4) slashing damage."
 			},
 			{
-				"Name": "Acid Breath (Recharge 5ñ6)",
+				"Name": "Acid Breath (Recharge 5-6)",
 				"Content": "The dragon exhales sizzling acid in a 40-foot-long, 5-foot-wide line. Each creature in that area makes a DC 15 Dexterity saving throw, taking 45 (10d8) acid damage on a failed save or half damage on a success. A creature that fails the save is blinded until the end of its next turn."
 			}
 		],
@@ -65665,7 +65665,7 @@
 				"Content": "Melee Weapon Attack: +9 to hit, reach 5 ft., one target. Hit: 14 (2d8 + 5) slashing damage."
 			},
 			{
-				"Name": "Lightning Breath (Recharge 5ñ6)",
+				"Name": "Lightning Breath (Recharge 5-6)",
 				"Content": "The dragon exhales a 60-foot-long, 5-foot-wide line of lightning. Each creature in that area makes a DC 16 Dexterity saving throw, taking 44 (8d10) lightning damage on a failed save or half damage on a success. A creature that fails the save can't take reactions until the end of its next turn."
 			}
 		],
@@ -65807,7 +65807,7 @@
 				"Content": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 13 (2d8 + 4) slashing damage."
 			},
 			{
-				"Name": "Breath Weapons (Recharge 5ñ6)",
+				"Name": "Breath Weapons (Recharge 5-6)",
 				"Content": "The dragon uses one of the following breath weapons:"
 			},
 			{
@@ -65956,7 +65956,7 @@
 				"Content": "† The dragon targets one creature within 60 feet, forcing it to make a DC 20 Dexterity saving throw. The creature takes 22 (4d10) lightning damage on a failure or half damage on a success. If the initial target is touching a body of water, all other creatures within 20 feet of it and touching the same body of water must also make the saving throw against this damage."
 			},
 			{
-				"Name": "Breath Weapons (Recharge 5ñ6)",
+				"Name": "Breath Weapons (Recharge 5-6)",
 				"Content": "The dragon uses one of the following breath weapons:"
 			},
 			{
@@ -66113,7 +66113,7 @@
 				"Content": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 13 (2d8 + 4) slashing damage."
 			},
 			{
-				"Name": "Breath Weapons (Recharge 5ñ6)",
+				"Name": "Breath Weapons (Recharge 5-6)",
 				"Content": "The dragon uses one of the following breath weapons:"
 			},
 			{
@@ -66264,7 +66264,7 @@
 				"Content": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 13 (2d8 + 4) bludgeoning damage."
 			},
 			{
-				"Name": "Scouring Breath (Recharge 5ñ6)",
+				"Name": "Scouring Breath (Recharge 5-6)",
 				"Content": "The dragon exhales scouring sand and stones in a 30-foot cone. Each creature in that area makes a DC 16 Dexterity saving throw, taking 38 (11d6) slashing damage on a failed save or half damage on a success.†"
 			}
 		],
@@ -66397,7 +66397,7 @@
 				"Content": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 13 (2d8 + 4) slashing damage.†"
 			},
 			{
-				"Name": "Maddening Breath (Recharge 5ñ6)",
+				"Name": "Maddening Breath (Recharge 5-6)",
 				"Content": "The dragon screams, stripping flesh from bone in a 30-foot cone. Each creature in that area makes a DC 15 Constitution saving throw, taking 44 (8d10) thunder damage on a failed save or half damage on a success.†"
 			}
 		],
@@ -66526,7 +66526,7 @@
 				"Content": "Melee Weapon Attack: +10 to hit, reach 5 ft., one target. Hit: 15 (2d8 + 6) slashing damage."
 			},
 			{
-				"Name": "Breath Weapons (Recharge 5ñ6)",
+				"Name": "Breath Weapons (Recharge 5-6)",
 				"Content": "The dragon uses one of the following breath weapons:"
 			},
 			{
@@ -66673,7 +66673,7 @@
 				"Content": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 13 (2d8 + 4) slashing damage."
 			},
 			{
-				"Name": "Poison Breath (Recharge 5ñ6)",
+				"Name": "Poison Breath (Recharge 5-6)",
 				"Content": "The dragon exhales poisonous gas in a 30-foot cone. Each creature in that area makes a DC 15 Constitution saving throw, taking 42 (12d6) poison damage on a failed save or half damage on a success."
 			}
 		],
@@ -66802,7 +66802,7 @@
 				"Content": "Melee Weapon Attack: +10 to hit, reach 5 ft., one target. Hit: 15 (2d8 + 6) slashing damage."
 			},
 			{
-				"Name": "Fire Breath (Recharge 5ñ6)",
+				"Name": "Fire Breath (Recharge 5-6)",
 				"Content": "The dragon exhales a blast of fire that fills a 30-foot cone. Each creature in that area makes a DC 17 Dexterity saving throw, taking 52 (15d6) fire damage on a failed save or half damage on a success. A creature that fails the saving throw also takes 5 (1d10) ongoing fire damage. While affected by this ongoing damage, it is frightened of the dragon. A creature can use an action to end the ongoing damage."
 			}
 		],
@@ -66899,7 +66899,7 @@
 				"Content": "Melee Weapon Attack: +10 to hit, reach 5 ft., one target. Hit: 15 (2d8 + 6) slashing damage."
 			},
 			{
-				"Name": "Fire Breath (Recharge 5ñ6)",
+				"Name": "Fire Breath (Recharge 5-6)",
 				"Content": "The dragon exhales a blast of fire that fills a 30-foot cone. Each creature in that area makes a DC 17 Dexterity saving throw, taking 52 (15d6) fire damage on a failed save or half damage on a success. A creature that fails the saving throw also suffers 5 (1d10) ongoing fire damage. While affected by this ongoing damage, it is frightened of the dragon. A creature can use an action to end the ongoing damage."
 			}
 		],
@@ -67054,7 +67054,7 @@
 				"Content": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 12 (2d8 + 3) slashing damage.†"
 			},
 			{
-				"Name": "Torrential Breath (Recharge 5ñ6)",
+				"Name": "Torrential Breath (Recharge 5-6)",
 				"Content": "The dragon exhales water in a 30-foot-long, 5-foot-wide line. Each creature in the area makes a DC 14 Dexterity saving throw, taking 42 (12d6) bludgeoning damage on a failed save or half damage on a success.†"
 			}
 		],
@@ -67194,7 +67194,7 @@
 				"Content": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 13 (2d8 + 4) slashing damage.†"
 			},
 			{
-				"Name": "Discognitive Breath (Recharge 5ñ6)",
+				"Name": "Discognitive Breath (Recharge 5-6)",
 				"Content": "The dragon unleashes psychic energy in a 30-foot cone. Each creature in that area makes a DC 15 Intelligence saving throw, taking 49 (9d10) psychic damage on a failed save or half damage on a success."
 			}
 		],
@@ -67348,7 +67348,7 @@
 				"Content": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 17 (3d8 + 4) slashing damage.†"
 			},
 			{
-				"Name": "Anguished Breath (Recharge 5ñ6)",
+				"Name": "Anguished Breath (Recharge 5-6)",
 				"Content": "The dragon exhales a shadowy maelstrom of anguish in a 30-foot cone. Each creature in that area makes a DC 16 Wisdom saving throw, taking 40 (9d8) necrotic damage on a failed save or half damage on a success."
 			}
 		],
@@ -67476,7 +67476,7 @@
 				"Content": "Melee Weapon Attack: +10 to hit, reach 5 ft., one target. Hit: 15 (2d8 + 6) slashing damage."
 			},
 			{
-				"Name": "Breath Weapons (Recharge 5ñ6)",
+				"Name": "Breath Weapons (Recharge 5-6)",
 				"Content": "The dragon uses one of the following breath weapons:"
 			},
 			{
@@ -67610,7 +67610,7 @@
 				"Content": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 13 (2d8 + 4) slashing damage."
 			},
 			{
-				"Name": "Cold Breath (Recharge 5ñ6)",
+				"Name": "Cold Breath (Recharge 5-6)",
 				"Content": "The dragon exhales a 30-foot cone of frost. Each creature in that area makes a DC 15 Constitution saving throw, taking 35 (10d6) cold damage on a failed save or half damage on a success.†"
 			}
 		],
