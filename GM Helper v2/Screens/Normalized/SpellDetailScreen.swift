@@ -35,7 +35,7 @@ struct SpellDetailScreen: View {
         SpellDetailScreen(spell: (PreviewData
             .loadJSON(
                 forResource: JsonResourceKey.spellsA5e.rawValue
-            ).first! as Spell_A5e).toSpell()
+            ).filter({ $0.name == "Alter Self" }).first! as Spell_A5e).toSpell()
         )
     }
 }
