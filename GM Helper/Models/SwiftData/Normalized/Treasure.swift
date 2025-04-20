@@ -8,6 +8,7 @@
 import SwiftUI
 import SwiftData
 
+
 @Model
 class Treasure: Nameable, Identifiable {
     #Index<Treasure>([\.id], [\.name], [\.rarity])
@@ -55,6 +56,7 @@ class Treasure: Nameable, Identifiable {
         self.treasureWoTC = treasureWoTC
     }
 }
+
 extension Treasure:ViewDataSource {
     static func listItemViewContent (_ listItem: Any, _ colorScheme:ColorScheme = .light) -> AnyView {
         let treasure = listItem as! Treasure

@@ -28,7 +28,9 @@ struct CoffeeThreeColumnSplitView: View {
             }
             .listStyle(PlainListStyle())
             .navigationTitle("Sidebar")
+#if os(iOS)
             .navigationBarTitleDisplayMode(.inline)
+#endif
         }
         content: {
             Group {
@@ -57,7 +59,9 @@ struct CoffeeThreeColumnSplitView: View {
                 }
             }
             .navigationTitle("CONTENT")
+#if os(iOS)
             .navigationBarTitleDisplayMode(.inline)
+#endif
         }
         detail: {
             Group {
@@ -72,7 +76,9 @@ struct CoffeeThreeColumnSplitView: View {
                 }
             }
             .navigationTitle("DETAIL")
+#if os(iOS)
             .navigationBarTitleDisplayMode(.inline)
+#endif
         }
     }
 }

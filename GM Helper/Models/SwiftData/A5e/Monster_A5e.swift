@@ -12,6 +12,7 @@ import SwiftData
 import SDWebImageSwiftUI
 
 // MARK: - Monster Model
+
 @Model
 class Monster_A5e: Decodable, Nameable {
     #Index<Monster_A5e>([\.id], [\.sourceId], [\.name], [\.monsterType], [\.challenge])

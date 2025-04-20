@@ -38,7 +38,9 @@ struct MonsterDetailScreen: View {
         .padding()
         .background(Color.buff)
         .navigationTitle("\(monster.name) (\(monster.sourceKeyRawValue))")
+#if os(iOS)
         .navigationBarTitleDisplayMode(.inline)
+#endif
     }
 }
 

@@ -24,7 +24,9 @@ struct CoffeeSampleExpandedListView: View {
             }
         }
         .listStyle(PlainListStyle())
+#if os(iOS)
         .listStyle(InsetGroupedListStyle())
+#endif
     }
 }
 

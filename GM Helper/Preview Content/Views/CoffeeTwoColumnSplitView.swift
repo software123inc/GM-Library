@@ -43,7 +43,9 @@ struct CoffeeTwoColumnSplitView: View {
                     }
                 }
                 .listStyle(.plain)
+#if os(iOS)
                 .navigationBarTitleDisplayMode(.inline)
+#endif
             } else {
                 Text("Please select a category")
             }

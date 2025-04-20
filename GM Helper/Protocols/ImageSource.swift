@@ -32,8 +32,7 @@ extension ImageSource {
         return URL(string: urlString)
     } }
     
-    func mmImageToken() -> AnyView {
-        
+    func mmImageToken() -> AnyView {        
         return AnyView(
             WebImage(
                 url: self.mmImageTokenUrl,

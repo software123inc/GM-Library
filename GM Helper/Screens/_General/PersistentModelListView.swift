@@ -84,6 +84,7 @@ struct PersistentModelListView<T:PersistentModel>: View where T:Nameable, T:View
         NavigationStack {
             VStack {
                 List(filteredListItems, selection: $selectedItem) { item in
+#if os(iOS)
                     if UIDevice.current.userInterfaceIdiom == .phone {
                         T.listItemViewContent(item, colorScheme)
                             .listRowBackground(Color.clear) // must not applied to iPad
@@ -92,6 +93,10 @@ struct PersistentModelListView<T:PersistentModel>: View where T:Nameable, T:View
                         T.listItemViewContent(item, colorScheme)
                             .background(Color.clear) // when selected, will appear .white/.gray
                     }
+#else
+                    T.listItemViewContent(item, colorScheme)
+                        .background(Color.clear) // when selected, will appear .white/.gray
+#endif
                 }
                 .searchable(text: $search)
                 T.listItemFooterViewContent(colorScheme)
@@ -113,6 +118,7 @@ extension PersistentModelListView {
     }
 }
 
+#if os(iOS)
 #Preview("Norm Monster", traits: .sampleData) {
     PersistentModelListView<Monster>(navigationTitle: "Monsters")
 }
@@ -120,9 +126,11 @@ extension PersistentModelListView {
 #Preview("Norm Spells", traits: .sampleData) {
     PersistentModelListView<Spell>(navigationTitle: "Spells")
 }
+
 #Preview("Norm Treasures", traits: .sampleData) {
     PersistentModelListView<Treasure>(navigationTitle: "Treasures")
 }
+#endif
 //
 //#Preview("A5e Monster", traits: .sampleData) {
 //    PersistentModelListView<Monster_A5e>(navigationTitle: "Monsters A5e")

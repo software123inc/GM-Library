@@ -57,6 +57,7 @@ class Treasure_A5e: Decodable, Nameable {
         }        
     }
 }
+
 extension Treasure_A5e: TreasureDTO {
     func toSourceKeyRawValue() -> String { SourceKey.a5e.rawValue }
     func toSource() -> String { source }

@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 struct MonsterA5eDetailView: View {
     var monster: Monster_A5e
     
@@ -24,6 +25,7 @@ struct MonsterA5eDetailView: View {
         .padding()
     }
 }
+
 
 #Preview(traits: .sampleData) {
     NavigationStack {

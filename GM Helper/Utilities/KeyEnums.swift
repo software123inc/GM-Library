@@ -15,6 +15,7 @@ enum AppStorageKey: String {
     case importSpellsWoTC
     case importTreasuresA5e
     case importTreasuresWoTC
+    case syncEnabled
 }
 
 enum JsonResourceKey: String {

@@ -29,6 +29,10 @@ class AppCommon {
     ])
     
     var isLandscape: Bool {
+#if os(iOS)
         UIDevice.current.orientation.isLandscape
+#else
+        true
+#endif
     }
 }

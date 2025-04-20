@@ -28,16 +28,22 @@ struct TreasureDetailScreen: View {
         .padding()
         .background(Color.buff)
         .navigationTitle("\(treasure.name) (\(treasure.sourceKeyRawValue))")
+#if os(iOS)
         .navigationBarTitleDisplayMode(.inline)
+#endif
     }
 }
 
 #Preview("A5e", traits: .sampleData) {
     NavigationStack {
-        TreasureDetailScreen(treasure: (PreviewData
-            .loadJSON(
-                forResource: JsonResourceKey.treasuresA5e.rawValue
-            ).first! as Treasure_A5e).toTreasure()
-        )
+        if #available(macOS 15, *) {
+            TreasureDetailScreen(treasure: (PreviewData
+                .loadJSON(
+                    forResource: JsonResourceKey.treasuresA5e.rawValue
+                ).first! as Treasure_A5e).toTreasure()
+            )
+        } else {
+            // Fallback on earlier versions
+        }
     }
 }

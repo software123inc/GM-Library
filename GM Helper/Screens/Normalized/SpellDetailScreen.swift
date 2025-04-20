@@ -24,7 +24,9 @@ struct SpellDetailScreen: View {
         .padding()
         .background(Color.buff)
         .navigationTitle("\(spell.name) (\(spell.sourceKeyRawValue))")
+#if os(iOS)
         .navigationBarTitleDisplayMode(.inline)
+#endif
     }
 }
 

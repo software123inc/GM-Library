@@ -31,9 +31,11 @@ struct ThreeColumnSplitViewSectioned: View {
             }
             .background(Color.buff)
             .scrollContentBackground(.hidden)
-            .listStyle(.insetGrouped)
             .navigationTitle("Resources")
+#if os(iOS)
+            .listStyle(.insetGrouped)
             .navigationBarTitleDisplayMode(.inline)
+#endif
         }
         content: {
             Group {
@@ -88,7 +90,9 @@ struct ThreeColumnSplitViewSectioned: View {
                 }
             }
             .navigationTitle("Item List")
+#if os(iOS)
             .navigationBarTitleDisplayMode(.inline)
+#endif
         }
         detail: {
             Group {
@@ -115,7 +119,9 @@ struct ThreeColumnSplitViewSectioned: View {
                 }
             }
             .navigationTitle("Item Details")
+#if os(iOS)
             .navigationBarTitleDisplayMode(.inline)
+#endif
         }
         .tint(colorScheme == .dark ? .white : .gray) //Color.a5EGreenTint)
     }

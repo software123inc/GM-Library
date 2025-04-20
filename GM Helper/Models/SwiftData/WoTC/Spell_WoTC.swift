@@ -8,6 +8,7 @@
 import SwiftUI
 import SwiftData
 
+
 @Model
 class Spell_WoTC: Decodable, Nameable {
     #Index<Spell_WoTC>([\.id], [\.originalId], [\.name], [\.level])
