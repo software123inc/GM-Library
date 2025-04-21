@@ -1,4 +1,14 @@
+//
+//  CloudKitSyncMonitor.swift
+//  GM Helper
+//
+//  Created by Tim W. Newton on 4/19/25.
+//
+
+import CloudKit
 import Combine
+import CoreData
+import SwiftUI
 
 class CloudKitSyncMonitor {
     private var container: NSPersistentCloudKitContainer
@@ -7,14 +17,27 @@ class CloudKitSyncMonitor {
 
     init(container: NSPersistentCloudKitContainer) {
         self.container = container
-        setupSyncMonitoring()
+        setupCloudKitSyncMonitoring()
     }
 
     func waitForInitialSync(completion: @escaping (Bool) -> Void) {
         syncCompletionHandler = completion
     }
+    
+    func checkCloudKitAvailability(completion: @escaping (Bool) -> Void) {
+        CKContainer.default().accountStatus { status, error in
+            if let error {
+                debugPrint("[CloudKitSyncMonitor: ERROR]: \(error.localizedDescription)")
+            }
+            
+            DispatchQueue.main.async {
+                completion(status == .available)
+            }
+            
+        }
+    }
 
-    private func setupSyncMonitoring() {
+    private func setupCloudKitSyncMonitoring() {
         NotificationCenter.default
             .publisher(for: NSPersistentCloudKitContainer.eventChangedNotification, object: container)
             .sink { [weak self] notification in
@@ -24,17 +47,20 @@ class CloudKitSyncMonitor {
                 
                 switch event.type {
                 case .setup:
-                    print("CloudKit setup started")
+                    debugPrint("[CloudKit] setup started")
                 case .import, .export:
                     if event.succeeded {
-                        print("CloudKit \(event.type.rawValue) succeeded")
+                        debugPrint("[CloudKit] import succeeded")
                         // Check if this is the initial sync
                         if event.type == .import {
                             self?.syncCompletionHandler?(true)
                             self?.syncCompletionHandler = nil // Clear handler after initial sync
                         }
+                        else if event.type == .export {
+                            debugPrint("[CloudKit] export succeeded.")
+                        }
                     } else if let error = event.error {
-                        print("CloudKit \(event.type.rawValue) failed: \(error)")
+                        debugPrint("[CloudKit] \(event.type.rawValue) failed: \(error)")
                         self?.syncCompletionHandler?(false)
                         self?.syncCompletionHandler = nil
                     }
