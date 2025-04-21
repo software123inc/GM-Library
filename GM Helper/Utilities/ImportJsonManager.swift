@@ -17,6 +17,13 @@ struct ImportJsonManager {
     }
     
     func importJsonData() {
+        debugPrint("Should import monsters A5e: \(SyncManager.shared.importMonstersA5e)")
+        debugPrint("Should import spells A5e: \(SyncManager.shared.importSpellsA5e)")
+        debugPrint("Should import monsters WoTC: \(SyncManager.shared.importMonstersWoTC)")
+        debugPrint("Should import spells WoTC: \(SyncManager.shared.importSpellsWoTC)")
+        debugPrint("Should import treasures A5e: \(SyncManager.shared.importTreasuresA5e)")
+        debugPrint("Should import treasures WoTC: \(SyncManager.shared.importTreasuresWoTC)")        
+        
         if isEntityEmpty(Monster_A5e.self) {
             importMonstersA5e()
         }

@@ -5,6 +5,8 @@
 //  Created by Tim W. Newton on 2/23/25.
 //
 
+import CloudKit
+import CoreData
 import SwiftUI
 import SwiftData
 import SDWebImage
@@ -16,22 +18,70 @@ struct GM_Helper_App: App {
     
     // MARK: - SwiftData
     let sharedModelContainer: ModelContainer
+//    let cloudKitSyncMonitor: CloudKitSyncMonitor
+    let importJsonManager: ImportJsonManager
     
     init() {
         SDImageCodersManager.shared.addCoder(SDImageAWebPCoder.shared)
         SDWebImageDownloader.shared.setValue("image/webp,image/*,*/*;q=0.8", forHTTPHeaderField:"Accept")
         
-        
         do {
             let modelConfiguration = ModelConfiguration(
-                "GM_Helper",
                 schema: AppCommon.shared.schema,
                 isStoredInMemoryOnly: false
             )
             
             sharedModelContainer = try ModelContainer(for: AppCommon.shared.schema, configurations: [modelConfiguration])
+            importJsonManager = ImportJsonManager(
+                mainContext: sharedModelContainer.mainContext
+            )
+            
+            
+//            let container = NSPersistentCloudKitContainer(name: "GM_Helper")
+//            cloudKitSyncMonitor = CloudKitSyncMonitor(container: container)
+            
+            handleInitialSetup()
+            
         } catch {
             fatalError("Could not create ModelContainer: \(error)")
+        }
+    }
+    
+    private func handleInitialSetup() {
+        print("[CloudKit Test] func handleInitialSetup()")
+        let isFirstLaunch = true // !UserDefaults.standard.bool(forKey: "hasLaunchedBefore")
+        let shouldUseCloudKit = UserDefaults.standard.bool(forKey: "shouldUseCloudKit")
+        
+        print("[INFO] Is First Launch: \(isFirstLaunch)")
+        print("[INFO] Use CloudKit: \(shouldUseCloudKit)")
+        
+        if isFirstLaunch {
+//            if shouldUseCloudKit {
+//                cloudKitSyncMonitor.checkCloudKitAvailability { available in
+//                    guard available else {
+//                        print("[WARNING] iCloud not available, importing without sync.")
+//                        importJsonManager.importJsonData()
+//                        return
+//                    }
+//                    
+//                    // Wait for CloudKit sync to launch to ensure data is up-to-date
+//                    cloudKitSyncMonitor.waitForInitialSync { success in
+//                        print("[CloudKit Test] waitForInitialSync")
+//                        guard success else {
+//                            print("[CloudKit Test] Initial sync failed! Skipping import.")
+//                            return
+//                        }
+//                        
+//                        print("[CloudKit Test] waitForInitialSync success passed.")
+//                        importJsonManager.importJsonData()
+//                    }
+//                }
+//            }
+//            else {
+                importJsonManager.importJsonData()
+//            }
+            
+            UserDefaults.standard.set(true, forKey: "hasLaunchedBefore")
         }
     }
 
@@ -39,11 +89,11 @@ struct GM_Helper_App: App {
         WindowGroup {
             SidebarHomeView()
         }
-        .modelContainer(sharedModelContainer)
         .onChange(of: scenePhase) { _, newScenePhase in
             switch newScenePhase {
                 case .active:
                     doAppIsActiveTasks()
+                    break
                 case .inactive:
                     doAppIsInactiveTasks()
                 case .background:
@@ -52,6 +102,7 @@ struct GM_Helper_App: App {
                     debugPrint("App enteringing unhandled phase.")
             }
         }
+        .modelContainer(sharedModelContainer) // https://stackoverflow.com/questions/78123311/swiftdata-crash-on-launch-in-ios-17-4-the-configuration-named-default-does-no
     }
 }
 
@@ -64,202 +115,17 @@ extension GM_Helper_App {
             debugPrint(error.localizedDescription)
         }
     }
-    
-    private func asyncImportJson<T:SwiftData.PersistentModel>(value: T.Type, resource:String, _ status: inout Bool) async where T:Decodable {
-        debugPrint("Importing from '\(resource)'.")
-        let items = await JsonDataLoader.loadJson(from: resource) as [T]
-        
-        do {
-            let context = sharedModelContainer.mainContext
-            
-            for item in items {
-                context.insert(item)
-            }
-            
-            try context.save()
-        } catch {
-            debugPrint(error.localizedDescription)
-        }
-        
-        status.toggle()
-    }
 }
 
 extension GM_Helper_App {
     // The scene is in the foreground and interactive.
     private func doAppIsActiveTasks() {
         debugPrint("App is active.")
-                
-        debugPrint("Should import monsters A5e: \(SyncManager.userPrefs.importMonstersA5e)")
-        debugPrint("Should import spells A5e: \(SyncManager.userPrefs.importSpellsA5e)")
-        debugPrint("Should import monsters WoTC: \(SyncManager.userPrefs.importMonstersWoTC)")
-        debugPrint("Should import spells WoTC: \(SyncManager.userPrefs.importSpellsWoTC)")
-        debugPrint("Should import treasures A5e: \(SyncManager.userPrefs.importTreasuresA5e)")
-        debugPrint("Should import treasures WoTC: \(SyncManager.userPrefs.importTreasuresWoTC)")
-        
-        if SyncManager.userPrefs.importMonstersA5e {
-            Task {
-                await asyncImportJson(
-                    value:Monster_A5e.self,
-                    resource: JsonResourceKey.monstersA5e.rawValue,
-                    &SyncManager.userPrefs.importMonstersA5e
-                )
-                
-                insertNormalizedMonsters(value: Monster_A5e.self)
-                saveDefaultData("Monster_A5e");
-            }
-        }
-        
-        if SyncManager.userPrefs.importSpellsA5e {
-            Task {
-                await asyncImportJson(
-                    value:Spell_A5e.self,
-                    resource: JsonResourceKey.spellsA5e.rawValue,
-                    &SyncManager.userPrefs.importSpellsA5e
-                )
-                
-                insertNormalizeSpells(value: Spell_A5e.self)
-                saveDefaultData("Spell_A5e");
-            }
-        }
-        
-        if SyncManager.userPrefs.importMonstersWoTC {
-            Task {
-                await asyncImportJson(
-                    value:Monster_WoTC.self,
-                    resource: JsonResourceKey.monstersWoTC.rawValue,
-                    &SyncManager.userPrefs.importMonstersWoTC
-                )
-                
-                insertNormalizedMonsters(value: Monster_WoTC.self)
-                saveDefaultData("Monster_WoTC");
-            }
-        }
-        
-        if SyncManager.userPrefs.importSpellsWoTC {
-            Task {
-                await asyncImportJson(
-                    value:Spell_WoTC.self,
-                    resource: JsonResourceKey.spellsWoTC.rawValue,
-                    &SyncManager.userPrefs.importSpellsWoTC
-                )
-                
-                insertNormalizeSpells(value: Spell_WoTC.self)
-                saveDefaultData("Spell_WoTC");
-            }
-        }
-        
-        if SyncManager.userPrefs.importTreasuresA5e {
-            Task {
-                await asyncImportJson(
-                    value:Treasure_A5e.self,
-                    resource: JsonResourceKey.treasuresWoTC.rawValue,
-                    &SyncManager.userPrefs.importTreasuresA5e
-                )
-                
-                insertNormalizeTreasures(value: Treasure_A5e.self)
-                saveDefaultData("Treasure_A5e");
-            }
-        }
-        
-        if SyncManager.userPrefs.importTreasuresWoTC {
-            Task {
-                await asyncImportJson(
-                    value:Treasure_WoTC.self,
-                    resource: JsonResourceKey.treasuresWoTC.rawValue,
-                    &SyncManager.userPrefs.importTreasuresWoTC
-                )
-                
-                insertNormalizeTreasures(value: Treasure_WoTC.self)
-                saveDefaultData("Treasure_WoTC");
-            }
-        }
-    }
-    
-    private func insertNormalizedMonsters<T:SwiftData.PersistentModel>(value: T.Type) where T:MonstrousDTO, T:Nameable {
-        let mainContext = sharedModelContainer.mainContext
-        let fetcher = FetchDescriptor<T>(sortBy: [.init(\T.name)])
-        if let monsters = try? mainContext.fetch(fetcher) {
-            for monster in monsters {
-                var m:Monster?
-                switch T.self {
-                    case is Monster_A5e.Type:
-                        let mm = monster as! Monster_A5e
-                        m = monster.toMonster(monsterA5e: mm)
-                    case is Monster_WoTC.Type:
-                        let mm = monster as! Monster_WoTC
-                        m = monster.toMonster(monsterWoTC: mm)
-                    default:
-                        debugPrint("Unhandled normalized monster type: \(T.self)")
-                        break
-                        
-                }
-                if let m {
-                    mainContext.insert(m)
-                }
-            }
-            
-//            debugPrint("Saved normalized monsters from: \(T.self), count: \(monsters.count)")
-        }
-    }
-    
-    private func insertNormalizeSpells<T:SwiftData.PersistentModel>(value: T.Type) where T:SpellDTO, T:Nameable {
-        let mainContext = sharedModelContainer.mainContext
-        let fetcher = FetchDescriptor<T>(sortBy: [.init(\T.name)])
-        if let results = try? mainContext.fetch(fetcher) {
-            for result in results {
-                var target:Spell?
-                switch T.self {
-                    case is Spell_A5e.Type:
-                        let item = result as! Spell_A5e
-                        target = result.toSpell(spellA5e: item)
-                    case is Spell_WoTC.Type:
-                        let item = result as! Spell_WoTC
-                        target = result.toSpell(spellWoTC: item)
-                    default:
-                        debugPrint("Unhandled normalized spell type: \(T.self)")
-                        break
-                        
-                }
-                if let target {
-                    mainContext.insert(target)
-                }
-            }
-            
-//            debugPrint("Saved normalized spells from: \(T.self), count: \(results.count)")
-        }
-    }
-    
-    private func insertNormalizeTreasures<T:SwiftData.PersistentModel>(value: T.Type) where T:TreasureDTO, T:Nameable {
-        let mainContext = sharedModelContainer.mainContext
-        let fetcher = FetchDescriptor<T>(sortBy: [.init(\T.name)])
-        if let results = try? mainContext.fetch(fetcher) {
-            for result in results {
-                var target:Treasure?
-                switch T.self {
-                    case is Treasure_A5e.Type:
-                        let item = result as! Treasure_A5e
-                        target = result.toTreasure(treasureA5e: item)
-                    case is Treasure_WoTC.Type:
-                        let item = result as! Treasure_WoTC
-                        target = result.toTreasure(treasureWoTC: item)
-                    default:
-                        debugPrint("Unhandled normalized treasure type: \(T.self)")
-                        break
-                        
-                }
-                if let target {
-                    mainContext.insert(target)
-                }
-            }
-            
-            //            debugPrint("Saved normalized spells from: \(T.self), count: \(results.count)")
-        }
     }
     
     // The scene is in the foreground but should pause its work.
     private func doAppIsInactiveTasks() {
-        debugPrint("App is inactive.")
+        debugPrint("App is inactive.")        
         saveDefaultData()
     }
     
