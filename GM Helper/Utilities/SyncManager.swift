@@ -11,7 +11,7 @@ import SwiftUI
 import Foundation
 
 class SyncManager  {
-    static let userPrefs = SyncManager()
+    static let shared = SyncManager()
 //    @Published static var userPrefs = SyncManager()
     // Local storage keys (all preferences)
 //    @AppStorage("theme") private var theme: String = "light"
@@ -28,7 +28,7 @@ class SyncManager  {
     @AppStorage(AppStorageKey.importTreasuresWoTC.rawValue) private var treasuresWoTC: Bool = true
 
     // iCloud store reference
-    private let iCloudStore = NSUbiquitousKeyValueStore.default
+    private let iCloudKeyValueStore = NSUbiquitousKeyValueStore.default
 
     // Keys eligible for iCloud syncing
     private enum SyncKeys: String {
@@ -45,18 +45,17 @@ class SyncManager  {
         // Register for iCloud updates
         NotificationCenter.default.addObserver(
             forName: NSUbiquitousKeyValueStore.didChangeExternallyNotification,
-            object: iCloudStore,
+            object: iCloudKeyValueStore,
             queue: .main
         ) { notification in
-            self.handleiCloudChanges(notification)
+            print("iCloudKeyValueStore notification observer added.")
+            self.handleiCloudKeyValuePairChanges(notification)
         }
         
         // Perform initial sync
-        iCloudStore.synchronize()
-        loadFromiCloud()
+        iCloudKeyValueStore.synchronize()
+        loadKeyValuePairsFromiCloud()
     }
-
-    // MARK: - Public API
 
     // Accessors for all preferences
     var importMonstersA5e: Bool {
@@ -116,33 +115,34 @@ class SyncManager  {
     
     private func syncIfNeeded(key: SyncKeys, value: Any) {
         guard syncEnabled else { return }
-        iCloudStore.set(value, forKey: key.rawValue)
-        iCloudStore.synchronize()
+        iCloudKeyValueStore.set(value, forKey: key.rawValue)
+        iCloudKeyValueStore.synchronize()
     }
 
-    private func loadFromiCloud() {
+    private func loadKeyValuePairsFromiCloud() {
+        print("[iCloudStore] loadKeyValuePairsFromiCloud().")
         guard isSyncEnabled else { return }
         
-        monstersA5e = iCloudStore.bool(forKey: SyncKeys.monstersA5e.rawValue)
-        monstersWoTC = iCloudStore.bool(forKey: SyncKeys.monstersWoTC.rawValue)
+        monstersA5e = iCloudKeyValueStore.bool(forKey: SyncKeys.monstersA5e.rawValue)
+        monstersWoTC = iCloudKeyValueStore.bool(forKey: SyncKeys.monstersWoTC.rawValue)
         
-        spellsA5e = iCloudStore.bool(forKey: SyncKeys.spellsA5e.rawValue)
-        spellsWoTC = iCloudStore.bool(forKey: SyncKeys.spellsWoTC.rawValue)
+        spellsA5e = iCloudKeyValueStore.bool(forKey: SyncKeys.spellsA5e.rawValue)
+        spellsWoTC = iCloudKeyValueStore.bool(forKey: SyncKeys.spellsWoTC.rawValue)
         
-        treasuresA5e = iCloudStore.bool(forKey: SyncKeys.treasuresA5e.rawValue)
-        treasuresWoTC = iCloudStore.bool(forKey: SyncKeys.treasuresWoTC.rawValue)
+        treasuresA5e = iCloudKeyValueStore.bool(forKey: SyncKeys.treasuresA5e.rawValue)
+        treasuresWoTC = iCloudKeyValueStore.bool(forKey: SyncKeys.treasuresWoTC.rawValue)
     }
 
-    private func handleiCloudChanges(_ notification: Notification) {
+    private func handleiCloudKeyValuePairChanges(_ notification: Notification) {
         guard let userInfo = notification.userInfo,
               let reason = userInfo[NSUbiquitousKeyValueStoreChangeReasonKey] as? Int else { return }
 
         // Handle different change reasons (e.g., server update, initial sync)
         switch reason {
-        case NSUbiquitousKeyValueStoreServerChange, NSUbiquitousKeyValueStoreInitialSyncChange:
-            loadFromiCloud()
-        default:
-            break
+            case NSUbiquitousKeyValueStoreServerChange, NSUbiquitousKeyValueStoreInitialSyncChange:
+                loadKeyValuePairsFromiCloud()
+            default:
+                break
         }
     }
 
@@ -151,23 +151,24 @@ class SyncManager  {
         NotificationCenter.default.removeObserver(
             self,
             name: NSUbiquitousKeyValueStore.didChangeExternallyNotification,
-            object: iCloudStore
+            object: iCloudKeyValueStore
         )
+        print("iCloudKeyValueStore notification observer removed.")
     }
 }
 
 // Example usage in a SwiftUI View
-struct SettingsView: View {
-//    @StateObject private var syncManager = SyncManager()
-    @State private var isSyncEnabled: Bool = SyncManager.userPrefs.isSyncEnabled
-
-    var body: some View {
-        Form {
-            Toggle("Enable iCloud Sync", isOn: $isSyncEnabled)
-                .onChange(of: isSyncEnabled) { _, newValue in
-                    SyncManager.userPrefs.isSyncEnabled = newValue
-                }
-            
+//struct SettingsView: View {
+////    @StateObject private var syncManager = SyncManager()
+//    @State private var isSyncEnabled: Bool = SyncManager.userPrefs.isSyncEnabled
+//
+//    var body: some View {
+//        Form {
+//            Toggle("Enable iCloud Sync", isOn: $isSyncEnabled)
+//                .onChange(of: isSyncEnabled) { _, newValue in
+//                    SyncManager.userPrefs.isSyncEnabled = newValue
+//                }
+//            
 //            Toggle("Other Enable iCloud Sync", isOn: SyncManager.$userPrefs.isSyncEnabled)
 //            Picker("Theme", selection: $syncManager.currentImportMonstersA5e) {
 //                Text("Light").tag("light")
@@ -175,6 +176,6 @@ struct SettingsView: View {
 //            }
 //            Slider(value: $syncManager.currentFontSize, in: 12...24, step: 1)
 //            TextField("Username", text: $syncManager.currentUsername)
-        }
-    }
-}
+//        }
+//    }
+//}
