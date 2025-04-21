@@ -39,8 +39,14 @@ class Treasure_A5e: Decodable, Nameable {
         self.name = try container.decode(String.self, forKey: .name)
         self.item_type = try container.decode(String.self, forKey: .item_type)
         self.requires_attunement = try container.decode(Bool.self, forKey: .requires_attunement)
-        self.crafting_components = try container.decodeIfPresent(String.self, forKey: .crafting_components)
-        self.desc = try container.decode(String.self, forKey: .desc)
+        self.desc = try container.decode(String.self, forKey: .desc)        
+        
+        do {
+            self.crafting_components = try container.decode(String.self, forKey: .crafting_components)
+        } catch {
+            let crafting_components = try container.decode([String].self, forKey: .crafting_components)
+            self.crafting_components = crafting_components.joined(separator: ", ")
+        }
         
         do {
             self.rarity = try container.decode(String.self, forKey: .rarity)
