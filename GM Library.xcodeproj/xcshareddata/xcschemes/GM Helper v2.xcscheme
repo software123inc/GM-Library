@@ -16,9 +16,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C7CF34AA2D6BC17A00275019"
-               BuildableName = "GM Helper.app"
-               BlueprintName = "GM Helper"
-               ReferencedContainer = "container:GM Helper.xcodeproj">
+               BuildableName = "GM Library.app"
+               BlueprintName = "GM Library"
+               ReferencedContainer = "container:GM Library.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C7CF34AA2D6BC17A00275019"
-            BuildableName = "GM Helper.app"
-            BlueprintName = "GM Helper"
-            ReferencedContainer = "container:GM Helper.xcodeproj">
+            BuildableName = "GM Library.app"
+            BlueprintName = "GM Library"
+            ReferencedContainer = "container:GM Library.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C7CF34AA2D6BC17A00275019"
-            BuildableName = "GM Helper.app"
-            BlueprintName = "GM Helper"
-            ReferencedContainer = "container:GM Helper.xcodeproj">
+            BuildableName = "GM Library.app"
+            BlueprintName = "GM Library"
+            ReferencedContainer = "container:GM Library.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

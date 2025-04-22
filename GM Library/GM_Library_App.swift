@@ -1,5 +1,5 @@
 //
-//  GM_Helper_v2App.swift
+//  GM_Library_App.swift
 //  GM Helper v2
 //
 //  Created by Tim W. Newton on 2/23/25.
@@ -13,7 +13,7 @@ import SDWebImage
 import SDWebImageSwiftUI
 
 @main
-struct GM_Helper_App: App {
+struct GM_Library_App: App {
     @Environment(\.scenePhase) private var scenePhase
     
     // MARK: - SwiftData
@@ -106,7 +106,7 @@ struct GM_Helper_App: App {
     }
 }
 
-extension GM_Helper_App {
+extension GM_Library_App {
     private func saveDefaultData(_ entity: String = "[all]") {
         do {
             debugPrint("Doing Save: \(entity)")
@@ -117,7 +117,7 @@ extension GM_Helper_App {
     }
 }
 
-extension GM_Helper_App {
+extension GM_Library_App {
     // The scene is in the foreground and interactive.
     private func doAppIsActiveTasks() {
         debugPrint("App is active.")
