@@ -4,6 +4,7 @@
 //
 //  Created by Tim W. Newton on 2/25/25.
 //
+//  https://stackoverflow.com/questions/49458771/http-get-api-call-always-fails-nslocalizeddescription-a-server-with-the-specifi
 
 import SwiftUI
 import SDWebImageSwiftUI

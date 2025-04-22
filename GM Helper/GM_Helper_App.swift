@@ -44,6 +44,7 @@ struct GM_Helper_App: App {
     }
     
     private func handleInitialSetup() {
+        // https://stackoverflow.com/questions/49606831/how-to-clear-userdefaults-for-xcode-build-of-mac-app
         print("[CloudKit Test] func handleInitialSetup()")
         let isFirstLaunch = !UserDefaults.standard.bool(forKey: "hasLaunchedBefore")
         let shouldUseCloudKit = UserDefaults.standard.bool(forKey: "shouldUseCloudKit")

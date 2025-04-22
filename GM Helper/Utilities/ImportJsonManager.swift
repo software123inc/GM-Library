@@ -22,7 +22,15 @@ struct ImportJsonManager {
         debugPrint("Should import monsters WoTC: \(SyncManager.shared.importMonstersWoTC)")
         debugPrint("Should import spells WoTC: \(SyncManager.shared.importSpellsWoTC)")
         debugPrint("Should import treasures A5e: \(SyncManager.shared.importTreasuresA5e)")
-        debugPrint("Should import treasures WoTC: \(SyncManager.shared.importTreasuresWoTC)")        
+        debugPrint("Should import treasures WoTC: \(SyncManager.shared.importTreasuresWoTC)")
+        
+        // https://www.hackingwithswift.com/quick-start/swiftdata/how-to-completely-reset-a-swiftdata-modelcontainer
+//        try? modelContext.delete(model: Monster_A5e.self)
+//        try? modelContext.delete(model: Monster_WoTC.self)
+//        try? modelContext.delete(model: Spell_A5e.self)
+//        try? modelContext.delete(model: Spell_WoTC.self)
+//        try? modelContext.delete(model: Treasure_A5e.self)
+//        try? modelContext.delete(model: Treasure_WoTC.self)
         
         if isEntityEmpty(Monster_A5e.self) {
             importMonstersA5e()
