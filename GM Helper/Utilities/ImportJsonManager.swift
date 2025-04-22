@@ -49,12 +49,11 @@ struct ImportJsonManager {
         }
     }
     
-    // <T:SwiftData.PersistentModel>(value: T.Type
     private func isEntityEmpty<T:SwiftData.PersistentModel>(_ entity: T.Type) -> Bool {
         let descriptor = FetchDescriptor<T>()
         do {
             let objs = try modelContext.fetch(descriptor)
-            print("\(entity) count: \(objs.count)")
+//            print("[isEntityEmpty] \(entity) count: \(objs.count)")
             return objs.isEmpty
         } catch {
             print("Error checking entity: \(error)")
@@ -65,12 +64,7 @@ struct ImportJsonManager {
     func importMonstersA5e() {
         if SyncManager.shared.importMonstersA5e {
             Task {
-                await asyncImportJson(
-                    entity:Monster_A5e.self,
-                    resource: JsonResourceKey.monstersA5e.rawValue,
-                    &SyncManager.shared.importMonstersA5e
-                )
-                
+                await asyncImportJson(entity:Monster_A5e.self, resource: JsonResourceKey.monstersA5e.rawValue, &SyncManager.shared.importMonstersA5e)
                 insertNormalizedMonsters(entity: Monster_A5e.self)
                 saveDefaultData("Monster_A5e");
             }
@@ -80,12 +74,7 @@ struct ImportJsonManager {
     func importMonstersWoTC() {
         if SyncManager.shared.importMonstersWoTC {
             Task {
-                await asyncImportJson(
-                    entity:Monster_WoTC.self,
-                    resource: JsonResourceKey.monstersWoTC.rawValue,
-                    &SyncManager.shared.importMonstersWoTC
-                )
-                
+                await asyncImportJson(entity:Monster_WoTC.self, resource: JsonResourceKey.monstersWoTC.rawValue, &SyncManager.shared.importMonstersWoTC)
                 insertNormalizedMonsters(entity: Monster_WoTC.self)
                 saveDefaultData("Monster_WoTC");
             }
@@ -95,12 +84,7 @@ struct ImportJsonManager {
     func importSpellsA5e() {
         if SyncManager.shared.importSpellsA5e {
             Task {
-                await asyncImportJson(
-                    entity:Spell_A5e.self,
-                    resource: JsonResourceKey.spellsA5e.rawValue,
-                    &SyncManager.shared.importSpellsA5e
-                )
-                
+                await asyncImportJson(entity:Spell_A5e.self, resource: JsonResourceKey.spellsA5e.rawValue, &SyncManager.shared.importSpellsA5e)
                 insertNormalizeSpells(entity: Spell_A5e.self)
                 saveDefaultData("Spell_A5e");
             }
@@ -110,12 +94,7 @@ struct ImportJsonManager {
     func importSpellsWoTC() {
         if SyncManager.shared.importSpellsWoTC {
             Task {
-                await asyncImportJson(
-                    entity:Spell_WoTC.self,
-                    resource: JsonResourceKey.spellsWoTC.rawValue,
-                    &SyncManager.shared.importSpellsWoTC
-                )
-                
+                await asyncImportJson(entity:Spell_WoTC.self, resource: JsonResourceKey.spellsWoTC.rawValue, &SyncManager.shared.importSpellsWoTC)
                 insertNormalizeSpells(entity: Spell_WoTC.self)
                 saveDefaultData("Spell_WoTC");
             }
@@ -125,30 +104,20 @@ struct ImportJsonManager {
     func importTreasuresA5e() {
         if SyncManager.shared.importTreasuresA5e {
             Task {
-                await asyncImportJson(
-                    entity:Treasure_A5e.self,
-                    resource: JsonResourceKey.treasuresA5e.rawValue,
-                    &SyncManager.shared.importTreasuresA5e
-                )
+                await asyncImportJson(entity:Treasure_A5e.self, resource: JsonResourceKey.treasuresA5e.rawValue, &SyncManager.shared.importTreasuresA5e)
+                insertNormalizeTreasures(entity: Treasure_A5e.self)
+                saveDefaultData("Treasure_A5e");
             }
-            
-            insertNormalizeTreasures(entity: Treasure_A5e.self)
-            saveDefaultData("Treasure_A5e");
         }
     }
     
     func importTreasuresWoTC() {
         if SyncManager.shared.importTreasuresWoTC {
             Task {
-                await asyncImportJson(
-                    entity:Treasure_WoTC.self,
-                    resource: JsonResourceKey.treasuresWoTC.rawValue,
-                    &SyncManager.shared.importTreasuresWoTC
-                )
+                await asyncImportJson(entity:Treasure_WoTC.self, resource: JsonResourceKey.treasuresWoTC.rawValue, &SyncManager.shared.importTreasuresWoTC)
+                insertNormalizeTreasures(entity: Treasure_WoTC.self)
+                saveDefaultData("Treasure_WoTC");
             }
-            
-            insertNormalizeTreasures(entity: Treasure_WoTC.self)
-            saveDefaultData("Treasure_WoTC");
         }
     }
     
@@ -171,8 +140,8 @@ struct ImportJsonManager {
     
     private func insertNormalizedMonsters<T:SwiftData.PersistentModel>(entity: T.Type) where T:MonstrousDTO, T:Nameable {
         let fetcher = FetchDescriptor<T>(sortBy: [.init(\T.name)])
-        if let monsters = try? modelContext.fetch(fetcher) {
-            for monster in monsters {
+        if let results = try? modelContext.fetch(fetcher) {
+            for monster in results {
                 var m:Monster?
                 switch T.self {
                     case is Monster_A5e.Type:
@@ -190,6 +159,7 @@ struct ImportJsonManager {
                     modelContext.insert(m)
                 }
             }
+//            debugPrint("Saved normalized monsters from: \(T.self), count: \(results.count)")
         }
     }
     
@@ -214,8 +184,7 @@ struct ImportJsonManager {
                     modelContext.insert(target)
                 }
             }
-            
-            //            debugPrint("Saved normalized spells from: \(T.self), count: \(results.count)")
+//            debugPrint("Saved normalized spells from: \(T.self), count: \(results.count)")
         }
     }
     
@@ -240,8 +209,7 @@ struct ImportJsonManager {
                     modelContext.insert(target)
                 }
             }
-            
-            //            debugPrint("Saved normalized spells from: \(T.self), count: \(results.count)")
+//            debugPrint("Saved normalized treasures from: \(T.self), count: \(results.count)")
         }
     }
     

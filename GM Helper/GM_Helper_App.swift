@@ -18,7 +18,6 @@ struct GM_Helper_App: App {
     
     // MARK: - SwiftData
     let sharedModelContainer: ModelContainer
-//    let cloudKitSyncMonitor: CloudKitSyncMonitor
     let importJsonManager: ImportJsonManager
     
     init() {
@@ -37,9 +36,6 @@ struct GM_Helper_App: App {
             )
             
             
-//            let container = NSPersistentCloudKitContainer(name: "GM_Helper")
-//            cloudKitSyncMonitor = CloudKitSyncMonitor(container: container)
-            
             handleInitialSetup()
             
         } catch {
@@ -49,37 +45,40 @@ struct GM_Helper_App: App {
     
     private func handleInitialSetup() {
         print("[CloudKit Test] func handleInitialSetup()")
-        let isFirstLaunch = true // !UserDefaults.standard.bool(forKey: "hasLaunchedBefore")
+        let isFirstLaunch = !UserDefaults.standard.bool(forKey: "hasLaunchedBefore")
         let shouldUseCloudKit = UserDefaults.standard.bool(forKey: "shouldUseCloudKit")
         
         print("[INFO] Is First Launch: \(isFirstLaunch)")
         print("[INFO] Use CloudKit: \(shouldUseCloudKit)")
         
         if isFirstLaunch {
-//            if shouldUseCloudKit {
-//                cloudKitSyncMonitor.checkCloudKitAvailability { available in
-//                    guard available else {
-//                        print("[WARNING] iCloud not available, importing without sync.")
-//                        importJsonManager.importJsonData()
-//                        return
-//                    }
-//                    
-//                    // Wait for CloudKit sync to launch to ensure data is up-to-date
-//                    cloudKitSyncMonitor.waitForInitialSync { success in
-//                        print("[CloudKit Test] waitForInitialSync")
-//                        guard success else {
-//                            print("[CloudKit Test] Initial sync failed! Skipping import.")
-//                            return
-//                        }
-//                        
-//                        print("[CloudKit Test] waitForInitialSync success passed.")
-//                        importJsonManager.importJsonData()
-//                    }
-//                }
-//            }
-//            else {
+            if shouldUseCloudKit {
+                let container = NSPersistentCloudKitContainer(name: "GM_Helper")
+                let cloudKitSyncMonitor = CloudKitSyncMonitor(container: container)
+                
+                cloudKitSyncMonitor.checkCloudKitAvailability { available in
+                    guard available else {
+                        print("[WARNING] iCloud not available, importing without sync.")
+                        importJsonManager.importJsonData()
+                        return
+                    }
+                    
+                    // Wait for CloudKit sync to launch to ensure data is up-to-date
+                    cloudKitSyncMonitor.waitForInitialSync { success in
+                        print("[CloudKit Test] waitForInitialSync")
+                        guard success else {
+                            print("[CloudKit Test] Initial sync failed! Skipping import.")
+                            return
+                        }
+                        
+                        print("[CloudKit Test] waitForInitialSync success passed.")
+                        importJsonManager.importJsonData()
+                    }
+                }
+            }
+            else {
                 importJsonManager.importJsonData()
-//            }
+            }
             
             UserDefaults.standard.set(true, forKey: "hasLaunchedBefore")
         }
