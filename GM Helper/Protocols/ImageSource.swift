@@ -28,7 +28,6 @@ extension ImageSource {
     
     var mmImageTokenUrl: URL? { get {
         let urlString =  "https://5e.tools/img/bestiary/tokens/\(self.imageName.replacingOccurrences(of: " ", with: "%20")).webp"
-//        debugPrint(urlString)
         
         return URL(string: urlString)
     } }
